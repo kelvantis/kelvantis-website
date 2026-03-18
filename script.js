@@ -581,6 +581,13 @@ function animateFlow() {
       modal: { label: 'Gratis · Geen verplichtingen', title: 'Plan je gratis strategiegesprek', subtitle: 'Vertel kort over je situatie. We nemen binnen 24 uur contact op om een gesprek in te plannen.' },
       form: { name: 'Naam', namePh: 'Jan de Vries', company: 'Bedrijfsnaam', companyPh: 'Jouw Bedrijf BV', email: 'E-mailadres', phone: 'Telefoonnummer', package: 'Pakket interesse', packageOpt0: 'Nog niet zeker', challenge: 'Wat is jouw grootste uitdaging?', challengeOpt0: 'Kies je situatie...', challengeOpt1: 'Te weinig leads en aanvragen', challengeOpt2: 'Website presteert slecht', challengeOpt3: 'Opvolging kost te veel tijd', challengeOpt4: 'Geen inzicht in marketingresultaten', challengeOpt5: 'Concurrentie trekt klanten weg', challengeOpt6: 'Anders', message: 'Vertel kort over je bedrijf', messagePh: 'Bijv: Ik run een installatiebedrijf in Limburg met 5 medewerkers en wil meer aanvragen online genereren.', optional: '(optioneel)', submit: 'Verstuur aanvraag', disclaimer: 'Door te versturen ga je akkoord met ons privacybeleid. We reageren binnen 24 uur.' },
       success: { title: 'Aanvraag ontvangen!', desc: 'We nemen binnen <strong>24 uur</strong> contact met je op om een strategiegesprek in te plannen. Check je inbox — ook je spamfolder.', close: 'Sluiten' },
+      results: {
+        label: 'Resultaten',
+        title: 'Wat klanten bereiken',
+        r1: { metric: '+127%', desc: 'meer leads in 60 dagen' },
+        r2: { metric: '18 uur', desc: 'per week bespaard op handmatig werk' },
+        r3: { metric: '3.2×', desc: 'hogere ROI op marketingbudget' }
+      },
       wa: { tooltip: 'App ons direct' },
       cookie: { text: 'Wij gebruiken cookies voor analytics en een betere gebruikerservaring. Lees ons <a href="/privacy">privacybeleid</a>.', accept: 'Accepteren', decline: 'Alleen noodzakelijk' }
     },
@@ -652,6 +659,13 @@ function animateFlow() {
       modal: { label: 'Free · No obligations', title: 'Schedule your free strategy call', subtitle: 'Tell us briefly about your situation. We\'ll contact you within 24 hours to schedule a call.' },
       form: { name: 'Name', namePh: 'John Smith', company: 'Company name', companyPh: 'Your Company Ltd', email: 'Email address', phone: 'Phone number', package: 'Package interest', packageOpt0: 'Not sure yet', challenge: 'What is your biggest challenge?', challengeOpt0: 'Choose your situation...', challengeOpt1: 'Not enough leads and requests', challengeOpt2: 'Website performs poorly', challengeOpt3: 'Follow-up takes too much time', challengeOpt4: 'No insight into marketing results', challengeOpt5: 'Competition is taking clients', challengeOpt6: 'Other', message: 'Tell us about your business', messagePh: 'E.g.: I run a B2B services company with 10 employees and want to generate more leads online.', optional: '(optional)', submit: 'Send request', disclaimer: 'By submitting you agree to our privacy policy. We respond within 24 hours.' },
       success: { title: 'Request received!', desc: 'We\'ll contact you within <strong>24 hours</strong> to schedule a strategy call. Check your inbox — including your spam folder.', close: 'Close' },
+      results: {
+        label: 'Results',
+        title: 'What clients achieve',
+        r1: { metric: '+127%', desc: 'more leads in 60 days' },
+        r2: { metric: '18 hrs', desc: 'saved per week on manual work' },
+        r3: { metric: '3.2×', desc: 'higher ROI on marketing budget' }
+      },
       wa: { tooltip: 'Message us directly' },
       cookie: { text: 'We use cookies for analytics and a better user experience. Read our <a href="/privacy">privacy policy</a>.', accept: 'Accept', decline: 'Essential only' }
     }
@@ -666,7 +680,7 @@ function animateFlow() {
     localStorage.setItem('kelvantis_lang', lang);
 
     const labels = [document.getElementById('langLabel'), document.getElementById('langLabelMobile')];
-    labels.forEach(el => { if (el) el.textContent = lang === 'nl' ? 'EN' : 'NL'; });
+    labels.forEach(el => { if (el) el.textContent = lang === 'nl' ? '🇬🇧' : '🇳🇱'; });
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const val = getKey(T[lang], el.dataset.i18n);

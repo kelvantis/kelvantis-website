@@ -2451,3 +2451,253 @@ html[data-theme="light"] .cta-section__inner {
 .navbar__mobile-toggles .navbar__lang-toggle {
   display: flex;
 }
+
+/* ═══════════════════════════════════════
+   LANG TOGGLE — FLAG EMOJI SIZE
+═══════════════════════════════════════ */
+#langLabel, #langLabelMobile {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* ═══════════════════════════════════════
+   LIGHT MODE — Comprehensive Overrides
+═══════════════════════════════════════ */
+
+/* Navbar interactive states */
+html[data-theme="light"] .navbar__mobile {
+  background: rgba(245, 247, 250, 0.97);
+}
+
+html[data-theme="light"] .navbar__link:hover,
+html[data-theme="light"] .navbar__link.navbar__link--active {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="light"] .navbar__hamburger:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="light"] .navbar__mobile-link:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Buttons */
+html[data-theme="light"] .btn--ghost:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Dashboard widget — stat cards */
+html[data-theme="light"] .stat-card {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard tab interactive states */
+html[data-theme="light"] .dashboard__tab:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-text-muted);
+}
+
+html[data-theme="light"] .dashboard__tab--active {
+  background: rgba(0, 0, 0, 0.07) !important;
+  color: var(--color-text) !important;
+}
+
+/* Voor wie section */
+html[data-theme="light"] .voor-wie__not-for {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+html[data-theme="light"] .voor-wie__not-for-item {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Footer */
+html[data-theme="light"] .footer__social-link {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Cookie banner */
+html[data-theme="light"] .cookie-banner {
+  background: rgba(245, 247, 250, 0.97);
+}
+
+/* Modal */
+html[data-theme="light"] .modal__card {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="light"] .modal__close {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="light"] .modal__close:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--color-text);
+}
+
+/* Form inputs */
+html[data-theme="light"] .form__input,
+html[data-theme="light"] .form__select,
+html[data-theme="light"] .form__textarea {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="light"] .form__select option {
+  background: #ffffff;
+  color: var(--color-text);
+}
+
+/* Radial bg gradients — tone down in light mode */
+html[data-theme="light"] .pricing {
+  background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(5,254,130,0.04) 0%, transparent 70%);
+}
+
+html[data-theme="light"] .faq {
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(5,254,130,0.03) 0%, transparent 70%);
+}
+
+html[data-theme="light"] .voor-wie {
+  background: none;
+}
+
+html[data-theme="light"] .diensten {
+  background: none;
+}
+
+/* ═══════════════════════════════════════
+   MOBILE RESPONSIVENESS
+═══════════════════════════════════════ */
+
+/* Hero visual — add padding on non-desktop to contain floating stat cards */
+@media (max-width: 1023px) {
+  .hero__visual {
+    padding: 2.5rem 0.75rem 2rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 479px) {
+  /* Hide floating stat cards — they overflow on tiny screens */
+  .stat-card {
+    display: none;
+  }
+
+  .hero__visual {
+    padding: 0;
+  }
+
+  /* Stack CTA buttons vertically */
+  .hero__ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Process steps: single column, compact */
+  .process__step {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  /* Pricing: already 1-col, reduce padding */
+  .pricing__card {
+    padding: 1.5rem;
+  }
+
+  /* Reduce section padding */
+  :root {
+    --section-pad: 4rem 0;
+  }
+
+  /* CTA section */
+  .cta-section__inner {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════
+   RESULTATEN SECTION
+═══════════════════════════════════════ */
+.resultaten {
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(5,254,130,0.04) 0%, transparent 70%);
+}
+
+.resultaten__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .resultaten__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.resultaten__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition-slow), transform var(--transition-slow), box-shadow var(--transition-slow);
+}
+
+.resultaten__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(5,254,130,0.5), transparent);
+}
+
+.resultaten__card:hover {
+  border-color: rgba(5, 254, 130, 0.25);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow), var(--shadow-md);
+}
+
+.resultaten__icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(5, 254, 130, 0.1);
+  border: 1px solid rgba(5, 254, 130, 0.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--color-accent);
+}
+
+.resultaten__metric {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 800;
+  color: var(--color-accent);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.resultaten__desc {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  max-width: 200px;
+  margin: 0 auto;
+}
