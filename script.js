@@ -529,7 +529,7 @@ function animateFlow() {
 (function initI18n() {
   const T = {
     nl: {
-      nav: { approach: 'Aanpak', forWho: 'Voor wie', packages: 'Pakketten', faq: 'FAQ', cta: 'Gratis gesprek', ctaMobile: 'Gratis gesprek plannen', diensten: 'Diensten', dienstenDropdown: { websites: { name: 'Websites laten maken', desc: 'Conversiegericht, snel en op maat' }, workflow: { name: 'Workflow Automatisering', desc: 'Processen op de achtergrond draaien' }, ai: { name: 'AI Implementatie', desc: 'AI die écht werkt voor je bedrijf' } } },
+      nav: { approach: 'Aanpak', forWho: 'Voor wie', packages: 'Pakketten', faq: 'FAQ', cta: 'Gratis gesprek', ctaMobile: 'Gratis gesprek plannen', diensten: 'Diensten', dienstenDropdown: { websites: { name: 'Websites laten maken', desc: 'Conversiegericht, snel en op maat' }, workflow: { name: 'Workflow Automatisering', desc: 'Processen op de achtergrond draaien' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code maatwerk' } } },
       hero: {
         badge: 'Website · SEO · Workflow Automatisering',
         title: 'Meer resultaat.<br><span class="hero__title-accent">Minder handwerk.</span>',
@@ -610,11 +610,11 @@ function animateFlow() {
         title: 'Wat we voor je bouwen',
         c1: { title: 'Websites die converteren', desc: 'Van snelle zakelijke website tot volledig geoptimaliseerde landingspagina. Wij bouwen op maat, snel en conversion-first.', link: 'Bekijk websitediensten' },
         c2: { title: 'Werk slimmer, niet harder', desc: 'Automatiseer repetitieve taken en laat je bedrijfsprocessen op de achtergrond draaien met n8n, Make en AI.', link: 'Bekijk automatisering' },
-        c3: { title: 'AI die écht werkt voor je bedrijf', desc: 'Van AI chatbots tot volledige AI implementaties. Klaar voor gebruik, getraind op jouw bedrijf.', link: 'Bekijk AI diensten' }
+        c3: { title: 'AI Development op maat', desc: 'Maatwerk AI-oplossingen gebouwd met Claude Code en VS Code. Van AI agents tot volledige integraties in je bedrijfsprocessen.', link: 'Bekijk AI Development' }
       }
     },
     en: {
-      nav: { approach: 'Approach', forWho: 'For who', packages: 'Packages', faq: 'FAQ', cta: 'Free call', ctaMobile: 'Schedule a free call', diensten: 'Services', dienstenDropdown: { websites: { name: 'Website development', desc: 'Conversion-focused, fast and custom' }, workflow: { name: 'Workflow Automation', desc: 'Business processes running in the background' }, ai: { name: 'AI Implementation', desc: 'AI that actually works for your business' } } },
+      nav: { approach: 'Approach', forWho: 'For who', packages: 'Packages', faq: 'FAQ', cta: 'Free call', ctaMobile: 'Schedule a free call', diensten: 'Services', dienstenDropdown: { websites: { name: 'Website development', desc: 'Conversion-focused, fast and custom' }, workflow: { name: 'Workflow Automation', desc: 'Business processes running in the background' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code custom builds' } } },
       hero: {
         badge: 'Website · SEO · Workflow Automation',
         title: 'More results.<br><span class="hero__title-accent">Less manual work.</span>',
@@ -695,7 +695,7 @@ function animateFlow() {
         title: 'What we build for you',
         c1: { title: 'Websites that convert', desc: 'From a fast business website to a fully optimised landing page. We build custom, fast and conversion-first.', link: 'View website services' },
         c2: { title: 'Work smarter, not harder', desc: 'Automate repetitive tasks and let your business processes run in the background with n8n, Make and AI.', link: 'View automation' },
-        c3: { title: 'AI that actually works for your business', desc: 'From AI chatbots to full AI implementations. Ready to use, trained on your business.', link: 'View AI services' }
+        c3: { title: 'Custom AI Development', desc: 'Bespoke AI solutions built with Claude Code and VS Code. From AI agents to full integrations in your business processes.', link: 'View AI Development' }
       }
     }
   };

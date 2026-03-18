@@ -2706,6 +2706,15 @@ html[data-theme="light"] .diensten {
 .navbar__dropdown-item {
   position: relative;
 }
+/* Invisible bridge fills the gap between trigger and panel so hover never breaks */
+.navbar__dropdown-item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0.75rem;
+}
 
 .navbar__dropdown-trigger {
   display: flex;
