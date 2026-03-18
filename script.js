@@ -90,6 +90,21 @@ function throttle(fn, delay) {
     }
   });
 
+  /* Dropdown behavior (desktop) */
+  const dropdownItems = document.querySelectorAll('.navbar__dropdown-item');
+  dropdownItems.forEach(item => {
+    document.addEventListener('click', (e) => {
+      if (!item.contains(e.target)) item.classList.remove('is-open');
+    });
+  });
+
+  /* Mobile accordion */
+  const accordions = document.querySelectorAll('.navbar__mobile-accordion');
+  accordions.forEach(acc => {
+    const trigger = acc.querySelector('.navbar__mobile-accordion-trigger');
+    trigger?.addEventListener('click', () => acc.classList.toggle('is-open'));
+  });
+
   /* Active nav link on scroll */
   const sections = ['hero', 'aanpak', 'diensten', 'prijzen', 'faq', 'contact'];
 
@@ -514,7 +529,7 @@ function animateFlow() {
 (function initI18n() {
   const T = {
     nl: {
-      nav: { approach: 'Aanpak', forWho: 'Voor wie', packages: 'Pakketten', faq: 'FAQ', cta: 'Gratis gesprek', ctaMobile: 'Gratis gesprek plannen' },
+      nav: { approach: 'Aanpak', forWho: 'Voor wie', packages: 'Pakketten', faq: 'FAQ', cta: 'Gratis gesprek', ctaMobile: 'Gratis gesprek plannen', diensten: 'Diensten', dienstenDropdown: { websites: { name: 'Websites laten maken', desc: 'Conversiegericht, snel en op maat' }, workflow: { name: 'Workflow Automatisering', desc: 'Processen op de achtergrond draaien' }, ai: { name: 'AI Implementatie', desc: 'AI die écht werkt voor je bedrijf' } } },
       hero: {
         badge: 'Website · SEO · Workflow Automatisering',
         title: 'Meer resultaat.<br><span class="hero__title-accent">Minder handwerk.</span>',
@@ -589,10 +604,17 @@ function animateFlow() {
         r3: { metric: '3.2×', desc: 'hogere ROI op marketingbudget' }
       },
       wa: { tooltip: 'App ons direct' },
-      cookie: { text: 'Wij gebruiken cookies voor analytics en een betere gebruikerservaring. Lees ons <a href="/privacy">privacybeleid</a>.', accept: 'Accepteren', decline: 'Alleen noodzakelijk' }
+      cookie: { text: 'Wij gebruiken cookies voor analytics en een betere gebruikerservaring. Lees ons <a href="/privacy">privacybeleid</a>.', accept: 'Accepteren', decline: 'Alleen noodzakelijk' },
+      dienstenOverzicht: {
+        label: 'Wat we doen',
+        title: 'Wat we voor je bouwen',
+        c1: { title: 'Websites die converteren', desc: 'Van snelle zakelijke website tot volledig geoptimaliseerde landingspagina. Wij bouwen op maat, snel en conversion-first.', link: 'Bekijk websitediensten' },
+        c2: { title: 'Werk slimmer, niet harder', desc: 'Automatiseer repetitieve taken en laat je bedrijfsprocessen op de achtergrond draaien met n8n, Make en AI.', link: 'Bekijk automatisering' },
+        c3: { title: 'AI die écht werkt voor je bedrijf', desc: 'Van AI chatbots tot volledige AI implementaties. Klaar voor gebruik, getraind op jouw bedrijf.', link: 'Bekijk AI diensten' }
+      }
     },
     en: {
-      nav: { approach: 'Approach', forWho: 'For who', packages: 'Packages', faq: 'FAQ', cta: 'Free call', ctaMobile: 'Schedule a free call' },
+      nav: { approach: 'Approach', forWho: 'For who', packages: 'Packages', faq: 'FAQ', cta: 'Free call', ctaMobile: 'Schedule a free call', diensten: 'Services', dienstenDropdown: { websites: { name: 'Website development', desc: 'Conversion-focused, fast and custom' }, workflow: { name: 'Workflow Automation', desc: 'Business processes running in the background' }, ai: { name: 'AI Implementation', desc: 'AI that actually works for your business' } } },
       hero: {
         badge: 'Website · SEO · Workflow Automation',
         title: 'More results.<br><span class="hero__title-accent">Less manual work.</span>',
@@ -667,7 +689,14 @@ function animateFlow() {
         r3: { metric: '3.2×', desc: 'higher ROI on marketing budget' }
       },
       wa: { tooltip: 'Message us directly' },
-      cookie: { text: 'We use cookies for analytics and a better user experience. Read our <a href="/privacy">privacy policy</a>.', accept: 'Accept', decline: 'Essential only' }
+      cookie: { text: 'We use cookies for analytics and a better user experience. Read our <a href="/privacy">privacy policy</a>.', accept: 'Accept', decline: 'Essential only' },
+      dienstenOverzicht: {
+        label: 'What we do',
+        title: 'What we build for you',
+        c1: { title: 'Websites that convert', desc: 'From a fast business website to a fully optimised landing page. We build custom, fast and conversion-first.', link: 'View website services' },
+        c2: { title: 'Work smarter, not harder', desc: 'Automate repetitive tasks and let your business processes run in the background with n8n, Make and AI.', link: 'View automation' },
+        c3: { title: 'AI that actually works for your business', desc: 'From AI chatbots to full AI implementations. Ready to use, trained on your business.', link: 'View AI services' }
+      }
     }
   };
 
@@ -696,6 +725,18 @@ function animateFlow() {
       const val = getKey(T[lang], el.dataset.i18nPlaceholder);
       if (val !== undefined) el.setAttribute('placeholder', val);
     });
+
+    // Page-specific translations (for service pages)
+    if (window.PAGE_T && window.PAGE_T[lang]) {
+      document.querySelectorAll('[data-page-i18n]').forEach(el => {
+        const val = getKey(window.PAGE_T[lang], el.dataset.pageI18n);
+        if (val !== undefined) el.textContent = val;
+      });
+      document.querySelectorAll('[data-page-i18n-html]').forEach(el => {
+        const val = getKey(window.PAGE_T[lang], el.dataset.pageI18nHtml);
+        if (val !== undefined) el.innerHTML = val;
+      });
+    }
   }
 
   const btns = [document.getElementById('langToggle'), document.getElementById('langToggleMobile')];

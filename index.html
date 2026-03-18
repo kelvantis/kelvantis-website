@@ -106,6 +106,35 @@
 
       <nav class="navbar__nav" id="navMenu" aria-label="Hoofdnavigatie">
         <ul class="navbar__links" role="list">
+          <li class="navbar__dropdown-item">
+            <button class="navbar__dropdown-trigger" aria-haspopup="true">
+              <span data-i18n="nav.diensten">Diensten</span>
+              <span class="navbar__dropdown-arrow">▾</span>
+            </button>
+            <div class="navbar__dropdown-panel" role="menu">
+              <a href="/diensten/website-laten-maken.html" class="navbar__dropdown-link" role="menuitem">
+                <span class="navbar__dropdown-link-icon">🌐</span>
+                <span class="navbar__dropdown-link-text">
+                  <strong data-i18n="nav.dienstenDropdown.websites.name">Websites laten maken</strong>
+                  <small data-i18n="nav.dienstenDropdown.websites.desc">Conversiegericht, snel en op maat</small>
+                </span>
+              </a>
+              <a href="/diensten/workflow-automatisering.html" class="navbar__dropdown-link" role="menuitem">
+                <span class="navbar__dropdown-link-icon">⚡</span>
+                <span class="navbar__dropdown-link-text">
+                  <strong data-i18n="nav.dienstenDropdown.workflow.name">Workflow Automatisering</strong>
+                  <small data-i18n="nav.dienstenDropdown.workflow.desc">Processen op de achtergrond draaien</small>
+                </span>
+              </a>
+              <a href="/diensten/ai-implementatie.html" class="navbar__dropdown-link" role="menuitem">
+                <span class="navbar__dropdown-link-icon">🤖</span>
+                <span class="navbar__dropdown-link-text">
+                  <strong data-i18n="nav.dienstenDropdown.ai.name">AI Implementatie</strong>
+                  <small data-i18n="nav.dienstenDropdown.ai.desc">AI die écht werkt voor je bedrijf</small>
+                </span>
+              </a>
+            </div>
+          </li>
           <li><a href="#aanpak" class="navbar__link" data-nav="aanpak" data-i18n="nav.approach">Aanpak</a></li>
           <li><a href="#voor-wie" class="navbar__link" data-nav="voor-wie" data-i18n="nav.forWho">Voor wie</a></li>
           <li><a href="#prijzen" class="navbar__link" data-nav="prijzen" data-i18n="nav.packages">Pakketten</a></li>
@@ -135,6 +164,19 @@
     <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
       <nav aria-label="Mobiele navigatie">
         <ul class="navbar__mobile-links" role="list">
+          <li>
+            <div class="navbar__mobile-accordion">
+              <button class="navbar__mobile-accordion-trigger">
+                <span data-i18n="nav.diensten">Diensten</span>
+                <span class="navbar__mobile-accordion-arrow">▾</span>
+              </button>
+              <nav class="navbar__mobile-subnav">
+                <a href="/diensten/website-laten-maken.html">🌐 <span data-i18n="nav.dienstenDropdown.websites.name">Websites laten maken</span></a>
+                <a href="/diensten/workflow-automatisering.html">⚡ <span data-i18n="nav.dienstenDropdown.workflow.name">Workflow Automatisering</span></a>
+                <a href="/diensten/ai-implementatie.html">🤖 <span data-i18n="nav.dienstenDropdown.ai.name">AI Implementatie</span></a>
+              </nav>
+            </div>
+          </li>
           <li><a href="#aanpak" class="navbar__mobile-link" data-i18n="nav.approach">Aanpak</a></li>
           <li><a href="#voor-wie" class="navbar__mobile-link" data-i18n="nav.forWho">Voor wie</a></li>
           <li><a href="#prijzen" class="navbar__mobile-link" data-i18n="nav.packages">Pakketten</a></li>
@@ -446,6 +488,44 @@
         </div>
       </div>
     </div>
+
+    <!-- ═══════════════════════════════════════
+         DIENSTEN OVERZICHT
+    ═══════════════════════════════════════ -->
+    <section class="section diensten-overzicht" id="diensten-overzicht">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label" data-i18n="dienstenOverzicht.label">Wat we doen</span>
+          <h2 class="section__title" data-i18n="dienstenOverzicht.title">Wat we voor je bouwen</h2>
+        </div>
+        <div class="diensten-overzicht__grid">
+          <div class="diensten__card reveal">
+            <div class="diensten-overzicht__card-emoji">🌐</div>
+            <h3 class="diensten__card-title" data-i18n="dienstenOverzicht.c1.title">Websites die converteren</h3>
+            <p class="diensten__card-desc" data-i18n="dienstenOverzicht.c1.desc">Van snelle zakelijke website tot volledig geoptimaliseerde landingspagina. Wij bouwen op maat, snel en conversion-first.</p>
+            <a href="/diensten/website-laten-maken.html" class="diensten-overzicht__card-link">
+              <span data-i18n="dienstenOverzicht.c1.link">Bekijk websitediensten</span> →
+            </a>
+          </div>
+          <div class="diensten__card reveal">
+            <div class="diensten-overzicht__card-emoji">⚡</div>
+            <h3 class="diensten__card-title" data-i18n="dienstenOverzicht.c2.title">Werk slimmer, niet harder</h3>
+            <p class="diensten__card-desc" data-i18n="dienstenOverzicht.c2.desc">Automatiseer repetitieve taken en laat je bedrijfsprocessen op de achtergrond draaien met n8n, Make en AI.</p>
+            <a href="/diensten/workflow-automatisering.html" class="diensten-overzicht__card-link">
+              <span data-i18n="dienstenOverzicht.c2.link">Bekijk automatisering</span> →
+            </a>
+          </div>
+          <div class="diensten__card reveal">
+            <div class="diensten-overzicht__card-emoji">🤖</div>
+            <h3 class="diensten__card-title" data-i18n="dienstenOverzicht.c3.title">AI die écht werkt voor je bedrijf</h3>
+            <p class="diensten__card-desc" data-i18n="dienstenOverzicht.c3.desc">Van AI chatbots tot volledige AI implementaties. Klaar voor gebruik, getraind op jouw bedrijf.</p>
+            <a href="/diensten/ai-implementatie.html" class="diensten-overzicht__card-link">
+              <span data-i18n="dienstenOverzicht.c3.link">Bekijk AI diensten</span> →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ═══════════════════════════════════════
          PROCESS / AANPAK
