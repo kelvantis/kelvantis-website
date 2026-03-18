@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,15 +106,23 @@
 
       <nav class="navbar__nav" id="navMenu" aria-label="Hoofdnavigatie">
         <ul class="navbar__links" role="list">
-          <li><a href="#aanpak" class="navbar__link" data-nav="aanpak">Aanpak</a></li>
-          <li><a href="#voor-wie" class="navbar__link" data-nav="voor-wie">Voor wie</a></li>
-          <li><a href="#prijzen" class="navbar__link" data-nav="prijzen">Pakketten</a></li>
-          <li><a href="#faq" class="navbar__link" data-nav="faq">FAQ</a></li>
+          <li><a href="#aanpak" class="navbar__link" data-nav="aanpak" data-i18n="nav.approach">Aanpak</a></li>
+          <li><a href="#voor-wie" class="navbar__link" data-nav="voor-wie" data-i18n="nav.forWho">Voor wie</a></li>
+          <li><a href="#prijzen" class="navbar__link" data-nav="prijzen" data-i18n="nav.packages">Pakketten</a></li>
+          <li><a href="#faq" class="navbar__link" data-nav="faq" data-i18n="nav.faq">FAQ</a></li>
         </ul>
       </nav>
 
       <div class="navbar__actions">
-        <button class="btn btn--primary btn--sm" data-modal="open">Gratis gesprek</button>
+        <button class="btn btn--primary btn--sm" data-modal="open" data-i18n="nav.cta">Gratis gesprek</button>
+        <button class="navbar__lang-toggle" id="langToggle" aria-label="Switch language">
+          <span id="langLabel">EN</span>
+        </button>
+        <button class="navbar__theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg id="themeIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </button>
         <button class="navbar__hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu">
           <span class="navbar__hamburger-line"></span>
           <span class="navbar__hamburger-line"></span>
@@ -127,11 +135,23 @@
     <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
       <nav aria-label="Mobiele navigatie">
         <ul class="navbar__mobile-links" role="list">
-          <li><a href="#aanpak" class="navbar__mobile-link">Aanpak</a></li>
-          <li><a href="#voor-wie" class="navbar__mobile-link">Voor wie</a></li>
-          <li><a href="#prijzen" class="navbar__mobile-link">Pakketten</a></li>
-          <li><a href="#faq" class="navbar__mobile-link">FAQ</a></li>
-          <li><button class="btn btn--primary btn--full" data-modal="open">Gratis gesprek plannen</button></li>
+          <li><a href="#aanpak" class="navbar__mobile-link" data-i18n="nav.approach">Aanpak</a></li>
+          <li><a href="#voor-wie" class="navbar__mobile-link" data-i18n="nav.forWho">Voor wie</a></li>
+          <li><a href="#prijzen" class="navbar__mobile-link" data-i18n="nav.packages">Pakketten</a></li>
+          <li><a href="#faq" class="navbar__mobile-link" data-i18n="nav.faq">FAQ</a></li>
+          <li>
+            <div class="navbar__mobile-toggles">
+              <button class="navbar__lang-toggle" id="langToggleMobile" aria-label="Switch language">
+                <span id="langLabelMobile">EN</span>
+              </button>
+              <button class="navbar__theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
+                <svg id="themeIconMobile" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li><button class="btn btn--primary btn--full" data-modal="open" data-i18n="nav.ctaMobile">Gratis gesprek plannen</button></li>
         </ul>
       </nav>
     </div>
@@ -153,26 +173,26 @@
           <div class="hero__text">
             <div class="hero__badge reveal">
               <span class="hero__badge-dot" aria-hidden="true"></span>
-              Website · SEO · Workflow Automatisering
+              <span data-i18n="hero.badge">Website · SEO · Workflow Automatisering</span>
             </div>
 
-            <h1 class="hero__title reveal" id="hero-heading">
+            <h1 class="hero__title reveal" id="hero-heading" data-i18n-html="hero.title">
               Meer resultaat.<br>
               <span class="hero__title-accent">Minder handwerk.</span>
             </h1>
 
-            <p class="hero__subtitle reveal">
+            <p class="hero__subtitle reveal" data-i18n="hero.subtitle">
               Kelvantis bouwt conversiegerichte websites, SEO-strategieën en workflow automations voor B2B bedrijven. AI zit verwerkt in alles — van copywriting tot lead-opvolging. We build systems that work while you don't.
             </p>
 
             <div class="hero__ctas reveal">
               <button class="btn btn--primary btn--lg" data-modal="open">
-                Gratis strategiegesprek
+                <span data-i18n="hero.ctaPrimary">Gratis strategiegesprek</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <a href="#aanpak" class="btn btn--ghost btn--lg">
+              <a href="#aanpak" class="btn btn--ghost btn--lg" data-i18n="hero.ctaSecondary">
                 Bekijk aanpak
               </a>
             </div>
@@ -184,7 +204,7 @@
                 <span class="hero__avatar hero__avatar--3"></span>
                 <span class="hero__avatar hero__avatar--4"></span>
               </div>
-              <p class="hero__trust-text">
+              <p class="hero__trust-text" data-i18n-html="hero.trust">
                 Gebouwd voor <strong>B2B bedrijven</strong> in Nederland
               </p>
             </div>
@@ -200,7 +220,7 @@
               </div>
               <div>
                 <div class="stat-card__value">+127%</div>
-                <div class="stat-card__label">Meer leads</div>
+                <div class="stat-card__label" data-i18n="stat1.label">Meer leads</div>
               </div>
             </div>
 
@@ -210,7 +230,7 @@
               </div>
               <div>
                 <div class="stat-card__value">24/7</div>
-                <div class="stat-card__label">Actief</div>
+                <div class="stat-card__label" data-i18n="stat2.label">Actief</div>
               </div>
             </div>
 
@@ -220,7 +240,7 @@
               </div>
               <div>
                 <div class="stat-card__value">3.2x</div>
-                <div class="stat-card__label">Gemiddelde ROI</div>
+                <div class="stat-card__label" data-i18n="stat3.label">Gemiddelde ROI</div>
               </div>
             </div>
 
@@ -248,17 +268,17 @@
                 <div class="dashboard__panel dashboard__panel--active" id="tab-website" role="tabpanel" aria-labelledby="btn-website">
                   <div class="dashboard__metrics">
                     <div class="dashboard__metric">
-                      <span class="dashboard__metric-label">Bezoekers</span>
+                      <span class="dashboard__metric-label" data-i18n="dash.visitors">Bezoekers</span>
                       <span class="dashboard__metric-value">2,847</span>
                       <span class="dashboard__metric-change">↑ 34%</span>
                     </div>
                     <div class="dashboard__metric">
-                      <span class="dashboard__metric-label">Conversie</span>
+                      <span class="dashboard__metric-label" data-i18n="dash.conversion">Conversie</span>
                       <span class="dashboard__metric-value">4.2%</span>
                       <span class="dashboard__metric-change">↑ 1.1%</span>
                     </div>
                     <div class="dashboard__metric">
-                      <span class="dashboard__metric-label">Leads</span>
+                      <span class="dashboard__metric-label" data-i18n="dash.leads">Leads</span>
                       <span class="dashboard__metric-value">119</span>
                       <span class="dashboard__metric-change">↑ 27%</span>
                     </div>
@@ -288,14 +308,14 @@
                 <!-- AI tab -->
                 <div class="dashboard__panel" id="tab-ai" role="tabpanel" aria-labelledby="btn-ai" aria-hidden="true">
                   <div class="ai-chat">
-                    <div class="ai-chat__message ai-chat__message--user">
+                    <div class="ai-chat__message ai-chat__message--user" data-i18n="ai.q1">
                       Wat zijn jullie openingstijden?
                     </div>
                     <div class="ai-chat__message ai-chat__message--bot">
                       <div class="ai-chat__bot-label" aria-hidden="true">AI</div>
-                      <div class="ai-chat__bubble">We zijn bereikbaar van ma–vr 8:00–18:00. Wil je direct een afspraak plannen?</div>
+                      <div class="ai-chat__bubble" data-i18n="ai.a1">We zijn bereikbaar van ma–vr 8:00–18:00. Wil je direct een afspraak plannen?</div>
                     </div>
-                    <div class="ai-chat__message ai-chat__message--user">
+                    <div class="ai-chat__message ai-chat__message--user" data-i18n="ai.q2">
                       Ja graag, morgen 10:00?
                     </div>
                     <div class="ai-chat__message ai-chat__message--bot">
@@ -310,11 +330,11 @@
                   <div class="ai-stats">
                     <div class="ai-stat">
                       <span class="ai-stat__value">94%</span>
-                      <span class="ai-stat__label">Vragen beantwoord</span>
+                      <span class="ai-stat__label" data-i18n="ai.stat1">Vragen beantwoord</span>
                     </div>
                     <div class="ai-stat">
                       <span class="ai-stat__value">1.8s</span>
-                      <span class="ai-stat__label">Gem. responstijd</span>
+                      <span class="ai-stat__label" data-i18n="ai.stat2">Gem. responstijd</span>
                     </div>
                   </div>
                 </div>
@@ -326,7 +346,7 @@
                       <div class="flow__icon" aria-hidden="true">
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round"/></svg>
                       </div>
-                      <span>Lead binnenkomt</span>
+                      <span data-i18n="flow.step1">Lead binnenkomt</span>
                       <span class="flow__check" aria-hidden="true">✓</span>
                     </div>
                     <div class="flow__connector" aria-hidden="true"></div>
@@ -334,25 +354,25 @@
                       <div class="flow__icon" aria-hidden="true">
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#05FE82" stroke-width="1.5"/><path d="M6 8h4M8 6v4" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round"/></svg>
                       </div>
-                      <span>AI kwalificeert</span>
+                      <span data-i18n="flow.step2">AI kwalificeert</span>
                     </div>
                     <div class="flow__connector" aria-hidden="true"></div>
                     <div class="flow__step">
                       <div class="flow__icon" aria-hidden="true">
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="9" rx="1" stroke="#05FE82" stroke-width="1.5"/><path d="M2 7l6 4 6-4" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round"/></svg>
                       </div>
-                      <span>Email verstuurd</span>
+                      <span data-i18n="flow.step3">Email verstuurd</span>
                     </div>
                     <div class="flow__connector" aria-hidden="true"></div>
                     <div class="flow__step">
                       <div class="flow__icon" aria-hidden="true">
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="1" stroke="#05FE82" stroke-width="1.5"/><path d="M5 8h6M8 5v6" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round"/></svg>
                       </div>
-                      <span>Afspraak gepland</span>
+                      <span data-i18n="flow.step4">Afspraak gepland</span>
                     </div>
                   </div>
                   <div class="flow__footer">
-                    <span class="flow__badge">47 automations actief</span>
+                    <span class="flow__badge" data-i18n="flow.badge">47 automations actief</span>
                   </div>
                 </div>
 
@@ -433,9 +453,9 @@
     <section class="section process" id="aanpak" aria-labelledby="aanpak-heading">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__label">Aanpak</span>
-          <h2 class="section__title" id="aanpak-heading">Van gesprek tot groei.<br>In vier stappen.</h2>
-          <p class="section__subtitle">Geen maandenlange trajecten. Geen vaag advies. Wij bouwen en lanceren snel, zodat jij zo snel mogelijk resultaat ziet.</p>
+          <span class="section__label" data-i18n="process.label">Aanpak</span>
+          <h2 class="section__title" id="aanpak-heading" data-i18n-html="process.title">Van gesprek tot groei.<br>In vier stappen.</h2>
+          <p class="section__subtitle" data-i18n="process.subtitle">Geen maandenlange trajecten. Geen vaag advies. Wij bouwen en lanceren snel, zodat jij zo snel mogelijk resultaat ziet.</p>
         </div>
 
         <div class="process__steps">
@@ -446,8 +466,8 @@
               <div class="process__step-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M12 3C7.03 3 3 7.03 3 12c0 1.68.44 3.26 1.2 4.63L3 21l4.37-1.2A8.96 8.96 0 0012 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <h3 class="process__step-title">Strategiegesprek</h3>
-              <p class="process__step-desc">We starten met een gratis gesprek om jouw situatie te begrijpen, knelpunten te identificeren en de grootste groeikansen bloot te leggen. Geen verplichtingen — wel concrete inzichten.</p>
+              <h3 class="process__step-title" data-i18n="process.s1.title">Strategiegesprek</h3>
+              <p class="process__step-desc" data-i18n="process.s1.desc">We starten met een gratis gesprek om jouw situatie te begrijpen, knelpunten te identificeren en de grootste groeikansen bloot te leggen. Geen verplichtingen — wel concrete inzichten.</p>
             </div>
           </div>
 
@@ -457,8 +477,8 @@
               <div class="process__step-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M9 9h6M9 12h4M9 15h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </div>
-              <h3 class="process__step-title">Systeem ontwerp</h3>
-              <p class="process__step-desc">Op basis van jouw doelen ontwerpen we een op maat gemaakt digitaal systeem. Je krijgt een helder plan met exacte tools, koppelingen en verwachte resultaten — voordat we ook maar één regel code schrijven.</p>
+              <h3 class="process__step-title" data-i18n="process.s2.title">Systeem ontwerp</h3>
+              <p class="process__step-desc" data-i18n="process.s2.desc">Op basis van jouw doelen ontwerpen we een op maat gemaakt digitaal systeem. Je krijgt een helder plan met exacte tools, koppelingen en verwachte resultaten — voordat we ook maar één regel code schrijven.</p>
             </div>
           </div>
 
@@ -468,8 +488,8 @@
               <div class="process__step-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14 3v4a1 1 0 001 1h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 13h6M9 17h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </div>
-              <h3 class="process__step-title">Bouwen & koppelen</h3>
-              <p class="process__step-desc">We bouwen alles van A tot Z en koppelen alle tools naadloos aan elkaar. Website, AI chatbot, automations, CRM — jij hoeft nergens naar om te kijken. Wij houden je op de hoogte via wekelijkse updates.</p>
+              <h3 class="process__step-title" data-i18n="process.s3.title">Bouwen &amp; koppelen</h3>
+              <p class="process__step-desc" data-i18n="process.s3.desc">We bouwen alles van A tot Z en koppelen alle tools naadloos aan elkaar. Website, AI chatbot, automations, CRM — jij hoeft nergens naar om te kijken. Wij houden je op de hoogte via wekelijkse updates.</p>
             </div>
           </div>
 
@@ -479,8 +499,8 @@
               <div class="process__step-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 17l4-8 4 4 4-6 4 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="17" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
               </div>
-              <h3 class="process__step-title">Live & schaalbaar</h3>
-              <p class="process__step-desc">Jouw systeem gaat live en begint direct voor je te werken. We monitoren de prestaties, optimaliseren waar nodig, en schalen het systeem mee zodra jij klaar bent voor de volgende groeistap.</p>
+              <h3 class="process__step-title" data-i18n="process.s4.title">Live &amp; schaalbaar</h3>
+              <p class="process__step-desc" data-i18n="process.s4.desc">Jouw systeem gaat live en begint direct voor je te werken. We monitoren de prestaties, optimaliseren waar nodig, en schalen het systeem mee zodra jij klaar bent voor de volgende groeistap.</p>
             </div>
           </div>
 
@@ -494,9 +514,9 @@
     <section class="section voor-wie" id="voor-wie" aria-labelledby="voor-wie-heading">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__label">Voor wie</span>
-          <h2 class="section__title" id="voor-wie-heading">Voor jou, als je<br>dit herkent.</h2>
-          <p class="section__subtitle">Kelvantis werkt met B2B bedrijven — van startup tot enterprise — die concrete problemen hebben op het vlak van online zichtbaarheid, leadgeneratie of inefficiënte werkprocessen. Herken jij jezelf?</p>
+          <span class="section__label" data-i18n="forwho.label">Voor wie</span>
+          <h2 class="section__title" id="voor-wie-heading" data-i18n-html="forwho.title">Voor jou, als je<br>dit herkent.</h2>
+          <p class="section__subtitle" data-i18n="forwho.subtitle">Kelvantis werkt met B2B bedrijven — van startup tot enterprise — die concrete problemen hebben op het vlak van online zichtbaarheid, leadgeneratie of inefficiënte werkprocessen. Herken jij jezelf?</p>
         </div>
 
         <div class="voor-wie__grid">
@@ -506,8 +526,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
             </div>
             <div>
-              <h3 class="voor-wie__title">"Leads komen binnen, maar opvolging is een chaos"</h3>
-              <p class="voor-wie__desc">Aanvragen worden te laat of helemaal niet opgevolgd. Je verliest deals niet omdat het product niet goed is — maar omdat het proces faalt. Wij automatiseren de opvolging volledig.</p>
+              <h3 class="voor-wie__title" data-i18n="forwho.c1.title">"Leads komen binnen, maar opvolging is een chaos"</h3>
+              <p class="voor-wie__desc" data-i18n="forwho.c1.desc">Aanvragen worden te laat of helemaal niet opgevolgd. Je verliest deals niet omdat het product niet goed is — maar omdat het proces faalt. Wij automatiseren de opvolging volledig.</p>
             </div>
           </article>
 
@@ -516,8 +536,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <div>
-              <h3 class="voor-wie__title">"We verliezen uren aan handmatig herhaalwerk"</h3>
-              <p class="voor-wie__desc">Facturen verwerken, CRM bijhouden, rapportages opstellen, e-mails kopiëren. Werk dat een systeem kan doen terwijl jij bezig bent met wat echt telt.</p>
+              <h3 class="voor-wie__title" data-i18n="forwho.c2.title">"We verliezen uren aan handmatig herhaalwerk"</h3>
+              <p class="voor-wie__desc" data-i18n="forwho.c2.desc">Facturen verwerken, CRM bijhouden, rapportages opstellen, e-mails kopiëren. Werk dat een systeem kan doen terwijl jij bezig bent met wat echt telt.</p>
             </div>
           </article>
 
@@ -526,8 +546,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
             </div>
             <div>
-              <h3 class="voor-wie__title">"Onze website converteert niet"</h3>
-              <p class="voor-wie__desc">Bezoekers komen, bekijken en vertrekken zonder te converteren. Je hebt een website die er mooi uitziet, maar die niet verkoopt. Wij bouwen voor conversie — niet voor decoratie.</p>
+              <h3 class="voor-wie__title" data-i18n="forwho.c3.title">"Onze website converteert niet"</h3>
+              <p class="voor-wie__desc" data-i18n="forwho.c3.desc">Bezoekers komen, bekijken en vertrekken zonder te converteren. Je hebt een website die er mooi uitziet, maar die niet verkoopt. Wij bouwen voor conversie — niet voor decoratie.</p>
             </div>
           </article>
 
@@ -536,8 +556,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
             </div>
             <div>
-              <h3 class="voor-wie__title">"We willen AI integreren maar weten niet hoe"</h3>
-              <p class="voor-wie__desc">Je ziet het potentieel van AI maar het ontbreekt aan overzicht, richting en iemand die het concreet kan bouwen. Geen hype, geen theorie — wij implementeren wat werkt.</p>
+              <h3 class="voor-wie__title" data-i18n="forwho.c4.title">"We willen AI integreren maar weten niet hoe"</h3>
+              <p class="voor-wie__desc" data-i18n="forwho.c4.desc">Je ziet het potentieel van AI maar het ontbreekt aan overzicht, richting en iemand die het concreet kan bouwen. Geen hype, geen theorie — wij implementeren wat werkt.</p>
             </div>
           </article>
 
@@ -546,8 +566,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
             <div>
-              <h3 class="voor-wie__title">"We zijn slecht vindbaar in Google"</h3>
-              <p class="voor-wie__desc">Je concurrenten staan bovenaan en pakken de leads die van jou hadden kunnen zijn. SEO is geen trucje — het is een systeem. Wij bouwen dat systeem en maken het meetbaar.</p>
+              <h3 class="voor-wie__title" data-i18n="forwho.c5.title">"We zijn slecht vindbaar in Google"</h3>
+              <p class="voor-wie__desc" data-i18n="forwho.c5.desc">Je concurrenten staan bovenaan en pakken de leads die van jou hadden kunnen zijn. SEO is geen trucje — het is een systeem. Wij bouwen dat systeem en maken het meetbaar.</p>
             </div>
           </article>
 
@@ -556,20 +576,20 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
             <div>
-              <h3 class="voor-wie__title">"We hebben een complete digitale infrastructuur nodig"</h3>
-              <p class="voor-wie__desc">Van een verouderde website tot een totale herbouw van je digitale stack. Website, SEO, automations en AI-integraties — wij ontwerpen en bouwen het als één samenhangend systeem.</p>
+              <h3 class="voor-wie__title" data-i18n="forwho.c6.title">"We hebben een complete digitale infrastructuur nodig"</h3>
+              <p class="voor-wie__desc" data-i18n="forwho.c6.desc">Van een verouderde website tot een totale herbouw van je digitale stack. Website, SEO, automations en AI-integraties — wij ontwerpen en bouwen het als één samenhangend systeem.</p>
             </div>
           </article>
 
         </div>
 
         <div class="voor-wie__not-for reveal" aria-label="Niet geschikt voor">
-          <p class="voor-wie__not-for-title">Niet voor jou als je zoekt naar:</p>
+          <p class="voor-wie__not-for-title" data-i18n="forwho.notfor.title">Niet voor jou als je zoekt naar:</p>
           <div class="voor-wie__not-for-list">
-            <span class="voor-wie__not-for-item">Social media beheer</span>
-            <span class="voor-wie__not-for-item">Maandelijks ads-beheer</span>
-            <span class="voor-wie__not-for-item">Dagelijkse content creatie</span>
-            <span class="voor-wie__not-for-item">Uurtje-factuurtje werk</span>
+            <span class="voor-wie__not-for-item" data-i18n="forwho.notfor.i1">Social media beheer</span>
+            <span class="voor-wie__not-for-item" data-i18n="forwho.notfor.i2">Maandelijks ads-beheer</span>
+            <span class="voor-wie__not-for-item" data-i18n="forwho.notfor.i3">Dagelijkse content creatie</span>
+            <span class="voor-wie__not-for-item" data-i18n="forwho.notfor.i4">Uurtje-factuurtje werk</span>
           </div>
         </div>
 
@@ -582,9 +602,9 @@
     <section class="section pricing" id="prijzen" aria-labelledby="prijzen-heading">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__label">Pakketten</span>
-          <h2 class="section__title" id="prijzen-heading">Drie pakketten.<br>Één duidelijk systeem.</h2>
-          <p class="section__subtitle">Geen uurtje-factuurtje, geen verborgen kosten. Vraag een offerte aan en we bespreken samen wat past bij jouw situatie en doelen.</p>
+          <span class="section__label" data-i18n="pricing.label">Pakketten</span>
+          <h2 class="section__title" id="prijzen-heading" data-i18n-html="pricing.title">Drie pakketten.<br>Één duidelijk systeem.</h2>
+          <p class="section__subtitle" data-i18n="pricing.subtitle">Geen uurtje-factuurtje, geen verborgen kosten. Vraag een offerte aan en we bespreken samen wat past bij jouw situatie en doelen.</p>
         </div>
 
         <div class="pricing__grid">
@@ -593,69 +613,69 @@
           <article class="pricing__card reveal" aria-label="Foundation pakket, €1.500">
             <div class="pricing__card-header">
               <h3 class="pricing__plan-name">Foundation</h3>
-              <p class="pricing__plan-sub">Eenmalige investering · Prijs op aanvraag</p>
+              <p class="pricing__plan-sub" data-i18n="pricing.f.sub">Eenmalige investering · Prijs op aanvraag</p>
             </div>
-            <p class="pricing__desc">De perfecte start. Een professionele website die presteert, converteert en gevonden wordt door jouw ideale klanten.</p>
+            <p class="pricing__desc" data-i18n="pricing.f.desc">De perfecte start. Een professionele website die presteert, converteert en gevonden wordt door jouw ideale klanten.</p>
             <ul class="pricing__features" aria-label="Inbegrepen in Foundation">
-              <li class="pricing__feature pricing__feature--yes">Conversiegerichte website (t/m 8 pagina's)</li>
-              <li class="pricing__feature pricing__feature--yes">Volledige SEO-optimalisatie</li>
-              <li class="pricing__feature pricing__feature--yes">Contactformulier met e-mailnotificaties</li>
-              <li class="pricing__feature pricing__feature--yes">Google Analytics & Search Console</li>
-              <li class="pricing__feature pricing__feature--yes">Mobiel geoptimaliseerd</li>
-              <li class="pricing__feature pricing__feature--yes">Core Web Vitals score 90+</li>
-              <li class="pricing__feature pricing__feature--no">AI chatbot</li>
-              <li class="pricing__feature pricing__feature--no">Marketing automations</li>
-              <li class="pricing__feature pricing__feature--no">CRM-koppeling</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.f.f1">Conversiegerichte website (t/m 8 pagina's)</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.f.f2">Volledige SEO-optimalisatie</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.f.f3">Contactformulier met e-mailnotificaties</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.f.f4">Google Analytics &amp; Search Console</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.f.f5">Mobiel geoptimaliseerd</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.f.f6">Core Web Vitals score 90+</li>
+              <li class="pricing__feature pricing__feature--no" data-i18n="pricing.f.f7">AI chatbot</li>
+              <li class="pricing__feature pricing__feature--no" data-i18n="pricing.f.f8">Marketing automations</li>
+              <li class="pricing__feature pricing__feature--no" data-i18n="pricing.f.f9">CRM-koppeling</li>
             </ul>
-            <button class="btn btn--outline btn--full" data-modal="open" data-pakket="Foundation">Offerte aanvragen</button>
+            <button class="btn btn--outline btn--full" data-modal="open" data-pakket="Foundation" data-i18n="pricing.cta">Offerte aanvragen</button>
           </article>
 
           <!-- Growth System (featured) -->
           <article class="pricing__card pricing__card--featured reveal" aria-label="Growth System pakket, €3.000, meest gekozen">
-            <div class="pricing__popular-badge">Meest gekozen</div>
+            <div class="pricing__popular-badge" data-i18n="pricing.gs.badge">Meest gekozen</div>
             <div class="pricing__card-header">
               <h3 class="pricing__plan-name">Growth System</h3>
-              <p class="pricing__plan-sub">Eenmalige investering · Prijs op aanvraag</p>
+              <p class="pricing__plan-sub" data-i18n="pricing.gs.sub">Eenmalige investering · Prijs op aanvraag</p>
             </div>
-            <p class="pricing__desc">Het complete AI marketing systeem. Van website tot chatbot tot automatisering — alles werkt samen om 24/7 leads voor je te genereren.</p>
+            <p class="pricing__desc" data-i18n="pricing.gs.desc">Het complete AI marketing systeem. Van website tot chatbot tot automatisering — alles werkt samen om 24/7 leads voor je te genereren.</p>
             <ul class="pricing__features" aria-label="Inbegrepen in Growth System">
-              <li class="pricing__feature pricing__feature--yes">Alles van Foundation</li>
-              <li class="pricing__feature pricing__feature--yes">AI chatbot op maat getraind</li>
-              <li class="pricing__feature pricing__feature--yes">Marketing automation flows</li>
-              <li class="pricing__feature pricing__feature--yes">CRM-koppeling & lead tracking</li>
-              <li class="pricing__feature pricing__feature--yes">E-mail nurturing sequenties</li>
-              <li class="pricing__feature pricing__feature--yes">Real-time analytics dashboard</li>
-              <li class="pricing__feature pricing__feature--yes">Agenda-integratie voor chatbot</li>
-              <li class="pricing__feature pricing__feature--yes">30 dagen ondersteuning na lancering</li>
-              <li class="pricing__feature pricing__feature--yes">Prioriteit support</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.gs.f1">Alles van Foundation</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.gs.f2">AI chatbot op maat getraind</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.gs.f3">Marketing automation flows</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.gs.f4">CRM-koppeling &amp; lead tracking</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.gs.f5">E-mail nurturing sequenties</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.gs.f6">Real-time analytics dashboard</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.gs.f7">Agenda-integratie voor chatbot</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.gs.f8">30 dagen ondersteuning na lancering</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.gs.f9">Prioriteit support</li>
             </ul>
-            <button class="btn btn--primary btn--full" data-modal="open" data-pakket="Growth System">Offerte aanvragen</button>
+            <button class="btn btn--primary btn--full" data-modal="open" data-pakket="Growth System" data-i18n="pricing.cta">Offerte aanvragen</button>
           </article>
 
           <!-- Advisory -->
           <article class="pricing__card reveal" aria-label="Advisory pakket, €500 per maand">
             <div class="pricing__card-header">
               <h3 class="pricing__plan-name">Advisory</h3>
-              <p class="pricing__plan-sub">Maandelijks opzegbaar · Prijs op aanvraag</p>
+              <p class="pricing__plan-sub" data-i18n="pricing.a.sub">Maandelijks opzegbaar · Prijs op aanvraag</p>
             </div>
-            <p class="pricing__desc">Directe lijn met je eigen AI marketing strategist. Maandelijkse optimalisaties, analyses en begeleiding voor doorlopende groei.</p>
+            <p class="pricing__desc" data-i18n="pricing.a.desc">Directe lijn met je eigen AI marketing strategist. Maandelijkse optimalisaties, analyses en begeleiding voor doorlopende groei.</p>
             <ul class="pricing__features" aria-label="Inbegrepen in Advisory">
-              <li class="pricing__feature pricing__feature--yes">Maandelijks strategiegesprek (60 min)</li>
-              <li class="pricing__feature pricing__feature--yes">Doorlopende systeem-optimalisatie</li>
-              <li class="pricing__feature pricing__feature--yes">Maandelijkse prestatierapportage</li>
-              <li class="pricing__feature pricing__feature--yes">Directe WhatsApp/e-mail toegang</li>
-              <li class="pricing__feature pricing__feature--yes">Nieuwe automations & A/B tests</li>
-              <li class="pricing__feature pricing__feature--yes">Prioriteit bij uitbreidingen</li>
-              <li class="pricing__feature pricing__feature--no">Inclusief nieuw systeem bouwen</li>
-              <li class="pricing__feature pricing__feature--no">Inclusief Foundation website</li>
-              <li class="pricing__feature pricing__feature--no">Inclusief AI chatbot setup</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.a.f1">Maandelijks strategiegesprek (60 min)</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.a.f2">Doorlopende systeem-optimalisatie</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.a.f3">Maandelijkse prestatierapportage</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.a.f4">Directe WhatsApp/e-mail toegang</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.a.f5">Nieuwe automations &amp; A/B tests</li>
+              <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.a.f6">Prioriteit bij uitbreidingen</li>
+              <li class="pricing__feature pricing__feature--no" data-i18n="pricing.a.f7">Inclusief nieuw systeem bouwen</li>
+              <li class="pricing__feature pricing__feature--no" data-i18n="pricing.a.f8">Inclusief Foundation website</li>
+              <li class="pricing__feature pricing__feature--no" data-i18n="pricing.a.f9">Inclusief AI chatbot setup</li>
             </ul>
-            <button class="btn btn--outline btn--full" data-modal="open" data-pakket="Advisory">Offerte aanvragen</button>
+            <button class="btn btn--outline btn--full" data-modal="open" data-pakket="Advisory" data-i18n="pricing.cta">Offerte aanvragen</button>
           </article>
 
         </div>
 
-        <p class="pricing__footnote reveal">
+        <p class="pricing__footnote reveal" data-i18n="pricing.footnote">
           Alle pakketten zijn eenmalige investeringen. Advisory is maandelijks opzegbaar. Plan een gratis gesprek — dan bespreken we wat past bij jouw situatie en budget.
         </p>
       </div>
@@ -668,70 +688,70 @@
     <section class="section faq" id="faq" aria-labelledby="faq-heading">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__label">FAQ</span>
-          <h2 class="section__title" id="faq-heading">Veelgestelde vragen.</h2>
-          <p class="section__subtitle">Staat jouw vraag er niet tussen? Plan een gratis gesprek en we beantwoorden alles direct.</p>
+          <span class="section__label" data-i18n="faq.label">FAQ</span>
+          <h2 class="section__title" id="faq-heading" data-i18n="faq.title">Veelgestelde vragen.</h2>
+          <p class="section__subtitle" data-i18n="faq.subtitle">Staat jouw vraag er niet tussen? Plan een gratis gesprek en we beantwoorden alles direct.</p>
         </div>
 
         <div class="faq__list reveal" role="list">
 
           <div class="faq__item" role="listitem">
             <button class="faq__question" aria-expanded="false" aria-controls="faq-1">
-              Voor wie is Kelvantis geschikt?
+              <span data-i18n="faq.q1">Voor wie is Kelvantis geschikt?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer" id="faq-1" hidden>
-              <p>Kelvantis werkt met B2B bedrijven — van startup tot enterprise — die concrete problemen hebben op het vlak van online zichtbaarheid, leadgeneratie of inefficiënte werkprocessen. Elke bedrijfsgrootte, elke sector, zolang er een helder probleem is dat we kunnen oplossen met een website, SEO of workflow automatisering.</p>
+              <p data-i18n="faq.a1">Kelvantis werkt met B2B bedrijven — van startup tot enterprise — die concrete problemen hebben op het vlak van online zichtbaarheid, leadgeneratie of inefficiënte werkprocessen. Elke bedrijfsgrootte, elke sector, zolang er een helder probleem is dat we kunnen oplossen met een website, SEO of workflow automatisering.</p>
             </div>
           </div>
 
           <div class="faq__item" role="listitem">
             <button class="faq__question" aria-expanded="false" aria-controls="faq-2">
-              Hoe lang duurt het om live te gaan?
+              <span data-i18n="faq.q2">Hoe lang duurt het om live te gaan?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer" id="faq-2" hidden>
-              <p>Een Foundation project staat gemiddeld binnen 2 weken live. Een volledig Growth System — inclusief AI chatbot, automations en CRM-koppeling — is gemiddeld binnen 4 tot 6 weken operationeel. We werken gefaseerd en houden je via vaste updates op de hoogte van de voortgang. Geen verrassingen.</p>
+              <p data-i18n="faq.a2">Een Foundation project staat gemiddeld binnen 2 weken live. Een volledig Growth System — inclusief AI chatbot, automations en CRM-koppeling — is gemiddeld binnen 4 tot 6 weken operationeel. We werken gefaseerd en houden je via vaste updates op de hoogte van de voortgang. Geen verrassingen.</p>
             </div>
           </div>
 
           <div class="faq__item" role="listitem">
             <button class="faq__question" aria-expanded="false" aria-controls="faq-3">
-              Heb ik technische kennis nodig?
+              <span data-i18n="faq.q3">Heb ik technische kennis nodig?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer" id="faq-3" hidden>
-              <p>Nee, absoluut niet. Wij regelen alles van A tot Z — van het ontwerp en de technische bouw tot aan de koppelingen en training van de AI. Jij hoeft alleen jouw bedrijf goed te kennen en ons te vertellen wat je wilt bereiken. De rest is aan ons.</p>
+              <p data-i18n="faq.a3">Nee, absoluut niet. Wij regelen alles van A tot Z — van het ontwerp en de technische bouw tot aan de koppelingen en training van de AI. Jij hoeft alleen jouw bedrijf goed te kennen en ons te vertellen wat je wilt bereiken. De rest is aan ons.</p>
             </div>
           </div>
 
           <div class="faq__item" role="listitem">
             <button class="faq__question" aria-expanded="false" aria-controls="faq-4">
-              Wat is het verschil tussen Foundation en Growth System?
+              <span data-i18n="faq.q4">Wat is het verschil tussen Foundation en Growth System?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer" id="faq-4" hidden>
-              <p>Foundation geeft je een professionele, snelle website met SEO en een contactformulier — een solide basis. Growth System gaat verder: je krijgt daar bovenop een AI chatbot, automatische lead nurturing, CRM-koppeling en marketing automations die 24/7 voor je werken. Foundation is perfect als start; Growth System is voor wie maximaal wil groeien op autopilot.</p>
+              <p data-i18n="faq.a4">Foundation geeft je een professionele, snelle website met SEO en een contactformulier — een solide basis. Growth System gaat verder: je krijgt daar bovenop een AI chatbot, automatische lead nurturing, CRM-koppeling en marketing automations die 24/7 voor je werken. Foundation is perfect als start; Growth System is voor wie maximaal wil groeien op autopilot.</p>
             </div>
           </div>
 
           <div class="faq__item" role="listitem">
             <button class="faq__question" aria-expanded="false" aria-controls="faq-5">
-              Kan ik later upgraden van Foundation naar Growth System?
+              <span data-i18n="faq.q5">Kan ik later upgraden van Foundation naar Growth System?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer" id="faq-5" hidden>
-              <p>Absoluut. Veel klanten starten met Foundation om snel resultaat te zien, en upgraden zodra ze de groei in leads ervaren. De investering van €1.500 in Foundation wordt volledig verrekend bij een upgrade naar Growth System — je betaalt alleen het verschil van €1.500. Zo groei je in jouw eigen tempo.</p>
+              <p data-i18n="faq.a5">Absoluut. Veel klanten starten met Foundation om snel resultaat te zien, en upgraden zodra ze de groei in leads ervaren. De investering van €1.500 in Foundation wordt volledig verrekend bij een upgrade naar Growth System — je betaalt alleen het verschil van €1.500. Zo groei je in jouw eigen tempo.</p>
             </div>
           </div>
 
@@ -746,17 +766,17 @@
       <div class="container">
         <div class="cta-section__inner reveal">
           <div class="cta-section__glow" aria-hidden="true"></div>
-          <span class="section__label">Klaar om te groeien?</span>
-          <h2 class="cta-section__title" id="cta-heading">
+          <span class="section__label" data-i18n="cta.label">Klaar om te groeien?</span>
+          <h2 class="cta-section__title" id="cta-heading" data-i18n-html="cta.title">
             Meer resultaat.<br>
             <span class="cta-section__title-accent">Minder handwerk.</span>
           </h2>
-          <p class="cta-section__subtitle">
+          <p class="cta-section__subtitle" data-i18n="cta.subtitle">
             Plan een gratis strategiegesprek en ontdek wat een conversiegerichte website, sterke SEO of slimme workflow automatisering voor jouw bedrijf kan betekenen. We kijken samen naar jouw situatie en de grootste kansen. Geen verplichtingen — wel concrete inzichten.
           </p>
           <div class="cta-section__actions">
             <button class="btn btn--primary btn--xl" data-modal="open">
-              Gratis strategiegesprek plannen
+              <span data-i18n="cta.btn">Gratis strategiegesprek plannen</span>
               <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -764,7 +784,7 @@
           </div>
           <p class="cta-section__trust">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2L5 8.3 2 5.4l4.2-.8L8 1z" stroke="#05FE82" stroke-width="1.2" stroke-linejoin="round"/></svg>
-            Gratis · Geen verplichtingen · Binnen 24 uur reactie
+            <span data-i18n="cta.trust">Gratis · Geen verplichtingen · Binnen 24 uur reactie</span>
           </p>
         </div>
       </div>
@@ -789,30 +809,30 @@
             </svg>
             <span class="footer__logo-text">Kelvan<span class="footer__logo-accent">tis</span></span>
           </a>
-          <p class="footer__tagline">Meer resultaat. Minder handwerk.</p>
+          <p class="footer__tagline" data-i18n="footer.tagline">Meer resultaat. Minder handwerk.</p>
         </div>
 
         <nav class="footer__nav" aria-label="Footer navigatie">
           <div class="footer__nav-group">
-            <h4 class="footer__nav-title">Navigatie</h4>
+            <h4 class="footer__nav-title" data-i18n="footer.nav.title">Navigatie</h4>
             <ul role="list">
-              <li><a href="#aanpak" class="footer__nav-link">Aanpak</a></li>
-              <li><a href="#diensten" class="footer__nav-link">Diensten</a></li>
-              <li><a href="#prijzen" class="footer__nav-link">Prijzen</a></li>
-              <li><a href="#faq" class="footer__nav-link">FAQ</a></li>
+              <li><a href="#aanpak" class="footer__nav-link" data-i18n="nav.approach">Aanpak</a></li>
+              <li><a href="#diensten" class="footer__nav-link" data-i18n="nav.packages">Diensten</a></li>
+              <li><a href="#prijzen" class="footer__nav-link" data-i18n="footer.nav.pricing">Prijzen</a></li>
+              <li><a href="#faq" class="footer__nav-link" data-i18n="nav.faq">FAQ</a></li>
             </ul>
           </div>
           <div class="footer__nav-group">
-            <h4 class="footer__nav-title">Contact</h4>
+            <h4 class="footer__nav-title" data-i18n="footer.contact.title">Contact</h4>
             <ul role="list">
               <li><a href="mailto:hallo@kelvantis.nl" class="footer__nav-link">hallo@kelvantis.nl</a></li>
-              <li><button class="footer__nav-link" data-modal="open" style="background:none;border:none;cursor:pointer;font-size:inherit;font-family:inherit;padding:0;text-align:left;">Gratis gesprek plannen</button></li>
+              <li><button class="footer__nav-link" data-modal="open" data-i18n="footer.contact.cta" style="background:none;border:none;cursor:pointer;font-size:inherit;font-family:inherit;padding:0;text-align:left;">Gratis gesprek plannen</button></li>
             </ul>
           </div>
         </nav>
 
         <div class="footer__social">
-          <h4 class="footer__nav-title">Volg ons</h4>
+          <h4 class="footer__nav-title" data-i18n="footer.social.title">Volg ons</h4>
           <div class="footer__social-links">
             <a href="https://linkedin.com/company/kelvantis" class="footer__social-link" aria-label="Kelvantis op LinkedIn" rel="noopener noreferrer" target="_blank">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
@@ -826,10 +846,10 @@
       </div>
 
       <div class="footer__bottom">
-        <p class="footer__copyright">&copy; 2026 Kelvantis. Alle rechten voorbehouden.</p>
+        <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2026 Kelvantis. Alle rechten voorbehouden.</p>
         <div class="footer__legal">
-          <a href="/privacy" class="footer__legal-link">Privacybeleid</a>
-          <a href="/voorwaarden" class="footer__legal-link">Algemene voorwaarden</a>
+          <a href="/privacy" class="footer__legal-link" data-i18n="footer.privacy">Privacybeleid</a>
+          <a href="/voorwaarden" class="footer__legal-link" data-i18n="footer.terms">Algemene voorwaarden</a>
         </div>
       </div>
 
@@ -847,9 +867,9 @@
       </button>
 
       <div class="modal__header">
-        <span class="section__label" style="margin-bottom:.75rem;">Gratis · Geen verplichtingen</span>
-        <h2 class="modal__title" id="modal-title">Plan je gratis strategiegesprek</h2>
-        <p class="modal__subtitle">Vertel kort over je situatie. We nemen binnen 24 uur contact op om een gesprek in te plannen.</p>
+        <span class="section__label" style="margin-bottom:.75rem;" data-i18n="modal.label">Gratis · Geen verplichtingen</span>
+        <h2 class="modal__title" id="modal-title" data-i18n="modal.title">Plan je gratis strategiegesprek</h2>
+        <p class="modal__subtitle" data-i18n="modal.subtitle">Vertel kort over je situatie. We nemen binnen 24 uur contact op om een gesprek in te plannen.</p>
       </div>
 
       <!-- Form -->
@@ -858,30 +878,30 @@
 
         <div class="form__row">
           <div class="form__group">
-            <label class="form__label" for="f-naam">Naam <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="text" id="f-naam" name="naam" required placeholder="Jan de Vries" autocomplete="name">
+            <label class="form__label" for="f-naam"><span data-i18n="form.name">Naam</span> <span aria-hidden="true">*</span></label>
+            <input class="form__input" type="text" id="f-naam" name="naam" required placeholder="Jan de Vries" data-i18n-placeholder="form.namePh" autocomplete="name">
           </div>
           <div class="form__group">
-            <label class="form__label" for="f-bedrijf">Bedrijfsnaam <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="text" id="f-bedrijf" name="bedrijf" required placeholder="Jouw Bedrijf BV" autocomplete="organization">
+            <label class="form__label" for="f-bedrijf"><span data-i18n="form.company">Bedrijfsnaam</span> <span aria-hidden="true">*</span></label>
+            <input class="form__input" type="text" id="f-bedrijf" name="bedrijf" required placeholder="Jouw Bedrijf BV" data-i18n-placeholder="form.companyPh" autocomplete="organization">
           </div>
         </div>
 
         <div class="form__row">
           <div class="form__group">
-            <label class="form__label" for="f-email">E-mailadres <span aria-hidden="true">*</span></label>
+            <label class="form__label" for="f-email"><span data-i18n="form.email">E-mailadres</span> <span aria-hidden="true">*</span></label>
             <input class="form__input" type="email" id="f-email" name="email" required placeholder="jan@jouwbedrijf.nl" autocomplete="email">
           </div>
           <div class="form__group">
-            <label class="form__label" for="f-tel">Telefoonnummer</label>
+            <label class="form__label" for="f-tel" data-i18n="form.phone">Telefoonnummer</label>
             <input class="form__input" type="tel" id="f-tel" name="telefoon" placeholder="+31 6 12 34 56 78" autocomplete="tel">
           </div>
         </div>
 
         <div class="form__group">
-          <label class="form__label" for="f-pakket">Pakket interesse</label>
+          <label class="form__label" for="f-pakket" data-i18n="form.package">Pakket interesse</label>
           <select class="form__select" id="f-pakket" name="pakket">
-            <option value="">Nog niet zeker</option>
+            <option value="" data-i18n="form.packageOpt0">Nog niet zeker</option>
             <option value="Foundation">Foundation (€1.500–€2.500)</option>
             <option value="Growth System">Growth System (€3.000–€5.000)</option>
             <option value="Optimization Sprint">Optimization Sprint (€750–€1.500/kwartaal)</option>
@@ -890,25 +910,25 @@
         </div>
 
         <div class="form__group">
-          <label class="form__label" for="f-uitdaging">Wat is jouw grootste uitdaging? <span aria-hidden="true">*</span></label>
+          <label class="form__label" for="f-uitdaging"><span data-i18n="form.challenge">Wat is jouw grootste uitdaging?</span> <span aria-hidden="true">*</span></label>
           <select class="form__select" id="f-uitdaging" name="uitdaging" required>
-            <option value="" disabled selected>Kies je situatie...</option>
-            <option value="Te weinig leads en aanvragen">Te weinig leads en aanvragen</option>
-            <option value="Website presteert slecht">Website presteert slecht</option>
-            <option value="Opvolging kost te veel tijd">Opvolging kost te veel tijd</option>
-            <option value="Geen inzicht in marketingresultaten">Geen inzicht in marketingresultaten</option>
-            <option value="Concurrentie trekt klanten weg">Concurrentie trekt klanten weg</option>
-            <option value="Anders">Anders</option>
+            <option value="" disabled selected data-i18n="form.challengeOpt0">Kies je situatie...</option>
+            <option value="Te weinig leads en aanvragen" data-i18n="form.challengeOpt1">Te weinig leads en aanvragen</option>
+            <option value="Website presteert slecht" data-i18n="form.challengeOpt2">Website presteert slecht</option>
+            <option value="Opvolging kost te veel tijd" data-i18n="form.challengeOpt3">Opvolging kost te veel tijd</option>
+            <option value="Geen inzicht in marketingresultaten" data-i18n="form.challengeOpt4">Geen inzicht in marketingresultaten</option>
+            <option value="Concurrentie trekt klanten weg" data-i18n="form.challengeOpt5">Concurrentie trekt klanten weg</option>
+            <option value="Anders" data-i18n="form.challengeOpt6">Anders</option>
           </select>
         </div>
 
         <div class="form__group">
-          <label class="form__label" for="f-bericht">Vertel kort over je bedrijf <span class="form__label-optional">(optioneel)</span></label>
-          <textarea class="form__textarea" id="f-bericht" name="bericht" rows="3" placeholder="Bijv: Ik run een installatiebedrijf in Limburg met 5 medewerkers en wil meer aanvragen online genereren."></textarea>
+          <label class="form__label" for="f-bericht"><span data-i18n="form.message">Vertel kort over je bedrijf</span> <span class="form__label-optional" data-i18n="form.optional">(optioneel)</span></label>
+          <textarea class="form__textarea" id="f-bericht" name="bericht" rows="3" placeholder="Bijv: Ik run een installatiebedrijf in Limburg met 5 medewerkers en wil meer aanvragen online genereren." data-i18n-placeholder="form.messagePh"></textarea>
         </div>
 
         <button type="submit" class="btn btn--primary btn--full btn--lg form__submit">
-          Verstuur aanvraag
+          <span data-i18n="form.submit">Verstuur aanvraag</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
 
@@ -922,9 +942,9 @@
         <div class="success__icon" aria-hidden="true">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#05FE82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Aanvraag ontvangen!</h3>
-        <p>We nemen binnen <strong>24 uur</strong> contact met je op om een strategiegesprek in te plannen. Check je inbox — ook je spamfolder.</p>
-        <button class="btn btn--ghost" id="modalSuccessClose" style="margin-top:1.5rem;">Sluiten</button>
+        <h3 data-i18n="success.title">Aanvraag ontvangen!</h3>
+        <p data-i18n-html="success.desc">We nemen binnen <strong>24 uur</strong> contact met je op om een strategiegesprek in te plannen. Check je inbox — ook je spamfolder.</p>
+        <button class="btn btn--ghost" id="modalSuccessClose" style="margin-top:1.5rem;" data-i18n="success.close">Sluiten</button>
       </div>
 
     </div>
@@ -938,7 +958,7 @@
      target="_blank"
      rel="noopener noreferrer"
      aria-label="App ons direct op WhatsApp">
-    <span class="wa-button__tooltip">App ons direct</span>
+    <span class="wa-button__tooltip" data-i18n="wa.tooltip">App ons direct</span>
     <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
@@ -950,11 +970,11 @@
   <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie-instellingen" aria-live="polite">
     <div class="cookie-banner__inner">
       <p class="cookie-banner__text">
-        Wij gebruiken cookies voor analytics en een betere gebruikerservaring. Lees ons <a href="/privacy">privacybeleid</a>.
+        <span data-i18n-html="cookie.text">Wij gebruiken cookies voor analytics en een betere gebruikerservaring. Lees ons <a href="/privacy">privacybeleid</a>.</span>
       </p>
       <div class="cookie-banner__actions">
-        <button class="btn btn--ghost btn--sm" id="cookieDecline">Alleen noodzakelijk</button>
-        <button class="btn btn--primary btn--sm" id="cookieAccept">Accepteren</button>
+        <button class="btn btn--ghost btn--sm" id="cookieDecline" data-i18n="cookie.decline">Alleen noodzakelijk</button>
+        <button class="btn btn--primary btn--sm" id="cookieAccept" data-i18n="cookie.accept">Accepteren</button>
       </div>
     </div>
   </div>
