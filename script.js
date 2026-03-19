@@ -529,7 +529,7 @@ function animateFlow() {
 (function initI18n() {
   const T = {
     nl: {
-      nav: { approach: 'Aanpak', forWho: 'Voor wie', packages: 'Pakketten', faq: 'FAQ', cta: 'Gratis gesprek', ctaMobile: 'Gratis gesprek plannen', diensten: 'Diensten', dienstenDropdown: { websites: { name: 'Websites laten maken', desc: 'Conversiegericht, snel en op maat' }, workflow: { name: 'Workflow Automatisering', desc: 'Processen op de achtergrond draaien' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code maatwerk' } } },
+      nav: { approach: 'Aanpak', forWho: 'Voor wie', packages: 'Pakketten', faq: 'FAQ', cta: 'Gratis gesprek', ctaMobile: 'Gratis gesprek plannen', diensten: 'Diensten', dienstenDropdown: { websites: { name: 'Websites laten maken', desc: 'Conversiegericht, snel en op maat' }, workflow: { name: 'Workflow Automatisering', desc: 'Processen op de achtergrond draaien' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code maatwerk' }, seo: { name: 'SEO', desc: 'Gevonden worden in Google' } } },
       hero: {
         badge: 'Website · SEO · Workflow Automatisering',
         title: 'Meer resultaat.<br><span class="hero__title-accent">Minder handwerk.</span>',
@@ -614,7 +614,7 @@ function animateFlow() {
       }
     },
     en: {
-      nav: { approach: 'Approach', forWho: 'For who', packages: 'Packages', faq: 'FAQ', cta: 'Free call', ctaMobile: 'Schedule a free call', diensten: 'Services', dienstenDropdown: { websites: { name: 'Website development', desc: 'Conversion-focused, fast and custom' }, workflow: { name: 'Workflow Automation', desc: 'Business processes running in the background' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code custom builds' } } },
+      nav: { approach: 'Approach', forWho: 'For who', packages: 'Packages', faq: 'FAQ', cta: 'Free call', ctaMobile: 'Schedule a free call', diensten: 'Services', dienstenDropdown: { websites: { name: 'Website development', desc: 'Conversion-focused, fast and custom' }, workflow: { name: 'Workflow Automation', desc: 'Business processes running in the background' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code custom builds' }, seo: { name: 'SEO', desc: 'Get found on Google' } } },
       hero: {
         badge: 'Website · SEO · Workflow Automation',
         title: 'More results.<br><span class="hero__title-accent">Less manual work.</span>',

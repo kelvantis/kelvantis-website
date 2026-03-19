@@ -2767,6 +2767,14 @@ html[data-theme="light"] .navbar__dropdown-trigger:hover {
   transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 200;
 }
+.navbar__dropdown-panel::before {
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+}
 html[data-theme="light"] .navbar__dropdown-panel {
   background: rgba(245, 247, 250, 0.97);
   border-color: rgba(0,0,0,0.1);

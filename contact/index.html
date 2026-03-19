@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Plan een gratis strategiegesprek | Kelvantis</title>
+  <meta name="description" content="Plan een gratis strategiegesprek met Kelvantis. Geen verkooppraatje, direct bruikbaar advies over websites, SEO of AI automatisering. Binnen 24 uur reactie.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.svg">
+  <link rel="canonical" href="https://kelvantis.com/contact/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kelvantis.com/contact/">
+  <meta property="og:title" content="Contact | Kelvantis">
+  <meta property="og:description" content="Plan een gratis strategiegesprek met Kelvantis. Binnen 24 uur reactie.">
+  <meta property="og:image" content="https://kelvantis.com/og-image.jpg">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Kelvantis">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .contact-page { padding: calc(var(--navbar-h) + 4rem) 0 6rem; }
+    .contact-page__grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-top: 3rem; }
+    @media (min-width: 768px) { .contact-page__grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-info__item { display: flex; align-items: flex-start; gap: 1rem; }
+    .contact-info__icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(5,254,130,0.1); border: 1px solid rgba(5,254,130,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
+    .contact-info__text strong { display: block; font-size: 0.875rem; font-weight: 600; color: var(--color-text); margin-bottom: 0.25rem; }
+    .contact-info__text span, .contact-info__text a { font-size: 0.9375rem; color: var(--color-text-muted); text-decoration: none; transition: color var(--transition-fast); }
+    .contact-info__text a:hover { color: var(--color-accent); }
+    .contact-trust { margin-top: 2.5rem; padding: 1.5rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+    .contact-trust__title { font-size: 0.875rem; font-weight: 600; color: var(--color-text); margin-bottom: 1rem; }
+    .contact-trust__items { display: flex; flex-direction: column; gap: 0.625rem; }
+    .contact-trust__item { display: flex; align-items: center; gap: 0.625rem; font-size: 0.875rem; color: var(--color-text-muted); }
+    .contact-trust__item::before { content: '✓'; color: var(--color-accent); font-weight: 700; flex-shrink: 0; }
+    .contact-form-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2rem; }
+    @media (min-width: 640px) { .contact-form-card { padding: 2.5rem; } }
+    .contact-form-card h2 { font-family: var(--font-heading); font-size: 1.375rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text); }
+    .contact-form-card p { font-size: 0.9375rem; color: var(--color-text-muted); margin-bottom: 1.75rem; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="navbar__container">
+    <a href="../index.html" class="navbar__logo" aria-label="Kelvantis: terug naar home">
+      <svg class="navbar__logo-icon" viewBox="0 0 1024 1024" width="36" height="36" aria-hidden="true">
+        <path fill="#434343" d="m290.9 434.8l-77.4 76.8c44.2 43.4 60.4 59.1 64.5 63.1 4.1 3.9 9.5 8.1 12 9.3 2.5 1.3 9 4.1 14.5 6.3 9.6 3.9 10.5 4 23.5 4.4 8.8 0.3 13.8 0 14.3-0.6 0.4-0.7-15.5-17.5-38.8-41.1-21.7-22-39.5-40.6-39.5-41.3 0-0.6 24-25.2 53.3-54.4l53.2-53.3c70.5 70.5 91.6 91 92.3 91 0.6 0 5.8-4.9 11.5-11 5.6-6 10.2-11.4 10.2-12 0-0.5-6.3-7.6-14.1-15.7-7.8-8.2-33.3-33.5-56.8-56.3-23.4-22.8-43.2-41.6-43.9-41.8-0.7-0.1-36.2 34.3-78.8 76.6z"/>
+        <path fill="#05fe82" d="m463.5 294.2c-26 25.9-47.4 47.9-47.4 48.7-0.1 0.9 5 6.8 11.4 13.1l11.4 11.5c10.5-10 26.8-26 42.9-42 16.1-15.9 29.7-29.1 30.2-29.2 0.6-0.2 16 14.4 34.3 32.5 18.3 18 35.9 35.3 39.2 38.5l6 5.7c14-6.1 21.5-8.9 25.8-10.2 4.2-1.3 7.7-2.6 7.7-3 0-0.5-25.1-26-55.8-56.8-30.6-30.7-56.3-55.9-57-56-0.8 0-22.7 21.2-48.7 47.2zm-36 373.6c-6.6 6.4-11.9 12.2-11.7 12.7 0.1 0.6 21.8 22.6 48.2 49l48 48c22.1-21.7 43.9-43.3 62.8-62 18.8-18.7 34.2-34.5 34.2-35 0-0.5-5.1-6.1-11.2-12.4-6.2-6.2-11.9-11.1-12.6-11-0.7 0.2-16 15-34 32.9-18 17.9-34.2 33.9-36 35.5l-3.3 3-72.4-72.5z"/>
+        <path fill="#434343" d="m681.2 430.1c-0.1 0.8 17.6 19.3 39.3 41.1 21.7 21.9 39.5 40.4 39.5 41 0 0.7-23.8 25-52.8 54.1l-52.7 52.7c-61.2-61.3-82.3-82.1-86.3-85.8l-7.4-6.7-23.3 23.5c76 76.1 102.4 102.1 107.7 107.1l9.8 8.9 155.2-154.5c-28.5-27.9-44.6-43.6-54.2-52.9-14.6-14.2-18.6-17.5-24-19.9-3.6-1.6-10.1-4.3-14.5-5.9-7.1-2.7-9.6-3.1-22.1-3.6-11.6-0.4-14.1-0.2-14.2 0.9z"/>
+        <path fill="#05fe82" d="m625.8 385c-4.3 1.1-11.3 3.7-15.5 5.7-7.2 3.4-9.9 5.8-33.8 29.3-14.2 14-57.7 57-96.5 95.6-38.8 38.5-75.4 74.7-81.5 80.3-7.1 6.5-13.1 11.1-17 13-3.3 1.6-8.2 3.7-11 4.6-2.9 1-9.4 2-15.5 2.2-8.5 0.4-12 0.1-18.5-1.6-4.4-1.1-10.7-3.1-14-4.4-3.3-1.3-9.3-4.4-13.2-7-4-2.6-7.7-4.5-8.3-4.2-0.5 0.3 0.2 1.9 1.8 3.6 1.5 1.7 7.7 7.3 13.8 12.3 6.2 5 14.7 11.2 19 13.7 4.4 2.6 11.1 6 14.9 7.6 3.9 1.7 9.5 3.6 12.5 4.4 3.5 0.9 10.6 1.4 19.5 1.3 13.3 0 14.4-0.2 22-3.2 4.4-1.7 10.1-4.5 12.8-6.2 2.6-1.6 9.3-7.3 15-12.7 5.6-5.3 48.9-47.9 96.1-94.7 47.3-46.8 90.9-89.8 97-95.5 9.2-8.7 12.6-11.2 20.1-14.7 8-3.8 10.2-4.4 20-5.3 7.7-0.8 13-0.8 17.5 0 3.6 0.6 9.2 1.9 12.5 3.1 3.3 1.1 8.3 3.2 11 4.6 2.8 1.4 7.4 4 10.3 5.9 2.8 1.8 5.7 3.3 6.2 3.3 0.5 0 1-0.4 1-1 0-0.6-4.8-5.2-10.6-10.2-5.8-5.1-14.7-12.1-19.8-15.5-5-3.5-12.5-7.7-16.6-9.4-4.1-1.8-9.7-3.8-12.5-4.6-2.7-0.8-10.8-1.6-18-1.9-10.7-0.3-14.3 0-20.7 1.6z"/>
+      </svg>
+      <span class="navbar__logo-text">Kelvan<span class="navbar__logo-accent">tis</span></span>
+    </a>
+
+    <nav class="navbar__nav" id="navMenu" aria-label="Hoofdnavigatie">
+      <ul class="navbar__links" role="list">
+        <li class="navbar__dropdown-item">
+          <button class="navbar__dropdown-trigger" aria-haspopup="true">
+            <span data-i18n="nav.diensten">Diensten</span>
+            <span class="navbar__dropdown-arrow">▾</span>
+          </button>
+          <div class="navbar__dropdown-panel" role="menu">
+            <a href="../diensten/website-laten-maken.html" class="navbar__dropdown-link" role="menuitem">
+              <span class="navbar__dropdown-link-icon">🌐</span>
+              <span class="navbar__dropdown-link-text">
+                <strong data-i18n="nav.dienstenDropdown.websites.name">Websites laten maken</strong>
+                <small data-i18n="nav.dienstenDropdown.websites.desc">Conversiegericht, snel en op maat</small>
+              </span>
+            </a>
+            <a href="../diensten/workflow-automatisering.html" class="navbar__dropdown-link" role="menuitem">
+              <span class="navbar__dropdown-link-icon">⚡</span>
+              <span class="navbar__dropdown-link-text">
+                <strong data-i18n="nav.dienstenDropdown.workflow.name">Workflow Automatisering</strong>
+                <small data-i18n="nav.dienstenDropdown.workflow.desc">Processen op de achtergrond draaien</small>
+              </span>
+            </a>
+            <a href="../diensten/ai-implementatie.html" class="navbar__dropdown-link" role="menuitem">
+              <span class="navbar__dropdown-link-icon">🤖</span>
+              <span class="navbar__dropdown-link-text">
+                <strong data-i18n="nav.dienstenDropdown.ai.name">AI Development</strong>
+                <small data-i18n="nav.dienstenDropdown.ai.desc">Claude Code & VS Code maatwerk</small>
+              </span>
+            </a>
+            <a href="../diensten/seo.html" class="navbar__dropdown-link" role="menuitem">
+              <span class="navbar__dropdown-link-icon">📈</span>
+              <span class="navbar__dropdown-link-text">
+                <strong>SEO</strong>
+                <small>Meetbare rankings, geen vaag advies</small>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li><a href="../index.html#aanpak" class="navbar__link" data-i18n="nav.approach">Aanpak</a></li>
+        <li><a href="../index.html#voor-wie" class="navbar__link" data-i18n="nav.forWho">Voor wie</a></li>
+        <li><a href="../index.html#prijzen" class="navbar__link" data-i18n="nav.packages">Pakketten</a></li>
+        <li><a href="../index.html#faq" class="navbar__link" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="btn btn--primary btn--sm" data-modal="open" data-i18n="nav.cta">Gratis gesprek</button>
+      <button class="navbar__lang-toggle" id="langToggle" aria-label="Switch language"><span id="langLabel">🇬🇧</span></button>
+      <button class="navbar__theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg id="themeIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="navbar__hamburger-line"></span><span class="navbar__hamburger-line"></span><span class="navbar__hamburger-line"></span>
+      </button>
+    </div>
+  </div>
+  <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobiele navigatie">
+      <ul class="navbar__mobile-links" role="list">
+        <li>
+          <div class="navbar__mobile-accordion">
+            <button class="navbar__mobile-accordion-trigger">
+              <span data-i18n="nav.diensten">Diensten</span>
+              <span class="navbar__mobile-accordion-arrow">▾</span>
+            </button>
+            <nav class="navbar__mobile-subnav">
+              <a href="../diensten/website-laten-maken.html">🌐 <span data-i18n="nav.dienstenDropdown.websites.name">Websites laten maken</span></a>
+              <a href="../diensten/workflow-automatisering.html">⚡ <span data-i18n="nav.dienstenDropdown.workflow.name">Workflow Automatisering</span></a>
+              <a href="../diensten/ai-implementatie.html">🤖 <span data-i18n="nav.dienstenDropdown.ai.name">AI Development</span></a>
+              <a href="../diensten/seo.html">📈 SEO</a>
+            </nav>
+          </div>
+        </li>
+        <li><a href="../index.html#aanpak" class="navbar__mobile-link" data-i18n="nav.approach">Aanpak</a></li>
+        <li><a href="../index.html#voor-wie" class="navbar__mobile-link" data-i18n="nav.forWho">Voor wie</a></li>
+        <li><a href="../index.html#prijzen" class="navbar__mobile-link" data-i18n="nav.packages">Pakketten</a></li>
+        <li><a href="../index.html#faq" class="navbar__mobile-link" data-i18n="nav.faq">FAQ</a></li>
+        <li>
+          <div class="navbar__mobile-toggles">
+            <button class="navbar__lang-toggle" id="langToggleMobile" aria-label="Switch language"><span id="langLabelMobile">🇬🇧</span></button>
+            <button class="navbar__theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="contact-page">
+    <div class="container">
+      <div class="section__header reveal" style="text-align:left; margin-bottom: 0;">
+        <span class="section__label">Gratis · Geen verplichtingen</span>
+        <h1 class="section__title" style="font-size: clamp(2rem, 5vw, 3rem);">Plan een gratis strategiegesprek</h1>
+        <p style="font-size: 1.0625rem; color: var(--color-text-muted); line-height: 1.7; max-width: 560px; margin-top: 1rem;">Geen verkooppraatje. We analyseren jouw situatie en geven direct bruikbaar advies over websites, SEO of AI automatisering. Binnen 24 uur reactie.</p>
+      </div>
+
+      <div class="contact-page__grid">
+
+        <!-- Contactformulier -->
+        <div class="contact-form-card reveal">
+          <h2>Stuur ons een bericht</h2>
+          <p>Vul het formulier in en we nemen binnen 24 uur contact op.</p>
+
+          <form id="contactPageForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="cp-naam">Naam <span aria-hidden="true">*</span></label>
+                <input class="form__input" type="text" id="cp-naam" name="naam" required placeholder="Jan de Vries" autocomplete="name">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="cp-bedrijf">Bedrijfsnaam <span aria-hidden="true">*</span></label>
+                <input class="form__input" type="text" id="cp-bedrijf" name="bedrijf" required placeholder="Jouw Bedrijf BV" autocomplete="organization">
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="cp-email">E-mailadres <span aria-hidden="true">*</span></label>
+                <input class="form__input" type="email" id="cp-email" name="email" required placeholder="jan@jouwbedrijf.nl" autocomplete="email">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="cp-website">Website URL <span class="form__label-optional">(optioneel)</span></label>
+                <input class="form__input" type="url" id="cp-website" name="website" placeholder="https://jouwbedrijf.nl" autocomplete="url">
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="cp-dienst">Interesse in <span aria-hidden="true">*</span></label>
+              <select class="form__select" id="cp-dienst" name="dienst" required>
+                <option value="" disabled selected>Kies een dienst...</option>
+                <option value="Website">Website laten maken</option>
+                <option value="SEO">SEO</option>
+                <option value="Automatisering">Workflow Automatisering</option>
+                <option value="AI Development">AI Development</option>
+                <option value="Combinatie">Combinatie van diensten</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="cp-bericht">Wat wil je aanpakken? <span aria-hidden="true">*</span></label>
+              <textarea class="form__textarea" id="cp-bericht" name="bericht" rows="4" required placeholder="Vertel kort over je situatie, je doelen en wat je wilt bereiken..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full btn--lg form__submit" id="cp-submit">
+              <span>Verstuur aanvraag</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="form__disclaimer">Door te versturen ga je akkoord met ons <a href="/privacy" class="form__link">privacybeleid</a>. We reageren binnen 24 uur.</p>
+          </form>
+
+          <div id="cp-success" hidden style="text-align:center; padding: 2rem 0;">
+            <div style="width:56px;height:56px;border-radius:50%;background:rgba(5,254,130,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#05FE82" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 style="font-family:var(--font-heading);font-size:1.375rem;margin-bottom:0.5rem;">Aanvraag ontvangen!</h3>
+            <p style="color:var(--color-text-muted);">We nemen binnen <strong>24 uur</strong> contact met je op.</p>
+          </div>
+        </div>
+
+        <!-- Contact info -->
+        <div class="contact-info reveal">
+          <div class="contact-info__item">
+            <div class="contact-info__icon">📧</div>
+            <div class="contact-info__text">
+              <strong>E-mail</strong>
+              <a href="mailto:hallo@kelvantis.com">hallo@kelvantis.com</a>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon">💬</div>
+            <div class="contact-info__text">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/31600000000" target="_blank" rel="noopener">Direct een gesprek starten</a>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon">📍</div>
+            <div class="contact-info__text">
+              <strong>Locatie</strong>
+              <span>Maastricht, Nederland</span>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon">🕐</div>
+            <div class="contact-info__text">
+              <strong>Reactietijd</strong>
+              <span>Binnen 24 uur op werkdagen</span>
+            </div>
+          </div>
+
+          <div class="contact-trust">
+            <p class="contact-trust__title">Wat je mag verwachten</p>
+            <div class="contact-trust__items">
+              <div class="contact-trust__item">Geen verkooppraatje, direct bruikbaar advies</div>
+              <div class="contact-trust__item">Eerlijk beeld van wat je nodig hebt</div>
+              <div class="contact-trust__item">Geen verplichtingen na het gesprek</div>
+              <div class="contact-trust__item">Concrete volgende stap na het gesprek</div>
+            </div>
+          </div>
+
+          <div style="padding: 1.5rem; background: rgba(5,254,130,0.06); border: 1px solid rgba(5,254,130,0.15); border-radius: var(--radius-lg);">
+            <p style="font-size: 0.9375rem; color: var(--color-text-muted); margin-bottom: 1rem; line-height: 1.6;">Liever direct inplannen?</p>
+            <a href="https://calendly.com/kelvantis" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
+              Plan via Calendly →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="../index.html" class="footer__logo" aria-label="Kelvantis">
+          <svg viewBox="0 0 1024 1024" width="28" height="28" aria-hidden="true">
+            <path fill="#434343" d="m290.9 434.8l-77.4 76.8c44.2 43.4 60.4 59.1 64.5 63.1 4.1 3.9 9.5 8.1 12 9.3 2.5 1.3 9 4.1 14.5 6.3 9.6 3.9 10.5 4 23.5 4.4 8.8 0.3 13.8 0 14.3-0.6 0.4-0.7-15.5-17.5-38.8-41.1-21.7-22-39.5-40.6-39.5-41.3 0-0.6 24-25.2 53.3-54.4l53.2-53.3c70.5 70.5 91.6 91 92.3 91 0.6 0 5.8-4.9 11.5-11 5.6-6 10.2-11.4 10.2-12 0-0.5-6.3-7.6-14.1-15.7-7.8-8.2-33.3-33.5-56.8-56.3-23.4-22.8-43.2-41.6-43.9-41.8-0.7-0.1-36.2 34.3-78.8 76.6z"/>
+            <path fill="#05fe82" d="m463.5 294.2c-26 25.9-47.4 47.9-47.4 48.7-0.1 0.9 5 6.8 11.4 13.1l11.4 11.5c10.5-10 26.8-26 42.9-42 16.1-15.9 29.7-29.1 30.2-29.2 0.6-0.2 16 14.4 34.3 32.5 18.3 18 35.9 35.3 39.2 38.5l6 5.7c14-6.1 21.5-8.9 25.8-10.2 4.2-1.3 7.7-2.6 7.7-3 0-0.5-25.1-26-55.8-56.8-30.6-30.7-56.3-55.9-57-56-0.8 0-22.7 21.2-48.7 47.2zm-36 373.6c-6.6 6.4-11.9 12.2-11.7 12.7 0.1 0.6 21.8 22.6 48.2 49l48 48c22.1-21.7 43.9-43.3 62.8-62 18.8-18.7 34.2-34.5 34.2-35 0-0.5-5.1-6.1-11.2-12.4-6.2-6.2-11.9-11.1-12.6-11-0.7 0.2-16 15-34 32.9-18 17.9-34.2 33.9-36 35.5l-3.3 3-72.4-72.5z"/>
+            <path fill="#434343" d="m681.2 430.1c-0.1 0.8 17.6 19.3 39.3 41.1 21.7 21.9 39.5 40.4 39.5 41 0 0.7-23.8 25-52.8 54.1l-52.7 52.7c-61.2-61.3-82.3-82.1-86.3-85.8l-7.4-6.7-23.3 23.5c76 76.1 102.4 102.1 107.7 107.1l9.8 8.9 155.2-154.5c-28.5-27.9-44.6-43.6-54.2-52.9-14.6-14.2-18.6-17.5-24-19.9-3.6-1.6-10.1-4.3-14.5-5.9-7.1-2.7-9.6-3.1-22.1-3.6-11.6-0.4-14.1-0.2-14.2 0.9z"/>
+            <path fill="#05fe82" d="m625.8 385c-4.3 1.1-11.3 3.7-15.5 5.7-7.2 3.4-9.9 5.8-33.8 29.3-14.2 14-57.7 57-96.5 95.6-38.8 38.5-75.4 74.7-81.5 80.3-7.1 6.5-13.1 11.1-17 13-3.3 1.6-8.2 3.7-11 4.6-2.9 1-9.4 2-15.5 2.2-8.5 0.4-12 0.1-18.5-1.6-4.4-1.1-10.7-3.1-14-4.4-3.3-1.3-9.3-4.4-13.2-7-4-2.6-7.7-4.5-8.3-4.2-0.5 0.3 0.2 1.9 1.8 3.6 1.5 1.7 7.7 7.3 13.8 12.3 6.2 5 14.7 11.2 19 13.7 4.4 2.6 11.1 6 14.9 7.6 3.9 1.7 9.5 3.6 12.5 4.4 3.5 0.9 10.6 1.4 19.5 1.3 13.3 0 14.4-0.2 22-3.2 4.4-1.7 10.1-4.5 12.8-6.2 2.6-1.6 9.3-7.3 15-12.7 5.6-5.3 48.9-47.9 96.1-94.7 47.3-46.8 90.9-89.8 97-95.5 9.2-8.7 12.6-11.2 20.1-14.7 8-3.8 10.2-4.4 20-5.3 7.7-0.8 13-0.8 17.5 0 3.6 0.6 9.2 1.9 12.5 3.1 3.3 1.1 8.3 3.2 11 4.6 2.8 1.4 7.4 4 10.3 5.9 2.8 1.8 5.7 3.3 6.2 3.3 0.5 0 1-0.4 1-1 0-0.6-4.8-5.2-10.6-10.2-5.8-5.1-14.7-12.1-19.8-15.5-5-3.5-12.5-7.7-16.6-9.4-4.1-1.8-9.7-3.8-12.5-4.6-2.7-0.8-10.8-1.6-18-1.9-10.7-0.3-14.3 0-20.7 1.6z"/>
+          </svg>
+          <span class="footer__logo-text">Kelvan<span class="footer__logo-accent">tis</span></span>
+        </a>
+        <p class="footer__tagline" data-i18n="footer.tagline">Meer resultaat. Minder handwerk.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigatie">
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-title">Diensten</h4>
+          <ul role="list">
+            <li><a href="../diensten/website-laten-maken.html" class="footer__nav-link">Websites laten maken</a></li>
+            <li><a href="../diensten/seo.html" class="footer__nav-link">SEO</a></li>
+            <li><a href="../diensten/workflow-automatisering.html" class="footer__nav-link">Workflow Automatisering</a></li>
+            <li><a href="../diensten/ai-implementatie.html" class="footer__nav-link">AI Development</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-title" data-i18n="footer.contact.title">Contact</h4>
+          <ul role="list">
+            <li><a href="mailto:hallo@kelvantis.com" class="footer__nav-link">hallo@kelvantis.com</a></li>
+            <li><a href="/contact/" class="footer__nav-link">Gratis gesprek plannen</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="footer__social">
+        <h4 class="footer__nav-title" data-i18n="footer.social.title">Volg ons</h4>
+        <div class="footer__social-links">
+          <a href="https://linkedin.com/company/kelvantis" class="footer__social-link" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://instagram.com/kelvantis" class="footer__social-link" aria-label="Instagram" rel="noopener noreferrer" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2026 Kelvantis. Alle rechten voorbehouden.</p>
+      <div class="footer__legal">
+        <a href="/privacy" class="footer__legal-link" data-i18n="footer.privacy">Privacybeleid</a>
+        <a href="/voorwaarden" class="footer__legal-link" data-i18n="footer.terms">Algemene voorwaarden</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal__overlay" id="modalOverlay"></div>
+  <div class="modal__card">
+    <button class="modal__close" id="modalClose" aria-label="Formulier sluiten">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="modal__header">
+      <span class="section__label" style="margin-bottom:.75rem;" data-i18n="modal.label">Gratis · Geen verplichtingen</span>
+      <h2 class="modal__title" id="modal-title" data-i18n="modal.title">Plan je gratis strategiegesprek</h2>
+      <p class="modal__subtitle" data-i18n="modal.subtitle">Vertel kort over je situatie. We nemen binnen 24 uur contact op.</p>
+    </div>
+    <form class="modal__form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+      <div class="form__row">
+        <div class="form__group">
+          <label class="form__label" for="f-naam"><span data-i18n="form.name">Naam</span> <span aria-hidden="true">*</span></label>
+          <input class="form__input" type="text" id="f-naam" name="naam" required placeholder="Jan de Vries" autocomplete="name">
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="f-bedrijf"><span data-i18n="form.company">Bedrijfsnaam</span> <span aria-hidden="true">*</span></label>
+          <input class="form__input" type="text" id="f-bedrijf" name="bedrijf" required placeholder="Jouw Bedrijf BV" autocomplete="organization">
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="form__group">
+          <label class="form__label" for="f-email"><span data-i18n="form.email">E-mailadres</span> <span aria-hidden="true">*</span></label>
+          <input class="form__input" type="email" id="f-email" name="email" required placeholder="jan@jouwbedrijf.nl" autocomplete="email">
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="f-tel" data-i18n="form.phone">Telefoonnummer</label>
+          <input class="form__input" type="tel" id="f-tel" name="telefoon" placeholder="+31 6 12 34 56 78" autocomplete="tel">
+        </div>
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="f-uitdaging"><span data-i18n="form.challenge">Wat is jouw grootste uitdaging?</span> <span aria-hidden="true">*</span></label>
+        <select class="form__select" id="f-uitdaging" name="uitdaging" required>
+          <option value="" disabled selected data-i18n="form.challengeOpt0">Kies je situatie...</option>
+          <option value="Te weinig leads" data-i18n="form.challengeOpt1">Te weinig leads en aanvragen</option>
+          <option value="Website presteert slecht" data-i18n="form.challengeOpt2">Website presteert slecht</option>
+          <option value="Opvolging kost te veel tijd" data-i18n="form.challengeOpt3">Opvolging kost te veel tijd</option>
+          <option value="Geen inzicht" data-i18n="form.challengeOpt4">Geen inzicht in marketingresultaten</option>
+          <option value="Concurrentie" data-i18n="form.challengeOpt5">Concurrentie trekt klanten weg</option>
+          <option value="Anders" data-i18n="form.challengeOpt6">Anders</option>
+        </select>
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="f-bericht"><span data-i18n="form.message">Vertel kort over je bedrijf</span> <span class="form__label-optional" data-i18n="form.optional">(optioneel)</span></label>
+        <textarea class="form__textarea" id="f-bericht" name="bericht" rows="3" placeholder="Bijv: Ik run een installatiebedrijf in Limburg..."></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full btn--lg form__submit">
+        <span data-i18n="form.submit">Verstuur aanvraag</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="form__disclaimer">Door te versturen ga je akkoord met ons <a href="/privacy" class="form__link">privacybeleid</a>.</p>
+    </form>
+    <div class="modal__success" id="formSuccess" hidden>
+      <div class="success__icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#05FE82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 data-i18n="success.title">Aanvraag ontvangen!</h3>
+      <p data-i18n-html="success.desc">We nemen binnen <strong>24 uur</strong> contact met je op.</p>
+      <button class="btn btn--ghost" id="modalSuccessClose" style="margin-top:1.5rem;" data-i18n="success.close">Sluiten</button>
+    </div>
+  </div>
+</div>
+
+<!-- WHATSAPP -->
+<a class="wa-button" href="https://wa.me/31600000000?text=Hallo%20Kelvantis%2C%20ik%20heb%20interesse%20in%20een%20gratis%20strategiegesprek." target="_blank" rel="noopener noreferrer" aria-label="App ons direct op WhatsApp">
+  <span class="wa-button__tooltip" data-i18n="wa.tooltip">App ons direct</span>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie-instellingen" aria-live="polite">
+  <div class="cookie-banner__inner">
+    <p class="cookie-banner__text"><span data-i18n-html="cookie.text">Wij gebruiken cookies voor analytics en een betere gebruikerservaring.</span></p>
+    <div class="cookie-banner__actions">
+      <button class="btn btn--ghost btn--sm" id="cookieDecline" data-i18n="cookie.decline">Alleen noodzakelijk</button>
+      <button class="btn btn--primary btn--sm" id="cookieAccept" data-i18n="cookie.accept">Accepteren</button>
+    </div>
+  </div>
+</div>
+
+<script src="../script.js"></script>
+<script>
+  // Contact page form submission
+  const cpForm = document.getElementById('contactPageForm');
+  const cpSuccess = document.getElementById('cp-success');
+  if (cpForm) {
+    cpForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('cp-submit');
+      btn.disabled = true;
+      btn.querySelector('span').textContent = 'Versturen...';
+      try {
+        const res = await fetch(cpForm.action, {
+          method: 'POST',
+          body: new FormData(cpForm),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          cpForm.hidden = true;
+          cpSuccess.hidden = false;
+        } else {
+          btn.disabled = false;
+          btn.querySelector('span').textContent = 'Verstuur aanvraag';
+          alert('Er is iets misgegaan. Probeer het opnieuw of mail naar hallo@kelvantis.com');
+        }
+      } catch {
+        btn.disabled = false;
+        btn.querySelector('span').textContent = 'Verstuur aanvraag';
+      }
+    });
+  }
+</script>
+</body>
+</html>
