@@ -1836,7 +1836,7 @@ button {
 
   .footer__nav {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .footer__inner {
@@ -2997,4 +2997,69 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
 .andere-diensten__card-text small {
   font-size: 0.8rem;
   color: var(--color-text-muted);
+}
+
+/* ═══════════════════════════════════════
+   MOBILE UX IMPROVEMENTS
+═══════════════════════════════════════ */
+
+/* Footer nav: 3 groups, 2-col on mobile (3rd wraps to new row) */
+.footer__nav {
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+
+@media (max-width: 639px) {
+  /* Hero: remove full-viewport height on mobile */
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--navbar-h) + 2rem);
+    padding-bottom: 3rem;
+  }
+
+  /* Tighter section padding on mobile */
+  section {
+    padding-block: 3.5rem;
+  }
+
+  /* Better touch targets for mobile nav */
+  .navbar__mobile-link {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    display: block;
+  }
+
+  .navbar__mobile-subnav a {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+
+  /* Blog grid: tighter on mobile */
+  .blog__grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 479px) {
+  /* Hero heading: smaller on tiny screens */
+  .hero__title {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1.15;
+  }
+
+  /* Service page headings */
+  .dienst-hero__title {
+    font-size: clamp(1.625rem, 7vw, 2rem);
+  }
+
+  /* Blog cards: compact padding */
+  .blog-card {
+    padding: 1.25rem;
+  }
+
+  /* Large buttons: readable on mobile */
+  .btn--lg {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
 }
