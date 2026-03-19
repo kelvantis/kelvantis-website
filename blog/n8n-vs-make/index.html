@@ -9,6 +9,8 @@
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
   <link rel="apple-touch-icon" href="../../favicon.svg">
   <link rel="canonical" href="https://kelvantis.com/blog/n8n-vs-make/">
+  <link rel="alternate" hreflang="nl" href="https://kelvantis.com/blog/n8n-vs-make/" />
+  <link rel="alternate" hreflang="x-default" href="https://kelvantis.com/blog/n8n-vs-make/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
@@ -36,8 +38,8 @@
       "name": "Kelvantis",
       "url": "https://kelvantis.com"
     },
-    "datePublished": "2026-03-18",
-    "dateModified": "2026-03-18",
+    "datePublished": "2026-04-01",
+    "dateModified": "2026-04-01",
     "url": "https://kelvantis.com/blog/n8n-vs-make/",
     "inLanguage": "nl"
   }
@@ -275,8 +277,10 @@
             </div>
           </li>
           <li><a href="../../index.html#aanpak" class="navbar__link">Aanpak</a></li>
+          <li><a href="../../index.html#voor-wie" class="navbar__link">Voor wie</a></li>
+          <li><a href="../../index.html#prijzen" class="navbar__link">Pakketten</a></li>
           <li><a href="/blog/" class="navbar__link">Blog</a></li>
-          <li><a href="/contact/" class="navbar__link">Contact</a></li>
+          <li><a href="../../index.html#faq" class="navbar__link">FAQ</a></li>
         </ul>
       </nav>
       <div class="navbar__actions">
@@ -308,8 +312,10 @@
             </div>
           </li>
           <li><a href="../../index.html#aanpak" class="navbar__mobile-link">Aanpak</a></li>
+          <li><a href="../../index.html#voor-wie" class="navbar__mobile-link">Voor wie</a></li>
+          <li><a href="../../index.html#prijzen" class="navbar__mobile-link">Pakketten</a></li>
           <li><a href="/blog/" class="navbar__mobile-link">Blog</a></li>
-          <li><a href="/contact/" class="navbar__mobile-link">Contact</a></li>
+          <li><a href="../../index.html#faq" class="navbar__mobile-link">FAQ</a></li>
           <li>
             <div class="navbar__mobile-toggles">
               <button class="navbar__lang-toggle" id="langToggleMobile" aria-label="Switch language"><span id="langLabelMobile">🇬🇧</span></button>
@@ -339,7 +345,7 @@
         <div class="article-hero__meta">
           <span>Kjell - Kelvantis</span>
           <span class="article-hero__meta-sep"></span>
-          <span>18 maart 2026</span>
+          <time datetime="2026-04-01">1 april 2026</time>
           <span class="article-hero__meta-sep"></span>
           <span>10 min leestijd</span>
         </div>
@@ -351,17 +357,30 @@
 
       <p>Als je serieus bezig bent met het <strong>automatiseren van bedrijfsprocessen</strong>, kom je al snel twee namen tegen: <strong>n8n vs Make</strong>. Beide zijn krachtige automation tools waarmee je workflows kunt bouwen die voor je werken, zonder dat je zelf hoeft te klikken, kopiëren of handmatig gegevens verplaatsen. Maar welke tool past het best bij jouw situatie? In dit artikel vergelijken we beide platforms eerlijk op prijs, gebruiksgemak, schaalbaarheid en technische mogelijkheden, zodat jij een weloverwogen keuze kunt maken voor jouw <strong>automation tool</strong> voor <strong>bedrijfsprocessen automatiseren</strong>.</p>
 
-      <h2>Wat is n8n?</h2>
+      <nav class="toc" aria-label="Inhoudsopgave">
+        <p class="toc-title">In dit artikel</p>
+        <ol>
+          <li><a href="#wat-is-n8n">Wat is n8n?</a></li>
+          <li><a href="#wat-is-make">Wat is Make?</a></li>
+          <li><a href="#vergelijking">De vergelijking</a></li>
+          <li><a href="#wanneer-n8n">Wanneer kies je n8n?</a></li>
+          <li><a href="#wanneer-make">Wanneer kies je Make?</a></li>
+          <li><a href="#kelvantis-keuze">Wat wij gebruiken bij Kelvantis</a></li>
+          <li><a href="#conclusie">Conclusie</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="wat-is-n8n">Wat is n8n?</h2>
       <p>n8n (spreek uit: "n-eight-n" of "nodemation") is een open-source workflow automation platform dat in 2019 is opgericht door Jan Oberhauser. Het platform onderscheidt zich van concurrenten door zijn open-source karakter: je kunt n8n volledig zelf hosten op jouw eigen server, en de broncode is openbaar beschikbaar.</p>
       <p>n8n werkt met een visuele editor waarin je nodes (knooppunten) aan elkaar koppelt om workflows te bouwen. Elke node vertegenwoordigt een actie of integratie met een externe service, zoals Gmail, Slack, HubSpot, PostgreSQL of een eigen API. Met meer dan 400 ingebouwde integraties en de mogelijkheid om JavaScript-code direct in je workflow te schrijven, is n8n een bijzonder flexibele tool.</p>
       <p><strong>De grootste troef van n8n:</strong> omdat je het zelf kunt hosten, betaal je geen kosten per taakuitvoering. Je betaalt alleen voor de server waarop n8n draait, wat voor bedrijven met grote volumes aanzienlijk goedkoper uitpakt.</p>
 
-      <h2>Wat is Make (voorheen Integromat)?</h2>
+      <h2 id="wat-is-make">Wat is Make (voorheen Integromat)?</h2>
       <p>Make, voorheen bekend als Integromat, is een no-code automation platform uit Tsjechië dat al langer op de markt is dan n8n. Make is volledig cloud-gebaseerd en richt zich op gebruiksvriendelijkheid. Het platform is met recht "no-code": je hoeft geen programmeervaardigheid te hebben om krachtige workflows te bouwen.</p>
       <p>Make werkt met "scenarios" in plaats van workflows. In een scenario combineer je modules (vergelijkbaar met n8n's nodes) om data te verplaatsen en te transformeren tussen verschillende apps. Make heeft meer dan 1.000 ingebouwde integraties, waarmee het op dat vlak ruim voor loopt op n8n.</p>
       <p><strong>De grootste troef van Make:</strong> de intuïtieve interface en de enorme bibliotheek van kant-en-klare integraties maken het zeer toegankelijk voor niet-technische gebruikers. Nieuwe workflows zijn in no-time gebouwd, zonder enige programmeerkennis.</p>
 
-      <h2>n8n vs Make: de vergelijking</h2>
+      <h2 id="vergelijking">n8n vs Make: de vergelijking</h2>
       <p>Laten we de twee platforms eerlijk naast elkaar leggen op de criteria die voor de meeste bedrijven belangrijk zijn:</p>
 
       <div style="overflow-x:auto;">
@@ -439,7 +458,7 @@
         </table>
       </div>
 
-      <h2>Wanneer kies je voor n8n?</h2>
+      <h2 id="wanneer-n8n">Wanneer kies je voor n8n?</h2>
       <p>n8n is de betere keuze in de volgende situaties:</p>
       <ul>
         <li><strong>Je verwerkt grote volumes.</strong> Als je dagelijks duizenden of tienduizenden runs verwacht, worden de kosten bij Make al snel hoog. Met n8n op een eigen server betaal je een vaste serverkosten, ongeacht het volume.</li>
@@ -449,7 +468,7 @@
         <li><strong>Je wilt geen vendor lock-in.</strong> Als open-source platform ben je niet afhankelijk van Make's prijsbeleid of functionaliteitswijzigingen.</li>
       </ul>
 
-      <h2>Wanneer kies je voor Make?</h2>
+      <h2 id="wanneer-make">Wanneer kies je voor Make?</h2>
       <p>Make is de betere keuze als:</p>
       <ul>
         <li><strong>Je geen technische kennis hebt.</strong> Make's visuele interface is bijzonder intuïtief. Iemand zonder programmeerervaring kan in een middag een complete lead-opvolging workflow bouwen.</li>
@@ -459,7 +478,7 @@
         <li><strong>Je visuele debugging wilt.</strong> Make toont precies welke data door elke module loopt bij het uitvoeren. Dat maakt debuggen voor niet-technische gebruikers stukken makkelijker.</li>
       </ul>
 
-      <h2>Wat wij gebruiken bij Kelvantis — en waarom</h2>
+      <h2 id="kelvantis-keuze">Wat wij gebruiken bij Kelvantis — en waarom</h2>
       <p>Bij Kelvantis werken we met <strong>beide tools</strong>, afhankelijk van de situatie van de klant. Dat is geen politieke neutraliteit, maar een bewuste keuze op basis van requirements.</p>
       <p>Voor klanten die <strong>eenvoudige automatiseringen</strong> willen — lead-opvolging, notificaties, eenvoudige CRM-koppelingen — kiezen we vaak voor Make. Het is sneller gebouwd, de klant kan het zelf beheren zonder technische kennis, en de kosten zijn laag.</p>
       <p>Voor klanten met <strong>hoge volumes, strenge privacy-eisen of complexe logica</strong> — denk aan bedrijven in de zorg, finance of met meerdere afdelingen die real-time data verwerken — kiezen we vrijwel altijd voor n8n. We hosten het op een dedicated server (VPS of eigen infrastructure) en bouwen workflows die je nergens anders zo flexibel kunt bouwen.</p>
@@ -470,7 +489,7 @@
 
       <p>Wat we bijna nooit doen: een klant vastmaken aan één platform zonder de alternatieven te bespreken. Want de "beste" automation tool is simpelweg de tool die het best past bij jouw bedrijf, data en budget.</p>
 
-      <h2>Conclusie</h2>
+      <h2 id="conclusie">Conclusie</h2>
       <p>n8n en Make zijn beide uitstekende automation tools die ieder hun eigen sterke punten hebben. Make wint op gebruiksgemak, snelheid van implementatie en aantal native integraties. n8n wint op prijs bij schaal, flexibiliteit, dataprivacy en AI-mogelijkheden.</p>
       <p>De keuze hangt uiteindelijk af van drie vragen:</p>
       <ol>
@@ -490,6 +509,24 @@
       </div>
 
     </article>
+
+    <section class="related-posts">
+      <div class="container">
+        <h2 class="related-posts__title">Meer lezen</h2>
+        <div class="related-grid">
+          <a href="/blog/ai-chatbot-website/" class="related-card">
+            <span class="related-card__cat">AI</span>
+            <h3>AI chatbot voor je website: wat kost het en wat levert het op?</h3>
+            <span class="related-card__time">8 min lezen</span>
+          </a>
+          <a href="/diensten/workflow-automatisering.html" class="related-card">
+            <span class="related-card__cat">Dienst</span>
+            <h3>Workflow automatisering voor jouw bedrijf</h3>
+            <span class="related-card__time">Bekijk dienst →</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -539,6 +576,7 @@
           <div class="footer__social-links">
             <a href="https://linkedin.com/company/kelvantis" class="footer__social-link" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              <span class="footer__social-label">LinkedIn</span>
             </a>
           </div>
         </div>

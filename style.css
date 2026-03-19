@@ -3063,3 +3063,148 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
     padding: 0.875rem 1.5rem;
   }
 }
+
+/* ═══════════════════════════════════════
+   AUDIT FIXES — maart 2026
+═══════════════════════════════════════ */
+
+/* Fix 2 — WhatsApp knop verbergen (placeholder nummer) */
+.wa-button { display: none !important; }
+
+/* Fix 15 — Taalknop verbergen (geen EN versie beschikbaar) */
+.navbar__lang-toggle { display: none !important; }
+
+/* Fix 1 — Hero proof line */
+.hero__proof {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-top: 1rem;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* Fix 4 — Footer social labels */
+.footer__social-link {
+  flex-direction: column;
+  height: auto;
+  min-height: 38px;
+  padding: 0.625rem 0.75rem;
+  gap: 4px;
+}
+.footer__social-label {
+  font-size: 0.6875rem;
+  color: var(--color-grey);
+  line-height: 1;
+}
+
+/* Fix 9 — TOC (inhoudsopgave) blogposts */
+.toc {
+  background: rgba(5,254,130,0.04);
+  border: 0.5px solid rgba(5,254,130,0.2);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+.toc-title {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+.toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.toc a {
+  color: var(--color-text);
+  font-size: 0.875rem;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity var(--transition), color var(--transition);
+}
+.toc a:hover { opacity: 1; color: var(--color-accent); }
+
+/* Fix 10 — Gerelateerde artikelen */
+.related-posts {
+  padding: 3rem 0;
+  border-top: 1px solid var(--color-border);
+}
+.related-posts__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.related-card {
+  display: block;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--transition), background var(--transition);
+}
+.related-card:hover {
+  border-color: rgba(5,254,130,0.3);
+  background: rgba(5,254,130,0.03);
+}
+.related-card__cat {
+  font-size: 0.6875rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 6px;
+}
+.related-card h3 {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.related-card__time {
+  font-size: 0.75rem;
+  color: var(--color-grey);
+}
+@media (max-width: 640px) { .related-grid { grid-template-columns: 1fr; } }
+
+/* Fix 12 — Leestijd op blog cards */
+.blog-card__sep { color: var(--color-grey); margin: 0 0.25rem; }
+.blog-card__readtime { color: var(--color-grey); font-size: 0.8125rem; }
+
+/* Fix 13 — Categorie filter tabs */
+.blog-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 0.8125rem;
+  border: 0.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+  color: var(--color-grey);
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+.filter-btn:hover { color: var(--color-text); border-color: rgba(255,255,255,0.3); }
+.filter-btn.active { color: var(--color-accent); border-color: var(--color-accent); }
+[data-theme="light"] .filter-btn {
+  border-color: rgba(0,0,0,0.12);
+}
+[data-theme="light"] .filter-btn:hover { border-color: rgba(0,0,0,0.3); }

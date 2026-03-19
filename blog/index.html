@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | Kelvantis — Websites, SEO & AI Automatisering</title>
-  <meta name="description" content="Praktische kennis over websites, SEO en AI automatisering voor Nederlandse B2B bedrijven. Leer hoe je slimme systemen bouwt die voor je werken.">
+  <title>SEO, Websites & AI Automatisering Kennisbank | Kelvantis Blog</title>
+  <meta name="description" content="Praktische gidsen over websites, SEO en AI automatisering voor B2B bedrijven in Nederland. Leer van Kelvantis experts en groei sneller.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="apple-touch-icon" href="../favicon.svg">
   <link rel="canonical" href="https://kelvantis.com/blog/">
+  <link rel="alternate" hreflang="nl" href="https://kelvantis.com/blog/" />
+  <link rel="alternate" hreflang="x-default" href="https://kelvantis.com/blog/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -194,8 +196,9 @@
           </li>
           <li><a href="../index.html#aanpak" class="navbar__link" data-i18n="nav.approach">Aanpak</a></li>
           <li><a href="../index.html#voor-wie" class="navbar__link" data-i18n="nav.forWho">Voor wie</a></li>
+          <li><a href="../index.html#prijzen" class="navbar__link" data-i18n="nav.packages">Pakketten</a></li>
           <li><a href="/blog/" class="navbar__link">Blog</a></li>
-          <li><a href="/contact/" class="navbar__link">Contact</a></li>
+          <li><a href="../index.html#faq" class="navbar__link" data-i18n="nav.faq">FAQ</a></li>
         </ul>
       </nav>
       <div class="navbar__actions">
@@ -227,8 +230,10 @@
             </div>
           </li>
           <li><a href="../index.html#aanpak" class="navbar__mobile-link">Aanpak</a></li>
+          <li><a href="../index.html#voor-wie" class="navbar__mobile-link">Voor wie</a></li>
+          <li><a href="../index.html#prijzen" class="navbar__mobile-link">Pakketten</a></li>
           <li><a href="/blog/" class="navbar__mobile-link">Blog</a></li>
-          <li><a href="/contact/" class="navbar__mobile-link">Contact</a></li>
+          <li><a href="../index.html#faq" class="navbar__mobile-link">FAQ</a></li>
           <li>
             <div class="navbar__mobile-toggles">
               <button class="navbar__lang-toggle" id="langToggleMobile" aria-label="Switch language"><span id="langLabelMobile">🇬🇧</span></button>
@@ -255,37 +260,52 @@
     <!-- BLOG GRID -->
     <section class="section" style="padding-top: 0;">
       <div class="container">
+
+        <!-- Categorie filter tabs -->
+        <div class="blog-filters" role="group" aria-label="Filter op categorie">
+          <button class="filter-btn active" data-filter="all" onclick="filterBlogs('all',this)">Alle</button>
+          <button class="filter-btn" data-filter="automatisering" onclick="filterBlogs('automatisering',this)">Automatisering</button>
+          <button class="filter-btn" data-filter="ai" onclick="filterBlogs('ai',this)">AI</button>
+          <button class="filter-btn" data-filter="websites" onclick="filterBlogs('websites',this)">Websites</button>
+        </div>
+
         <div class="blog-grid">
 
           <!-- Card 1: n8n vs Make -->
-          <a href="./n8n-vs-make/" class="blog-card reveal">
+          <a href="./n8n-vs-make/" class="blog-card reveal" data-cat="automatisering">
             <span class="blog-card__category">Automatisering</span>
             <h2 class="blog-card__title">n8n vs Make: welke automation tool past bij jouw bedrijf? [2026]</h2>
             <p class="blog-card__excerpt">Twijfel je tussen n8n en Make voor jouw workflow automatisering? We vergelijken prijs, functies en schaalbaarheid eerlijk naast elkaar.</p>
             <div class="blog-card__meta">
-              <span>18 maart 2026</span>
+              <time datetime="2026-04-01">1 april 2026</time>
+              <span class="blog-card__sep">·</span>
+              <span class="blog-card__readtime">10 min lezen</span>
               <svg class="blog-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
           </a>
 
           <!-- Card 2: AI Chatbot -->
-          <a href="./ai-chatbot-website/" class="blog-card reveal">
+          <a href="./ai-chatbot-website/" class="blog-card reveal" data-cat="ai">
             <span class="blog-card__category">AI</span>
             <h2 class="blog-card__title">AI chatbot voor je website: wat kost het en wat levert het op? [2026]</h2>
             <p class="blog-card__excerpt">Wat kost een AI chatbot en wat is de ROI? Alles wat B2B bedrijven moeten weten over implementatie, kosten en conversie.</p>
             <div class="blog-card__meta">
-              <span>18 maart 2026</span>
+              <time datetime="2026-04-08">8 april 2026</time>
+              <span class="blog-card__sep">·</span>
+              <span class="blog-card__readtime">8 min lezen</span>
               <svg class="blog-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
           </a>
 
           <!-- Card 3: Webflow vs WordPress -->
-          <a href="./webflow-vs-wordpress/" class="blog-card reveal">
+          <a href="./webflow-vs-wordpress/" class="blog-card reveal" data-cat="websites">
             <span class="blog-card__category">Websites</span>
             <h2 class="blog-card__title">Webflow vs WordPress in 2026: welk platform past bij jouw bedrijf?</h2>
             <p class="blog-card__excerpt">Webflow of WordPress? We vergelijken design, snelheid, SEO, kosten en schaalbaarheid in een eerlijke vergelijking.</p>
             <div class="blog-card__meta">
-              <span>18 maart 2026</span>
+              <time datetime="2026-04-15">15 april 2026</time>
+              <span class="blog-card__sep">·</span>
+              <span class="blog-card__readtime">11 min lezen</span>
               <svg class="blog-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
           </a>
@@ -463,5 +483,14 @@
   </div>
 
   <script src="../script.js"></script>
+  <script>
+    function filterBlogs(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.blog-card[data-cat]').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+      });
+    }
+  </script>
 </body>
 </html>

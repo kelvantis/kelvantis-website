@@ -9,6 +9,8 @@
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
   <link rel="apple-touch-icon" href="../../favicon.svg">
   <link rel="canonical" href="https://kelvantis.com/blog/ai-chatbot-website/">
+  <link rel="alternate" hreflang="nl" href="https://kelvantis.com/blog/ai-chatbot-website/" />
+  <link rel="alternate" hreflang="x-default" href="https://kelvantis.com/blog/ai-chatbot-website/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
@@ -28,8 +30,8 @@
     "description": "Wat kost een AI chatbot en wat levert het op? Alles over implementatie, ROI en concrete voorbeelden voor B2B bedrijven.",
     "author": { "@type": "Person", "name": "Kjell", "jobTitle": "Oprichter Kelvantis" },
     "publisher": { "@type": "Organization", "name": "Kelvantis", "url": "https://kelvantis.com" },
-    "datePublished": "2026-03-18",
-    "dateModified": "2026-03-18",
+    "datePublished": "2026-04-08",
+    "dateModified": "2026-04-08",
     "url": "https://kelvantis.com/blog/ai-chatbot-website/",
     "inLanguage": "nl"
   }
@@ -101,8 +103,10 @@
             </div>
           </li>
           <li><a href="../../index.html#aanpak" class="navbar__link">Aanpak</a></li>
+          <li><a href="../../index.html#voor-wie" class="navbar__link">Voor wie</a></li>
+          <li><a href="../../pakketten/" class="navbar__link">Pakketten</a></li>
           <li><a href="/blog/" class="navbar__link">Blog</a></li>
-          <li><a href="/contact/" class="navbar__link">Contact</a></li>
+          <li><a href="../../index.html#faq" class="navbar__link">FAQ</a></li>
         </ul>
       </nav>
       <div class="navbar__actions">
@@ -117,8 +121,10 @@
         <ul class="navbar__mobile-links" role="list">
           <li><div class="navbar__mobile-accordion"><button class="navbar__mobile-accordion-trigger"><span>Diensten</span><span class="navbar__mobile-accordion-arrow">▾</span></button><nav class="navbar__mobile-subnav"><a href="../../diensten/website-laten-maken.html">🌐 Websites laten maken</a><a href="../../diensten/workflow-automatisering.html">⚡ Workflow Automatisering</a><a href="../../diensten/ai-implementatie.html">🤖 AI Development</a><a href="../../diensten/seo.html">📈 SEO</a></nav></div></li>
           <li><a href="../../index.html#aanpak" class="navbar__mobile-link">Aanpak</a></li>
+          <li><a href="../../index.html#voor-wie" class="navbar__mobile-link">Voor wie</a></li>
+          <li><a href="../../pakketten/" class="navbar__mobile-link">Pakketten</a></li>
           <li><a href="/blog/" class="navbar__mobile-link">Blog</a></li>
-          <li><a href="/contact/" class="navbar__mobile-link">Contact</a></li>
+          <li><a href="../../index.html#faq" class="navbar__mobile-link">FAQ</a></li>
           <li><div class="navbar__mobile-toggles"><button class="navbar__lang-toggle" id="langToggleMobile" aria-label="Switch language"><span id="langLabelMobile">🇬🇧</span></button><button class="navbar__theme-toggle" id="themeToggleMobile" aria-label="Toggle theme"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button></div></li>
         </ul>
       </nav>
@@ -141,7 +147,7 @@
         <div class="article-hero__meta">
           <span>Kjell - Kelvantis</span>
           <span class="article-hero__meta-sep"></span>
-          <span>18 maart 2026</span>
+          <time datetime="2026-04-08">8 april 2026</time>
           <span class="article-hero__meta-sep"></span>
           <span>9 min leestijd</span>
         </div>
@@ -153,11 +159,24 @@
 
       <p>Een <strong>AI chatbot</strong> op je <strong>website</strong>: het was tot voor kort voorbehouden aan grote corporates met grote budgetten. In 2026 is dat compleet veranderd. Met tools als Claude, GPT-4o en Gemini Pro zijn slimme chatbots toegankelijk geworden voor elk bedrijf, van installatiebedrijf tot advocatenkantoor. Maar wat kost een AI chatbot precies, en — misschien nog belangrijker — wat levert het op in termen van <strong>leads</strong> en <strong>klantenservice</strong>? In dit artikel zetten we alles op een rij, zonder blabla.</p>
 
-      <h2>Wat is een AI chatbot — en wat is het niet?</h2>
+      <nav class="toc" aria-label="Inhoudsopgave">
+        <p class="toc-title">In dit artikel</p>
+        <ol>
+          <li><a href="#wat-is-chatbot">Wat is een AI chatbot?</a></li>
+          <li><a href="#wat-levert-het-op">Wat levert het op?</a></li>
+          <li><a href="#kosten">Wat kost een AI chatbot?</a></li>
+          <li><a href="#implementatie">Hoe werkt de implementatie?</a></li>
+          <li><a href="#vergelijking">AI chatbot vs live chat vs contactformulier</a></li>
+          <li><a href="#voor-wie">Voor welke bedrijven werkt het?</a></li>
+          <li><a href="#conclusie">Conclusie</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="wat-is-chatbot">Wat is een AI chatbot — en wat is het niet?</h2>
       <p>Een AI chatbot is een digitale assistent die via een chatvenster op je website communiceert met bezoekers, aangedreven door een groot taalmodel (LLM) zoals Claude van Anthropic of GPT-4o van OpenAI. Wat een moderne AI chatbot uniek maakt ten opzichte van oudere chatbots, is dat hij <em>begrijpt</em> wat iemand vraagt, ook als de formulering onverwacht is. Hij geeft contextuele antwoorden, onthoudt eerdere berichten in een gesprek, en kan — indien goed geconfigureerd — handelen op basis van data uit jouw eigen systemen.</p>
       <p><strong>Wat een AI chatbot niet is:</strong> een vervanging voor menselijk contact bij complexe situaties. De beste implementaties gebruiken de chatbot als eerste lijn die 80% van de vragen zelfstandig afhandelt, en naadloos doorverwijst naar een mens voor de rest.</p>
 
-      <h2>Wat levert een AI chatbot concreet op?</h2>
+      <h2 id="wat-levert-het-op">Wat levert een AI chatbot concreet op?</h2>
       <p>Laten we direct zijn: een AI chatbot is geen magisch leadgeneratie-apparaat. Maar goed geimplementeerd levert het wél concrete, meetbare voordelen op:</p>
 
       <h3>1. 24/7 beschikbaarheid</h3>
@@ -172,7 +191,7 @@
       <h3>4. Betere kwalificatie van leads</h3>
       <p>Een chatbot kan vragen stellen die je sales team nodig heeft: budget, tijdlijn, grootte van het bedrijf. Als een lead bij een medewerker aankomt, is die al voor-gekwalificeerd. Dit verhoogt de conversieratio van leads naar klanten aanzienlijk.</p>
 
-      <h2>Wat kost een AI chatbot?</h2>
+      <h2 id="kosten">Wat kost een AI chatbot?</h2>
       <p>De kosten van een AI chatbot zijn sterk afhankelijk van het type implementatie. We onderscheiden drie niveaus:</p>
 
       <div style="overflow-x:auto;">
@@ -214,7 +233,7 @@
         <p><strong>Let op:</strong> Goedkope SaaS chatbots zien er aantrekkelijk uit door lage maandelijkse kosten, maar bieden weinig maatwerk en zijn niet getraind op jouw bedrijfsdata. Een chatbot die onjuiste informatie geeft, schaadt je reputatie.</p>
       </div>
 
-      <h2>Hoe werkt de implementatie?</h2>
+      <h2 id="implementatie">Hoe werkt de implementatie?</h2>
       <p>Bij Kelvantis volgen we een helder implementatieproces:</p>
       <ol>
         <li><strong>Intake & doelstelling.</strong> We bepalen samen wat de chatbot moet kunnen. Leadgeneratie? Klantenservice? Afspraken inplannen? De doelstelling bepaalt de architectuur.</li>
@@ -224,7 +243,7 @@
         <li><strong>Monitoring & optimalisatie.</strong> De eerste weken monitoren we de gesprekken actief. Vragen die de chatbot niet goed beantwoordt, worden gebruikt om de kennisbank te verbeteren.</li>
       </ol>
 
-      <h2>AI chatbot vs live chat vs contactformulier</h2>
+      <h2 id="vergelijking">AI chatbot vs live chat vs contactformulier</h2>
       <p>Welke tool past wanneer? Een eerlijke vergelijking:</p>
 
       <div style="overflow-x:auto;">
@@ -280,7 +299,7 @@
 
       <p>De conclusie: een AI chatbot en live chat vullen elkaar aan. Gebruik de AI chatbot als eerste lijn voor de meeste vragen, en laat complexe gesprekken of warme leads doorstromen naar een medewerker.</p>
 
-      <h2>Voor welke bedrijven werkt een AI chatbot het best?</h2>
+      <h2 id="voor-wie">Voor welke bedrijven werkt een AI chatbot het best?</h2>
       <p>Een AI chatbot levert de meeste waarde als:</p>
       <ul>
         <li><strong>Je veel repetitieve vragen ontvangt</strong> — installatiebedrijven, accountantskantoren, makelaars, webshops: overal waar bezoekers steeds dezelfde vragen stellen over prijs, levertijd of werkwijze.</li>
@@ -291,7 +310,7 @@
 
       <p>Een AI chatbot is minder geschikt als je producten of diensten sterk variëren per klant, en elk gesprek fundamenteel anders is. In dat geval is een live chat of telefonisch contact beter.</p>
 
-      <h2>Conclusie</h2>
+      <h2 id="conclusie">Conclusie</h2>
       <p>Een AI chatbot is in 2026 geen luxe meer — het is een praktisch instrument voor bedrijven die slimmer willen omgaan met hun tijd en meer leads willen vangen buiten kantooruren. De investering van €797 tot €2.500 voor een goede maatwerk-implementatie verdient zich in de meeste gevallen binnen 3-6 maanden terug.</p>
       <p>Maar — en dit is cruciaal — een slecht geconfigureerde chatbot die onjuiste informatie geeft of frustratie oplevert bij bezoekers, is erger dan geen chatbot. Investeer in goede implementatie op basis van jouw eigen bedrijfsdata.</p>
 
@@ -305,6 +324,24 @@
       </div>
 
     </article>
+
+    <section class="related-posts">
+      <div class="container">
+        <h2 class="related-posts__title">Meer lezen</h2>
+        <div class="related-grid">
+          <a href="/blog/n8n-vs-make/" class="related-card">
+            <span class="related-card__cat">Automatisering</span>
+            <h3>n8n vs Make: welke automation tool past bij jou?</h3>
+            <span class="related-card__time">10 min lezen</span>
+          </a>
+          <a href="/diensten/ai-implementatie.html" class="related-card">
+            <span class="related-card__cat">Dienst</span>
+            <h3>AI Development voor jouw bedrijf</h3>
+            <span class="related-card__time">Bekijk dienst →</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -352,7 +389,7 @@
         <div class="footer__social">
           <h4 class="footer__nav-title">Volg ons</h4>
           <div class="footer__social-links">
-            <a href="https://linkedin.com/company/kelvantis" class="footer__social-link" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://linkedin.com/company/kelvantis" class="footer__social-link" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg><span class="footer__social-label">LinkedIn</span></a>
           </div>
         </div>
       </div>
