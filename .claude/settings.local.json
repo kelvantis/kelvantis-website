@@ -6,7 +6,11 @@
       "Bash(do)",
       "Bash(sed -i '/linkedin\\\\.com\\\\/company\\\\/kelvantis/,/<\\\\/a>/d' \"$f\")",
       "Bash(echo \"Done: $f\")",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(sed -i 's/aria-label=\"\"Foundation pakket, €1\\\\.500\"\"/aria-label=\"\"Foundation pakket\"\"/' \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy/index.html\")",
+      "Bash(sed -i 's/aria-label=\"\"Growth System pakket, €3\\\\.000, meest gekozen\"\"/aria-label=\"\"Growth System pakket, meest gekozen\"\"/' \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy/index.html\")",
+      "Bash(sed -i 's/aria-label=\"\"Advisory pakket, €500 per maand\"\"/aria-label=\"\"Advisory pakket\"\"/' \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy/index.html\")",
+      "Bash(grep -rn pricing__card-price 'c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy' --include=*.html)"
     ]
   }
 }
