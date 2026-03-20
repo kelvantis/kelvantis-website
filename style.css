@@ -3209,6 +3209,21 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
 }
 [data-theme="light"] .filter-btn:hover { border-color: rgba(0,0,0,0.3); }
 
+/* ─── Diensten "wat is het" two-col layout — responsive ─── */
+.voor-wie__grid--2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .voor-wie__grid--2col {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 /* ═══════════════════════════════════════
    MOBILE UX v2 — Dashboard + General
 ═══════════════════════════════════════ */
