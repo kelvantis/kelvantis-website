@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep -rl \"Aanpak\\\\|Voor wie\\\\|nav\\\\.packages\\\\|nav\\\\.forWho\\\\|nav\\\\.approach\" 'c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy' --include=*.html)"
+      "Bash(grep -rl \"Aanpak\\\\|Voor wie\\\\|nav\\\\.packages\\\\|nav\\\\.forWho\\\\|nav\\\\.approach\" 'c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy' --include=*.html)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(sed -i '/linkedin\\\\.com\\\\/company\\\\/kelvantis/,/<\\\\/a>/d' \"$f\")",
+      "Bash(echo \"Done: $f\")",
+      "Bash(done)"
     ]
   }
 }
