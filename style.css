@@ -1719,6 +1719,13 @@ button {
   color: var(--color-grey);
 }
 
+.footer__powered {
+  font-size: 0.8rem;
+  color: var(--color-grey);
+  opacity: 0.6;
+  text-align: center;
+}
+
 .footer__legal {
   display: flex;
   gap: 1.25rem;
@@ -1834,15 +1841,15 @@ button {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* footer__nav becomes transparent wrapper so its 3 groups sit directly in the parent grid */
   .footer__nav {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: contents;
   }
 
   .footer__inner {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr 1fr;
+    gap: 2.5rem;
     align-items: start;
   }
 }
