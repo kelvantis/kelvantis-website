@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -rl \"Aanpak\\\\|Voor wie\\\\|nav\\\\.packages\\\\|nav\\\\.forWho\\\\|nav\\\\.approach\" 'c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy' --include=*.html)"
+    ]
+  }
+}
