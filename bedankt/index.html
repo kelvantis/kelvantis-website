@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina niet gevonden | Kelvantis</title>
+  <title>Aanvraag ontvangen | Kelvantis</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <style>
-    .error-page {
+    .bedankt-page {
       min-height: 70vh;
       display: flex;
       align-items: center;
@@ -19,32 +19,65 @@
       text-align: center;
       padding: 5rem 1.5rem;
     }
-    .error-page__inner { max-width: 480px; }
-    .error-page__code {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(5rem, 15vw, 8rem);
-      font-weight: 800;
-      letter-spacing: -0.05em;
-      color: var(--color-accent);
-      line-height: 1;
-      margin-bottom: 1rem;
-      opacity: 0.15;
+    .bedankt-page__inner { max-width: 520px; }
+    .bedankt-page__icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(5, 254, 130, 0.1);
+      border: 1px solid rgba(5, 254, 130, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
     }
-    .error-page__title {
+    .bedankt-page__title {
       font-family: 'Sora', sans-serif;
-      font-size: clamp(1.5rem, 4vw, 2rem);
-      font-weight: 700;
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      font-weight: 800;
       letter-spacing: -0.03em;
       color: var(--color-text);
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
-    .error-page__desc {
-      font-size: 1rem;
+    .bedankt-page__desc {
+      font-size: 1.0625rem;
       color: var(--color-text-muted);
-      line-height: 1.7;
+      line-height: 1.75;
       margin-bottom: 2rem;
     }
-    .error-page__actions {
+    .bedankt-page__steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      text-align: left;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .bedankt-page__step {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+      color: var(--color-text-muted);
+    }
+    .bedankt-page__step-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(5, 254, 130, 0.12);
+      color: var(--color-accent);
+      font-family: 'Sora', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bedankt-page__actions {
       display: flex;
       gap: 0.75rem;
       justify-content: center;
@@ -102,14 +135,34 @@
   </header>
 
   <main>
-    <div class="error-page">
-      <div class="error-page__inner">
-        <div class="error-page__code" aria-hidden="true">404</div>
-        <h1 class="error-page__title">Deze pagina bestaat niet</h1>
-        <p class="error-page__desc">De pagina die je zoekt is verplaatst, verwijderd of heeft nooit bestaan. Ga terug naar de homepage of neem contact op.</p>
-        <div class="error-page__actions">
+    <div class="bedankt-page">
+      <div class="bedankt-page__inner">
+        <div class="bedankt-page__icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <path d="M4 12l6 6L20 6" stroke="#05FE82" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h1 class="bedankt-page__title">Aanvraag ontvangen!</h1>
+        <p class="bedankt-page__desc">Bedankt voor je bericht. We nemen binnen <strong>24 uur</strong> contact met je op voor een vrijblijvend strategiegesprek.</p>
+
+        <div class="bedankt-page__steps">
+          <div class="bedankt-page__step">
+            <span class="bedankt-page__step-num">1</span>
+            <span>Je ontvangt een bevestiging per e-mail</span>
+          </div>
+          <div class="bedankt-page__step">
+            <span class="bedankt-page__step-num">2</span>
+            <span>We nemen binnen 24 uur contact op om een gesprek in te plannen</span>
+          </div>
+          <div class="bedankt-page__step">
+            <span class="bedankt-page__step-num">3</span>
+            <span>In het gesprek analyseren we jouw situatie en bespreken we de mogelijkheden</span>
+          </div>
+        </div>
+
+        <div class="bedankt-page__actions">
           <a href="/" class="btn btn--primary">Terug naar home</a>
-          <a href="/contact/" class="btn btn--ghost">Neem contact op</a>
+          <a href="/blog/" class="btn btn--ghost">Lees onze blog</a>
         </div>
       </div>
     </div>

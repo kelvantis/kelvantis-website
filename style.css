@@ -1782,6 +1782,17 @@ button {
   }
 }
 
+/* Tablet — 768px (iPad portrait) */
+@media (min-width: 768px) {
+  .pricing__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hoe__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Desktop — 1024px */
 @media (min-width: 1024px) {
   :root {
@@ -3075,8 +3086,8 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
    AUDIT FIXES — maart 2026
 ═══════════════════════════════════════ */
 
-/* Fix 2 — WhatsApp knop verbergen (placeholder nummer) */
-.wa-button { display: none !important; }
+/* Fix 2 — WhatsApp knop zichtbaar (echt nummer ingesteld) */
+/* .wa-button { display: none !important; } */
 
 /* Fix 15 — Taalknop verbergen (geen EN versie beschikbaar) */
 .navbar__lang-toggle { display: none !important; }

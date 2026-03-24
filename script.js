@@ -488,7 +488,60 @@ function animateFlow() {
     } catch {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
-      alert('Er is iets misgegaan. Mail ons direct: hallo@kelvantis.nl');
+      let errEl = form.querySelector('.form__error-msg');
+      if (!errEl) {
+        errEl = document.createElement('p');
+        errEl.className = 'form__error-msg';
+        errEl.style.cssText = 'color:#f87171;font-size:.875rem;margin-top:.75rem;text-align:center;';
+        form.appendChild(errEl);
+      }
+      errEl.textContent = 'Er is iets misgegaan. Mail ons direct: kelvantis.com@gmail.com';
+    }
+  });
+})();
+
+/* ═══════════════════════════════════════
+   10b. CONTACT PAGE FORM
+═══════════════════════════════════════ */
+(function initContactPageForm() {
+  const form = document.getElementById('contactPageForm');
+  if (!form) return;
+
+  const success = document.getElementById('cp-success');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('.form__submit');
+    const originalHTML = submitBtn.innerHTML;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Versturen…';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.hidden = true;
+        if (success) { success.hidden = false; success.focus(); }
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalHTML;
+      let errEl = form.querySelector('.form__error-msg');
+      if (!errEl) {
+        errEl = document.createElement('p');
+        errEl.className = 'form__error-msg';
+        errEl.style.cssText = 'color:#f87171;font-size:.875rem;margin-top:.75rem;text-align:center;';
+        form.appendChild(errEl);
+      }
+      errEl.textContent = 'Er is iets misgegaan. Mail ons direct: kelvantis.com@gmail.com';
     }
   });
 })();
