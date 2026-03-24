@@ -10,7 +10,10 @@
       "Bash(sed -i 's/aria-label=\"\"Foundation pakket, €1\\\\.500\"\"/aria-label=\"\"Foundation pakket\"\"/' \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy/index.html\")",
       "Bash(sed -i 's/aria-label=\"\"Growth System pakket, €3\\\\.000, meest gekozen\"\"/aria-label=\"\"Growth System pakket, meest gekozen\"\"/' \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy/index.html\")",
       "Bash(sed -i 's/aria-label=\"\"Advisory pakket, €500 per maand\"\"/aria-label=\"\"Advisory pakket\"\"/' \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy/index.html\")",
-      "Bash(grep -rn pricing__card-price 'c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy' --include=*.html)"
+      "Bash(grep -rn pricing__card-price 'c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy' --include=*.html)",
+      "Bash(grep -E \"\\\\.\\(html|json\\)$\")",
+      "Bash(sed -i 's|<p class=\"\"footer__copyright\"\"[^>]*>&copy; 2026 Kelvantis. Alle rechten voorbehouden.</p>|<p class=\"\"footer__copyright\"\">\\\\&copy; 2026 Kelvantis. Alle rechten voorbehouden.</p>\\\\n      <!-- KVK: [INVULLEN NA APRIL 2026] -->|' \"$f\")",
+      "Bash(echo \"KVK comment added: $f\")"
     ]
   }
 }

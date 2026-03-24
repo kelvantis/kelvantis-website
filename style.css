@@ -3411,3 +3411,15 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
     justify-content: center;
   }
 }
+
+/* Taak 10 — disclaimer stats */
+.resultaten__disclaimer {
+  font-size: 0.6875rem;
+  color: #6B7280;
+  text-align: center;
+  margin-top: 1.25rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
