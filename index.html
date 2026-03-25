@@ -1045,11 +1045,24 @@
         <div class="form__group">
           <label class="form__label" for="f-pakket" data-i18n="form.package">Pakket interesse</label>
           <select class="form__select" id="f-pakket" name="pakket">
-            <option value="" data-i18n="form.packageOpt0">Nog niet zeker</option>
-            <option value="Foundation">Foundation</option>
-            <option value="Growth System">Growth System</option>
-            <option value="Optimization Sprint">Optimization Sprint</option>
-            <option value="Advisory">Advisory</option>
+            <option value="">Nog niet zeker</option>
+            <optgroup label="── Pakketten (aanbevolen) ──">
+              <option value="Foundation">Foundation — Website</option>
+              <option value="Growth System">Growth System — Website + AI</option>
+              <option value="Maatwerk">Maatwerk — Volledig systeem</option>
+              <option value="SEO Start">SEO Start</option>
+              <option value="SEO Groei">SEO Groei</option>
+              <option value="SEO Dominantie">SEO Dominantie</option>
+              <option value="Starter Automation">Starter Automation</option>
+              <option value="Business Automation">Business Automation</option>
+              <option value="Enterprise">Enterprise</option>
+            </optgroup>
+            <optgroup label="── Los afnemen ──">
+              <option value="Los — Website">Alleen een website</option>
+              <option value="Los — SEO">Alleen SEO</option>
+              <option value="Los — Workflow">Alleen workflow / automatisering</option>
+              <option value="Los — AI">Alleen AI integratie</option>
+            </optgroup>
           </select>
         </div>
 
