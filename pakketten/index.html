@@ -228,6 +228,7 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Naar hoofdinhoud</a>
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
@@ -244,34 +245,34 @@
       <nav class="navbar__nav" id="navMenu" aria-label="Hoofdnavigatie">
         <ul class="navbar__links" role="list">
           <li class="navbar__dropdown-item">
-            <button class="navbar__dropdown-trigger" aria-haspopup="true">
+            <button class="navbar__dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Diensten menu openen">
               <span data-i18n="nav.diensten">Diensten</span>
               <span class="navbar__dropdown-arrow">▾</span>
             </button>
             <div class="navbar__dropdown-panel" role="menu">
               <a href="../diensten/website-laten-maken.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon">🌐</span>
+                <span class="navbar__dropdown-link-icon" aria-hidden="true">🌐</span>
                 <span class="navbar__dropdown-link-text">
                   <strong data-i18n="nav.dienstenDropdown.websites.name">Websites laten maken</strong>
                   <small data-i18n="nav.dienstenDropdown.websites.desc">Conversiegericht, snel en op maat</small>
                 </span>
               </a>
               <a href="../diensten/workflow-automatisering.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon">⚡</span>
+                <span class="navbar__dropdown-link-icon" aria-hidden="true">⚡</span>
                 <span class="navbar__dropdown-link-text">
                   <strong data-i18n="nav.dienstenDropdown.workflow.name">Workflow Automatisering</strong>
                   <small data-i18n="nav.dienstenDropdown.workflow.desc">Processen op de achtergrond draaien</small>
                 </span>
               </a>
               <a href="../diensten/ai-implementatie.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon">🤖</span>
+                <span class="navbar__dropdown-link-icon" aria-hidden="true">🤖</span>
                 <span class="navbar__dropdown-link-text">
                   <strong data-i18n="nav.dienstenDropdown.ai.name">AI Development</strong>
                   <small data-i18n="nav.dienstenDropdown.ai.desc">AI die écht werkt voor je bedrijf</small>
                 </span>
               </a>
               <a href="../diensten/seo.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon">🔍</span>
+                <span class="navbar__dropdown-link-icon" aria-hidden="true">🔍</span>
                 <span class="navbar__dropdown-link-text">
                   <strong data-i18n="nav.dienstenDropdown.seo.name">SEO</strong>
                   <small data-i18n="nav.dienstenDropdown.seo.desc">Gevonden worden in Google</small>
@@ -285,16 +286,16 @@
         </ul>
       </nav>
       <div class="navbar__actions">
-        <button class="btn btn--primary btn--sm" data-modal="open" data-i18n="nav.cta">Gratis gesprek</button>
-        <button class="navbar__lang-toggle" id="langToggle" aria-label="Switch language">
+        <button type="button" class="btn btn--primary btn--sm" data-modal="open" data-i18n="nav.cta">Gratis gesprek</button>
+        <button type="button" class="navbar__lang-toggle" id="langToggle" aria-label="Switch language">
           <span id="langLabel">🇬🇧</span>
         </button>
-        <button class="navbar__theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <button type="button" class="navbar__theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <svg id="themeIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
           </svg>
         </button>
-        <button class="navbar__hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu">
+        <button type="button" class="navbar__hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu">
           <span class="navbar__hamburger-line"></span>
           <span class="navbar__hamburger-line"></span>
           <span class="navbar__hamburger-line"></span>
@@ -306,7 +307,7 @@
         <ul class="navbar__mobile-links" role="list">
           <li>
             <div class="navbar__mobile-accordion">
-              <button class="navbar__mobile-accordion-trigger">
+              <button class="navbar__mobile-accordion-trigger" type="button" aria-expanded="false" aria-label="Diensten submenu openen">
                 <span data-i18n="nav.diensten">Diensten</span>
                 <span class="navbar__mobile-accordion-arrow">▾</span>
               </button>
@@ -323,23 +324,23 @@
           <li><a href="../index.html#faq" class="navbar__mobile-link" data-i18n="nav.faq">FAQ</a></li>
           <li>
             <div class="navbar__mobile-toggles">
-              <button class="navbar__lang-toggle" id="langToggleMobile" aria-label="Switch language">
+              <button type="button" class="navbar__lang-toggle" id="langToggleMobile" aria-label="Switch language">
                 <span id="langLabelMobile">🇬🇧</span>
               </button>
-              <button class="navbar__theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
+              <button type="button" class="navbar__theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
                 <svg id="themeIconMobile" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
                 </svg>
               </button>
             </div>
           </li>
-          <li><button class="btn btn--primary btn--full" data-modal="open" data-i18n="nav.ctaMobile">Gratis gesprek plannen</button></li>
+          <li><button type="button" class="btn btn--primary btn--full" data-modal="open" data-i18n="nav.ctaMobile">Gratis gesprek plannen</button></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- HERO -->
     <section class="dienst-hero">
@@ -348,7 +349,7 @@
         <h1 class="dienst-hero__title" data-page-i18n="hero.title">Transparante pakketten. Geen verborgen kosten.</h1>
         <p class="dienst-hero__subtitle" data-page-i18n="hero.subtitle">Investeer eenmalig of maandelijks. Geen lock-in, geen verrassingen.</p>
         <div class="hero__ctas">
-          <button class="btn btn--primary btn--lg" data-modal="open">
+          <button type="button" class="btn btn--primary btn--lg" data-modal="open">
             <span data-page-i18n="hero.cta">Gratis gesprek plannen</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -389,7 +390,7 @@
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="websites.s.features.4">SSL certificaat</span></li>
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="websites.s.features.5">Google Analytics</span></li>
             </ul>
-            <button class="btn btn--ghost btn--full" data-modal="open" data-pakket="Starter Website" data-i18n="pricing.cta">Offerte aanvragen</button>
+            <button type="button" class="btn btn--ghost btn--full" data-modal="open" data-pakket="Starter Website" data-i18n="pricing.cta">Offerte aanvragen</button>
           </div>
 
           <!-- Business (featured) -->
@@ -407,7 +408,7 @@
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="websites.b.features.3">Core Web Vitals 90+</span></li>
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="websites.b.features.4">30 dagen support</span></li>
             </ul>
-            <button class="btn btn--primary btn--full" data-modal="open" data-pakket="Business Website" data-i18n="pricing.cta">Offerte aanvragen</button>
+            <button type="button" class="btn btn--primary btn--full" data-modal="open" data-pakket="Business Website" data-i18n="pricing.cta">Offerte aanvragen</button>
           </div>
 
           <!-- Growth System -->
@@ -423,7 +424,7 @@
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Marketing automation flows</span></li>
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>CRM-koppeling & lead tracking</span></li>
             </ul>
-            <button class="btn btn--ghost btn--full" data-modal="open" data-pakket="Growth System">Offerte aanvragen</button>
+            <button type="button" class="btn btn--ghost btn--full" data-modal="open" data-pakket="Growth System">Offerte aanvragen</button>
           </div>
 
         </div>
@@ -440,7 +441,7 @@
             <span style="font-size:0.8125rem;padding:0.375rem 0.75rem;border:1px solid var(--color-border);border-radius:var(--radius-full);color:var(--color-text-muted);">One-pager / landingspagina</span>
             <span style="font-size:0.8125rem;padding:0.375rem 0.75rem;border:1px solid var(--color-border);border-radius:var(--radius-full);color:var(--color-text-muted);">Redesign bestaande site</span>
           </div>
-          <button class="btn btn--ghost" data-modal="open" data-pakket="Los — Website" style="font-size:0.875rem;padding:0.625rem 1.25rem;">Vraag los aan</button>
+          <button type="button" class="btn btn--ghost" data-modal="open" data-pakket="Los — Website" style="font-size:0.875rem;padding:0.625rem 1.25rem;">Vraag los aan</button>
         </div>
       </div>
     </section>
@@ -468,7 +469,7 @@
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="seo.s.features.2">2 pagina's geoptimaliseerd per maand</span></li>
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="seo.s.features.3">Maandelijkse rapportage</span></li>
             </ul>
-            <button class="btn btn--ghost btn--full" data-modal="open" data-pakket="SEO Start" data-i18n="pricing.cta">Offerte aanvragen</button>
+            <button type="button" class="btn btn--ghost btn--full" data-modal="open" data-pakket="SEO Start" data-i18n="pricing.cta">Offerte aanvragen</button>
           </div>
 
           <!-- SEO Groei (featured) -->
@@ -486,7 +487,7 @@
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="seo.b.features.3">Concurrentieanalyse</span></li>
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="seo.b.features.4">Keyword tracking dashboard</span></li>
             </ul>
-            <button class="btn btn--primary btn--full" data-modal="open" data-pakket="SEO Groei" data-i18n="pricing.cta">Offerte aanvragen</button>
+            <button type="button" class="btn btn--primary btn--full" data-modal="open" data-pakket="SEO Groei" data-i18n="pricing.cta">Offerte aanvragen</button>
           </div>
 
           <!-- SEO Dominantie -->
@@ -501,7 +502,7 @@
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Dedicated SEO strategie</span></li>
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Prioritaire content productie</span></li>
             </ul>
-            <button class="btn btn--ghost btn--full" data-modal="open" data-pakket="SEO Dominantie">Offerte aanvragen</button>
+            <button type="button" class="btn btn--ghost btn--full" data-modal="open" data-pakket="SEO Dominantie">Offerte aanvragen</button>
           </div>
 
         </div>
@@ -518,7 +519,7 @@
             <span style="font-size:0.8125rem;padding:0.375rem 0.75rem;border:1px solid var(--color-border);border-radius:var(--radius-full);color:var(--color-text-muted);">Technische SEO fix</span>
             <span style="font-size:0.8125rem;padding:0.375rem 0.75rem;border:1px solid var(--color-border);border-radius:var(--radius-full);color:var(--color-text-muted);">Keyword onderzoek</span>
           </div>
-          <button class="btn btn--ghost" data-modal="open" data-pakket="Los — SEO" style="font-size:0.875rem;padding:0.625rem 1.25rem;">Vraag los aan</button>
+          <button type="button" class="btn btn--ghost" data-modal="open" data-pakket="Los — SEO" style="font-size:0.875rem;padding:0.625rem 1.25rem;">Vraag los aan</button>
         </div>
       </div>
     </section>
@@ -546,7 +547,7 @@
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="ai.s.features.2">Documentatie & handleiding</span></li>
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="ai.s.features.3">30 dagen support</span></li>
             </ul>
-            <button class="btn btn--ghost btn--full" data-modal="open" data-pakket="Starter Automation" data-i18n="pricing.cta">Offerte aanvragen</button>
+            <button type="button" class="btn btn--ghost btn--full" data-modal="open" data-pakket="Starter Automation" data-i18n="pricing.cta">Offerte aanvragen</button>
           </div>
 
           <!-- Business Automation (featured) -->
@@ -564,7 +565,7 @@
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="ai.b.features.3">Lead notificaties</span></li>
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-page-i18n="ai.b.features.4">30 dagen support</span></li>
             </ul>
-            <button class="btn btn--primary btn--full" data-modal="open" data-pakket="Business Automation" data-i18n="pricing.cta">Offerte aanvragen</button>
+            <button type="button" class="btn btn--primary btn--full" data-modal="open" data-pakket="Business Automation" data-i18n="pricing.cta">Offerte aanvragen</button>
           </div>
 
           <!-- Enterprise -->
@@ -579,7 +580,7 @@
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Volledige system integratie</span></li>
               <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Dedicated ondersteuning</span></li>
             </ul>
-            <button class="btn btn--ghost btn--full" data-modal="open" data-pakket="Enterprise Automation">Offerte aanvragen</button>
+            <button type="button" class="btn btn--ghost btn--full" data-modal="open" data-pakket="Enterprise Automation">Offerte aanvragen</button>
           </div>
 
         </div>
@@ -596,7 +597,7 @@
             <span style="font-size:0.8125rem;padding:0.375rem 0.75rem;border:1px solid var(--color-border);border-radius:var(--radius-full);color:var(--color-text-muted);">AI chatbot integratie</span>
             <span style="font-size:0.8125rem;padding:0.375rem 0.75rem;border:1px solid var(--color-border);border-radius:var(--radius-full);color:var(--color-text-muted);">Systemen koppelen</span>
           </div>
-          <button class="btn btn--ghost" data-modal="open" data-pakket="Los — Workflow/AI" style="font-size:0.875rem;padding:0.625rem 1.25rem;">Vraag los aan</button>
+          <button type="button" class="btn btn--ghost" data-modal="open" data-pakket="Los — Workflow/AI" style="font-size:0.875rem;padding:0.625rem 1.25rem;">Vraag los aan</button>
         </div>
       </div>
     </section>
@@ -611,7 +612,7 @@
         <div class="faq__list reveal" role="list">
 
           <div class="faq__item" role="listitem">
-            <button class="faq__question" aria-expanded="false" aria-controls="pfaq-1">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="pfaq-1">
               <span data-page-i18n="faq.q1">Zijn er verborgen kosten?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -623,7 +624,7 @@
           </div>
 
           <div class="faq__item" role="listitem">
-            <button class="faq__question" aria-expanded="false" aria-controls="pfaq-2">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="pfaq-2">
               <span data-page-i18n="faq.q2">Kan ik stoppen wanneer ik wil met een SEO-abonnement?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -635,7 +636,7 @@
           </div>
 
           <div class="faq__item" role="listitem">
-            <button class="faq__question" aria-expanded="false" aria-controls="pfaq-3">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="pfaq-3">
               <span data-page-i18n="faq.q3">Hoe vraag ik een offerte aan?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -659,7 +660,7 @@
           <h2 class="cta-section__title" data-i18n-html="cta.title">Meer resultaat.<br><span class="cta-section__title-accent">Minder handwerk.</span></h2>
           <p class="cta-section__subtitle" data-i18n="cta.subtitle">Plan een gratis strategiegesprek en ontdek wat een conversiegerichte website, sterke SEO of slimme workflow automatisering voor jouw bedrijf kan betekenen.</p>
           <div class="cta-section__actions">
-            <button class="btn btn--primary btn--xl" data-modal="open">
+            <button type="button" class="btn btn--primary btn--xl" data-modal="open">
               <span data-i18n="cta.btn">Gratis strategiegesprek plannen</span>
               <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
@@ -714,8 +715,8 @@
             <ul role="list">
               <li><a href="mailto:kelvantis.com@gmail.com" class="footer__nav-link">kelvantis.com@gmail.com</a></li>
               <li><a href="tel:+31627900367" class="footer__nav-link">+31 6 27 90 03 67</a></li>
-              <li><span class="footer__nav-link" style="cursor:default;">&#128205; Maastricht, Nederland</span></li>
-              <li><button class="footer__nav-link" data-modal="open" data-i18n="footer.contact.cta" style="background:none;border:none;cursor:pointer;font-size:inherit;font-family:inherit;padding:0;text-align:left;">Gratis gesprek plannen</button></li>
+              <li><span class="footer__nav-link" style="cursor:default;"><span aria-hidden="true">&#128205;</span> Maastricht, Nederland</span></li>
+              <li><button type="button" class="footer__nav-link" data-modal="open" data-i18n="footer.contact.cta" style="background:none;border:none;cursor:pointer;font-size:inherit;font-family:inherit;padding:0;text-align:left;">Gratis gesprek plannen</button></li>
             </ul>
           </div>
         </nav>
@@ -743,7 +744,7 @@
   <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
     <div class="modal__overlay" id="modalOverlay"></div>
     <div class="modal__card">
-      <button class="modal__close" id="modalClose" aria-label="Formulier sluiten">
+      <button type="button" class="modal__close" id="modalClose" aria-label="Formulier sluiten">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </button>
       <div class="modal__header">
@@ -755,17 +756,17 @@
         <div class="form__row">
           <div class="form__group">
             <label class="form__label" for="f-naam"><span data-i18n="form.name">Naam</span> <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="text" id="f-naam" name="naam" required placeholder="Jan de Vries" autocomplete="name">
+            <input class="form__input" type="text" id="f-naam" name="naam" required aria-required="true" placeholder="Jan de Vries" autocomplete="name">
           </div>
           <div class="form__group">
             <label class="form__label" for="f-bedrijf"><span data-i18n="form.company">Bedrijfsnaam</span> <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="text" id="f-bedrijf" name="bedrijf" required placeholder="Jouw Bedrijf BV" autocomplete="organization">
+            <input class="form__input" type="text" id="f-bedrijf" name="bedrijf" required aria-required="true" placeholder="Jouw Bedrijf BV" autocomplete="organization">
           </div>
         </div>
         <div class="form__row">
           <div class="form__group">
             <label class="form__label" for="f-email"><span data-i18n="form.email">E-mailadres</span> <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="email" id="f-email" name="email" required placeholder="jan@jouwbedrijf.nl" autocomplete="email">
+            <input class="form__input" type="email" id="f-email" name="email" required aria-required="true" placeholder="jan@jouwbedrijf.nl" autocomplete="email">
           </div>
           <div class="form__group">
             <label class="form__label" for="f-tel" data-i18n="form.phone">Telefoonnummer</label>
@@ -774,7 +775,7 @@
         </div>
         <div class="form__group">
           <label class="form__label" for="f-uitdaging"><span data-i18n="form.challenge">Wat is jouw grootste uitdaging?</span> <span aria-hidden="true">*</span></label>
-          <select class="form__select" id="f-uitdaging" name="uitdaging" required>
+          <select class="form__select" id="f-uitdaging" name="uitdaging" required aria-required="true">
             <option value="" disabled selected>Kies je situatie...</option>
             <option value="Te weinig leads en aanvragen">Te weinig leads en aanvragen</option>
             <option value="Website presteert slecht">Website presteert slecht</option>
@@ -800,7 +801,7 @@
         </div>
         <h3 data-i18n="success.title">Aanvraag ontvangen!</h3>
         <p data-i18n-html="success.desc">We nemen binnen <strong>24 uur</strong> contact met je op.</p>
-        <button class="btn btn--ghost" id="modalSuccessClose" style="margin-top:1.5rem;" data-i18n="success.close">Sluiten</button>
+        <button type="button" class="btn btn--ghost" id="modalSuccessClose" style="margin-top:1.5rem;" data-i18n="success.close">Sluiten</button>
       </div>
     </div>
   </div>
@@ -820,8 +821,8 @@
         <span data-i18n-html="cookie.text">Wij gebruiken cookies voor analytics en een betere gebruikerservaring. Lees ons <a href="/privacy">privacybeleid</a>.</span>
       </p>
       <div class="cookie-banner__actions">
-        <button class="btn btn--ghost btn--sm" id="cookieDecline" data-i18n="cookie.decline">Alleen noodzakelijk</button>
-        <button class="btn btn--primary btn--sm" id="cookieAccept" data-i18n="cookie.accept">Accepteren</button>
+        <button type="button" class="btn btn--ghost btn--sm" id="cookieDecline" data-i18n="cookie.decline">Alleen noodzakelijk</button>
+        <button type="button" class="btn btn--primary btn--sm" id="cookieAccept" data-i18n="cookie.accept">Accepteren</button>
       </div>
     </div>
   </div>

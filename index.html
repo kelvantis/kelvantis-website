@@ -143,6 +143,7 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Naar hoofdinhoud</a>
 
   <!-- ═══════════════════════════════════════
        NAVBAR
@@ -163,34 +164,34 @@
       <nav class="navbar__nav" id="navMenu" aria-label="Hoofdnavigatie">
         <ul class="navbar__links" role="list">
           <li class="navbar__dropdown-item">
-            <button class="navbar__dropdown-trigger" aria-haspopup="true">
+            <button class="navbar__dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Diensten menu openen">
               <span data-i18n="nav.diensten">Diensten</span>
               <span class="navbar__dropdown-arrow">▾</span>
             </button>
             <div class="navbar__dropdown-panel" role="menu">
               <a href="/diensten/website-laten-maken.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon">🌐</span>
+                <span class="navbar__dropdown-link-icon" aria-hidden="true">🌐</span>
                 <span class="navbar__dropdown-link-text">
                   <strong data-i18n="nav.dienstenDropdown.websites.name">Websites laten maken</strong>
                   <small data-i18n="nav.dienstenDropdown.websites.desc">Conversiegericht, snel en op maat</small>
                 </span>
               </a>
               <a href="/diensten/workflow-automatisering.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon">⚡</span>
+                <span class="navbar__dropdown-link-icon" aria-hidden="true">⚡</span>
                 <span class="navbar__dropdown-link-text">
                   <strong data-i18n="nav.dienstenDropdown.workflow.name">Workflow Automatisering</strong>
                   <small data-i18n="nav.dienstenDropdown.workflow.desc">Processen op de achtergrond draaien</small>
                 </span>
               </a>
               <a href="/diensten/ai-implementatie.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon">🤖</span>
+                <span class="navbar__dropdown-link-icon" aria-hidden="true">🤖</span>
                 <span class="navbar__dropdown-link-text">
                   <strong data-i18n="nav.dienstenDropdown.ai.name">AI Development</strong>
                   <small data-i18n="nav.dienstenDropdown.ai.desc">AI die écht werkt voor je bedrijf</small>
                 </span>
               </a>
               <a href="/diensten/seo.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon">🔍</span>
+                <span class="navbar__dropdown-link-icon" aria-hidden="true">🔍</span>
                 <span class="navbar__dropdown-link-text">
                   <strong data-i18n="nav.dienstenDropdown.seo.name">SEO</strong>
                   <small data-i18n="nav.dienstenDropdown.seo.desc">Gevonden worden in Google</small>
@@ -205,16 +206,16 @@
       </nav>
 
       <div class="navbar__actions">
-        <button class="btn btn--primary btn--sm" data-modal="open" data-i18n="nav.cta">Gratis gesprek</button>
-        <button class="navbar__lang-toggle" id="langToggle" aria-label="Switch language">
+        <button type="button" class="btn btn--primary btn--sm" data-modal="open" data-i18n="nav.cta">Gratis gesprek</button>
+        <button type="button" class="navbar__lang-toggle" id="langToggle" aria-label="Switch language">
           <span id="langLabel">🇬🇧</span>
         </button>
-        <button class="navbar__theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <button type="button" class="navbar__theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <svg id="themeIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
           </svg>
         </button>
-        <button class="navbar__hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu">
+        <button type="button" class="navbar__hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu">
           <span class="navbar__hamburger-line"></span>
           <span class="navbar__hamburger-line"></span>
           <span class="navbar__hamburger-line"></span>
@@ -228,7 +229,7 @@
         <ul class="navbar__mobile-links" role="list">
           <li>
             <div class="navbar__mobile-accordion">
-              <button class="navbar__mobile-accordion-trigger">
+              <button class="navbar__mobile-accordion-trigger" type="button" aria-expanded="false" aria-label="Diensten submenu openen">
                 <span data-i18n="nav.diensten">Diensten</span>
                 <span class="navbar__mobile-accordion-arrow">▾</span>
               </button>
@@ -245,23 +246,23 @@
           <li><a href="#faq" class="navbar__mobile-link" data-i18n="nav.faq">FAQ</a></li>
           <li>
             <div class="navbar__mobile-toggles">
-              <button class="navbar__lang-toggle" id="langToggleMobile" aria-label="Switch language">
+              <button type="button" class="navbar__lang-toggle" id="langToggleMobile" aria-label="Switch language">
                 <span id="langLabelMobile">🇬🇧</span>
               </button>
-              <button class="navbar__theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
+              <button type="button" class="navbar__theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
                 <svg id="themeIconMobile" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
                 </svg>
               </button>
             </div>
           </li>
-          <li><button class="btn btn--primary btn--full" data-modal="open" data-i18n="nav.ctaMobile">Gratis gesprek plannen</button></li>
+          <li><button type="button" class="btn btn--primary btn--full" data-modal="open" data-i18n="nav.ctaMobile">Gratis gesprek plannen</button></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- ═══════════════════════════════════════
          HERO
@@ -290,7 +291,7 @@
             </p>
 
             <div class="hero__ctas reveal">
-              <button class="btn btn--primary btn--lg" data-modal="open">
+              <button type="button" class="btn btn--primary btn--lg" data-modal="open">
                 <span data-i18n="hero.ctaPrimary">Gratis strategiegesprek</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -313,9 +314,9 @@
                   <span></span><span></span><span></span>
                 </div>
                 <div class="dashboard__tabs">
-                  <button class="dashboard__tab dashboard__tab--active" role="tab" aria-selected="true" aria-controls="tab-website" id="btn-website" data-tab="website">Website</button>
-                  <button class="dashboard__tab" role="tab" aria-selected="false" aria-controls="tab-ai" id="btn-ai" data-tab="ai">AI</button>
-                  <button class="dashboard__tab" role="tab" aria-selected="false" aria-controls="tab-automations" id="btn-automations" data-tab="automations">Automations</button>
+                  <button type="button" class="dashboard__tab dashboard__tab--active" role="tab" aria-selected="true" aria-controls="tab-website" id="btn-website" data-tab="website">Website</button>
+                  <button type="button" class="dashboard__tab" role="tab" aria-selected="false" aria-controls="tab-ai" id="btn-ai" data-tab="ai">AI</button>
+                  <button type="button" class="dashboard__tab" role="tab" aria-selected="false" aria-controls="tab-automations" id="btn-automations" data-tab="automations">Automations</button>
                 </div>
                 <div class="dashboard__live" aria-label="Systeem is live">
                   <span class="dashboard__live-dot" aria-hidden="true"></span>
@@ -593,7 +594,7 @@
         </div>
 
         <div class="reveal" style="text-align:center; margin-top:2.5rem;">
-          <button class="btn btn--primary" data-modal="open">Herken jij dit? Gratis gesprek plannen →</button>
+          <button type="button" class="btn btn--primary" data-modal="open">Herken jij dit? Gratis gesprek plannen →</button>
         </div>
 
       </div>
@@ -726,7 +727,7 @@
           </div>
         </div>
         <div class="reveal" style="text-align:center; margin-top:2.5rem;">
-          <button class="btn btn--primary" data-modal="open">Gratis gesprek plannen</button>
+          <button type="button" class="btn btn--primary" data-modal="open">Gratis gesprek plannen</button>
         </div>
       </div>
     </section>
@@ -791,7 +792,7 @@
         </div>
 
         <div class="reveal" style="text-align:center; margin-top:2.5rem;">
-          <button class="btn btn--primary" data-modal="open">Zo ziet jouw eerste stap eruit →</button>
+          <button type="button" class="btn btn--primary" data-modal="open">Zo ziet jouw eerste stap eruit →</button>
         </div>
 
       </div>
@@ -828,7 +829,7 @@
               <li class="pricing__feature pricing__feature--no" data-i18n="pricing.f.f8">Marketing automations</li>
               <li class="pricing__feature pricing__feature--no" data-i18n="pricing.f.f9">CRM-koppeling</li>
             </ul>
-            <button class="btn btn--outline btn--full" data-modal="open" data-pakket="Foundation" data-i18n="pricing.cta">Offerte aanvragen</button>
+            <button type="button" class="btn btn--outline btn--full" data-modal="open" data-pakket="Foundation" data-i18n="pricing.cta">Offerte aanvragen</button>
           </article>
 
           <!-- Growth System (featured) -->
@@ -850,7 +851,7 @@
               <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.gs.f8">30 dagen ondersteuning na lancering</li>
               <li class="pricing__feature pricing__feature--yes" data-i18n="pricing.gs.f9">Prioriteit support</li>
             </ul>
-            <button class="btn btn--primary btn--full" data-modal="open" data-pakket="Growth System" data-i18n="pricing.cta">Offerte aanvragen</button>
+            <button type="button" class="btn btn--primary btn--full" data-modal="open" data-pakket="Growth System" data-i18n="pricing.cta">Offerte aanvragen</button>
           </article>
 
           <!-- Advisory -->
@@ -871,7 +872,7 @@
               <li class="pricing__feature pricing__feature--no" data-i18n="pricing.a.f8">Inclusief Foundation website</li>
               <li class="pricing__feature pricing__feature--no" data-i18n="pricing.a.f9">Inclusief AI chatbot setup</li>
             </ul>
-            <button class="btn btn--outline btn--full" data-modal="open" data-pakket="Advisory" data-i18n="pricing.cta">Offerte aanvragen</button>
+            <button type="button" class="btn btn--outline btn--full" data-modal="open" data-pakket="Advisory" data-i18n="pricing.cta">Offerte aanvragen</button>
           </article>
 
         </div>
@@ -897,7 +898,7 @@
         <div class="faq__list reveal" role="list">
 
           <div class="faq__item" role="listitem">
-            <button class="faq__question" aria-expanded="false" aria-controls="faq-1">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-1">
               <span data-i18n="faq.q1">Voor wie is Kelvantis geschikt?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -909,7 +910,7 @@
           </div>
 
           <div class="faq__item" role="listitem">
-            <button class="faq__question" aria-expanded="false" aria-controls="faq-2">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-2">
               <span data-i18n="faq.q2">Hoe lang duurt het om live te gaan?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -921,7 +922,7 @@
           </div>
 
           <div class="faq__item" role="listitem">
-            <button class="faq__question" aria-expanded="false" aria-controls="faq-3">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-3">
               <span data-i18n="faq.q3">Heb ik technische kennis nodig?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -933,7 +934,7 @@
           </div>
 
           <div class="faq__item" role="listitem">
-            <button class="faq__question" aria-expanded="false" aria-controls="faq-4">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-4">
               <span data-i18n="faq.q4">Wat is het verschil tussen Foundation en Growth System?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -945,7 +946,7 @@
           </div>
 
           <div class="faq__item" role="listitem">
-            <button class="faq__question" aria-expanded="false" aria-controls="faq-5">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-5">
               <span data-i18n="faq.q5">Kan ik later upgraden van Foundation naar Growth System?</span>
               <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -976,7 +977,7 @@
             Plan een gratis strategiegesprek en ontdek wat een conversiegerichte website, sterke SEO of slimme workflow automatisering voor jouw bedrijf kan betekenen. We kijken samen naar jouw situatie en de grootste kansen. Geen verplichtingen, wel concrete inzichten.
           </p>
           <div class="cta-section__actions">
-            <button class="btn btn--primary btn--xl" data-modal="open">
+            <button type="button" class="btn btn--primary btn--xl" data-modal="open">
               <span data-i18n="cta.btn">Gratis strategiegesprek plannen</span>
               <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1037,8 +1038,8 @@
             <ul role="list">
               <li><a href="mailto:kelvantis.com@gmail.com" class="footer__nav-link">kelvantis.com@gmail.com</a></li>
               <li><a href="tel:+31627900367" class="footer__nav-link">+31 6 27 90 03 67</a></li>
-              <li><span class="footer__nav-link" style="cursor:default;">&#128205; Maastricht, Nederland</span></li>
-              <li><button class="footer__nav-link" data-modal="open" data-i18n="footer.contact.cta" style="background:none;border:none;cursor:pointer;font-size:inherit;font-family:inherit;padding:0;text-align:left;">Gratis gesprek plannen</button></li>
+              <li><span class="footer__nav-link" style="cursor:default;"><span aria-hidden="true">&#128205;</span> Maastricht, Nederland</span></li>
+              <li><button type="button" class="footer__nav-link" data-modal="open" data-i18n="footer.contact.cta" style="background:none;border:none;cursor:pointer;font-size:inherit;font-family:inherit;padding:0;text-align:left;">Gratis gesprek plannen</button></li>
             </ul>
           </div>
         </nav>
@@ -1058,7 +1059,7 @@
       <div class="footer__bottom">
         <p class="footer__copyright">&copy; 2026 Kelvantis. Alle rechten voorbehouden.</p>
       <!-- KVK: [INVULLEN NA APRIL 2026] -->
-        <p class="footer__powered">⚡ Powered by Kelvantis</p>
+        <p class="footer__powered"><span aria-hidden="true">⚡</span> Powered by Kelvantis</p>
         <div class="footer__legal">
           <a href="/privacy" class="footer__legal-link" data-i18n="footer.privacy">Privacybeleid</a>
           <a href="/voorwaarden" class="footer__legal-link" data-i18n="footer.terms">Algemene voorwaarden</a>
@@ -1074,7 +1075,7 @@
   <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
     <div class="modal__overlay" id="modalOverlay"></div>
     <div class="modal__card">
-      <button class="modal__close" id="modalClose" aria-label="Formulier sluiten">
+      <button type="button" class="modal__close" id="modalClose" aria-label="Formulier sluiten">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </button>
 
@@ -1091,18 +1092,18 @@
         <div class="form__row">
           <div class="form__group">
             <label class="form__label" for="f-naam"><span data-i18n="form.name">Naam</span> <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="text" id="f-naam" name="naam" required placeholder="Jan de Vries" data-i18n-placeholder="form.namePh" autocomplete="name">
+            <input class="form__input" type="text" id="f-naam" name="naam" required aria-required="true" placeholder="Jan de Vries" data-i18n-placeholder="form.namePh" autocomplete="name">
           </div>
           <div class="form__group">
             <label class="form__label" for="f-bedrijf"><span data-i18n="form.company">Bedrijfsnaam</span> <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="text" id="f-bedrijf" name="bedrijf" required placeholder="Jouw Bedrijf BV" data-i18n-placeholder="form.companyPh" autocomplete="organization">
+            <input class="form__input" type="text" id="f-bedrijf" name="bedrijf" required aria-required="true" placeholder="Jouw Bedrijf BV" data-i18n-placeholder="form.companyPh" autocomplete="organization">
           </div>
         </div>
 
         <div class="form__row">
           <div class="form__group">
             <label class="form__label" for="f-email"><span data-i18n="form.email">E-mailadres</span> <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="email" id="f-email" name="email" required placeholder="jan@jouwbedrijf.nl" autocomplete="email">
+            <input class="form__input" type="email" id="f-email" name="email" required aria-required="true" placeholder="jan@jouwbedrijf.nl" autocomplete="email">
           </div>
           <div class="form__group">
             <label class="form__label" for="f-tel" data-i18n="form.phone">Telefoonnummer</label>
@@ -1136,7 +1137,7 @@
 
         <div class="form__group">
           <label class="form__label" for="f-uitdaging"><span data-i18n="form.challenge">Wat is jouw grootste uitdaging?</span> <span aria-hidden="true">*</span></label>
-          <select class="form__select" id="f-uitdaging" name="uitdaging" required>
+          <select class="form__select" id="f-uitdaging" name="uitdaging" required aria-required="true">
             <option value="" disabled selected data-i18n="form.challengeOpt0">Kies je situatie...</option>
             <option value="Te weinig leads en aanvragen" data-i18n="form.challengeOpt1">Te weinig leads en aanvragen</option>
             <option value="Website presteert slecht" data-i18n="form.challengeOpt2">Website presteert slecht</option>
@@ -1169,7 +1170,7 @@
         </div>
         <h3 data-i18n="success.title">Aanvraag ontvangen!</h3>
         <p data-i18n-html="success.desc">We nemen binnen <strong>24 uur</strong> contact met je op om een strategiegesprek in te plannen. Check je inbox, ook je spamfolder.</p>
-        <button class="btn btn--ghost" id="modalSuccessClose" style="margin-top:1.5rem;" data-i18n="success.close">Sluiten</button>
+        <button type="button" class="btn btn--ghost" id="modalSuccessClose" style="margin-top:1.5rem;" data-i18n="success.close">Sluiten</button>
       </div>
 
     </div>
@@ -1198,8 +1199,8 @@
         <span data-i18n-html="cookie.text">Wij gebruiken cookies voor analytics en een betere gebruikerservaring. Lees ons <a href="/privacy">privacybeleid</a>.</span>
       </p>
       <div class="cookie-banner__actions">
-        <button class="btn btn--ghost btn--sm" id="cookieDecline" data-i18n="cookie.decline">Alleen noodzakelijk</button>
-        <button class="btn btn--primary btn--sm" id="cookieAccept" data-i18n="cookie.accept">Accepteren</button>
+        <button type="button" class="btn btn--ghost btn--sm" id="cookieDecline" data-i18n="cookie.decline">Alleen noodzakelijk</button>
+        <button type="button" class="btn btn--primary btn--sm" id="cookieAccept" data-i18n="cookie.accept">Accepteren</button>
       </div>
     </div>
   </div>

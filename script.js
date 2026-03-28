@@ -93,8 +93,16 @@ function throttle(fn, delay) {
   /* Dropdown behavior (desktop) */
   const dropdownItems = document.querySelectorAll('.navbar__dropdown-item');
   dropdownItems.forEach(item => {
+    const trigger = item.querySelector('.navbar__dropdown-trigger');
+    trigger?.addEventListener('click', () => {
+      item.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', String(item.classList.contains('is-open')));
+    });
     document.addEventListener('click', (e) => {
-      if (!item.contains(e.target)) item.classList.remove('is-open');
+      if (!item.contains(e.target)) {
+        item.classList.remove('is-open');
+        trigger?.setAttribute('aria-expanded', 'false');
+      }
     });
   });
 
@@ -102,7 +110,10 @@ function throttle(fn, delay) {
   const accordions = document.querySelectorAll('.navbar__mobile-accordion');
   accordions.forEach(acc => {
     const trigger = acc.querySelector('.navbar__mobile-accordion-trigger');
-    trigger?.addEventListener('click', () => acc.classList.toggle('is-open'));
+    trigger?.addEventListener('click', () => {
+      acc.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', String(acc.classList.contains('is-open')));
+    });
   });
 
   /* Active nav link on scroll */

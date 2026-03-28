@@ -151,6 +151,7 @@
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Naar hoofdinhoud</a>
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
@@ -167,12 +168,12 @@
       <nav class="navbar__nav" id="navMenu" aria-label="Hoofdnavigatie">
         <ul class="navbar__links" role="list">
           <li class="navbar__dropdown-item">
-            <button class="navbar__dropdown-trigger" aria-haspopup="true"><span>Diensten</span><span class="navbar__dropdown-arrow">▾</span></button>
+            <button class="navbar__dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Diensten menu openen"><span>Diensten</span><span class="navbar__dropdown-arrow">▾</span></button>
             <div class="navbar__dropdown-panel" role="menu">
-              <a href="/diensten/website-laten-maken.html" class="navbar__dropdown-link" role="menuitem"><span class="navbar__dropdown-link-icon">🌐</span><span class="navbar__dropdown-link-text"><strong>Websites laten maken</strong><small>Conversiegericht, snel en op maat</small></span></a>
-              <a href="/diensten/workflow-automatisering.html" class="navbar__dropdown-link" role="menuitem"><span class="navbar__dropdown-link-icon">⚡</span><span class="navbar__dropdown-link-text"><strong>Workflow Automatisering</strong><small>Processen op de achtergrond draaien</small></span></a>
-              <a href="/diensten/ai-implementatie.html" class="navbar__dropdown-link" role="menuitem"><span class="navbar__dropdown-link-icon">🤖</span><span class="navbar__dropdown-link-text"><strong>AI Development</strong><small>AI die écht werkt voor je bedrijf</small></span></a>
-              <a href="/diensten/seo.html" class="navbar__dropdown-link" role="menuitem"><span class="navbar__dropdown-link-icon">🔍</span><span class="navbar__dropdown-link-text"><strong>SEO</strong><small>Gevonden worden in Google</small></span></a>
+              <a href="/diensten/website-laten-maken.html" class="navbar__dropdown-link" role="menuitem"><span class="navbar__dropdown-link-icon" aria-hidden="true">🌐</span><span class="navbar__dropdown-link-text"><strong>Websites laten maken</strong><small>Conversiegericht, snel en op maat</small></span></a>
+              <a href="/diensten/workflow-automatisering.html" class="navbar__dropdown-link" role="menuitem"><span class="navbar__dropdown-link-icon" aria-hidden="true">⚡</span><span class="navbar__dropdown-link-text"><strong>Workflow Automatisering</strong><small>Processen op de achtergrond draaien</small></span></a>
+              <a href="/diensten/ai-implementatie.html" class="navbar__dropdown-link" role="menuitem"><span class="navbar__dropdown-link-icon" aria-hidden="true">🤖</span><span class="navbar__dropdown-link-text"><strong>AI Development</strong><small>AI die écht werkt voor je bedrijf</small></span></a>
+              <a href="/diensten/seo.html" class="navbar__dropdown-link" role="menuitem"><span class="navbar__dropdown-link-icon" aria-hidden="true">🔍</span><span class="navbar__dropdown-link-text"><strong>SEO</strong><small>Gevonden worden in Google</small></span></a>
             </div>
           </li>
           <li><a href="/werkwijze/" class="navbar__link">Werkwijze</a></li>
@@ -181,27 +182,27 @@
         </ul>
       </nav>
       <div class="navbar__actions">
-        <button class="btn btn--primary btn--sm" data-modal="open">Gratis gesprek</button>
-        <button class="navbar__lang-toggle" id="langToggle" aria-label="Switch language"><span id="langLabel">🇬🇧</span></button>
-        <button class="navbar__theme-toggle" id="themeToggle" aria-label="Toggle theme"><svg id="themeIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button>
-        <button class="navbar__hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu"><span class="navbar__hamburger-line"></span><span class="navbar__hamburger-line"></span><span class="navbar__hamburger-line"></span></button>
+        <button type="button" class="btn btn--primary btn--sm" data-modal="open">Gratis gesprek</button>
+        <button type="button" class="navbar__lang-toggle" id="langToggle" aria-label="Switch language"><span id="langLabel">🇬🇧</span></button>
+        <button type="button" class="navbar__theme-toggle" id="themeToggle" aria-label="Toggle theme"><svg id="themeIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button>
+        <button type="button" class="navbar__hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu"><span class="navbar__hamburger-line"></span><span class="navbar__hamburger-line"></span><span class="navbar__hamburger-line"></span></button>
       </div>
     </div>
     <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
       <nav aria-label="Mobiele navigatie">
         <ul class="navbar__mobile-links" role="list">
-          <li><div class="navbar__mobile-accordion"><button class="navbar__mobile-accordion-trigger"><span>Diensten</span><span class="navbar__mobile-accordion-arrow">▾</span></button><nav class="navbar__mobile-subnav"><a href="/diensten/website-laten-maken.html">🌐 Websites laten maken</a><a href="/diensten/workflow-automatisering.html">⚡ Workflow Automatisering</a><a href="/diensten/ai-implementatie.html">🤖 AI Development</a><a href="/diensten/seo.html">🔍 SEO</a></nav></div></li>
+          <li><div class="navbar__mobile-accordion"><button class="navbar__mobile-accordion-trigger" type="button" aria-expanded="false" aria-label="Diensten submenu openen"><span>Diensten</span><span class="navbar__mobile-accordion-arrow">▾</span></button><nav class="navbar__mobile-subnav"><a href="/diensten/website-laten-maken.html">🌐 Websites laten maken</a><a href="/diensten/workflow-automatisering.html">⚡ Workflow Automatisering</a><a href="/diensten/ai-implementatie.html">🤖 AI Development</a><a href="/diensten/seo.html">🔍 SEO</a></nav></div></li>
           <li><a href="/werkwijze/" class="navbar__mobile-link">Werkwijze</a></li>
           <li><a href="/blog/" class="navbar__mobile-link">Blog</a></li>
           <li><a href="/#faq" class="navbar__mobile-link">FAQ</a></li>
-          <li><div class="navbar__mobile-toggles"><button class="navbar__lang-toggle" id="langToggleMobile" aria-label="Switch language"><span id="langLabelMobile">🇬🇧</span></button><button class="navbar__theme-toggle" id="themeToggleMobile" aria-label="Toggle theme"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button></div></li>
-          <li><button class="btn btn--primary btn--full" data-modal="open">Gratis gesprek plannen</button></li>
+          <li><div class="navbar__mobile-toggles"><button type="button" class="navbar__lang-toggle" id="langToggleMobile" aria-label="Switch language"><span id="langLabelMobile">🇬🇧</span></button><button type="button" class="navbar__theme-toggle" id="themeToggleMobile" aria-label="Toggle theme"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button></div></li>
+          <li><button type="button" class="btn btn--primary btn--full" data-modal="open">Gratis gesprek plannen</button></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- Hero -->
     <section class="legal-hero">
       <div class="container">
@@ -324,8 +325,8 @@
             <ul role="list">
               <li><a href="mailto:kelvantis.com@gmail.com" class="footer__nav-link">kelvantis.com@gmail.com</a></li>
               <li><a href="tel:+31627900367" class="footer__nav-link">+31 6 27 90 03 67</a></li>
-              <li><span class="footer__nav-link" style="cursor:default;">&#128205; Maastricht, Nederland</span></li>
-              <li><button class="footer__nav-link" data-modal="open" style="background:none;border:none;cursor:pointer;font-size:inherit;font-family:inherit;padding:0;text-align:left;">Gratis gesprek plannen</button></li>
+              <li><span class="footer__nav-link" style="cursor:default;"><span aria-hidden="true">&#128205;</span> Maastricht, Nederland</span></li>
+              <li><button type="button" class="footer__nav-link" data-modal="open" style="background:none;border:none;cursor:pointer;font-size:inherit;font-family:inherit;padding:0;text-align:left;">Gratis gesprek plannen</button></li>
             </ul>
           </div>
         </nav>
@@ -342,7 +343,7 @@
       <div class="footer__bottom">
         <p class="footer__copyright">&copy; 2026 Kelvantis. Alle rechten voorbehouden.</p>
         <!-- KVK: [INVULLEN NA APRIL 2026] -->
-        <p class="footer__powered">⚡ Powered by Kelvantis</p>
+        <p class="footer__powered"><span aria-hidden="true">⚡</span> Powered by Kelvantis</p>
         <div class="footer__legal">
           <a href="/privacy/" class="footer__legal-link">Privacybeleid</a>
           <a href="/voorwaarden/" class="footer__legal-link">Algemene voorwaarden</a>

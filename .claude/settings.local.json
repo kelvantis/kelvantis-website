@@ -13,7 +13,10 @@
       "Bash(grep -rn pricing__card-price 'c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy' --include=*.html)",
       "Bash(grep -E \"\\\\.\\(html|json\\)$\")",
       "Bash(sed -i 's|<p class=\"\"footer__copyright\"\"[^>]*>&copy; 2026 Kelvantis. Alle rechten voorbehouden.</p>|<p class=\"\"footer__copyright\"\">\\\\&copy; 2026 Kelvantis. Alle rechten voorbehouden.</p>\\\\n      <!-- KVK: [INVULLEN NA APRIL 2026] -->|' \"$f\")",
-      "Bash(echo \"KVK comment added: $f\")"
+      "Bash(echo \"KVK comment added: $f\")",
+      "Bash(grep -l \"Organization\\\\|Company\" \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy\"/*.html)",
+      "WebFetch(domain:bnnx.com)",
+      "WebFetch(domain:www.bnnx.com)"
     ]
   }
 }
