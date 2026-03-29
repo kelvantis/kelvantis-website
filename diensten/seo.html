@@ -164,7 +164,6 @@
   </script>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Naar hoofdinhoud</a>
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
@@ -189,43 +188,37 @@
             </button>
             <div class="navbar__dropdown-panel" role="menu">
               <a href="./website-laten-maken.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon" aria-hidden="true">🌐</span>
+                <span class="navbar__dropdown-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
                 <span class="navbar__dropdown-link-text">
                   <strong data-i18n="nav.dienstenDropdown.websites.name">Websites laten maken</strong>
                   <small data-i18n="nav.dienstenDropdown.websites.desc">Conversiegericht, snel en op maat</small>
                 </span>
               </a>
               <a href="./workflow-automatisering.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon" aria-hidden="true">⚡</span>
+                <span class="navbar__dropdown-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
                 <span class="navbar__dropdown-link-text">
                   <strong data-i18n="nav.dienstenDropdown.workflow.name">Workflow Automatisering</strong>
                   <small data-i18n="nav.dienstenDropdown.workflow.desc">Processen op de achtergrond draaien</small>
                 </span>
               </a>
               <a href="./ai-implementatie.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon" aria-hidden="true">🤖</span>
+                <span class="navbar__dropdown-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/></svg></span>
                 <span class="navbar__dropdown-link-text">
                   <strong>AI Development</strong>
                   <small>Claude Code &amp; VS Code maatwerk</small>
                 </span>
               </a>
-              <a href="./seo.html" class="navbar__dropdown-link" role="menuitem">
-                <span class="navbar__dropdown-link-icon" aria-hidden="true">📈</span>
-                <span class="navbar__dropdown-link-text">
-                  <strong>SEO</strong>
-                  <small>Meetbare rankings, geen vaag advies</small>
-                </span>
-              </a>
             </div>
           </li>
-          <li><a href="/werkwijze/" class="navbar__link">Werkwijze</a></li>
+          <li><a href="/#aanpak" class="navbar__link">Aanpak</a></li>
+          <li><a href="/#voor-wie" class="navbar__link">Voor wie</a></li>
           <li><a href="/blog/" class="navbar__link">Blog</a></li>
           <li><a href="/contact/" class="navbar__link">Contact</a></li>
         </ul>
       </nav>
 
       <div class="navbar__actions">
-        <button type="button" class="btn btn--primary btn--sm" data-modal="open" data-i18n="nav.cta">Gratis gesprek</button>
+        <a href="/contact/" class="btn btn--primary btn--sm">Gratis gesprek</a>
         <button type="button" class="navbar__lang-toggle" id="langToggle" aria-label="Switch language">
           <span id="langLabel">🇬🇧</span>
         </button>
@@ -253,14 +246,15 @@
                 <span class="navbar__mobile-accordion-arrow">▾</span>
               </button>
               <nav class="navbar__mobile-subnav">
-                <a href="./website-laten-maken.html">🌐 Websites laten maken</a>
-                <a href="./workflow-automatisering.html">⚡ Workflow Automatisering</a>
-                <a href="./ai-implementatie.html">🤖 AI Development</a>
-                <a href="./seo.html">📈 SEO</a>
+                <a href="./website-laten-maken.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Websites laten maken</a>
+                <a href="./workflow-automatisering.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Workflow Automatisering</a>
+                <a href="./ai-implementatie.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/></svg> AI Development</a>
+                
               </nav>
             </div>
           </li>
-          <li><a href="/werkwijze/" class="navbar__mobile-link">Werkwijze</a></li>
+          <li><a href="/#aanpak" class="navbar__mobile-link">Aanpak</a></li>
+          <li><a href="/#voor-wie" class="navbar__mobile-link">Voor wie</a></li>
           <li><a href="/blog/" class="navbar__mobile-link">Blog</a></li>
           <li><a href="/contact/" class="navbar__mobile-link">Contact</a></li>
           <li>
@@ -275,13 +269,13 @@
               </button>
             </div>
           </li>
-          <li><button type="button" class="btn btn--primary btn--full" data-modal="open" data-i18n="nav.ctaMobile">Gratis gesprek plannen</button></li>
+          <li><a href="/contact/" class="btn btn--primary btn--full">Gratis gesprek plannen</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main-content">
+  <main>
 
     <!-- HERO -->
     <section class="dienst-hero">
@@ -329,7 +323,7 @@
               </div>
             </div>
             <div style="display:flex;align-items:center;gap:.75rem;">
-              <span style="font-size:1.5rem;">⚡</span>
+              <span style="font-size:1.5rem;" aria-hidden="true">⚡</span>
               <div>
                 <strong style="color:var(--color-text);display:block;font-size:.9375rem;">Technische SEO</strong>
                 <small style="color:var(--color-text-muted);font-size:.825rem;">Snelheid, crawlbaarheid, Core Web Vitals</small>
@@ -463,14 +457,14 @@
         </div>
         <div class="andere-diensten__grid">
           <a href="./website-laten-maken.html" class="andere-diensten__card reveal">
-            <span class="andere-diensten__card-emoji">🌐</span>
+            <span class="andere-diensten__card-emoji" aria-hidden="true">🌐</span>
             <div class="andere-diensten__card-text">
               <strong data-page-i18n="andere.c1.title">Websites laten maken</strong>
               <small data-page-i18n="andere.c1.desc">Conversiegerichte websites voor B2B</small>
             </div>
           </a>
           <a href="./ai-implementatie.html" class="andere-diensten__card reveal">
-            <span class="andere-diensten__card-emoji">🤖</span>
+            <span class="andere-diensten__card-emoji" aria-hidden="true">🤖</span>
             <div class="andere-diensten__card-text">
               <strong data-page-i18n="andere.c2.title">AI Development</strong>
               <small data-page-i18n="andere.c2.desc">Maatwerk AI-oplossingen met Claude Code</small>
@@ -552,8 +546,6 @@
             <h4 class="footer__nav-title">Navigatie</h4>
             <ul role="list">
               <li><a href="/over-ons/" class="footer__nav-link">Over ons</a></li>
-              <li><a href="/werkwijze/" class="footer__nav-link">Werkwijze</a></li>
-              <li><a href="/pakketten/" class="footer__nav-link">Pakketten</a></li>
               <li><a href="/contact/" class="footer__nav-link">Contact</a></li>
             </ul>
           </div>
