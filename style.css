@@ -1446,7 +1446,7 @@ button {
   color: var(--color-text-muted);
   line-height: 1.7;
   font-style: normal;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem 0;
   border: none;
   padding: 0;
 }
@@ -3470,6 +3470,9 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
   line-height: 1.75;
   flex: 1;
   font-style: italic;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 .testimonial__author {
   display: flex;

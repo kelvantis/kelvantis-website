@@ -92,6 +92,42 @@
   }
   </script>
 
+  <!-- Review + AggregateRating Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kelvantis",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "3",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Jan V." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Binnen 6 weken stond onze nieuwe website live en kregen we direct meer aanvragen. Kjell denkt mee als ondernemer, niet als websitebouwer."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Sarah M." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "De workflow automatisering bespaart ons team nu 15 uur per week. Ik had nooit gedacht dat dit zo snel geïmplementeerd kon worden."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Robert B." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Eindelijk een bureau dat gewoon eerlijk is. Geen bullshit beloftes, gewoon resultaat. Onze Google rankings zijn verdubbeld in 4 maanden."
+      }
+    ]
+  }
+  </script>
+
   <!-- FAQ Schema -->
   <script type="application/ld+json">
   {
@@ -234,10 +270,10 @@
                 <span class="navbar__mobile-accordion-arrow">▾</span>
               </button>
               <nav class="navbar__mobile-subnav">
-                <a href="/diensten/website-laten-maken.html">🌐 <span data-i18n="nav.dienstenDropdown.websites.name">Websites laten maken</span></a>
-                <a href="/diensten/workflow-automatisering.html">⚡ <span data-i18n="nav.dienstenDropdown.workflow.name">Workflow Automatisering</span></a>
-                <a href="/diensten/ai-implementatie.html">🤖 <span data-i18n="nav.dienstenDropdown.ai.name">AI Development</span></a>
-                <a href="/diensten/seo.html">🔍 <span data-i18n="nav.dienstenDropdown.seo.name">SEO</span></a>
+                <a href="/diensten/website-laten-maken.html"><span aria-hidden="true">🌐</span> <span data-i18n="nav.dienstenDropdown.websites.name">Websites laten maken</span></a>
+                <a href="/diensten/workflow-automatisering.html"><span aria-hidden="true">⚡</span> <span data-i18n="nav.dienstenDropdown.workflow.name">Workflow Automatisering</span></a>
+                <a href="/diensten/ai-implementatie.html"><span aria-hidden="true">🤖</span> <span data-i18n="nav.dienstenDropdown.ai.name">AI Development</span></a>
+                <a href="/diensten/seo.html"><span aria-hidden="true">🔍</span> <span data-i18n="nav.dienstenDropdown.seo.name">SEO</span></a>
               </nav>
             </div>
           </li>
@@ -331,18 +367,18 @@
                   <div class="dashboard__metrics">
                     <div class="dashboard__metric">
                       <span class="dashboard__metric-label" data-i18n="dash.visitors">Bezoekers</span>
-                      <span class="dashboard__metric-value">2,847</span>
-                      <span class="dashboard__metric-change">↑ 34%</span>
+                      <span class="dashboard__metric-value" aria-label="2.847 bezoekers deze maand">2,847</span>
+                      <span class="dashboard__metric-change" aria-label="stijging 34 procent">↑ 34%</span>
                     </div>
                     <div class="dashboard__metric">
                       <span class="dashboard__metric-label" data-i18n="dash.conversion">Conversie</span>
-                      <span class="dashboard__metric-value">4.2%</span>
-                      <span class="dashboard__metric-change">↑ 1.1%</span>
+                      <span class="dashboard__metric-value" aria-label="4.2 procent conversieratio">4.2%</span>
+                      <span class="dashboard__metric-change" aria-label="stijging 1.1 procentpunt">↑ 1.1%</span>
                     </div>
                     <div class="dashboard__metric">
                       <span class="dashboard__metric-label" data-i18n="dash.leads">Leads</span>
-                      <span class="dashboard__metric-value">119</span>
-                      <span class="dashboard__metric-change">↑ 27%</span>
+                      <span class="dashboard__metric-value" aria-label="119 leads deze maand">119</span>
+                      <span class="dashboard__metric-change" aria-label="stijging 27 procent">↑ 27%</span>
                     </div>
                   </div>
                   <div class="dashboard__chart">
@@ -694,36 +730,42 @@
         <div class="testimonials__grid reveal">
           <div class="testimonial__card">
             <div class="testimonial__stars" aria-label="5 sterren">★★★★★</div>
-            <p class="testimonial__quote">"Binnen 6 weken stond onze nieuwe website live en kregen we direct meer aanvragen. Kjell denkt mee als ondernemer, niet als websitebouwer."</p>
-            <div class="testimonial__author">
-              <div class="testimonial__avatar" aria-hidden="true">JV</div>
-              <div>
-                <strong class="testimonial__name">Jan V.</strong>
-                <span class="testimonial__role">Directeur, B2B dienstverlener</span>
-              </div>
-            </div>
+            <blockquote class="testimonial__quote">
+              <p>"Binnen 6 weken stond onze nieuwe website live en kregen we direct meer aanvragen. Kjell denkt mee als ondernemer, niet als websitebouwer."</p>
+              <footer class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">JV</div>
+                <div>
+                  <cite class="testimonial__name">Jan V.</cite>
+                  <span class="testimonial__role">Directeur, B2B dienstverlener</span>
+                </div>
+              </footer>
+            </blockquote>
           </div>
           <div class="testimonial__card">
             <div class="testimonial__stars" aria-label="5 sterren">★★★★★</div>
-            <p class="testimonial__quote">"De workflow automatisering bespaart ons team nu 15 uur per week. Ik had nooit gedacht dat dit zo snel geïmplementeerd kon worden."</p>
-            <div class="testimonial__author">
-              <div class="testimonial__avatar" aria-hidden="true">SM</div>
-              <div>
-                <strong class="testimonial__name">Sarah M.</strong>
-                <span class="testimonial__role">Operations Manager</span>
-              </div>
-            </div>
+            <blockquote class="testimonial__quote">
+              <p>"De workflow automatisering bespaart ons team nu 15 uur per week. Ik had nooit gedacht dat dit zo snel geïmplementeerd kon worden."</p>
+              <footer class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">SM</div>
+                <div>
+                  <cite class="testimonial__name">Sarah M.</cite>
+                  <span class="testimonial__role">Operations Manager</span>
+                </div>
+              </footer>
+            </blockquote>
           </div>
           <div class="testimonial__card">
             <div class="testimonial__stars" aria-label="5 sterren">★★★★★</div>
-            <p class="testimonial__quote">"Eindelijk een bureau dat gewoon eerlijk is. Geen bullshit beloftes, gewoon resultaat. Onze Google rankings zijn verdubbeld in 4 maanden."</p>
-            <div class="testimonial__author">
-              <div class="testimonial__avatar" aria-hidden="true">RB</div>
-              <div>
-                <strong class="testimonial__name">Robert B.</strong>
-                <span class="testimonial__role">Eigenaar, MKB bedrijf</span>
-              </div>
-            </div>
+            <blockquote class="testimonial__quote">
+              <p>"Eindelijk een bureau dat gewoon eerlijk is. Geen bullshit beloftes, gewoon resultaat. Onze Google rankings zijn verdubbeld in 4 maanden."</p>
+              <footer class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">RB</div>
+                <div>
+                  <cite class="testimonial__name">Robert B.</cite>
+                  <span class="testimonial__role">Eigenaar, MKB bedrijf</span>
+                </div>
+              </footer>
+            </blockquote>
           </div>
         </div>
         <div class="reveal" style="text-align:center; margin-top:2.5rem;">

@@ -402,25 +402,40 @@ function animateFlow() {
    9. COOKIE BANNER (AVG/GDPR)
 ═══════════════════════════════════════ */
 (function initCookieBanner() {
-  const banner = document.getElementById('cookieBanner');
+  const banner  = document.getElementById('cookieBanner');
   if (!banner) return;
+
+  const acceptBtn  = document.getElementById('cookieAccept');
+  const declineBtn = document.getElementById('cookieDecline');
+
+  function dismiss(choice) {
+    localStorage.setItem('kelvantis_cookie_consent', choice);
+    banner.classList.remove('is-visible');
+    banner.removeEventListener('keydown', trapFocus);
+  }
+
+  /* Focus trap: Tab cycles only between the two buttons */
+  function trapFocus(e) {
+    if (e.key !== 'Tab') return;
+    e.preventDefault();
+    if (document.activeElement === acceptBtn) {
+      declineBtn.focus();
+    } else {
+      acceptBtn.focus();
+    }
+  }
 
   const stored = localStorage.getItem('kelvantis_cookie_consent');
   if (!stored) {
-    // Show banner after short delay so page renders first
-    setTimeout(() => banner.classList.add('is-visible'), 1200);
+    setTimeout(() => {
+      banner.classList.add('is-visible');
+      acceptBtn?.focus();          /* autofocus on the primary action */
+      banner.addEventListener('keydown', trapFocus);
+    }, 1200);
   }
 
-  document.getElementById('cookieAccept')?.addEventListener('click', () => {
-    localStorage.setItem('kelvantis_cookie_consent', 'all');
-    banner.classList.remove('is-visible');
-    // If you add Google Analytics later, initialise it here
-  });
-
-  document.getElementById('cookieDecline')?.addEventListener('click', () => {
-    localStorage.setItem('kelvantis_cookie_consent', 'minimal');
-    banner.classList.remove('is-visible');
-  });
+  acceptBtn?.addEventListener('click',  () => dismiss('all'));
+  declineBtn?.addEventListener('click', () => dismiss('minimal'));
 })();
 
 /* ═══════════════════════════════════════
