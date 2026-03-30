@@ -608,11 +608,11 @@ function animateFlow() {
 (function initI18n() {
   const T = {
     nl: {
-      nav: { approach: 'Aanpak', forWho: 'Voor wie', packages: 'Pakketten', faq: 'FAQ', cta: 'Gratis gesprek', ctaMobile: 'Gratis gesprek plannen', diensten: 'Diensten', dienstenDropdown: { websites: { name: 'Websites laten maken', desc: 'Conversiegericht, snel en op maat' }, workflow: { name: 'Workflow Automatisering', desc: 'Processen op de achtergrond draaien' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code maatwerk' }, seo: { name: 'SEO', desc: 'Gevonden worden in Google' } } },
+      nav: { approach: 'Aanpak', forWho: 'Voor wie', packages: 'Pakketten', faq: 'FAQ', cta: 'Gratis gesprek', ctaMobile: 'Gratis gesprek plannen', diensten: 'Diensten', dienstenDropdown: { websites: { name: 'Websites laten maken', desc: 'Conversiegericht, snel en op maat' }, workflow: { name: 'Workflow Automatisering', desc: 'Processen op de achtergrond draaien' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code maatwerk' }, seo: { name: 'GEO & AEO', desc: 'Gevonden worden in AI-zoekmachines' } } },
       hero: {
-        badge: 'Website · SEO · Workflow Automatisering',
+        badge: 'Website · GEO/AEO · Workflow Automatisering',
         title: 'Meer resultaat.<br><span class="hero__title-accent">Minder handwerk.</span>',
-        subtitle: 'Kelvantis bouwt conversiegerichte websites, SEO-strategieën en workflow automations voor B2B bedrijven. AI zit verwerkt in alles, van copywriting tot lead-opvolging. We build systems that work while you don\'t.',
+        subtitle: 'Kelvantis bouwt conversiegerichte websites, GEO/AEO-strategieën en workflow automations voor B2B bedrijven. AI zit verwerkt in alles, van copywriting tot lead-opvolging. We build systems that work while you don\'t.',
         ctaPrimary: 'Gratis strategiegesprek',
         ctaSecondary: 'Bekijk aanpak',
         trust: 'Gebouwd voor <strong>B2B bedrijven</strong> in Nederland'
@@ -640,8 +640,8 @@ function animateFlow() {
         c2: { title: '"We verliezen uren aan handmatig herhaalwerk"', desc: 'Facturen verwerken, CRM bijhouden, rapportages opstellen, e-mails kopiëren. Werk dat een systeem kan doen terwijl jij bezig bent met wat echt telt.' },
         c3: { title: '"Onze website converteert niet"', desc: 'Bezoekers komen, bekijken en vertrekken zonder te converteren. Je hebt een website die er mooi uitziet, maar die niet verkoopt. Wij bouwen voor conversie, niet voor decoratie.' },
         c4: { title: '"We willen AI integreren maar weten niet hoe"', desc: 'Je ziet het potentieel van AI maar het ontbreekt aan overzicht, richting en iemand die het concreet kan bouwen. Geen hype, geen theorie, wij implementeren wat werkt.' },
-        c5: { title: '"We zijn slecht vindbaar in Google"', desc: 'Je concurrenten staan bovenaan en pakken de leads die van jou hadden kunnen zijn. SEO is geen trucje, het is een systeem. Wij bouwen dat systeem en maken het meetbaar.' },
-        c6: { title: '"We hebben een complete digitale infrastructuur nodig"', desc: 'Van een verouderde website tot een totale herbouw van je digitale stack. Website, SEO, automations en AI-integraties, wij ontwerpen en bouwen het als één samenhangend systeem.' },
+        c5: { title: '"We zijn slecht vindbaar in Google"', desc: 'Je concurrenten staan bovenaan en pakken de leads die van jou hadden kunnen zijn. GEO/AEO is geen trucje, het is een systeem. Wij bouwen dat systeem en maken het meetbaar.' },
+        c6: { title: '"We hebben een complete digitale infrastructuur nodig"', desc: 'Van een verouderde website tot een totale herbouw van je digitale stack. Website, GEO/AEO, automations en AI-integraties, wij ontwerpen en bouwen het als één samenhangend systeem.' },
         notfor: { title: 'Niet voor jou als je zoekt naar:', i1: 'Social media beheer', i2: 'Maandelijks ads-beheer', i3: 'Dagelijkse content creatie', i4: 'Uurtje-factuurtje werk' }
       },
       pricing: {
@@ -650,7 +650,7 @@ function animateFlow() {
         subtitle: 'Geen uurtje-factuurtje, geen verborgen kosten. Vraag een offerte aan en we bespreken samen wat past bij jouw situatie en doelen.',
         footnote: 'Alle pakketten zijn eenmalige investeringen. Advisory is maandelijks opzegbaar. Plan een gratis gesprek, dan bespreken we wat past bij jouw situatie en budget.',
         cta: 'Offerte aanvragen',
-        f: { sub: 'Eenmalige investering · Prijs op aanvraag', desc: 'De perfecte start. Een professionele website die presteert, converteert en gevonden wordt door jouw ideale klanten.', f1: 'Conversiegerichte website (t/m 8 pagina\'s)', f2: 'Volledige SEO-optimalisatie', f3: 'Contactformulier met e-mailnotificaties', f4: 'Google Analytics & Search Console', f5: 'Mobiel geoptimaliseerd', f6: 'Core Web Vitals score 90+', f7: 'AI chatbot', f8: 'Marketing automations', f9: 'CRM-koppeling' },
+        f: { sub: 'Eenmalige investering · Prijs op aanvraag', desc: 'De perfecte start. Een professionele website die presteert, converteert en gevonden wordt door jouw ideale klanten.', f1: 'Conversiegerichte website (t/m 8 pagina\'s)', f2: 'SEO & GEO-optimalisatie', f3: 'Contactformulier met e-mailnotificaties', f4: 'Google Analytics & Search Console', f5: 'Mobiel geoptimaliseerd', f6: 'Core Web Vitals score 90+', f7: 'AI chatbot', f8: 'Marketing automations', f9: 'CRM-koppeling' },
         gs: { badge: 'Meest gekozen', sub: 'Eenmalige investering · Prijs op aanvraag', desc: 'Het complete AI marketing systeem. Van website tot chatbot tot automatisering, alles werkt samen om 24/7 leads voor je te genereren.', f1: 'Alles van Foundation', f2: 'AI chatbot op maat getraind', f3: 'Marketing automation flows', f4: 'CRM-koppeling & lead tracking', f5: 'E-mail nurturing sequenties', f6: 'Real-time analytics dashboard', f7: 'Agenda-integratie voor chatbot', f8: '30 dagen ondersteuning na lancering', f9: 'Prioriteit support' },
         a: { sub: 'Maandelijks opzegbaar · Prijs op aanvraag', desc: 'Directe lijn met je eigen AI marketing strategist. Maandelijkse optimalisaties, analyses en begeleiding voor doorlopende groei.', f1: 'Maandelijks strategiegesprek (60 min)', f2: 'Doorlopende systeem-optimalisatie', f3: 'Maandelijkse prestatierapportage', f4: 'Directe WhatsApp/e-mail toegang', f5: 'Nieuwe automations & A/B tests', f6: 'Prioriteit bij uitbreidingen', f7: 'Inclusief nieuw systeem bouwen', f8: 'Inclusief Foundation website', f9: 'Inclusief AI chatbot setup' }
       },
@@ -658,16 +658,16 @@ function animateFlow() {
         label: 'FAQ',
         title: 'Veelgestelde vragen.',
         subtitle: 'Staat jouw vraag er niet tussen? Plan een gratis gesprek en we beantwoorden alles direct.',
-        q1: 'Voor wie is Kelvantis geschikt?', a1: 'Kelvantis werkt met B2B bedrijven, van startup tot enterprise, die concrete problemen hebben op het vlak van online zichtbaarheid, leadgeneratie of inefficiënte werkprocessen. Elke bedrijfsgrootte, elke sector, zolang er een helder probleem is dat we kunnen oplossen met een website, SEO of workflow automatisering.',
+        q1: 'Voor wie is Kelvantis geschikt?', a1: 'Kelvantis werkt met B2B bedrijven, van startup tot enterprise, die concrete problemen hebben op het vlak van online zichtbaarheid, leadgeneratie of inefficiënte werkprocessen. Elke bedrijfsgrootte, elke sector, zolang er een helder probleem is dat we kunnen oplossen met een website, GEO/AEO of workflow automatisering.',
         q2: 'Hoe lang duurt het om live te gaan?', a2: 'Een Foundation project staat gemiddeld binnen 2 weken live. Een volledig Growth System, inclusief AI chatbot, automations en CRM-koppeling, is gemiddeld binnen 4 tot 6 weken operationeel. We werken gefaseerd en houden je via vaste updates op de hoogte van de voortgang. Geen verrassingen.',
         q3: 'Heb ik technische kennis nodig?', a3: 'Nee, absoluut niet. Wij regelen alles van A tot Z, van het ontwerp en de technische bouw tot aan de koppelingen en training van de AI. Jij hoeft alleen jouw bedrijf goed te kennen en ons te vertellen wat je wilt bereiken. De rest is aan ons.',
-        q4: 'Wat is het verschil tussen Foundation en Growth System?', a4: 'Foundation geeft je een professionele, snelle website met SEO en een contactformulier, een solide basis. Growth System gaat verder: je krijgt daar bovenop een AI chatbot, automatische lead nurturing, CRM-koppeling en marketing automations die 24/7 voor je werken. Foundation is perfect als start; Growth System is voor wie maximaal wil groeien op autopilot.',
+        q4: 'Wat is het verschil tussen Foundation en Growth System?', a4: 'Foundation geeft je een professionele, snelle website met SEO/GEO-optimalisatie en een contactformulier, een solide basis. Growth System gaat verder: je krijgt daar bovenop een AI chatbot, automatische lead nurturing, CRM-koppeling en marketing automations die 24/7 voor je werken. Foundation is perfect als start; Growth System is voor wie maximaal wil groeien op autopilot.',
         q5: 'Kan ik later upgraden van Foundation naar Growth System?', a5: 'Absoluut. Veel klanten starten met Foundation om snel resultaat te zien, en upgraden zodra ze de groei in leads ervaren. De investering van €1.500 in Foundation wordt volledig verrekend bij een upgrade naar Growth System, je betaalt alleen het verschil van €1.500. Zo groei je in jouw eigen tempo.'
       },
       cta: {
         label: 'Klaar om te groeien?',
         title: 'Meer resultaat.<br><span class="cta-section__title-accent">Minder handwerk.</span>',
-        subtitle: 'Plan een gratis strategiegesprek en ontdek wat een conversiegerichte website, sterke SEO of slimme workflow automatisering voor jouw bedrijf kan betekenen. We kijken samen naar jouw situatie en de grootste kansen. Geen verplichtingen, wel concrete inzichten.',
+        subtitle: 'Plan een gratis strategiegesprek en ontdek wat een conversiegerichte website, GEO/AEO of slimme workflow automatisering voor jouw bedrijf kan betekenen. We kijken samen naar jouw situatie en de grootste kansen. Geen verplichtingen, wel concrete inzichten.',
         btn: 'Gratis strategiegesprek plannen',
         trust: 'Gratis · Geen verplichtingen · Binnen 24 uur reactie'
       },
@@ -693,11 +693,11 @@ function animateFlow() {
       }
     },
     en: {
-      nav: { approach: 'Approach', forWho: 'For who', packages: 'Packages', faq: 'FAQ', cta: 'Free call', ctaMobile: 'Schedule a free call', diensten: 'Services', dienstenDropdown: { websites: { name: 'Website development', desc: 'Conversion-focused, fast and custom' }, workflow: { name: 'Workflow Automation', desc: 'Business processes running in the background' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code custom builds' }, seo: { name: 'SEO', desc: 'Get found on Google' } } },
+      nav: { approach: 'Approach', forWho: 'For who', packages: 'Packages', faq: 'FAQ', cta: 'Free call', ctaMobile: 'Schedule a free call', diensten: 'Services', dienstenDropdown: { websites: { name: 'Website development', desc: 'Conversion-focused, fast and custom' }, workflow: { name: 'Workflow Automation', desc: 'Business processes running in the background' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code custom builds' }, seo: { name: 'GEO & AEO', desc: 'Get found in AI search engines' } } },
       hero: {
-        badge: 'Website · SEO · Workflow Automation',
+        badge: 'Website · GEO/AEO · Workflow Automation',
         title: 'More results.<br><span class="hero__title-accent">Less manual work.</span>',
-        subtitle: 'Kelvantis builds conversion-focused websites, SEO strategies and workflow automations for B2B companies. AI is embedded in everything, from copywriting to lead follow-up. We build systems that work while you don\'t.',
+        subtitle: 'Kelvantis builds conversion-focused websites, GEO/AEO strategies and workflow automations for B2B companies. AI is embedded in everything, from copywriting to lead follow-up. We build systems that work while you don\'t.',
         ctaPrimary: 'Free strategy call',
         ctaSecondary: 'View approach',
         trust: 'Built for <strong>B2B companies</strong> in the Netherlands'
@@ -725,8 +725,8 @@ function animateFlow() {
         c2: { title: '"We\'re losing hours on manual repetitive work"', desc: 'Processing invoices, updating CRM, creating reports, copying emails. Work that a system can do while you focus on what really matters.' },
         c3: { title: '"Our website doesn\'t convert"', desc: 'Visitors come, browse and leave without converting. You have a website that looks good but doesn\'t sell. We build for conversion, not for decoration.' },
         c4: { title: '"We want to integrate AI but don\'t know how"', desc: 'You see the potential of AI but lack overview, direction and someone who can actually build it. No hype, no theory, we implement what works.' },
-        c5: { title: '"We rank poorly in Google"', desc: 'Your competitors are at the top and capturing leads that could have been yours. SEO isn\'t a trick, it\'s a system. We build that system and make it measurable.' },
-        c6: { title: '"We need a complete digital infrastructure"', desc: 'From an outdated website to a complete rebuild of your digital stack. Website, SEO, automations and AI integrations, we design and build it as one coherent system.' },
+        c5: { title: '"We rank poorly in Google"', desc: 'Your competitors are at the top and capturing leads that could have been yours. GEO/AEO isn\'t a trick, it\'s a system. We build that system and make it measurable.' },
+        c6: { title: '"We need a complete digital infrastructure"', desc: 'From an outdated website to a complete rebuild of your digital stack. Website, GEO/AEO, automations and AI integrations, we design and build it as one coherent system.' },
         notfor: { title: 'Not for you if you\'re looking for:', i1: 'Social media management', i2: 'Monthly ads management', i3: 'Daily content creation', i4: 'Hourly billing work' }
       },
       pricing: {
@@ -735,7 +735,7 @@ function animateFlow() {
         subtitle: 'No hourly billing, no hidden costs. Request a quote and we\'ll discuss together what fits your situation and goals.',
         footnote: 'All packages are one-time investments. Advisory is cancellable monthly. Schedule a free call, we\'ll discuss what fits your situation and budget.',
         cta: 'Request quote',
-        f: { sub: 'One-time investment · Price on request', desc: 'The perfect start. A professional website that performs, converts and gets found by your ideal clients.', f1: 'Conversion-focused website (up to 8 pages)', f2: 'Full SEO optimisation', f3: 'Contact form with email notifications', f4: 'Google Analytics & Search Console', f5: 'Mobile optimised', f6: 'Core Web Vitals score 90+', f7: 'AI chatbot', f8: 'Marketing automations', f9: 'CRM integration' },
+        f: { sub: 'One-time investment · Price on request', desc: 'The perfect start. A professional website that performs, converts and gets found by your ideal clients.', f1: 'Conversion-focused website (up to 8 pages)', f2: 'SEO & GEO optimisation', f3: 'Contact form with email notifications', f4: 'Google Analytics & Search Console', f5: 'Mobile optimised', f6: 'Core Web Vitals score 90+', f7: 'AI chatbot', f8: 'Marketing automations', f9: 'CRM integration' },
         gs: { badge: 'Most popular', sub: 'One-time investment · Price on request', desc: 'The complete AI marketing system. From website to chatbot to automation, everything works together to generate leads 24/7.', f1: 'Everything from Foundation', f2: 'Custom-trained AI chatbot', f3: 'Marketing automation flows', f4: 'CRM integration & lead tracking', f5: 'Email nurturing sequences', f6: 'Real-time analytics dashboard', f7: 'Calendar integration for chatbot', f8: '30 days support after launch', f9: 'Priority support' },
         a: { sub: 'Cancel anytime · Price on request', desc: 'Direct line with your own AI marketing strategist. Monthly optimisations, analyses and guidance for ongoing growth.', f1: 'Monthly strategy call (60 min)', f2: 'Ongoing system optimisation', f3: 'Monthly performance report', f4: 'Direct WhatsApp/email access', f5: 'New automations & A/B tests', f6: 'Priority for expansions', f7: 'Includes building new system', f8: 'Includes Foundation website', f9: 'Includes AI chatbot setup' }
       },
@@ -743,16 +743,16 @@ function animateFlow() {
         label: 'FAQ',
         title: 'Frequently asked questions.',
         subtitle: 'Can\'t find your question? Schedule a free call and we\'ll answer everything directly.',
-        q1: 'Who is Kelvantis for?', a1: 'Kelvantis works with B2B companies, from startup to enterprise, that have concrete problems with online visibility, lead generation or inefficient work processes. Any company size, any sector, as long as there\'s a clear problem we can solve with a website, SEO or workflow automation.',
+        q1: 'Who is Kelvantis for?', a1: 'Kelvantis works with B2B companies, from startup to enterprise, that have concrete problems with online visibility, lead generation or inefficient work processes. Any company size, any sector, as long as there\'s a clear problem we can solve with a website, GEO/AEO or workflow automation.',
         q2: 'How long does it take to go live?', a2: 'A Foundation project is typically live within 2 weeks. A full Growth System, including AI chatbot, automations and CRM integration, is operational within 4 to 6 weeks on average. We work in phases and keep you updated with fixed progress reports. No surprises.',
         q3: 'Do I need technical knowledge?', a3: 'No, absolutely not. We handle everything from A to Z, from design and technical build to integrations and AI training. You only need to know your business well and tell us what you want to achieve. The rest is on us.',
-        q4: 'What\'s the difference between Foundation and Growth System?', a4: 'Foundation gives you a professional, fast website with SEO and a contact form, a solid foundation. Growth System goes further: you also get an AI chatbot, automatic lead nurturing, CRM integration and marketing automations working 24/7. Foundation is perfect to start; Growth System is for those who want to grow on autopilot.',
+        q4: 'What\'s the difference between Foundation and Growth System?', a4: 'Foundation gives you a professional, fast website with SEO/GEO optimisation and a contact form, a solid foundation. Growth System goes further: you also get an AI chatbot, automatic lead nurturing, CRM integration and marketing automations working 24/7. Foundation is perfect to start; Growth System is for those who want to grow on autopilot.',
         q5: 'Can I upgrade from Foundation to Growth System later?', a5: 'Absolutely. Many clients start with Foundation to see results quickly, and upgrade once they experience the growth in leads. The Foundation investment is fully credited toward a Growth System upgrade, you only pay the difference. Grow at your own pace.'
       },
       cta: {
         label: 'Ready to grow?',
         title: 'More results.<br><span class="cta-section__title-accent">Less manual work.</span>',
-        subtitle: 'Schedule a free strategy call and discover what a conversion-focused website, strong SEO or smart workflow automation can mean for your business. We\'ll look at your situation and the biggest opportunities together. No obligations, just concrete insights.',
+        subtitle: 'Schedule a free strategy call and discover what a conversion-focused website, GEO/AEO or smart workflow automation can mean for your business. We\'ll look at your situation and the biggest opportunities together. No obligations, just concrete insights.',
         btn: 'Schedule free strategy call',
         trust: 'Free · No obligations · Response within 24 hours'
       },

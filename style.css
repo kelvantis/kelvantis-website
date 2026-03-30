@@ -302,6 +302,7 @@ button {
 .navbar__links {
   display: flex;
   gap: 0.25rem;
+  align-items: center;
 }
 
 .navbar__link {
@@ -1683,6 +1684,17 @@ button {
   color: var(--color-text);
 }
 
+.footer__nav-link--cta {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+.footer__nav-link--cta:hover {
+  color: #04C864;
+}
+html[data-theme="light"] .footer__nav-link--cta {
+  color: var(--color-accent);
+}
+
 .footer__social-links {
   display: flex;
   gap: 0.75rem;
@@ -2960,6 +2972,9 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
   margin-top: 1.25rem;
   transition: gap var(--transition-fast);
   text-decoration: none;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
 }
 .diensten-overzicht__card-link:hover {
   gap: 0.625rem;
@@ -3292,6 +3307,32 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
 @media (max-width: 1023px) {
   .hero__layout {
     gap: 2rem;
+  }
+  /* Clip overflowing stat cards and disable float animations on non-desktop */
+  .hero__visual {
+    overflow: hidden;
+  }
+  .stat-card {
+    animation: none;
+  }
+}
+
+/* ─── Hero CTA: stack buttons on medium-small screens ─── */
+@media (max-width: 639px) {
+  .hero__ctas {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero__ctas .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
   }
 }
 

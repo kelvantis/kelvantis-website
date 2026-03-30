@@ -1,4 +1,5 @@
 {
+  "buildCommand": "node build.mjs",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
