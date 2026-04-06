@@ -16,7 +16,8 @@
       "Bash(echo \"KVK comment added: $f\")",
       "Bash(grep -l \"Organization\\\\|Company\" \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy\"/*.html)",
       "WebFetch(domain:bnnx.com)",
-      "WebFetch(domain:www.bnnx.com)"
+      "WebFetch(domain:www.bnnx.com)",
+      "Bash(grep -l \"<footer\" \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy\"/**/*.html)"
     ]
   }
 }
