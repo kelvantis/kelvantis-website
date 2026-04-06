@@ -3,6 +3,11 @@
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/pakketten/:path*", "destination": "/contact", "permanent": true },
+    { "source": "/diensten/seo", "destination": "/diensten/geo-aeo", "permanent": true },
+    { "source": "/diensten/seo.html", "destination": "/diensten/geo-aeo.html", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
