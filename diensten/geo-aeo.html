@@ -639,5 +639,15 @@
   </div>
 
   <script src="../script.js"></script>
+
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-mobile-cta" aria-hidden="true">
+    <a href="/contact/" class="sticky-mobile-cta__btn">Gratis gesprek plannen →</a>
+  </div>
+  <style>
+  .sticky-mobile-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;background:linear-gradient(135deg,#05FE82,#00d4aa);padding:.875rem 1.25rem;display:flex;justify-content:center;align-items:center;}
+  .sticky-mobile-cta__btn{color:#0A0F1E;font-weight:700;font-size:.9375rem;text-decoration:none;letter-spacing:-.01em;}
+  @media(min-width:768px){.sticky-mobile-cta{display:none;}}
+  </style>
 </body>
 </html>

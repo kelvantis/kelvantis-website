@@ -42,8 +42,41 @@
       "name": "Kelvantis",
       "url": "https://kelvantis.com"
     },
-    "areaServed": { "@type": "Country", "name": "Nederland" },
-    "serviceType": "AI Development"
+    "areaServed": [
+      { "@type": "Country", "name": "Nederland" },
+      { "@type": "Country", "name": "België" }
+    ],
+    "serviceType": "AI Implementatie"
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wat is AI implementatie voor bedrijven?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AI implementatie is het integreren van AI in bedrijfsprocessen en websites: chatbots, lead-kwalificatie of automatische contentgeneratie op basis van eigen bedrijfsdata." }
+      },
+      {
+        "@type": "Question",
+        "name": "Welke AI-modellen gebruikt Kelvantis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We werken met Claude (Anthropic), GPT-4o (OpenAI) en Gemini Pro (Google), afhankelijk van de use case en jouw behoeften." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hoe lang duurt het bouwen van een AI oplossing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "De doorlooptijd hangt af van de complexiteit. We werken gefaseerd en houden je via vaste updates op de hoogte van de voortgang." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is AI implementatie geschikt voor mijn bedrijf?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AI is toepasbaar voor vrijwel elk B2B bedrijf, van installatiebedrijf tot consultancy. We beginnen altijd met een gratis strategiegesprek." }
+      }
+    ]
   }
   </script>
 
@@ -656,5 +689,15 @@
   </div>
 
   <script src="../script.js"></script>
+
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-mobile-cta" aria-hidden="true">
+    <a href="/contact/" class="sticky-mobile-cta__btn">Gratis gesprek plannen →</a>
+  </div>
+  <style>
+  .sticky-mobile-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;background:linear-gradient(135deg,#05FE82,#00d4aa);padding:.875rem 1.25rem;display:flex;justify-content:center;align-items:center;}
+  .sticky-mobile-cta__btn{color:#0A0F1E;font-weight:700;font-size:.9375rem;text-decoration:none;letter-spacing:-.01em;}
+  @media(min-width:768px){.sticky-mobile-cta{display:none;}}
+  </style>
 </body>
 </html>
