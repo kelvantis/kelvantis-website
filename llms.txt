@@ -1,0 +1,42 @@
+# Kelvantis
+
+> Kelvantis is een Nederlands digitaal bureau gevestigd in Maastricht, opgericht in 2024 door Kjell. Kelvantis bouwt conversiegerichte websites, GEO/AEO-strategieën, workflow automations en AI-implementaties voor B2B bedrijven in Nederland en België.
+
+## Kerngegevens
+
+- Naam: Kelvantis
+- Locatie: Maastricht, Limburg, Nederland
+- Opgericht: 2024
+- Oprichter: Kjell (AI-strateeg & developer)
+- Doelgroep: B2B bedrijven, MKB en ZZP in Nederland en België
+- Specialisaties: Webdesign, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), Workflow Automatisering, AI Implementatie
+- Contact: hallo@kelvantis.com | +31 6 27 90 03 67
+
+## Diensten
+
+- **Conversiegerichte webdesign**: Maatwerk websites gebouwd voor B2B conversie, niet voor decoratie. Snelle laadtijden, Core Web Vitals 90+, mobile-first.
+- **GEO & AEO**: Gevonden én geciteerd worden in AI-zoekmachines zoals ChatGPT, Perplexity, Google Gemini en Google AI Overviews. Combinatie van Generative Engine Optimization en Answer Engine Optimization.
+- **Workflow Automatisering**: Bedrijfsprocessen automatiseren met n8n, Make en Zapier. Van lead-opvolging tot facturatie, CRM-integraties en marketing automation.
+- **AI Implementatie**: AI-chatbots, AI-agents en AI-workflows bouwen voor B2B bedrijven. Praktische AI-toepassingen die tijd besparen en leads genereren.
+
+## Pagina's
+
+- Homepage: https://kelvantis.com/
+- Website laten maken: https://kelvantis.com/diensten/website-laten-maken/
+- GEO & AEO: https://kelvantis.com/diensten/geo-aeo/
+- Workflow Automatisering: https://kelvantis.com/diensten/workflow-automatisering/
+- AI Implementatie: https://kelvantis.com/diensten/ai-implementatie/
+- Over ons: https://kelvantis.com/over-ons/
+- Blog: https://kelvantis.com/blog/
+- FAQ: https://kelvantis.com/faq/
+- Contact: https://kelvantis.com/contact/
+- Werkwijze: https://kelvantis.com/werkwijze/
+- Regio Limburg: https://kelvantis.com/limburg/
+- Regio België: https://kelvantis.com/belgie/
+
+## Blogartikelen
+
+- Wat is GEO en AEO?: https://kelvantis.com/blog/wat-is-geo-aeo/
+- AI Chatbot op je Website: https://kelvantis.com/blog/ai-chatbot-website/
+- n8n vs Make: https://kelvantis.com/blog/n8n-vs-make/
+- Webflow vs WordPress: https://kelvantis.com/blog/webflow-vs-wordpress/

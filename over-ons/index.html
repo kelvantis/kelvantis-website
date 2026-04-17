@@ -29,6 +29,35 @@
   <!-- Styles -->
   <link rel="stylesheet" href="../style.css">
 
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kelvantis.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Over Ons" }
+    ]
+  }
+  </script>
+
+  <!-- Person Schema (Kjell) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kjell",
+    "jobTitle": "Oprichter & AI-strateeg",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Kelvantis",
+      "url": "https://kelvantis.com"
+    },
+    "knowsAbout": ["GEO", "AEO", "Generative Engine Optimization", "Answer Engine Optimization", "AI Automatisering", "Webdesign", "Workflow Automatisering", "n8n", "Make"],
+    "url": "https://kelvantis.com/over-ons/"
+  }
+  </script>
+
   <!-- Page translations (loaded before script.js) -->
   <script>
     window.PAGE_T = {
@@ -36,13 +65,13 @@
         hero: {
           label: 'Over ons',
           title: 'Het systeem achter Kelvantis',
-          subtitle: 'Kelvantis is geen traditioneel bureau. We bouwen systemen die voor je werken, ook als je slaapt.',
+          subtitle: 'Kelvantis is een Nederlands digitaal bureau gevestigd in Maastricht, opgericht in 2024. Gespecialiseerd in conversiegerichte webdesign, GEO/AEO-optimalisatie, workflow automatisering en AI-implementatie voor B2B bedrijven in Nederland en België.',
           cta: 'Gratis gesprek plannen'
         },
         kjell: {
           label: 'De oprichter',
           title: 'Wie is Kjell?',
-          p1: 'Kjell is de oprichter van Kelvantis. Hij bouwt websites, GEO/AEO-strategieën en AI-workflows voor B2B bedrijven die willen groeien zonder meer mensen aan te nemen.',
+          p1: 'Kjell is de oprichter van Kelvantis, een Nederlands digitaal bureau opgericht in 2024 in Maastricht. Hij bouwt conversiegerichte websites, GEO/AEO-strategieën en AI-workflows voor B2B bedrijven die willen groeien zonder meer mensen aan te nemen.',
           p2: 'Gefascineerd door de combinatie van technologie en business. Hoe kan automatisering een bedrijf slimmer laten werken? Hoe zorg je dat een website niet alleen mooi is, maar ook converteert? Die vragen drijven het werk.',
           p3: 'Gevestigd in Maastricht, actief door heel Nederland en België. Directe communicatie, geen tussenlagen.'
         },
@@ -462,7 +491,7 @@
           <div class="footer__nav-group">
             <h4 class="footer__nav-title" data-i18n="footer.contact.title">Contact</h4>
             <ul role="list">
-              <li><a href="mailto:kelvantis.com@gmail.com" class="footer__nav-link">kelvantis.com@gmail.com</a></li>
+              <li><a href="mailto:hallo@kelvantis.com" class="footer__nav-link">hallo@kelvantis.com</a></li>
               <li><a href="tel:+31627900367" class="footer__nav-link">+31 6 27 90 03 67</a></li>
               <li><span class="footer__nav-link" style="cursor:default;"><span aria-hidden="true">&#128205;</span> Maastricht, Nederland</span></li>
               <li><a href="/contact/" class="footer__nav-link footer__nav-link--cta" data-i18n="footer.contact.cta">Gratis gesprek plannen</a></li>
