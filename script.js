@@ -608,7 +608,7 @@ function animateFlow() {
 (function initI18n() {
   const T = {
     nl: {
-      nav: { approach: 'Aanpak', forWho: 'Voor wie', packages: 'Pakketten', faq: 'FAQ', cta: 'Gratis gesprek', ctaMobile: 'Gratis gesprek plannen', diensten: 'Diensten', dienstenDropdown: { websites: { name: 'Websites laten maken', desc: 'Conversiegericht, snel en op maat' }, workflow: { name: 'Workflow Automatisering', desc: 'Processen op de achtergrond draaien' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code maatwerk' }, seo: { name: 'GEO & AEO', desc: 'Gevonden worden in AI-zoekmachines' } } },
+      nav: { approach: 'Aanpak', forWho: 'Voor wie', packages: 'Pakketten', faq: 'FAQ', cta: 'Gratis gesprek', ctaMobile: 'Gratis gesprek plannen', diensten: 'Diensten', dienstenDropdown: { websites: { name: 'Websites laten maken', desc: 'Conversiegericht, snel en op maat' }, workflow: { name: 'Workflow Automatisering', desc: 'Processen op de achtergrond draaien' }, ai: { name: 'AI Implementatie', desc: 'Claude Code & VS Code maatwerk' }, seo: { name: 'GEO & AEO', desc: 'Gevonden worden in AI-zoekmachines' } } },
       hero: {
         badge: 'Website · GEO/AEO · Workflow Automatisering',
         title: 'Meer resultaat.<br><span class="hero__title-accent">Minder handwerk.</span>',
@@ -689,11 +689,11 @@ function animateFlow() {
         title: 'Wat we voor je bouwen',
         c1: { title: 'Websites die converteren', desc: 'Van snelle zakelijke website tot volledig geoptimaliseerde landingspagina. Wij bouwen op maat, snel en conversion-first.', link: 'Bekijk websitediensten' },
         c2: { title: 'Werk slimmer, niet harder', desc: 'Automatiseer repetitieve taken en laat je bedrijfsprocessen op de achtergrond draaien met n8n, Make en AI.', link: 'Bekijk automatisering' },
-        c3: { title: 'AI Development op maat', desc: 'Maatwerk AI-oplossingen gebouwd met Claude Code en VS Code. Van AI agents tot volledige integraties in je bedrijfsprocessen.', link: 'Bekijk AI Development' }
+        c3: { title: 'AI Implementatie op maat', desc: 'Maatwerk AI-oplossingen gebouwd met Claude Code en VS Code. Van AI agents tot volledige integraties in je bedrijfsprocessen.', link: 'Bekijk AI Implementatie' }
       }
     },
     en: {
-      nav: { approach: 'Approach', forWho: 'For who', packages: 'Packages', faq: 'FAQ', cta: 'Free call', ctaMobile: 'Schedule a free call', diensten: 'Services', dienstenDropdown: { websites: { name: 'Website development', desc: 'Conversion-focused, fast and custom' }, workflow: { name: 'Workflow Automation', desc: 'Business processes running in the background' }, ai: { name: 'AI Development', desc: 'Claude Code & VS Code custom builds' }, seo: { name: 'GEO & AEO', desc: 'Get found in AI search engines' } } },
+      nav: { approach: 'Approach', forWho: 'For who', packages: 'Packages', faq: 'FAQ', cta: 'Free call', ctaMobile: 'Schedule a free call', diensten: 'Services', dienstenDropdown: { websites: { name: 'Website development', desc: 'Conversion-focused, fast and custom' }, workflow: { name: 'Workflow Automation', desc: 'Business processes running in the background' }, ai: { name: 'AI Implementatie', desc: 'Claude Code & VS Code custom builds' }, seo: { name: 'GEO & AEO', desc: 'Get found in AI search engines' } } },
       hero: {
         badge: 'Website · GEO/AEO · Workflow Automation',
         title: 'More results.<br><span class="hero__title-accent">Less manual work.</span>',
@@ -774,7 +774,7 @@ function animateFlow() {
         title: 'What we build for you',
         c1: { title: 'Websites that convert', desc: 'From a fast business website to a fully optimised landing page. We build custom, fast and conversion-first.', link: 'View website services' },
         c2: { title: 'Work smarter, not harder', desc: 'Automate repetitive tasks and let your business processes run in the background with n8n, Make and AI.', link: 'View automation' },
-        c3: { title: 'Custom AI Development', desc: 'Bespoke AI solutions built with Claude Code and VS Code. From AI agents to full integrations in your business processes.', link: 'View AI Development' }
+        c3: { title: 'Custom AI Implementatie', desc: 'Bespoke AI solutions built with Claude Code and VS Code. From AI agents to full integrations in your business processes.', link: 'View AI Implementatie' }
       }
     }
   };

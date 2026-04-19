@@ -92,15 +92,18 @@ Snapshot van de staat vóór de sprint: pagina-overzicht met meta-tags en schema
 
 ---
 
+## Blok 6 — Nabewerking open TODO's
+
+- **LinkedIn URL**: `https://www.linkedin.com/in/kjellkuijpers/` ingevuld in `over-ons/index.html` (HTML + Person schema) en `index.html` sameAs. TODO-comments verwijderd.
+- **Crunchbase**: verwijderd uit `index.html` sameAs — Kjell heeft geen Crunchbase-profiel.
+- **Nav-naam**: "AI Development" → "AI Implementatie" globaal vervangen in alle `.html` en `.js` bestanden. Navigatie, schema, page-title en display-naam nu consistent.
+
 ## Open TODO's
 
 | Item | Waar | Wanneer oppakken |
 |---|---|---|
-| Echte persoonlijke LinkedIn URL van Kjell | `over-ons/index.html` (HTML + Person schema), `index.html` (sameAs) | Zodra bekend |
-| Echte Crunchbase URL | `index.html` sameAs | Indien profiel bestaat |
 | Foto Kjell uploaden naar `/images/kjell.jpg` | over-ons Kjell-sectie | Zodra beschikbaar (img verbergt zich nu via onerror) |
-| Nav-naam discrepantie "AI Development" (menu) vs "AI Implementatie" (URL + schema) | `_components/navbar.html`, `diensten/ai-implementatie.html` | Bewust uitgesteld — beslissen: label aanpassen naar "AI Implementatie" of alles hernoemen naar "AI Development" (URL-redirect nodig) |
-| `limburg/index.html` title bevat "SEO Bureau" en "Website Laten Maken Maastricht" | title + og:title + twitter:title | Valt buiten deze 5-blok sprint; aparte cleanup nodig vanwege positioneringsregels |
+| `limburg/index.html` title bevat "SEO Bureau" en "Website Laten Maken Maastricht" | title + og:title + twitter:title | Valt buiten deze sprint; aparte cleanup nodig vanwege positioneringsregels |
 | Echte case-studies of klant-showcases | `website-laten-maken.html` | Wanneer toestemming klanten verkregen |
 
 ---
