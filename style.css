@@ -3565,13 +3565,40 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
   font-size: 0.75rem;
   color: var(--color-grey);
 }
-/* Werkwijze & over-ons — inline grid → single-column on mobile */
+/* Utility: 2-column content grid (werkwijze stap secties) */
+.stack-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
 @media (max-width: 767px) {
-  /* 1fr 1fr grids (werkwijze stap sections, over-ons vergelijking) */
-  .section > .container > div[style*="grid-template-columns: 1fr 1fr"] {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
+  .stack-2col {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
+  .stack-2col > * {
+    order: unset !important;
+  }
+}
+
+/* Utility: checklist item met icoon + muted-text */
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.checklist-item__icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.checklist-item__text {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+/* Over-ons — inline grid → single-column on mobile (.voor-wie__grid variants) */
+@media (max-width: 767px) {
   /* repeat(2, 1fr) grids (over-ons waarden) */
   .section > .container > div[style*="grid-template-columns: repeat(2, 1fr)"],
   .section > .container > .voor-wie__grid[style*="grid-template-columns"] {
