@@ -683,68 +683,6 @@
     </div>
   </footer>
 
-  <!-- MODAL -->
-  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
-    <div class="modal__overlay" id="modalOverlay"></div>
-    <div class="modal__card">
-      <button type="button" class="modal__close" id="modalClose" aria-label="Formulier sluiten">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </button>
-      <div class="modal__header">
-        <span class="section__label" style="margin-bottom:.75rem;">Gratis · Geen verplichtingen</span>
-        <h2 class="modal__title" id="modal-title">Plan je gratis strategiegesprek</h2>
-        <p class="modal__subtitle">Vertel kort over je situatie. We nemen binnen 24 uur contact op.</p>
-      </div>
-      <form class="modal__form" id="contactForm" action="https://formspree.io/f/xwvweodo" method="POST" novalidate>
-        <div class="form__row">
-          <div class="form__group">
-            <label class="form__label" for="f-naam">Naam <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="text" id="f-naam" name="naam" required aria-required="true" placeholder="Jan de Vries" autocomplete="name">
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="f-bedrijf">Bedrijfsnaam <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="text" id="f-bedrijf" name="bedrijf" required aria-required="true" placeholder="Jouw Bedrijf BV" autocomplete="organization">
-          </div>
-        </div>
-        <div class="form__row">
-          <div class="form__group">
-            <label class="form__label" for="f-email">E-mailadres <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="email" id="f-email" name="email" required aria-required="true" placeholder="jan@jouwbedrijf.nl" autocomplete="email">
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="f-tel">Telefoonnummer</label>
-            <input class="form__input" type="tel" id="f-tel" name="telefoon" placeholder="+31 6 12 34 56 78" autocomplete="tel">
-          </div>
-        </div>
-        <div class="form__group">
-          <label class="form__label" for="f-uitdaging">Wat is jouw grootste uitdaging? <span aria-hidden="true">*</span></label>
-          <select class="form__select" id="f-uitdaging" name="uitdaging" required aria-required="true">
-            <option value="" disabled selected>Kies je situatie...</option>
-            <option value="Automatisering">Bedrijfsprocessen automatiseren</option>
-            <option value="Te weinig leads">Te weinig leads en aanvragen</option>
-            <option value="Website presteert slecht">Website presteert slecht</option>
-            <option value="Anders">Anders</option>
-          </select>
-        </div>
-        <div class="form__group">
-          <label class="form__label" for="f-bericht">Vertel kort over je bedrijf <span class="form__label-optional">(optioneel)</span></label>
-          <textarea class="form__textarea" id="f-bericht" name="bericht" rows="3" placeholder="Bijv: Ik zoek hulp bij het kiezen tussen n8n en Make..."></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full btn--lg form__submit">
-          <span>Verstuur aanvraag</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <p class="form__disclaimer">Door te versturen ga je akkoord met ons <a href="/privacy" class="form__link">privacybeleid</a>.</p>
-      </form>
-      <div class="modal__success" id="formSuccess" hidden>
-        <div class="success__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#05FE82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Aanvraag ontvangen!</h3>
-        <p>We nemen binnen <strong>24 uur</strong> contact met je op.</p>
-        <button type="button" class="btn btn--ghost" id="modalSuccessClose" style="margin-top:1.5rem;">Sluiten</button>
-      </div>
-    </div>
-  </div>
-
   <!-- WHATSAPP -->
   <a class="wa-button" href="https://wa.me/31627900367?text=Hallo%20Kelvantis" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <span class="wa-button__tooltip">App ons direct</span>
