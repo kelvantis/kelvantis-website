@@ -1404,7 +1404,8 @@ button {
 .testimonials__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 .testimonial {
@@ -3256,7 +3257,7 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
   font-size: 0.75rem;
   color: var(--color-grey);
 }
-@media (max-width: 640px) { .related-grid { grid-template-columns: 1fr; } }
+@media (max-width: 639px) { .related-grid { grid-template-columns: 1fr; } }
 
 /* Fix 12 — Leestijd op blog cards */
 .blog-card__sep { color: var(--color-grey); margin: 0 0.25rem; }
@@ -3510,12 +3511,6 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
 }
 
 /* Testimonials sectie */
-.testimonials__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-}
 .testimonial__card {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
@@ -3570,17 +3565,6 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
   font-size: 0.75rem;
   color: var(--color-grey);
 }
-@media (max-width: 1024px) {
-  .testimonials__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 640px) {
-  .testimonials__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Werkwijze & over-ons — inline grid → single-column on mobile */
 @media (max-width: 767px) {
   /* 1fr 1fr grids (werkwijze stap sections, over-ons vergelijking) */
@@ -3668,13 +3652,6 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
   /* Reduce padding on feature cards */
   .voor-wie__card {
     padding: 1.25rem;
-  }
-}
-
-/* ─── Pricing cards: ensure 1-col at very small viewport ─── */
-@media (max-width: 479px) {
-  .pricing__grid {
-    grid-template-columns: 1fr !important;
   }
 }
 
