@@ -2434,43 +2434,26 @@ html[data-theme="light"] .cta-section__inner {
 }
 
 /* ═══════════════════════════════════════
-   NAVBAR TOGGLES — Theme & Language
+   NAVBAR TOGGLE — Theme
 ═══════════════════════════════════════ */
 
-.navbar__theme-toggle,
-.navbar__lang-toggle {
+.navbar__theme-toggle {
   background: none;
   border: 1px solid var(--color-border);
   color: var(--color-text-muted);
   border-radius: var(--radius-xs);
-  padding: 0.4rem 0.55rem;
+  padding: 0;
   cursor: pointer;
-  font-size: 0.75rem;
-  font-family: var(--font-body);
-  font-weight: 600;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
   transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
-  line-height: 1;
-  letter-spacing: 0.03em;
   flex-shrink: 0;
 }
 
-.navbar__theme-toggle {
-  width: 32px;
-  height: 32px;
-  padding: 0;
-}
-
-.navbar__lang-toggle {
-  min-width: 36px;
-  height: 32px;
-}
-
-.navbar__theme-toggle:hover,
-.navbar__lang-toggle:hover {
+.navbar__theme-toggle:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
   background: var(--color-accent-glow);
@@ -2478,8 +2461,7 @@ html[data-theme="light"] .cta-section__inner {
 
 /* Hide on mobile — shown in mobile menu instead */
 @media (max-width: 767px) {
-  .navbar__theme-toggle,
-  .navbar__lang-toggle {
+  .navbar__theme-toggle {
     display: none;
   }
 }
@@ -2491,17 +2473,8 @@ html[data-theme="light"] .cta-section__inner {
   padding: 0.75rem 0 0.25rem;
 }
 
-.navbar__mobile-toggles .navbar__theme-toggle,
-.navbar__mobile-toggles .navbar__lang-toggle {
+.navbar__mobile-toggles .navbar__theme-toggle {
   display: flex;
-}
-
-/* ═══════════════════════════════════════
-   LANG TOGGLE — FLAG EMOJI SIZE
-═══════════════════════════════════════ */
-#langLabel, #langLabelMobile {
-  font-size: 1.1rem;
-  line-height: 1;
 }
 
 /* ═══════════════════════════════════════
@@ -3147,9 +3120,6 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
 
 /* Fix 2 — WhatsApp knop zichtbaar (echt nummer ingesteld) */
 /* .wa-button { display: none !important; } */
-
-/* Fix 15 — Taalknop verbergen (geen EN versie beschikbaar) */
-.navbar__lang-toggle { display: none !important; }
 
 /* Fix 1 — Hero proof line */
 .hero__proof {
