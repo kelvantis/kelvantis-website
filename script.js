@@ -175,6 +175,8 @@ function throttle(fn, delay) {
   let autoTimer = null;
   const tabOrder = ['website', 'ai', 'automations'];
   let currentIndex = 0;
+  let cycleCount = 0;
+  const MAX_CYCLES = tabOrder.length;
 
   function activateTab(tabName) {
     // Update tabs
@@ -210,8 +212,13 @@ function throttle(fn, delay) {
     }
   }
 
-  /* Auto-cycle tabs */
+  /* Auto-cycle tabs — stops after one complete loop */
   function nextTab() {
+    cycleCount++;
+    if (cycleCount >= MAX_CYCLES) {
+      stopAuto();
+      return;
+    }
     currentIndex = (currentIndex + 1) % tabOrder.length;
     activateTab(tabOrder[currentIndex]);
   }
@@ -230,9 +237,8 @@ function throttle(fn, delay) {
       stopAuto();
       const tabName = tab.dataset.tab;
       currentIndex = tabOrder.indexOf(tabName);
+      cycleCount = 0;
       activateTab(tabName);
-      // Restart auto after manual interaction
-      setTimeout(startAuto, 8000);
     });
   });
 
