@@ -42,18 +42,23 @@
   </script>
 
   <!-- Person Schema (Kjell) -->
+  <!-- TODO: echte LinkedIn URL en foto-pad invullen zodra beschikbaar -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Kjell",
     "jobTitle": "Oprichter & AI-strateeg",
+    "image": "https://kelvantis.com/images/kjell.jpg",
     "worksFor": {
       "@type": "Organization",
       "name": "Kelvantis",
       "url": "https://kelvantis.com"
     },
-    "knowsAbout": ["GEO", "AEO", "Generative Engine Optimization", "Answer Engine Optimization", "AI Automatisering", "Webdesign", "Workflow Automatisering", "n8n", "Make"],
+    "knowsAbout": ["GEO", "AEO", "Generative Engine Optimization", "Answer Engine Optimization", "AI Automatisering", "Webdesign", "Webflow", "WordPress", "Workflow Automatisering", "n8n", "Make.com", "Claude", "GPT-4"],
+    "sameAs": [
+      "https://www.linkedin.com/in/kjell-kelvantis/"
+    ],
     "url": "https://kelvantis.com/over-ons/"
   }
   </script>
@@ -294,9 +299,31 @@
         </div>
         <div class="voor-wie__grid" style="grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
           <div class="reveal">
-            <p style="font-size: 1.0625rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.25rem;" data-page-i18n="kjell.p1">Kjell is de oprichter van Kelvantis. Hij bouwt websites, GEO/AEO-strategieën en AI-workflows voor B2B bedrijven die willen groeien zonder meer mensen aan te nemen.</p>
-            <p style="font-size: 1.0625rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.25rem;" data-page-i18n="kjell.p2">Gefascineerd door de combinatie van technologie en business. Hoe kan automatisering een bedrijf slimmer laten werken? Hoe zorg je dat een website niet alleen mooi is, maar ook converteert? Die vragen drijven het werk.</p>
-            <p style="font-size: 1.0625rem; color: var(--color-text-muted); line-height: 1.8;" data-page-i18n="kjell.p3">Gevestigd in Maastricht, actief door heel Nederland en België. Directe communicatie, geen tussenlagen.</p>
+            <!-- TODO: foto /images/kjell.jpg toevoegen zodra beschikbaar; img verbergt zichzelf als bestand ontbreekt -->
+            <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:1.5rem;">
+              <img src="/images/kjell.jpg" alt="Kjell, oprichter Kelvantis" width="96" height="96" style="width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid var(--color-border);flex-shrink:0;" onerror="this.style.display='none'">
+              <div>
+                <strong style="color:var(--color-text);display:block;font-size:1.0625rem;">Kjell</strong>
+                <span style="color:var(--color-text-muted);font-size:.9375rem;">Oprichter &amp; AI-strateeg</span>
+                <!-- TODO: echte LinkedIn URL invullen -->
+                <a href="https://www.linkedin.com/in/kjell-kelvantis/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.375rem;margin-top:.375rem;color:var(--color-accent);font-size:.875rem;text-decoration:none;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11.01-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+            <p style="font-size: 1.0625rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.25rem;" data-page-i18n="kjell.p1">Kjell is de oprichter van Kelvantis. Hij bouwt websites in Webflow en WordPress, zet GEO/AEO-strategieën op voor B2B bedrijven en automatiseert processen met n8n en Make.com. Alles met één doel: bedrijven laten groeien zonder meer mensen aan te nemen.</p>
+            <p style="font-size: 1.0625rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.25rem;" data-page-i18n="kjell.p2">Gefascineerd door de combinatie van technologie en business. Werkt dagelijks met AI-tools zoals Claude en GPT-4 om sneller en slimmer te bouwen. Hoe kan automatisering een bedrijf slimmer laten werken? Hoe zorg je dat een website niet alleen mooi is, maar ook converteert? Die vragen drijven het werk.</p>
+            <p style="font-size: 1.0625rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.5rem;" data-page-i18n="kjell.p3">Gevestigd in Maastricht, actief door heel Nederland en België. Directe communicatie, geen tussenlagen.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+              <span style="display:inline-block;padding:.375rem .75rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:999px;font-size:.8125rem;color:var(--color-text-muted);">Webflow</span>
+              <span style="display:inline-block;padding:.375rem .75rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:999px;font-size:.8125rem;color:var(--color-text-muted);">WordPress</span>
+              <span style="display:inline-block;padding:.375rem .75rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:999px;font-size:.8125rem;color:var(--color-text-muted);">n8n</span>
+              <span style="display:inline-block;padding:.375rem .75rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:999px;font-size:.8125rem;color:var(--color-text-muted);">Make.com</span>
+              <span style="display:inline-block;padding:.375rem .75rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:999px;font-size:.8125rem;color:var(--color-text-muted);">Claude</span>
+              <span style="display:inline-block;padding:.375rem .75rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:999px;font-size:.8125rem;color:var(--color-text-muted);">GPT-4</span>
+              <span style="display:inline-block;padding:.375rem .75rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:999px;font-size:.8125rem;color:var(--color-text-muted);">GEO/AEO</span>
+            </div>
           </div>
           <div class="reveal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2rem; display: flex; flex-direction: column; gap: 1rem;">
             <div style="display:flex;align-items:center;gap:.75rem;">
