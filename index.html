@@ -36,10 +36,11 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Schema.org JSON-LD -->
+  <!-- TODO: echte persoonlijke LinkedIn en Crunchbase URL's invullen zodra beschikbaar -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["Organization", "LocalBusiness"],
     "name": "Kelvantis",
     "description": "Kelvantis bouwt conversiegerichte websites, GEO/AEO-strategieën en workflow automations voor B2B bedrijven.",
     "url": "https://kelvantis.com",
@@ -54,12 +55,16 @@
       "url": "https://kelvantis.com/over-ons/"
     },
     "knowsAbout": [
-      "GEO/AEO optimalisatie",
-      "Workflow automatisering",
-      "AI implementatie",
-      "Website development",
-      "B2B leadgeneratie",
-      "Generative Engine Optimization"
+      "Webdesign",
+      "Webflow",
+      "WordPress",
+      "n8n",
+      "Make.com",
+      "AI implementation",
+      "Generative Engine Optimization",
+      "Answer Engine Optimization",
+      "Workflow Automation",
+      "B2B leadgeneratie"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -67,13 +72,20 @@
       "addressRegion": "Limburg",
       "addressCountry": "NL"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.8514,
+      "longitude": 5.6910
+    },
     "areaServed": [
       { "@type": "Country", "name": "Nederland" },
       { "@type": "Country", "name": "België" }
     ],
     "sameAs": [
       "https://www.instagram.com/kelvantis/",
-      "https://www.linkedin.com/company/kelvantis/"
+      "https://www.linkedin.com/company/kelvantis/",
+      "https://www.linkedin.com/in/kjell-kelvantis/",
+      "https://www.crunchbase.com/organization/kelvantis"
     ],
     "serviceType": ["Website Development", "GEO & AEO", "Workflow Automatisering", "AI Implementatie"],
     "priceRange": "€€",
