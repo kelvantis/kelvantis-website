@@ -3843,6 +3843,25 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
   line-height: 1.7;
   color: var(--color-text-muted);
 }
+.cases-cta {
+  margin: 2.5rem auto 0;
+  max-width: 560px;
+  text-align: center;
+  padding: 1.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl, 18px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+}
+.cases-cta p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
 
 /* ─── Expert quotes (E-E-A-T) ─── */
 .expert-quote {
