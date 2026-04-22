@@ -3757,6 +3757,37 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
   margin: 0;
 }
 
+/* ─── Entity-alinea (AEO "Wat is X") ─── */
+.entity__block {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+}
+.entity__title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin: 0 0 1rem;
+}
+.entity__lead {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0 0 1rem;
+}
+.entity__body {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+.entity__body strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
 /* ─── Expert quotes (E-E-A-T) ─── */
 .expert-quote {
   border-left: 3px solid var(--color-accent, #05FE82);
