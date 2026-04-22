@@ -3788,6 +3788,62 @@ html[data-theme="light"] .navbar__mobile-accordion-trigger:hover {
   font-weight: 600;
 }
 
+/* ─── Use cases grid (diensten) ─── */
+.usecases__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.usecase {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl, 18px);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 200ms ease;
+}
+.usecase:hover {
+  transform: translateY(-2px);
+  border-color: rgba(5, 254, 130, 0.35);
+}
+.usecase__icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+.usecase__title {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin: 0;
+}
+.usecase__desc {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+.usecase__tools {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8125rem;
+  color: var(--color-grey, #8a8f99);
+  letter-spacing: 0.01em;
+}
+.usecases__footer {
+  margin: 2rem auto 0;
+  max-width: 640px;
+  text-align: center;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
 /* ─── Expert quotes (E-E-A-T) ─── */
 .expert-quote {
   border-left: 3px solid var(--color-accent, #05FE82);
