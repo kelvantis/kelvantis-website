@@ -2747,6 +2747,15 @@ html[data-theme="light"] .diensten {
   margin: 0 auto;
 }
 
+.resultaten__source {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-grey);
+  font-style: normal;
+  margin-top: 0.875rem;
+  letter-spacing: 0.02em;
+}
+
 /* ─── Navbar Dropdown ─── */
 .navbar__dropdown-item {
   position: relative;
