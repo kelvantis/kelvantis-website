@@ -128,42 +128,6 @@
   }
   </script>
 
-  <!-- Review + AggregateRating Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Kelvantis",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "3",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Jan V." },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Binnen 6 weken stond onze nieuwe website live en kregen we direct meer aanvragen. Kjell denkt mee als ondernemer, niet als websitebouwer."
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Sarah M." },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "De workflow automatisering bespaart ons team nu 15 uur per week. Ik had nooit gedacht dat dit zo snel geïmplementeerd kon worden."
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Robert B." },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Eindelijk een bureau dat gewoon eerlijk is. Geen bullshit beloftes, gewoon resultaat. Onze Google rankings zijn verdubbeld in 4 maanden."
-      }
-    ]
-  }
-  </script>
-
   <!-- FAQ Schema -->
   <script type="application/ld+json">
   {
@@ -754,53 +718,22 @@
     <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-heading" style="background: var(--color-surface);">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__label">Ervaringen</span>
-          <h2 class="section__title" id="testimonials-heading">Wat klanten zeggen.</h2>
-          <p class="section__subtitle">Eerlijke reacties van bedrijven die wij hebben geholpen groeien.</p>
+          <span class="section__label">Cases</span>
+          <h2 class="section__title" id="testimonials-heading">Eerlijk: we verzamelen onze eerste cases.</h2>
+          <p class="section__subtitle">Kelvantis is jong. We laten hier geen nep-testimonials zien — wel de kans om als eerste klant mee te bouwen aan ons portfolio.</p>
         </div>
-        <div class="testimonials__grid reveal">
-          <div class="testimonial__card">
-            <div class="testimonial__stars" aria-label="5 sterren">★★★★★</div>
-            <blockquote class="testimonial__quote">
-              <p>"Binnen 6 weken stond onze nieuwe website live en kregen we direct meer aanvragen. Kjell denkt mee als ondernemer, niet als websitebouwer."</p>
-              <footer class="testimonial__author">
-                <div class="testimonial__avatar" aria-hidden="true">JV</div>
-                <div>
-                  <cite class="testimonial__name">Jan V.</cite>
-                  <span class="testimonial__role">Directeur, B2B dienstverlener</span>
-                </div>
-              </footer>
-            </blockquote>
+        <div class="testimonials__placeholder reveal">
+          <div class="testimonials__placeholder-card">
+            <div class="testimonials__placeholder-badge" aria-hidden="true">Word casestudy #1</div>
+            <h3 class="testimonials__placeholder-title">Eerste klantcases worden nu opgebouwd</h3>
+            <p class="testimonials__placeholder-body">Wil je de eerste Kelvantis-case worden? We werken scherp geprijsd met de eerste klanten in ruil voor transparante meet-resultaten en een case-study achteraf. Eerlijk werk, echte cijfers, geen verzonnen quotes.</p>
+            <ul class="testimonials__placeholder-list">
+              <li><svg class="testimonials__placeholder-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Directe toegang tot Kjell — geen accountmanagers</span></li>
+              <li><svg class="testimonials__placeholder-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Transparante metrics vanaf dag één</span></li>
+              <li><svg class="testimonials__placeholder-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Gezamenlijke case-study publicatie</span></li>
+            </ul>
+            <button type="button" class="btn btn--primary" data-modal="open">Word onze eerste casestudy</button>
           </div>
-          <div class="testimonial__card">
-            <div class="testimonial__stars" aria-label="5 sterren">★★★★★</div>
-            <blockquote class="testimonial__quote">
-              <p>"De workflow automatisering bespaart ons team nu 15 uur per week. Ik had nooit gedacht dat dit zo snel geïmplementeerd kon worden."</p>
-              <footer class="testimonial__author">
-                <div class="testimonial__avatar" aria-hidden="true">SM</div>
-                <div>
-                  <cite class="testimonial__name">Sarah M.</cite>
-                  <span class="testimonial__role">Operations Manager</span>
-                </div>
-              </footer>
-            </blockquote>
-          </div>
-          <div class="testimonial__card">
-            <div class="testimonial__stars" aria-label="5 sterren">★★★★★</div>
-            <blockquote class="testimonial__quote">
-              <p>"Eindelijk een bureau dat gewoon eerlijk is. Geen bullshit beloftes, gewoon resultaat. Onze Google rankings zijn verdubbeld in 4 maanden."</p>
-              <footer class="testimonial__author">
-                <div class="testimonial__avatar" aria-hidden="true">RB</div>
-                <div>
-                  <cite class="testimonial__name">Robert B.</cite>
-                  <span class="testimonial__role">Eigenaar, MKB bedrijf</span>
-                </div>
-              </footer>
-            </blockquote>
-          </div>
-        </div>
-        <div class="reveal" style="text-align:center; margin-top:2.5rem;">
-          <button type="button" class="btn btn--primary" data-modal="open">Gratis gesprek plannen</button>
         </div>
       </div>
     </section>
