@@ -1,0 +1,5 @@
+Contact: mailto:kelvantis.com@gmail.com
+Expires: 2027-04-23T00:00:00.000Z
+Preferred-Languages: nl, en
+Canonical: https://kelvantis.com/.well-known/security.txt
+Policy: https://kelvantis.com/privacy/

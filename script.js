@@ -607,3 +607,63 @@ function animateFlow() {
     });
   });
 })();
+
+/* ═══════════════════════════════════════
+   COOKIE CONSENT BANNER (AVG / GA Consent Mode v2)
+═══════════════════════════════════════ */
+(function initCookieBanner() {
+  const STORAGE_KEY = 'kelvantis_cookie_consent';
+  const stored = localStorage.getItem(STORAGE_KEY);
+
+  if (stored === 'granted' && typeof gtag === 'function') {
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    return;
+  }
+  if (stored === 'denied') return;
+
+  function renderBanner() {
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-live', 'polite');
+    banner.setAttribute('aria-label', 'Cookie-toestemming');
+    banner.innerHTML = `
+      <div class="cookie-banner__inner">
+        <p class="cookie-banner__text">We gebruiken Google Analytics 4 voor anonieme gebruiksstatistieken — geen advertentie-tracking, geen verkoop van data. <a href="/privacy/" class="cookie-banner__link">Privacyverklaring</a>.</p>
+        <div class="cookie-banner__actions">
+          <button type="button" class="cookie-banner__btn cookie-banner__btn--secondary" data-action="decline">Alleen noodzakelijk</button>
+          <button type="button" class="cookie-banner__btn cookie-banner__btn--primary" data-action="accept">Accepteren</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(banner);
+
+    requestAnimationFrame(() => banner.classList.add('cookie-banner--visible'));
+
+    function hideBanner() {
+      banner.classList.remove('cookie-banner--visible');
+      setTimeout(() => banner.remove(), 220);
+    }
+
+    banner.querySelector('[data-action="accept"]').addEventListener('click', () => {
+      localStorage.setItem(STORAGE_KEY, 'granted');
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
+      }
+      hideBanner();
+    });
+
+    banner.querySelector('[data-action="decline"]').addEventListener('click', () => {
+      localStorage.setItem(STORAGE_KEY, 'denied');
+      hideBanner();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderBanner);
+  } else {
+    renderBanner();
+  }
+})();
