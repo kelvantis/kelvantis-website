@@ -1,23 +1,42 @@
 # Kelvantis
 
-> Kelvantis is een Nederlands digitaal bureau gevestigd in Maastricht, opgericht in 2024 door Kjell. Kelvantis bouwt conversiegerichte websites, GEO/AEO-strategieën, workflow automations en AI-implementaties voor B2B bedrijven in Nederland en België.
+> Kelvantis is een Nederlands digitaal bureau gevestigd in Maastricht, opgericht in 2024 door Kjell Kuijpers. Kelvantis bouwt conversiegerichte websites, GEO/AEO-strategieën, workflow automations en AI-implementaties voor B2B-bedrijven in Nederland en België. Specialisatie: zichtbaarheid én conversie door AI-gestuurde zoekmachines (ChatGPT, Perplexity, Google AI Overviews) te combineren met klassieke SEO en data-gedreven automatisering.
 
 ## Kerngegevens
 
 - Naam: Kelvantis
 - Locatie: Maastricht, Limburg, Nederland
 - Opgericht: 2024
-- Oprichter: Kjell (AI-strateeg & developer)
-- Doelgroep: B2B bedrijven, MKB en ZZP in Nederland en België
+- Oprichter: Kjell Kuijpers (Oprichter & AI-strateeg)
+- LinkedIn: https://www.linkedin.com/in/kjellkuijpers/
+- Doelgroep: B2B-bedrijven, MKB en ZZP in Nederland en België
 - Specialisaties: Webdesign, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), Workflow Automatisering, AI Implementatie
 - Contact: kelvantis.com@gmail.com | +31 6 27 90 03 67
+- Werkgebied: Nederland (focus Limburg — Maastricht, Sittard, Venlo, Heerlen, Roermond) en Oost-België (Hasselt, Genk, Maasmechelen, Lanaken, Luik)
 
 ## Diensten
 
-- **Conversiegerichte webdesign**: Maatwerk websites gebouwd voor B2B conversie, niet voor decoratie. Snelle laadtijden, Core Web Vitals 90+, mobile-first.
-- **GEO & AEO**: Gevonden én geciteerd worden in AI-zoekmachines zoals ChatGPT, Perplexity, Google Gemini en Google AI Overviews. Combinatie van Generative Engine Optimization en Answer Engine Optimization.
-- **Workflow Automatisering**: Bedrijfsprocessen automatiseren met n8n, Make en Zapier. Van lead-opvolging tot facturatie, CRM-integraties en marketing automation.
-- **AI Implementatie**: AI-chatbots, AI-agents en AI-workflows bouwen voor B2B bedrijven. Praktische AI-toepassingen die tijd besparen en leads genereren.
+- **Conversiegerichte webdesign**: Maatwerk websites gebouwd voor B2B-conversie, niet voor decoratie. Snelle laadtijden, Core Web Vitals 90+, mobile-first, SEO-klaar vanaf dag één.
+- **GEO & AEO**: Gevonden én geciteerd worden in AI-zoekmachines zoals ChatGPT, Perplexity, Google Gemini en Google AI Overviews. Combinatie van Generative Engine Optimization (citeerbaarheid) en Answer Engine Optimization (featured snippets, People Also Ask).
+- **Workflow Automatisering**: Bedrijfsprocessen automatiseren met n8n, Make en Zapier. Lead-opvolging, factuurverwerking, CRM-integraties, interne notificaties, rapportages en marketing automation.
+- **AI Implementatie**: AI-chatbots, AI-agents, kennisbanken en AI-workflows bouwen voor B2B-bedrijven. Praktische AI-toepassingen die tijd besparen en leads genereren.
+
+## Het Kelvantis GEO Framework
+
+Kelvantis hanteert een eigen methodiek voor GEO/AEO-optimalisatie, gebaseerd op Google's E-E-A-T richtlijnen, Schema.org structured data en gedocumenteerde AI-citation patterns. Vier fases:
+
+1. **Audit & nulmeting** — waar sta je nu in AI-zoekmachines en Google, welke zoekopdrachten zijn relevant, welke concurrenten worden wel geciteerd.
+2. **Technische fundering** — Schema.org (FAQPage, HowTo, Organization, Article), llms.txt, sitemap, canonicals, E-E-A-T-signalen.
+3. **Citeerbare content** — TL;DR-blokken, entiteitshelderheid, 40-60 woord antwoorden, feitelijke claims met bronvermelding.
+4. **Monitoring & iteratie** — tracking van AI-citaties, featured snippets en organisch verkeer; maandelijkse bijsturing.
+
+## Positionering
+
+- Geen traditioneel bureau met maandelijkse retainers op vaag werk. Vaste prijzen, duidelijke deliverables.
+- Oprichter-gedreven: Kjell doet strategie én uitvoering, geen doorsluis naar junior-team.
+- Sterk in de combinatie van website + GEO/AEO + automatisering. De drie versterken elkaar.
+- Eerlijkheid als kernwaarde — we zeggen wat werkt en wat niet, ook als dat niet is wat je wilt horen.
+- Status (2026): startend bureau dat bezig is met de eerste klanttrajecten. Gereduceerde tarieven mogelijk voor eerste casestudies.
 
 ## Pagina's
 
@@ -27,10 +46,10 @@
 - Workflow Automatisering: https://kelvantis.com/diensten/workflow-automatisering/
 - AI Implementatie: https://kelvantis.com/diensten/ai-implementatie/
 - Over ons: https://kelvantis.com/over-ons/
+- Werkwijze: https://kelvantis.com/werkwijze/
 - Blog: https://kelvantis.com/blog/
 - FAQ: https://kelvantis.com/faq/
 - Contact: https://kelvantis.com/contact/
-- Werkwijze: https://kelvantis.com/werkwijze/
 - Regio Limburg: https://kelvantis.com/limburg/
 - Regio België: https://kelvantis.com/belgie/
 
