@@ -41,10 +41,10 @@ Kelvantis hanteert een eigen methodiek voor GEO/AEO-optimalisatie, gebaseerd op 
 ## Pagina's
 
 - Homepage: https://kelvantis.com/
-- Website laten maken: https://kelvantis.com/diensten/website-laten-maken/
-- GEO & AEO: https://kelvantis.com/diensten/geo-aeo/
-- Workflow Automatisering: https://kelvantis.com/diensten/workflow-automatisering/
-- AI Implementatie: https://kelvantis.com/diensten/ai-implementatie/
+- Website laten maken: https://kelvantis.com/website-laten-maken/
+- GEO & AEO: https://kelvantis.com/geo-aeo/
+- Workflow Automatisering: https://kelvantis.com/workflow-automatisering/
+- AI Implementatie: https://kelvantis.com/ai-implementatie/
 - Over ons: https://kelvantis.com/over-ons/
 - Werkwijze: https://kelvantis.com/werkwijze/
 - Blog: https://kelvantis.com/blog/

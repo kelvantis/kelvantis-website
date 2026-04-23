@@ -5,8 +5,17 @@
   "trailingSlash": false,
   "redirects": [
     { "source": "/pakketten/:path*", "destination": "/contact", "permanent": true },
-    { "source": "/diensten/seo", "destination": "/diensten/geo-aeo", "permanent": true },
-    { "source": "/diensten/seo.html", "destination": "/diensten/geo-aeo.html", "permanent": true }
+    { "source": "/diensten/seo", "destination": "/geo-aeo", "permanent": true },
+    { "source": "/diensten/seo.html", "destination": "/geo-aeo", "permanent": true },
+    { "source": "/diensten/geo-aeo", "destination": "/geo-aeo", "permanent": true },
+    { "source": "/diensten/geo-aeo.html", "destination": "/geo-aeo", "permanent": true },
+    { "source": "/diensten/ai-implementatie", "destination": "/ai-implementatie", "permanent": true },
+    { "source": "/diensten/ai-implementatie.html", "destination": "/ai-implementatie", "permanent": true },
+    { "source": "/diensten/workflow-automatisering", "destination": "/workflow-automatisering", "permanent": true },
+    { "source": "/diensten/workflow-automatisering.html", "destination": "/workflow-automatisering", "permanent": true },
+    { "source": "/diensten/website-laten-maken", "destination": "/website-laten-maken", "permanent": true },
+    { "source": "/diensten/website-laten-maken.html", "destination": "/website-laten-maken", "permanent": true },
+    { "source": "/diensten/:path*", "destination": "/", "permanent": true }
   ],
   "headers": [
     {
