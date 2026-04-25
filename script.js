@@ -149,6 +149,12 @@ function throttle(fn, delay) {
   const elements = document.querySelectorAll('.reveal');
   if (!elements.length) return;
 
+  // Fallback: als IntersectionObserver niet bestaat, toon alles direct
+  if (typeof IntersectionObserver === 'undefined') {
+    elements.forEach(el => el.classList.add('reveal--visible'));
+    return;
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -162,6 +168,18 @@ function throttle(fn, delay) {
   });
 
   elements.forEach(el => observer.observe(el));
+
+  // Safety net: als na 2.5s elementen nog onzichtbaar zijn (boven viewport,
+  // niet getriggerd, of script-conflict), forceer ze visible. Voorkomt
+  // "lege secties" door observer-issues.
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.reveal--visible)').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 1.5) {
+        el.classList.add('reveal--visible');
+      }
+    });
+  }, 2500);
 })();
 
 /* ═══════════════════════════════════════

@@ -239,6 +239,13 @@ button {
   transform: translateY(0);
 }
 
+/* No-JS fallback: zonder JavaScript reveals direct zichtbaar maken
+   zodat de site bruikbaar blijft als JS faalt of disabled is */
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
+}
+
 /* Stagger children */
 .reveal:nth-child(2) { transition-delay: 0.1s; }
 .reveal:nth-child(3) { transition-delay: 0.15s; }
