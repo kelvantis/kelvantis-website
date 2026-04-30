@@ -297,6 +297,10 @@
             <h3 style="font-family:var(--font-heading);font-size:1.375rem;margin-bottom:0.5rem;">Aanvraag ontvangen!</h3>
             <p style="color:var(--color-text-muted);">We nemen binnen <strong>24 uur</strong> contact met je op.</p>
           </div>
+
+          <div id="cp-error" hidden role="alert" aria-live="polite" style="margin-top:1rem;padding:0.875rem 1rem;border-radius:8px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#FCA5A5;font-size:0.9375rem;line-height:1.5;">
+            <strong style="color:#F87171;">Er ging iets mis bij het versturen.</strong> Probeer het opnieuw, of mail direct naar <a href="mailto:kelvantis.com@gmail.com" style="color:#F87171;text-decoration:underline;">kelvantis.com@gmail.com</a>.
+          </div>
         </div>
 
         <!-- Contact info -->
@@ -432,12 +436,14 @@
   // Contact page form submission
   const cpForm = document.getElementById('contactPageForm');
   const cpSuccess = document.getElementById('cp-success');
+  const cpError = document.getElementById('cp-error');
   if (cpForm) {
     cpForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = document.getElementById('cp-submit');
       btn.disabled = true;
       btn.querySelector('span').textContent = 'Versturen...';
+      if (cpError) cpError.hidden = true;
       try {
         const res = await fetch(cpForm.action, {
           method: 'POST',
@@ -450,11 +456,18 @@
         } else {
           btn.disabled = false;
           btn.querySelector('span').textContent = 'Verstuur aanvraag';
-          alert('Er is iets misgegaan. Probeer het opnieuw of mail naar kelvantis.com@gmail.com');
+          if (cpError) {
+            cpError.hidden = false;
+            cpError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
         }
       } catch {
         btn.disabled = false;
         btn.querySelector('span').textContent = 'Verstuur aanvraag';
+        if (cpError) {
+          cpError.hidden = false;
+          cpError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
       }
     });
   }
