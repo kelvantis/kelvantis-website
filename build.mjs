@@ -4,8 +4,10 @@ import { join, extname } from 'path';
 const navbar = readFileSync('_components/navbar.html', 'utf8');
 const footer = readFileSync('_components/footer.html', 'utf8');
 
-const headerRe = /<header class="navbar"[\s\S]*?<\/header>/;
-const footerRe = /<footer class="footer"[\s\S]*?<\/footer>/;
+// Match standaard navbar (.navbar) én legacy regio-navbars (.limburg-nav, .belgie-nav)
+// die ooit als losse design-systemen gebouwd zijn maar nu via build moeten syncen.
+const headerRe = /<header class="(?:navbar|limburg-nav|belgie-nav)"[\s\S]*?<\/header>/;
+const footerRe = /<footer[\s\S]*?<\/footer>/;
 
 function collectHtmlFiles(dir, skip = []) {
   const results = [];
