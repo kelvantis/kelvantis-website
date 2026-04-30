@@ -958,90 +958,10 @@
       <h1 class="hero-title">Het AI-bureau<br>van <span class="accent">Limburg.</span></h1>
       <p class="hero-sub">Kelvantis bouwt voor Limburgse bedrijven een digitale infrastructuur die werkt terwijl jij dat niet doet. Van een conversiegerichte website tot volledige AI-automatisering in Maastricht en omgeving.</p>
       <div class="ctas">
-        <a href="#scan" class="btn-primary">Gratis AI Scan aanvragen</a>
+        <a href="#scan" class="btn-primary">Gratis strategiegesprek</a>
         <a href="#diensten" class="btn-secondary">Bekijk onze diensten</a>
       </div>
       <p class="micro">Geen verplichtingen. Reactie binnen 24 uur. Gevestigd in Maastricht &mdash; actief in heel Limburg en grensstreek België.</p>
-    </div>
-
-    <!-- Robot mascotte -->
-    <div class="robot-wrap" id="robotWrap">
-      <div class="speech" id="speech" aria-live="polite">Hoi! Ik analyseer jouw bedrijf.</div>
-      <svg class="robot-svg" id="robotSvg" width="220" height="280" viewBox="0 0 220 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kelvantis robot mascotte">
-        <defs>
-          <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#1a2744"/>
-            <stop offset="100%" stop-color="#0d1528"/>
-          </linearGradient>
-          <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#051a0f"/>
-            <stop offset="100%" stop-color="#021208"/>
-          </linearGradient>
-          <linearGradient id="glowGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#05FE82" stop-opacity=".3"/>
-            <stop offset="100%" stop-color="#05FE82" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-
-        <!-- Antenne (buiten hoofd-group, beweegt niet mee) -->
-        <line x1="110" y1="28" x2="110" y2="52" stroke="#2a3f5f" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="110" cy="22" r="7" fill="#0d1528" stroke="#05FE82" stroke-width="1.5"/>
-        <circle class="antenna-glow" cx="110" cy="22" r="4" fill="#05FE82"/>
-
-        <!-- HOOFD GROUP — draait mee met muis (tilt) -->
-        <g id="robotHead">
-          <!-- Hoofd -->
-          <rect x="58" y="52" width="104" height="86" rx="14" fill="url(#bodyGrad)" stroke="#1e3050" stroke-width="1.5"/>
-          <!-- Screen -->
-          <rect x="70" y="62" width="80" height="56" rx="8" fill="url(#screenGrad)" stroke="#05FE82" stroke-width="1"/>
-          <rect class="scanline" x="70" y="62" width="80" height="3" fill="#05FE82" opacity=".15" rx="1"/>
-          <!-- Oog sockets -->
-          <ellipse cx="95" cy="88" rx="9" ry="9" fill="#0A0F1E"/>
-          <ellipse cx="125" cy="88" rx="9" ry="9" fill="#0A0F1E"/>
-          <!-- Linkeroog -->
-          <g class="eye-l">
-            <ellipse id="pupilL" cx="95" cy="88" rx="6" ry="6" fill="#05FE82" opacity=".9"/>
-            <ellipse id="shineL" cx="97" cy="86" rx="2" ry="2" fill="#F0F2F5" opacity=".8"/>
-          </g>
-          <!-- Rechteroog -->
-          <g class="eye-r">
-            <ellipse id="pupilR" cx="125" cy="88" rx="6" ry="6" fill="#05FE82" opacity=".9"/>
-            <ellipse id="shineR" cx="127" cy="86" rx="2" ry="2" fill="#F0F2F5" opacity=".8"/>
-          </g>
-          <!-- Mond -->
-          <rect x="85" y="104" width="50" height="6" rx="3" fill="#051a0f" stroke="#05FE82" stroke-width=".5"/>
-          <rect id="mouthBar" x="86" y="105" width="25" height="4" rx="2" fill="#05FE82" opacity=".7"/>
-          <!-- Oor bolts -->
-          <circle cx="60" cy="80" r="5" fill="#111827" stroke="#1e3050" stroke-width="1"/>
-          <circle cx="60" cy="80" r="2" fill="#05FE82" opacity=".4"/>
-          <circle cx="160" cy="80" r="5" fill="#111827" stroke="#1e3050" stroke-width="1"/>
-          <circle cx="160" cy="80" r="2" fill="#05FE82" opacity=".4"/>
-        </g>
-
-        <!-- Nek -->
-        <rect x="100" y="138" width="20" height="12" rx="4" fill="#0d1528" stroke="#1e3050" stroke-width="1"/>
-        <!-- Torso -->
-        <rect x="52" y="150" width="116" height="84" rx="16" fill="url(#bodyGrad)" stroke="#1e3050" stroke-width="1.5"/>
-        <!-- Chest panel -->
-        <rect x="68" y="162" width="84" height="52" rx="8" fill="#051a0f" stroke="#05FE82" stroke-width=".75"/>
-        <circle cx="84" cy="178" r="5" fill="#05FE82" opacity=".8"/>
-        <circle cx="100" cy="178" r="5" fill="#05FE82" opacity=".4"/>
-        <circle cx="116" cy="178" r="5" fill="#05FE82" opacity=".2"/>
-        <rect x="78" y="192" width="64" height="4" rx="2" fill="#051a0f" stroke="#05FE82" stroke-width=".5"/>
-        <rect id="chestBar" x="79" y="193" width="32" height="2" rx="1" fill="#05FE82" opacity=".6"/>
-        <!-- Glow -->
-        <rect x="52" y="210" width="116" height="24" fill="url(#glowGrad)"/>
-        <!-- Armen -->
-        <rect x="22" y="155" width="24" height="60" rx="10" fill="url(#bodyGrad)" stroke="#1e3050" stroke-width="1"/>
-        <circle cx="34" cy="222" r="10" fill="#0d1528" stroke="#1e3050" stroke-width="1"/>
-        <rect x="174" y="155" width="24" height="60" rx="10" fill="url(#bodyGrad)" stroke="#1e3050" stroke-width="1"/>
-        <circle cx="186" cy="222" r="10" fill="#0d1528" stroke="#1e3050" stroke-width="1"/>
-        <!-- Benen -->
-        <rect x="76" y="234" width="28" height="36" rx="8" fill="url(#bodyGrad)" stroke="#1e3050" stroke-width="1"/>
-        <rect x="116" y="234" width="28" height="36" rx="8" fill="url(#bodyGrad)" stroke="#1e3050" stroke-width="1"/>
-        <rect x="72" y="264" width="36" height="10" rx="5" fill="#0d1528" stroke="#1e3050" stroke-width="1"/>
-        <rect x="112" y="264" width="36" height="10" rx="5" fill="#0d1528" stroke="#1e3050" stroke-width="1"/>
-      </svg>
     </div>
 
   </div>
