@@ -12,7 +12,7 @@
 - Doelgroep: B2B-bedrijven, MKB en ZZP in Nederland en België
 - Specialisaties: Webdesign, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), Workflow Automatisering, AI Implementatie
 - Contact: kelvantis.com@gmail.com | +31 6 27 90 03 67
-- Werkgebied: Nederland (focus Limburg — Maastricht, Sittard, Venlo, Heerlen, Roermond) en Oost-België (Hasselt, Genk, Maasmechelen, Lanaken, Luik)
+- Werkgebied: Nederland (focus Limburg — Maastricht, Sittard, Venlo, Heerlen, Roermond) en Belgisch Limburg (Hasselt, Genk, Maasmechelen, Lanaken, Tongeren, Bilzen, Sint-Truiden) en Luik. Eigen landingspagina's voor Tongeren (workflow-automatisering) en Lanaken (webdesign).
 
 ## Diensten
 
@@ -52,6 +52,8 @@ Kelvantis hanteert een eigen methodiek voor GEO/AEO-optimalisatie, gebaseerd op 
 - Contact: https://kelvantis.com/contact/
 - Regio Limburg: https://kelvantis.com/limburg/
 - Regio België: https://kelvantis.com/belgie/
+- Regio Tongeren (workflow-automatisering): https://kelvantis.com/tongeren/
+- Regio Lanaken (webdesign): https://kelvantis.com/lanaken/
 
 ## Blogartikelen
 

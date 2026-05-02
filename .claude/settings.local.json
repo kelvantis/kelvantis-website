@@ -17,7 +17,10 @@
       "Bash(grep -l \"Organization\\\\|Company\" \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy\"/*.html)",
       "WebFetch(domain:bnnx.com)",
       "WebFetch(domain:www.bnnx.com)",
-      "Bash(grep -l \"<footer\" \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy\"/**/*.html)"
+      "Bash(grep -l \"<footer\" \"c:\\\\Users\\\\kkuij\\\\Desktop\\\\Website Kelvantis - Copy\"/**/*.html)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
