@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="nl" data-theme="dark" class="no-js">
+<html lang="nl">
 <head>
-  <script>document.documentElement.classList.remove("no-js")</script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ0XQN7GR4"></script>
@@ -17,8 +16,8 @@
   <title>AI Implementatie voor MKB | AI Chatbot &amp; AI Agent | Kelvantis</title>
   <meta name="description" content="AI-implementatie voor MKB en B2B. Kelvantis bouwt AI-chatbots, AI-agents en AI-workflows op maat, praktisch en meetbaar. Gratis strategiegesprek.">
   <meta name="robots" content="index, follow">
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="apple-touch-icon" href="../favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
   <link rel="canonical" href="https://kelvantis.com/ai-implementatie/">
   <link rel="alternate" hreflang="nl" href="https://kelvantis.com/ai-implementatie/" />
   <link rel="alternate" hreflang="x-default" href="https://kelvantis.com/ai-implementatie/" />
@@ -36,10 +35,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../style.css">
+  <!-- Styles (gedeelde paper.css) -->
+  <link rel="stylesheet" href="/paper.css">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -114,16 +113,19 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kelvantis.com/" },
-      
+
       { "@type": "ListItem", "position": 2, "name": "AI Implementatie" }
     ]
   }
   </script>
-
 </head>
 <body>
 
-  <!-- NAVBAR -->
+<a class="skip-link" href="#main">Direct naar inhoud</a>
+
+<div class="page">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="navbar" id="navbar">
     <div class="navbar__container">
 
@@ -234,174 +236,155 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- HERO -->
-    <section class="dienst-hero">
-      <div class="container">
-        <span class="dienst-hero__label">AI Implementatie</span>
-        <h1 class="dienst-hero__title">AI implementatie voor je bedrijf, zonder gedoe</h1>
-        <p class="dienst-hero__subtitle">AI is geen toverstaf en geen vervanger van mensen. Wel kan het je veel werk uit handen nemen, je klanten beter helpen, en jouw kennis 24/7 bereikbaar maken. We bouwen wat past bij hoe jouw bedrijf werkt.</p>
-        <div class="hero__ctas">
-          <button type="button" class="btn btn--primary btn--lg" data-modal="open">
-            <span>Gratis gesprek plannen</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <a href="../index.html#aanpak" class="btn btn--ghost btn--lg">Bekijk aanpak</a>
-        </div>
+    <section class="svc-hero">
+      <p class="svc-hero__label">AI Implementatie</p>
+      <h1 class="svc-hero__title">AI implementatie voor je bedrijf, <span class="accent">zonder gedoe</span></h1>
+      <p class="svc-hero__sub">AI is geen toverstaf en geen vervanger van mensen. Wel kan het je veel werk uit handen nemen, je klanten beter helpen, en jouw kennis 24/7 bereikbaar maken. We bouwen wat past bij hoe jouw bedrijf werkt.</p>
+      <div class="svc-hero__ctas">
+        <button type="button" class="cta-primary" data-modal="open">Gratis gesprek plannen</button>
+        <a href="/#aanpak" class="cta-secondary">Bekijk aanpak</a>
       </div>
     </section>
 
     <!-- TL;DR -->
-    <div class="container">
+    <div class="tldr-wrap">
       <div class="tldr" role="note" aria-label="Samenvatting">
-        <p class="tldr__label">TL;DR</p>
-        <p>AI implementatie betekent voor ons: praktische AI voor bedrijven, niet de zoveelste hype. Een chatbot die jouw klanten 's avonds nog helpt, een AI-assistent die je documenten kent, of een AI consultant-rol die we tijdelijk invullen om de juiste keuzes te maken. Van een eerste chatbot maken tot een volledig AI-systeem dat past bij hoe jouw team werkt.</p>
+        <div class="tldr-label">TL;DR</div>
+        <div class="tldr-text">AI implementatie betekent voor ons: praktische AI voor bedrijven, niet de zoveelste hype. Een chatbot die jouw klanten 's avonds nog helpt, een AI-assistent die je documenten kent, of een AI consultant-rol die we tijdelijk invullen om de juiste keuzes te maken. Van een eerste chatbot maken tot een volledig AI-systeem dat past bij hoe jouw team werkt.</div>
       </div>
     </div>
 
     <!-- WAT IS HET -->
     <section class="section">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">Wat is het</span>
-          <h2 class="section__title">AI die werkt voor jou, niet andersom.</h2>
+      <header class="section-head">
+        <div class="section-label">Wat is het</div>
+        <div>
+          <h2 class="section-title">AI die werkt voor jou, niet <span class="accent">andersom</span>.</h2>
         </div>
-        <div class="voor-wie__grid voor-wie__grid--2col">
-          <div class="reveal">
-            <p style="font-size: 1.0625rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.25rem;">AI implementatie betekent bij Kelvantis: wij nemen jouw bedrijfskennis, je processen en je klantgegevens, en bouwen daarmee een AI die jouw team daadwerkelijk ondersteunt.</p>
-            <p style="font-size: 1.0625rem; color: var(--color-text-muted); line-height: 1.8;">Van een eenvoudige FAQ-bot tot een volledig geautomatiseerde klantenservice of intern kennissysteem. Wij implementeren wat bij jouw bedrijf past.</p>
+      </header>
+      <div class="two-col">
+        <div class="two-col__text">
+          <p>AI implementatie betekent bij Kelvantis: wij nemen jouw bedrijfskennis, je processen en je klantgegevens, en bouwen daarmee een AI die jouw team daadwerkelijk ondersteunt.</p>
+          <p>Van een eenvoudige FAQ-bot tot een volledig geautomatiseerde klantenservice of intern kennissysteem. Wij implementeren wat bij jouw bedrijf past.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-row">
+            <span class="feature-row__icon" aria-hidden="true">🧠</span>
+            <div><strong>Getraind op jouw bedrijf</strong><small>Kennis van je producten, processen en tone-of-voice</small></div>
           </div>
-          <div class="reveal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2rem; display: flex; flex-direction: column; gap: 1rem;">
-            <div style="display:flex;align-items:center;gap:.75rem;">
-              <span style="font-size:1.5rem;">🧠</span>
-              <div>
-                <strong style="color:var(--color-text);display:block;font-size:.9375rem;">Getraind op jouw bedrijf</strong>
-                <small style="color:var(--color-text-muted);font-size:.825rem;">Kennis van je producten, processen en tone-of-voice</small>
-              </div>
-            </div>
-            <div style="display:flex;align-items:center;gap:.75rem;">
-              <span style="font-size:1.5rem;">💬</span>
-              <div>
-                <strong style="color:var(--color-text);display:block;font-size:.9375rem;">Multi-channel</strong>
-                <small style="color:var(--color-text-muted);font-size:.825rem;">Website, WhatsApp, Slack, e-mail en meer</small>
-              </div>
-            </div>
-            <div style="display:flex;align-items:center;gap:.75rem;">
-              <span style="font-size:1.5rem;">📈</span>
-              <div>
-                <strong style="color:var(--color-text);display:block;font-size:.9375rem;">Groeit mee met je bedrijf</strong>
-                <small style="color:var(--color-text-muted);font-size:.825rem;">Prompts, knowledge base en integraties breiden we uit zodra je nieuwe use-cases ziet</small>
-              </div>
-            </div>
-            <div style="display:flex;align-items:center;gap:.75rem;">
-              <span style="font-size:1.5rem;">🔒</span>
-              <div>
-                <strong style="color:var(--color-text);display:block;font-size:.9375rem;">Privacy-proof</strong>
-                <small style="color:var(--color-text-muted);font-size:.825rem;">AVG-compliant, data blijft bij jou</small>
-              </div>
-            </div>
+          <div class="feature-row">
+            <span class="feature-row__icon" aria-hidden="true">💬</span>
+            <div><strong>Multi-channel</strong><small>Website, WhatsApp, Slack, e-mail en meer</small></div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row__icon" aria-hidden="true">📈</span>
+            <div><strong>Groeit mee met je bedrijf</strong><small>Prompts, knowledge base en integraties breiden we uit zodra je nieuwe use-cases ziet</small></div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row__icon" aria-hidden="true">🔒</span>
+            <div><strong>Privacy-proof</strong><small>AVG-compliant, data blijft bij jou</small></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- EXPERT QUOTE -->
-    <div class="container">
-      <blockquote class="expert-quote reveal">
+    <section class="section">
+      <blockquote class="expert-quote">
         <p>"AI implementatie draait niet om de nieuwste technologie, het draait om het juiste probleem oplossen. Een goed gebouwde AI chatbot die leads kwalificeert levert meer op dan tien experimentele features."</p>
-        <cite>,  Kjell, oprichter Kelvantis</cite>
+        <cite>Kjell, oprichter Kelvantis</cite>
       </blockquote>
-    </div>
+    </section>
 
     <!-- USE CASES -->
     <section class="section">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">Use cases</span>
-          <h2 class="section__title">Waar AI het meeste werk uit handen neemt.</h2>
-          <p class="section__subtitle">Zes concrete toepassingen waar we AI voor bouwen. Elke use case vervangt repetitief denkwerk dat een mens zou vermoeien, maar een AI nooit.</p>
+      <header class="section-head">
+        <div class="section-label">Use cases</div>
+        <div>
+          <h2 class="section-title">Waar AI het meeste werk uit handen neemt.</h2>
+          <p class="section-sub">Zes concrete toepassingen waar we AI voor bouwen. Elke use case vervangt repetitief denkwerk dat een mens zou vermoeien, maar een AI nooit.</p>
         </div>
-        <div class="usecases__grid">
-          <div class="usecase reveal">
-            <div class="usecase__icon" aria-hidden="true">💬</div>
-            <h3 class="usecase__title">AI chatbot voor je website</h3>
-            <p class="usecase__desc">Een chatbot die jouw diensten, prijzen en FAQ's kent, leads kwalificeert en afspraken inplant, 24/7, in jouw tone-of-voice. Geen scripts, wel echte gesprekken.</p>
-            <div class="usecase__tools">GPT-4 / Claude · Pinecone · Calendly</div>
-          </div>
-          <div class="usecase reveal">
-            <div class="usecase__icon" aria-hidden="true">📚</div>
-            <h3 class="usecase__title">Interne AI-kennisbank</h3>
-            <p class="usecase__desc">Je team stelt vragen in natuurlijke taal aan een AI die al je handboeken, contracten en procesdocumenten kent. Antwoord in seconden, met bronverwijzing.</p>
-            <div class="usecase__tools">OpenAI · Notion / SharePoint · Slack</div>
-          </div>
-          <div class="usecase reveal">
-            <div class="usecase__icon" aria-hidden="true">📝</div>
-            <h3 class="usecase__title">Content- &amp; offerte-assistent</h3>
-            <p class="usecase__desc">Blog-drafts, LinkedIn-posts, offertes en klant-e-mails, voorgeschreven in jouw stijl. Jij doet de laatste check, AI doet het zware werk.</p>
-            <div class="usecase__tools">Claude / GPT-4 · Custom prompts · CMS-integratie</div>
-          </div>
-          <div class="usecase reveal">
-            <div class="usecase__icon" aria-hidden="true">📞</div>
-            <h3 class="usecase__title">Leadkwalificatie &amp; scoring</h3>
-            <p class="usecase__desc">Elke binnenkomende lead krijgt binnen 30 seconden een AI-score op basis van bedrijf, intentie en koopsignalen. Hoge scores gaan direct naar sales, lage naar nurture-flow.</p>
-            <div class="usecase__tools">OpenAI · HubSpot / Pipedrive · Clearbit</div>
-          </div>
-          <div class="usecase reveal">
-            <div class="usecase__icon" aria-hidden="true">🔍</div>
-            <h3 class="usecase__title">Document-analyse &amp; extractie</h3>
-            <p class="usecase__desc">Contracten, offertes, inkoopfacturen en tenderdocumenten worden automatisch uitgelezen en gestructureerd. Bespaart uren aan handmatig doornemen.</p>
-            <div class="usecase__tools">GPT-4 Vision · LlamaParse · Python</div>
-          </div>
-          <div class="usecase reveal">
-            <div class="usecase__icon" aria-hidden="true">🎯</div>
-            <h3 class="usecase__title">Personalisatie op de website</h3>
-            <p class="usecase__desc">Headlines, case studies en CTA's passen zich realtime aan op basis van branche, bedrijfsgrootte en gedrag. Elke bezoeker ziet de meest relevante boodschap.</p>
-            <div class="usecase__tools">OpenAI · Edge functions · Analytics</div>
-          </div>
-        </div>
-        <p class="usecases__footer reveal">Heb je een ander idee? We zijn altijd nieuwsgierig naar nieuwe toepassingen, vooral als ze repetitief zijn en regels hebben.</p>
+      </header>
+      <div class="usecase-grid">
+        <article class="usecase">
+          <div class="usecase__icon" aria-hidden="true">💬</div>
+          <h3 class="usecase__title">AI chatbot voor je website</h3>
+          <p class="usecase__desc">Een chatbot die jouw diensten, prijzen en FAQ's kent, leads kwalificeert en afspraken inplant, 24/7, in jouw tone-of-voice. Geen scripts, wel echte gesprekken.</p>
+          <p class="usecase__meta">GPT-4 / Claude · Pinecone · Calendly</p>
+        </article>
+        <article class="usecase">
+          <div class="usecase__icon" aria-hidden="true">📚</div>
+          <h3 class="usecase__title">Interne AI-kennisbank</h3>
+          <p class="usecase__desc">Je team stelt vragen in natuurlijke taal aan een AI die al je handboeken, contracten en procesdocumenten kent. Antwoord in seconden, met bronverwijzing.</p>
+          <p class="usecase__meta">OpenAI · Notion / SharePoint · Slack</p>
+        </article>
+        <article class="usecase">
+          <div class="usecase__icon" aria-hidden="true">📝</div>
+          <h3 class="usecase__title">Content- &amp; offerte-assistent</h3>
+          <p class="usecase__desc">Blog-drafts, LinkedIn-posts, offertes en klant-e-mails, voorgeschreven in jouw stijl. Jij doet de laatste check, AI doet het zware werk.</p>
+          <p class="usecase__meta">Claude / GPT-4 · Custom prompts · CMS-integratie</p>
+        </article>
+        <article class="usecase">
+          <div class="usecase__icon" aria-hidden="true">📞</div>
+          <h3 class="usecase__title">Leadkwalificatie &amp; scoring</h3>
+          <p class="usecase__desc">Elke binnenkomende lead krijgt binnen 30 seconden een AI-score op basis van bedrijf, intentie en koopsignalen. Hoge scores gaan direct naar sales, lage naar nurture-flow.</p>
+          <p class="usecase__meta">OpenAI · HubSpot / Pipedrive · Clearbit</p>
+        </article>
+        <article class="usecase">
+          <div class="usecase__icon" aria-hidden="true">🔍</div>
+          <h3 class="usecase__title">Document-analyse &amp; extractie</h3>
+          <p class="usecase__desc">Contracten, offertes, inkoopfacturen en tenderdocumenten worden automatisch uitgelezen en gestructureerd. Bespaart uren aan handmatig doornemen.</p>
+          <p class="usecase__meta">GPT-4 Vision · LlamaParse · Python</p>
+        </article>
+        <article class="usecase">
+          <div class="usecase__icon" aria-hidden="true">🎯</div>
+          <h3 class="usecase__title">Personalisatie op de website</h3>
+          <p class="usecase__desc">Headlines, case studies en CTA's passen zich realtime aan op basis van branche, bedrijfsgrootte en gedrag. Elke bezoeker ziet de meest relevante boodschap.</p>
+          <p class="usecase__meta">OpenAI · Edge functions · Analytics</p>
+        </article>
       </div>
+      <p class="usecase-foot">Heb je een ander idee? We zijn altijd nieuwsgierig naar nieuwe toepassingen, vooral als ze repetitief zijn en regels hebben.</p>
     </section>
 
     <!-- HOE WERKT HET -->
-    <section class="section process" style="background: var(--color-surface);">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">Hoe werkt het</span>
-          <h2 class="section__title">AI live in 4 stappen.</h2>
-          <p class="section__subtitle">Van data tot werkende AI: we begeleiden je door het hele traject.</p>
+    <section class="section">
+      <header class="section-head">
+        <div class="section-label">Hoe werkt het</div>
+        <div>
+          <h2 class="section-title">AI live in <span class="accent">4 stappen</span>.</h2>
+          <p class="section-sub">Van data tot werkende AI: we begeleiden je door het hele traject.</p>
         </div>
-        <div class="process__steps">
-          <div class="process__step reveal">
-            <div class="process__step-number" aria-hidden="true">01</div>
-            <div class="process__step-content">
-              <h3 class="process__step-title">AI audit & strategie</h3>
-              <p class="process__step-desc">We analyseren je bedrijfsprocessen en bepalen waar AI de meeste impact heeft.</p>
-            </div>
+      </header>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="process-num" aria-hidden="true">01</div>
+          <div>
+            <h3 class="process-title">AI audit &amp; strategie</h3>
+            <p class="process-desc">We analyseren je bedrijfsprocessen en bepalen waar AI de meeste impact heeft.</p>
           </div>
-          <div class="process__step reveal">
-            <div class="process__step-number" aria-hidden="true">02</div>
-            <div class="process__step-content">
-              <h3 class="process__step-title">Data & training</h3>
-              <p class="process__step-desc">We verzamelen de benodigde data: FAQ's, productinformatie, klantgesprekken, procesdocumentatie. Dit wordt de kennis van jouw AI.</p>
-            </div>
+        </div>
+        <div class="process-step">
+          <div class="process-num" aria-hidden="true">02</div>
+          <div>
+            <h3 class="process-title">Data &amp; training</h3>
+            <p class="process-desc">We verzamelen de benodigde data: FAQ's, productinformatie, klantgesprekken, procesdocumentatie. Dit wordt de kennis van jouw AI.</p>
           </div>
-          <div class="process__step reveal">
-            <div class="process__step-number" aria-hidden="true">03</div>
-            <div class="process__step-content">
-              <h3 class="process__step-title">Bouw & integratie</h3>
-              <p class="process__step-desc">We bouwen de AI en integreren hem in je bestaande tools: website, WhatsApp, Slack, CRM, e-mail.</p>
-            </div>
+        </div>
+        <div class="process-step">
+          <div class="process-num" aria-hidden="true">03</div>
+          <div>
+            <h3 class="process-title">Bouw &amp; integratie</h3>
+            <p class="process-desc">We bouwen de AI en integreren hem in je bestaande tools: website, WhatsApp, Slack, CRM, e-mail.</p>
           </div>
-          <div class="process__step reveal">
-            <div class="process__step-number" aria-hidden="true">04</div>
-            <div class="process__step-content">
-              <h3 class="process__step-title">Testen & optimaliseren</h3>
-              <p class="process__step-desc">Na livegang monitoren we de prestaties, verfijnen we de antwoorden en trainen we de AI bij. Je AI wordt elke week slimmer.</p>
-            </div>
+        </div>
+        <div class="process-step">
+          <div class="process-num" aria-hidden="true">04</div>
+          <div>
+            <h3 class="process-title">Testen &amp; optimaliseren</h3>
+            <p class="process-desc">Na livegang monitoren we de prestaties, verfijnen we de antwoorden en trainen we de AI bij. Je AI wordt elke week slimmer.</p>
           </div>
         </div>
       </div>
@@ -409,197 +392,179 @@
 
     <!-- PRIJZEN -->
     <section class="section" id="prijzen">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">Pakketten</span>
-          <h2 class="section__title">AI voor elk budget.</h2>
-          <p class="section__subtitle">Van eenvoudige chatbot tot complexe AI-integratie. Transparante prijzen, geen verrassingen.</p>
+      <header class="section-head">
+        <div class="section-label">Pakketten</div>
+        <div>
+          <h2 class="section-title">AI voor <span class="accent">elk budget</span>.</h2>
+          <p class="section-sub">Van eenvoudige chatbot tot complexe AI-integratie. Transparante prijzen, geen verrassingen.</p>
         </div>
-        <div class="pricing__grid">
+      </header>
+      <div class="pricing-grid">
 
-          <!-- AI Starter -->
-          <div class="pricing__card reveal">
-            <div class="pricing__card-header">
-              <h3 class="pricing__card-name">AI Starter</h3>
-              <div class="pricing__card-sub">Eenmalig</div>
-              <p class="pricing__card-desc">AI chatbot voor je website. Beantwoordt vragen 24/7 op basis van jouw content.</p>
-            </div>
-            <ul class="pricing__features">
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Chatbot op je website</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Getraind op jouw FAQ & content</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Handoff naar mens bij complexe vragen</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>WhatsApp of Slack integratie</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>30 dagen support</span></li>
-            </ul>
-            <button type="button" class="btn btn--ghost btn--full" data-modal="open" data-pakket="AI Starter">Bespreek dit pakket</button>
-          </div>
+        <article class="price-card">
+          <h3 class="price-name">AI Starter</h3>
+          <p class="price-sub">Eenmalig</p>
+          <p class="price-desc">AI chatbot voor je website. Beantwoordt vragen 24/7 op basis van jouw content.</p>
+          <ul class="price-features">
+            <li class="yes">Chatbot op je website</li>
+            <li class="yes">Getraind op jouw FAQ &amp; content</li>
+            <li class="yes">Handoff naar mens bij complexe vragen</li>
+            <li class="yes">WhatsApp of Slack integratie</li>
+            <li class="yes">30 dagen support</li>
+          </ul>
+          <button type="button" class="btn btn--outline btn--full price-cta" data-modal="open" data-pakket="AI Starter">Bespreek dit pakket</button>
+        </article>
 
-          <!-- AI Business (featured) -->
-          <div class="pricing__card pricing__card--featured reveal">
-            <div class="pricing__card-badge">Onze aanbeveling</div>
-            <div class="pricing__card-header">
-              <h3 class="pricing__card-name">AI Business</h3>
-              <div class="pricing__card-sub">Eenmalig</div>
-              <p class="pricing__card-desc">Volledige AI-integratie in je bedrijf: van klantenservice tot interne processen.</p>
-            </div>
-            <ul class="pricing__features">
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Alles van AI Starter</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>CRM-koppeling & lead-kwalificatie</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Agenda-integratie (afspraken plannen)</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Interne kennisbank voor je team</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Multi-channel: web, app, WhatsApp</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>60 dagen support & optimalisatie</span></li>
-            </ul>
-            <button type="button" class="btn btn--primary btn--full" data-modal="open" data-pakket="AI Business">Bespreek dit pakket</button>
-          </div>
+        <article class="price-card featured">
+          <div class="price-badge">Onze aanbeveling</div>
+          <h3 class="price-name">AI Business</h3>
+          <p class="price-sub">Eenmalig</p>
+          <p class="price-desc">Volledige AI-integratie in je bedrijf: van klantenservice tot interne processen.</p>
+          <ul class="price-features">
+            <li class="yes">Alles van AI Starter</li>
+            <li class="yes">CRM-koppeling &amp; lead-kwalificatie</li>
+            <li class="yes">Agenda-integratie (afspraken plannen)</li>
+            <li class="yes">Interne kennisbank voor je team</li>
+            <li class="yes">Multi-channel: web, app, WhatsApp</li>
+            <li class="yes">60 dagen support &amp; optimalisatie</li>
+          </ul>
+          <button type="button" class="btn btn--primary btn--full price-cta" data-modal="open" data-pakket="AI Business">Bespreek dit pakket</button>
+        </article>
 
-          <!-- Custom AI -->
-          <div class="pricing__card reveal">
-            <div class="pricing__card-header">
-              <h3 class="pricing__card-name">Custom AI</h3>
-              <div class="pricing__card-sub">Maatwerk</div>
-              <p class="pricing__card-desc">Op maat gebouwde AI-systemen voor complexe bedrijfsprocessen.</p>
-            </div>
-            <ul class="pricing__features">
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Alles van AI Business</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Custom AI-modellen & fine-tuning</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>On-premise deployment optie</span></li>
-              <li class="pricing__feature"><svg class="pricing__check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Dedicated support & SLA</span></li>
-            </ul>
-            <button type="button" class="btn btn--ghost btn--full" data-modal="open" data-pakket="Custom AI">Bespreek dit pakket</button>
-          </div>
+        <article class="price-card">
+          <h3 class="price-name">Custom AI</h3>
+          <p class="price-sub">Maatwerk</p>
+          <p class="price-desc">Op maat gebouwde AI-systemen voor complexe bedrijfsprocessen.</p>
+          <ul class="price-features">
+            <li class="yes">Alles van AI Business</li>
+            <li class="yes">Custom AI-modellen &amp; fine-tuning</li>
+            <li class="yes">On-premise deployment optie</li>
+            <li class="yes">Dedicated support &amp; SLA</li>
+          </ul>
+          <button type="button" class="btn btn--outline btn--full price-cta" data-modal="open" data-pakket="Custom AI">Bespreek dit pakket</button>
+        </article>
 
-        </div>
       </div>
     </section>
 
-    <!-- FAQ SECTIE -->
-    <section class="section" style="background: var(--color-surface);">
-      <div class="container" style="max-width: 780px;">
-        <div class="section__header reveal">
-          <span class="section__label">Veelgestelde vragen</span>
-          <h2 class="section__title">Alles over AI implementatie</h2>
-        </div>
+    <!-- FAQ -->
+    <section class="section">
+      <header class="section-head">
+        <div class="section-label">Veelgestelde vragen</div>
         <div>
-          <details class="faq-item reveal" style="border-bottom: 1px solid var(--color-border); padding: 1.25rem 0;">
-            <summary style="cursor:pointer; font-weight:600; color:var(--color-text); list-style:none; display:flex; justify-content:space-between; align-items:center;">
-              Wat is AI implementatie voor bedrijven?
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <p style="margin-top:.75rem; color:var(--color-text-muted); line-height:1.7;">AI implementatie is het integreren van AI in bedrijfsprocessen en websites: chatbots, lead-kwalificatie of automatische contentgeneratie op basis van eigen bedrijfsdata.</p>
-          </details>
-          <details class="faq-item reveal" style="border-bottom: 1px solid var(--color-border); padding: 1.25rem 0;">
-            <summary style="cursor:pointer; font-weight:600; color:var(--color-text); list-style:none; display:flex; justify-content:space-between; align-items:center;">
-              Welke AI-modellen gebruikt Kelvantis?
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <p style="margin-top:.75rem; color:var(--color-text-muted); line-height:1.7;">We werken met Claude (Anthropic), GPT-4o (OpenAI) en Gemini Pro (Google), afhankelijk van de use case en jouw behoeften.</p>
-          </details>
-          <details class="faq-item reveal" style="border-bottom: 1px solid var(--color-border); padding: 1.25rem 0;">
-            <summary style="cursor:pointer; font-weight:600; color:var(--color-text); list-style:none; display:flex; justify-content:space-between; align-items:center;">
-              Hoe lang duurt het bouwen van een AI oplossing?
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <p style="margin-top:.75rem; color:var(--color-text-muted); line-height:1.7;">De doorlooptijd hangt af van de complexiteit. We werken gefaseerd en houden je via vaste updates op de hoogte van de voortgang.</p>
-          </details>
-          <details class="faq-item reveal" style="border-bottom: 1px solid var(--color-border); padding: 1.25rem 0;">
-            <summary style="cursor:pointer; font-weight:600; color:var(--color-text); list-style:none; display:flex; justify-content:space-between; align-items:center;">
-              Is AI implementatie geschikt voor mijn bedrijf?
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <p style="margin-top:.75rem; color:var(--color-text-muted); line-height:1.7;">AI is toepasbaar voor vrijwel elk B2B bedrijf, van installatiebedrijf tot consultancy. We beginnen altijd met een gratis strategiegesprek.</p>
-          </details>
-          <details class="faq-item reveal" style="border-bottom: 1px solid var(--color-border); padding: 1.25rem 0;">
-            <summary style="cursor:pointer; font-weight:600; color:var(--color-text); list-style:none; display:flex; justify-content:space-between; align-items:center;">
-              Wat is een AI agent?
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <p style="margin-top:.75rem; color:var(--color-text-muted); line-height:1.7;">Een AI agent is een autonoom AI-systeem dat zelfstandig taken uitvoert namens jou. Waar een chatbot alleen antwoorden geeft, kan een AI agent actie ondernemen: e-mails versturen, CRM-records bijwerken, afspraken plannen en complexe workflows doorlopen zonder menselijke tussenkomst.</p>
-          </details>
-          <details class="faq-item reveal" style="border-bottom: 1px solid var(--color-border); padding: 1.25rem 0;">
-            <summary style="cursor:pointer; font-weight:600; color:var(--color-text); list-style:none; display:flex; justify-content:space-between; align-items:center;">
-              Wat is agentic AI?
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <p style="margin-top:.75rem; color:var(--color-text-muted); line-height:1.7;">Agentic AI is een AI-architectuur waarbij AI-systemen zelfstandig doelen nastreven, beslissingen nemen en acties uitvoeren. In tegenstelling tot traditionele AI die alleen reageert op input, kan agentic AI proactief werken: processen monitoren, problemen signaleren en oplossen zonder dat een mens elke stap hoeft goed te keuren.</p>
-          </details>
-          <details class="faq-item reveal" style="padding: 1.25rem 0;">
-            <summary style="cursor:pointer; font-weight:600; color:var(--color-text); list-style:none; display:flex; justify-content:space-between; align-items:center;">
-              Wat kan AI doen voor mijn bedrijf?
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <p style="margin-top:.75rem; color:var(--color-text-muted); line-height:1.7;">AI kan voor B2B bedrijven onder andere: leads 24/7 kwalificeren via een chatbot, klantvragen automatisch beantwoorden, offertes en rapportages genereren, bedrijfsdata analyseren en trends signaleren, en repetitieve taken automatiseren. De ROI hangt af van je specifieke processen, in een gratis gesprek analyseren we waar AI de meeste impact heeft.</p>
-          </details>
+          <h2 class="section-title">Alles over AI implementatie</h2>
         </div>
-      </div>
+      </header>
+      <ul class="faq__list measure">
+        <li class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-1">
+            <span>Wat is AI implementatie voor bedrijven?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-1" hidden>
+            <p>AI implementatie is het integreren van AI in bedrijfsprocessen en websites: chatbots, lead-kwalificatie of automatische contentgeneratie op basis van eigen bedrijfsdata.</p>
+          </div>
+        </li>
+        <li class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-2">
+            <span>Welke AI-modellen gebruikt Kelvantis?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-2" hidden>
+            <p>We werken met Claude (Anthropic), GPT-4o (OpenAI) en Gemini Pro (Google), afhankelijk van de use case en jouw behoeften.</p>
+          </div>
+        </li>
+        <li class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-3">
+            <span>Hoe lang duurt het bouwen van een AI oplossing?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-3" hidden>
+            <p>De doorlooptijd hangt af van de complexiteit. We werken gefaseerd en houden je via vaste updates op de hoogte van de voortgang.</p>
+          </div>
+        </li>
+        <li class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-4">
+            <span>Is AI implementatie geschikt voor mijn bedrijf?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-4" hidden>
+            <p>AI is toepasbaar voor vrijwel elk B2B bedrijf, van installatiebedrijf tot consultancy. We beginnen altijd met een gratis strategiegesprek.</p>
+          </div>
+        </li>
+        <li class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-5">
+            <span>Wat is een AI agent?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-5" hidden>
+            <p>Een AI agent is een autonoom AI-systeem dat zelfstandig taken uitvoert namens jou. Waar een chatbot alleen antwoorden geeft, kan een AI agent actie ondernemen: e-mails versturen, CRM-records bijwerken, afspraken plannen en complexe workflows doorlopen zonder menselijke tussenkomst.</p>
+          </div>
+        </li>
+        <li class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-6">
+            <span>Wat is agentic AI?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-6" hidden>
+            <p>Agentic AI is een AI-architectuur waarbij AI-systemen zelfstandig doelen nastreven, beslissingen nemen en acties uitvoeren. In tegenstelling tot traditionele AI die alleen reageert op input, kan agentic AI proactief werken: processen monitoren, problemen signaleren en oplossen zonder dat een mens elke stap hoeft goed te keuren.</p>
+          </div>
+        </li>
+        <li class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-7">
+            <span>Wat kan AI doen voor mijn bedrijf?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-7" hidden>
+            <p>AI kan voor B2B bedrijven onder andere: leads 24/7 kwalificeren via een chatbot, klantvragen automatisch beantwoorden, offertes en rapportages genereren, bedrijfsdata analyseren en trends signaleren, en repetitieve taken automatiseren. De ROI hangt af van je specifieke processen, in een gratis gesprek analyseren we waar AI de meeste impact heeft.</p>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <!-- LEES OOK -->
-    <div class="container" style="max-width: 780px; margin-bottom: 2rem;">
-      <p class="reveal" style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.7; text-align: center;">
-        <strong style="color: var(--color-text);">Lees ook:</strong>
-        <a href="/blog/ai-chatbot-website/" style="color: var(--color-accent); text-decoration: underline;">AI Chatbot voor je Website: Kosten, Voordelen &amp; Voorbeelden</a>
-      </p>
+    <div class="tldr-wrap">
+      <p class="lees-ook"><strong>Lees ook:</strong> <a href="/blog/ai-chatbot-website/">AI Chatbot voor je Website: Kosten, Voordelen &amp; Voorbeelden</a></p>
     </div>
 
     <!-- ANDERE DIENSTEN -->
-    <section class="section andere-diensten">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">Bekijk ook</span>
-          <h2 class="section__title">Meer van Kelvantis</h2>
+    <section class="section">
+      <header class="section-head">
+        <div class="section-label">Bekijk ook</div>
+        <div>
+          <h2 class="section-title">Meer van Kelvantis</h2>
         </div>
-        <div class="andere-diensten__grid">
-          <a href="./website-laten-maken.html" class="andere-diensten__card reveal">
-            <span class="andere-diensten__card-emoji" aria-hidden="true">🌐</span>
-            <div class="andere-diensten__card-text">
-              <strong>Websites laten maken</strong>
-              <small>Conversiegerichte websites voor B2B</small>
-            </div>
-          </a>
-          <a href="./workflow-automatisering.html" class="andere-diensten__card reveal">
-            <span class="andere-diensten__card-emoji" aria-hidden="true">⚡</span>
-            <div class="andere-diensten__card-text">
-              <strong>Workflow Automatisering</strong>
-              <small>Processen automatiseren met n8n en Make</small>
-            </div>
-          </a>
-          <a href="./geo-aeo.html" class="andere-diensten__card reveal">
-            <span class="andere-diensten__card-emoji" aria-hidden="true">🔍</span>
-            <div class="andere-diensten__card-text">
-              <strong>GEO &amp; AEO</strong>
-              <small>Gevonden worden in ChatGPT en AI Overviews</small>
-            </div>
-          </a>
-        </div>
+      </header>
+      <div class="andere-grid">
+        <a href="/website-laten-maken/" class="andere-card">
+          <span class="andere-card__emoji" aria-hidden="true">🌐</span>
+          <span><strong>Websites laten maken</strong><small>Conversiegerichte websites voor B2B</small></span>
+        </a>
+        <a href="/workflow-automatisering/" class="andere-card">
+          <span class="andere-card__emoji" aria-hidden="true">⚡</span>
+          <span><strong>Workflow Automatisering</strong><small>Processen automatiseren met n8n en Make</small></span>
+        </a>
+        <a href="/geo-aeo/" class="andere-card">
+          <span class="andere-card__emoji" aria-hidden="true">🔍</span>
+          <span><strong>GEO &amp; AEO</strong><small>Gevonden worden in ChatGPT en AI Overviews</small></span>
+        </a>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="section cta-section" id="contact">
-      <div class="container">
-        <div class="cta-section__inner reveal">
-          <div class="cta-section__glow" aria-hidden="true"></div>
-          <span class="section__label">Klaar om te groeien?</span>
-          <h2 class="cta-section__title">Meer resultaat.<br><span class="cta-section__title-accent">Minder handwerk.</span></h2>
-          <p class="cta-section__subtitle">Plan een gratis strategiegesprek en ontdek wat AI implementatie voor jouw bedrijf kan betekenen.</p>
-          <div class="cta-section__actions">
-            <button type="button" class="btn btn--primary btn--xl" data-modal="open">
-              <span>Gratis strategiegesprek plannen</span>
-              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
-          <p class="cta-section__trust">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2L5 8.3 2 5.4l4.2-.8L8 1z" stroke="#05FE82" stroke-width="1.2" stroke-linejoin="round"/></svg>
-            <span>Gratis · Geen verplichtingen · Binnen 24 uur reactie</span>
-          </p>
-        </div>
+    <section class="cta-section" id="contact">
+      <div class="cta-block">
+        <span class="cta-label">Klaar om te groeien?</span>
+        <h2 class="cta-title">Meer resultaat.<br><span class="accent">Minder handwerk.</span></h2>
+        <p class="cta-sub">Plan een gratis strategiegesprek en ontdek wat AI implementatie voor jouw bedrijf kan betekenen.</p>
+        <button type="button" class="cta-primary" data-modal="open">Gratis strategiegesprek plannen</button>
+        <p class="cta-trust">Gratis · Geen verplichtingen · Binnen 24 uur reactie</p>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -661,15 +626,17 @@
     </div>
   </footer>
 
-  <!-- MODAL -->
-  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+</div>
+
+  <!-- ═══════════ INTAKE FORM MODAL ═══════════ -->
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal__overlay" id="modalOverlay"></div>
     <div class="modal__card">
       <button type="button" class="modal__close" id="modalClose" aria-label="Formulier sluiten">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </button>
       <div class="modal__header">
-        <span class="section__label" style="margin-bottom:.75rem;">Gratis · Geen verplichtingen</span>
+        <span class="section__label">Gratis · Geen verplichtingen</span>
         <h2 class="modal__title" id="modal-title">Plan je gratis strategiegesprek</h2>
         <p class="modal__subtitle">Vertel kort over je situatie. We nemen binnen 24 uur contact op om een gesprek in te plannen.</p>
       </div>
@@ -722,12 +689,12 @@
         </div>
         <h3>Aanvraag ontvangen!</h3>
         <p>We nemen binnen <strong>24 uur</strong> contact met je op.</p>
-        <button type="button" class="btn btn--ghost" id="modalSuccessClose" style="margin-top:1.5rem;">Sluiten</button>
+        <button type="button" class="btn btn--ghost" id="modalSuccessClose">Sluiten</button>
       </div>
     </div>
   </div>
 
-  <!-- WHATSAPP -->
+  <!-- ═══════════ WHATSAPP ═══════════ -->
   <a class="wa-button" href="https://wa.me/31627900367?text=Hallo%20Kelvantis%2C%20ik%20heb%20interesse%20in%20een%20gratis%20strategiegesprek." target="_blank" rel="noopener noreferrer" aria-label="App ons direct op WhatsApp">
     <span class="wa-button__tooltip">App ons direct</span>
     <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
@@ -735,20 +702,7 @@
     </svg>
   </a>
 
-  <!-- COOKIE BANNER -->
-  <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie-instellingen" aria-live="polite">
-    <div class="cookie-banner__inner">
-      <p class="cookie-banner__text">
-        <span>Wij gebruiken cookies voor analytics en een betere gebruikerservaring. Lees ons <a href="/privacy">privacybeleid</a>.</span>
-      </p>
-      <div class="cookie-banner__actions">
-        <button type="button" class="btn btn--ghost btn--sm" id="cookieDecline">Alleen noodzakelijk</button>
-        <button type="button" class="btn btn--primary btn--sm" id="cookieAccept">Accepteren</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="../script.js"></script>
+  <script src="/script.js"></script>
 
 </body>
 </html>
