@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="nl" data-theme="dark" class="no-js">
+<html lang="nl">
 <head>
-  <script>document.documentElement.classList.remove("no-js")</script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ0XQN7GR4"></script>
@@ -41,10 +40,1342 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Styles (homepage-scoped, inline — gedeelde style.css blijft voor overige pagina's) -->
+  <style>
+:root {
+  --paper: #F7F2E8;
+  --paper-soft: #F1EADC;
+  --paper-deep: #E8DFCB;
+  --cream: #FDFAF3;
+  --ink: #1F1814;
+  --ink-soft: #5A4F46;
+  --ink-faint: #8E8275;
+  --rule: #DDD2BC;
+  --rule-strong: #C8BCA0;
+  --signal: #FF4D2E;
+  --signal-warm: #F26A3D;
+  --signal-deep: #C8331C;
+  --signal-tint: rgba(255, 77, 46, 0.1);
+  --signal-glow: rgba(255, 77, 46, 0.18);
+  --moss: #6B7355;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter Tight', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 1;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(139, 110, 80, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(139, 110, 80, 0.03) 0%, transparent 50%);
+  mix-blend-mode: multiply;
+}
+
+.page { position: relative; z-index: 2; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+
+img, svg { display: block; }
+a { color: inherit; }
+
+/* ──── SKIP LINK ──── */
+.skip-link {
+  position: absolute;
+  left: -9999px; top: 0;
+  z-index: 200;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 12px 20px;
+  border-radius: var(--r-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-decoration: none;
+}
+.skip-link:focus { left: 16px; top: 16px; }
+
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
+
+/* ──── NAVBAR (gedeelde component, paper-restyle) ──── */
+.navbar {
+  position: sticky; top: 0;
+  z-index: 50;
+  background: rgba(247, 242, 232, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+.navbar--scrolled { border-bottom-color: var(--rule); }
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 48px;
+}
+.navbar__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.navbar__logo-icon { width: 32px; height: 32px; }
+.navbar__logo-text {
+  font-family: var(--font-display);
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+}
+.navbar__logo-accent {
+  font-style: italic;
+  color: var(--signal);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+}
+.navbar__nav { display: flex; }
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.navbar__link,
+.navbar__dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+  transition: color 0.2s, background 0.2s;
+}
+.navbar__link:hover,
+.navbar__dropdown-trigger:hover,
+.navbar__link--active { color: var(--signal); }
+.navbar__dropdown-item { position: relative; }
+.navbar__dropdown-arrow { font-size: 10px; transition: transform 0.2s; }
+.navbar__dropdown-item.is-open .navbar__dropdown-arrow { transform: rotate(180deg); }
+.navbar__dropdown-panel {
+  position: absolute;
+  top: calc(100% + 8px); left: 0;
+  min-width: 320px;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  box-shadow: 0 16px 40px rgba(31, 24, 20, 0.12);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}
+.navbar__dropdown-item.is-open .navbar__dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.navbar__dropdown-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--r-sm);
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.2s;
+}
+.navbar__dropdown-link:hover { background: var(--paper-soft); }
+.navbar__dropdown-link-icon {
+  display: inline-flex;
+  width: 32px; height: 32px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-sm);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  color: var(--signal-deep);
+}
+.navbar__dropdown-link-text { display: flex; flex-direction: column; gap: 2px; }
+.navbar__dropdown-link-text strong { font-weight: 600; font-size: 14px; }
+.navbar__dropdown-link-text small { font-size: 12px; color: var(--ink-faint); }
+.navbar__actions { display: flex; align-items: center; gap: 10px; }
+.navbar__theme-toggle { display: none; }   /* homepage is light-only */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  width: 44px; height: 44px;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+}
+.navbar__hamburger-line {
+  display: block;
+  width: 18px; height: 1.5px;
+  background: var(--ink);
+  transition: transform 0.25s, opacity 0.25s;
+}
+.navbar__hamburger.is-open .navbar__hamburger-line:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+.navbar__hamburger.is-open .navbar__hamburger-line:nth-child(2) { opacity: 0; }
+.navbar__hamburger.is-open .navbar__hamburger-line:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+
+.navbar__mobile {
+  display: none;
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  padding: 12px 24px 24px;
+}
+.navbar__mobile.is-open { display: block; }
+.navbar__mobile-links { list-style: none; display: flex; flex-direction: column; }
+.navbar__mobile-link,
+.navbar__mobile-accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 17px;
+  color: var(--ink);
+  text-decoration: none;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  padding: 16px 4px;
+  cursor: pointer;
+}
+.navbar__mobile-accordion-arrow { font-size: 12px; transition: transform 0.2s; }
+.navbar__mobile-accordion.is-open .navbar__mobile-accordion-arrow { transform: rotate(180deg); }
+.navbar__mobile-subnav { display: none; flex-direction: column; padding: 4px 0 8px; }
+.navbar__mobile-accordion.is-open .navbar__mobile-subnav { display: flex; }
+.navbar__mobile-subnav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.navbar__mobile-subnav a:hover { color: var(--signal); }
+.navbar__mobile-toggles { padding: 12px 4px; }
+
+/* ──── BUTTONS (.btn — voor navbar/modal/cookie) ──── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--r-pill);
+  padding: 13px 22px;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.btn--primary { background: var(--ink); color: var(--paper); }
+.btn--primary:hover { background: var(--signal); transform: translateY(-1px); box-shadow: 0 8px 24px var(--signal-glow); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
+.btn--ghost:hover { border-color: var(--ink); }
+.btn--outline { background: var(--cream); color: var(--ink); border-color: var(--rule-strong); }
+.btn--outline:hover { border-color: var(--ink); }
+.btn--sm { padding: 9px 16px; font-size: 14px; }
+.btn--lg { padding: 15px 26px; font-size: 16px; }
+.btn--xl { padding: 18px 32px; font-size: 16px; }
+.btn--full { width: 100%; }
+
+/* ──── HERO ──── */
+.hero {
+  padding: 80px 48px 120px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 460px;
+  gap: 80px;
+  align-items: center;
+}
+.hero-main { min-width: 0; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--signal-deep);
+  margin-bottom: 28px;
+  padding: 6px 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-pill);
+  background: var(--cream);
+}
+.hero-badge .dot {
+  width: 6px; height: 6px;
+  background: var(--signal);
+  border-radius: 50%;
+}
+.hero-title-wrap {
+  position: relative;
+  display: block;
+  padding: 24px;
+  margin: 0 -24px;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 350;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+}
+.hero-title .accent {
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+  color: var(--signal);
+  font-weight: 350;
+}
+.measure-corner {
+  position: absolute;
+  width: 12px; height: 12px;
+  border: 1px solid var(--rule-strong);
+  transition: border-color 0.3s;
+}
+.measure-corner.tl { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+.measure-corner.tr { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+.measure-corner.bl { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+.measure-corner.br { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+.hero-title-wrap:hover .measure-corner { border-color: var(--signal); }
+.hero-sub {
+  margin-top: 40px;
+  max-width: 540px;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.cta-row { display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
+.cta-primary, .cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 14px 24px;
+  border-radius: var(--r-pill);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.cta-primary { background: var(--ink); color: var(--paper); }
+.cta-primary:hover { background: var(--signal); transform: translateY(-1px); box-shadow: 0 8px 24px var(--signal-glow); }
+.cta-secondary { color: var(--ink); border: 1px solid var(--rule); background: var(--cream); }
+.cta-secondary:hover { border-color: var(--ink); }
+.cta-primary::after, .cta-secondary::after { content: '→'; transition: transform 0.25s; }
+.cta-primary:hover::after, .cta-secondary:hover::after { transform: translateX(3px); }
+.hero-proof {
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+
+/* ──── HERO DASHBOARD (single panel — Website) ──── */
+.dashboard {
+  background: var(--cream);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+}
+.dash-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-soft);
+}
+.dash-window-controls { display: flex; gap: 6px; margin-right: 8px; }
+.dash-window-controls span {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--rule-strong);
+}
+.dash-tab {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+.dash-live {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--moss);
+}
+.dash-live::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--moss);
+}
+.dash-body { padding: 20px; }
+.dash-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 450;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.metric {
+  padding: 12px;
+  background: var(--paper);
+  border-radius: 10px;
+  border: 1px solid var(--rule);
+}
+.metric-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin-bottom: 4px;
+}
+.metric-value {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 450;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.metric-change {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--moss);
+  margin-top: 3px;
+  font-weight: 500;
+}
+.spark {
+  height: 70px;
+  padding: 8px;
+  background: var(--paper);
+  border-radius: 10px;
+  border: 1px solid var(--rule);
+}
+.spark svg { width: 100%; height: 100%; }
+.chart__area { opacity: 0; transition: opacity 1.1s ease 0.2s; }
+.chart__area.animated { opacity: 1; }
+.chart__line {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  transition: stroke-dashoffset 1.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.chart__line.animated { stroke-dashoffset: 0; }
+.spark-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-top: 8px;
+  padding: 0 4px;
+}
+
+/* ──── TL;DR ──── */
+.tldr-wrap { padding: 24px 48px 48px; }
+.tldr {
+  background: var(--cream);
+  border-radius: var(--r-md);
+  padding: 24px 32px;
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--signal);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  align-items: start;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.tldr-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--signal-deep);
+  padding-top: 4px;
+}
+.tldr-text {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+  font-weight: 400;
+}
+
+/* ──── TICKER ──── */
+.ticker-wrap {
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-soft);
+  overflow: hidden;
+  position: relative;
+}
+.ticker-wrap::before, .ticker-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.ticker-wrap::before { left: 0; background: linear-gradient(90deg, var(--paper-soft), transparent); }
+.ticker-wrap::after { right: 0; background: linear-gradient(-90deg, var(--paper-soft), transparent); }
+.ticker {
+  display: flex;
+  gap: 52px;
+  white-space: nowrap;
+  animation: ticker-scroll 48s linear infinite;
+  width: max-content;
+}
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-variation-settings: 'SOFT' 60;
+  flex-shrink: 0;
+}
+.tool .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--signal);
+  flex-shrink: 0;
+}
+
+/* ──── SECTIONS ──── */
+.section { padding: 96px 48px; position: relative; }
+.section-head {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 32px;
+  margin-bottom: 56px;
+  align-items: start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+  padding-top: 12px;
+  border-top: 2px solid var(--signal);
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5.5vw, 72px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+.section-title .accent {
+  font-style: italic;
+  color: var(--signal);
+  font-variation-settings: 'SOFT' 100, 'WONK' 1;
+}
+.section-sub {
+  margin-top: 18px;
+  max-width: 620px;
+  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.55;
+}
+.section-cta { text-align: center; margin-top: 40px; }
+
+/* ──── VOOR WIE ──── */
+.voor-wie-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.vw-card {
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  padding: 28px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+.vw-card:hover {
+  background: var(--paper);
+  border-color: var(--rule-strong);
+  transform: translateY(-2px);
+}
+.vw-quote {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+.vw-quote::before { content: '«'; color: var(--signal); margin-right: 4px; }
+.vw-quote::after { content: '»'; color: var(--signal); margin-left: 2px; }
+.vw-desc { font-size: 15px; line-height: 1.55; color: var(--ink-soft); }
+.not-for {
+  margin-top: 32px;
+  padding: 20px 28px;
+  background: var(--paper-soft);
+  border-radius: var(--r-md);
+  border: 1px dashed var(--rule-strong);
+}
+.not-for-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+  margin-bottom: 10px;
+}
+.not-for-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.not-for-item {
+  font-size: 13px;
+  padding: 6px 12px;
+  background: var(--paper);
+  border-radius: var(--r-pill);
+  color: var(--ink-soft);
+  text-decoration: line-through;
+  text-decoration-color: var(--ink-faint);
+}
+
+/* ──── DIENSTEN (blueprint flow) ──── */
+.diensten-flow { margin-top: 8px; }
+.diensten-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  position: relative;
+  margin-bottom: 48px;
+}
+.diensten-row::before {
+  content: '';
+  position: absolute;
+  left: 16%; right: 16%;
+  bottom: -32px;
+  height: 1px;
+  background: var(--rule-strong);
+}
+.diensten-row::after {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: -52px;
+  width: 1px; height: 24px;
+  background: var(--rule-strong);
+  transform: translateX(-50%);
+}
+.node {
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 28px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.node:hover {
+  border-color: var(--signal);
+  background: var(--paper);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(31, 24, 20, 0.08);
+}
+.node-id {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.node-id::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--signal);
+  border-radius: 50%;
+}
+.node-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 450;
+  letter-spacing: -0.015em;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.node-title .accent { font-style: italic; color: var(--signal); font-variation-settings: 'SOFT' 100, 'WONK' 1; }
+.node-desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 16px;
+}
+.node-desc small { opacity: 0.7; }
+.node-link {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--signal-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--rule);
+}
+.node:hover .node-link { gap: 10px; }
+.diensten-output {
+  background: linear-gradient(135deg, var(--cream), var(--paper-soft));
+  border: 1px solid var(--signal);
+  border-radius: 14px;
+  padding: 32px 36px;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.diensten-output:hover { transform: translateY(-2px); box-shadow: 0 16px 32px rgba(255, 77, 46, 0.12); }
+.diensten-output .node-id { justify-content: center; color: var(--signal-deep); }
+.diensten-output .node-title { margin-bottom: 8px; }
+.diensten-output .node-desc { margin-bottom: 14px; }
+.diensten-output .node-link { justify-content: center; display: inline-flex; margin-top: 0; }
+
+/* ──── RESULTATEN ──── */
+.resultaten-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.res-card {
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  padding: 32px 28px;
+}
+.res-metric {
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 350;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--signal);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.res-desc { font-size: 15px; line-height: 1.5; margin-bottom: 16px; }
+.res-source {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  font-style: normal;
+  padding-top: 12px;
+  border-top: 1px dashed var(--rule);
+  display: block;
+}
+.res-disclaimer {
+  margin: 24px auto 0;
+  font-size: 13px;
+  color: var(--ink-faint);
+  text-align: center;
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+/* ──── AANPAK ──── */
+.process-steps { display: flex; flex-direction: column; gap: 4px; }
+.process-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  padding: 28px;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  transition: background 0.25s, transform 0.25s, border-color 0.25s;
+}
+.process-step:hover {
+  background: var(--paper);
+  transform: translateX(4px);
+  border-color: var(--rule-strong);
+}
+.process-num {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 350;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--signal);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+  font-style: italic;
+}
+.process-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 450;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+}
+.process-desc { font-size: 15px; color: var(--ink-soft); line-height: 1.55; }
+
+/* ──── PRICING ──── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.price-card {
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  padding: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.price-card.featured {
+  border-color: var(--signal);
+  background: linear-gradient(180deg, var(--cream), var(--paper-soft));
+}
+.price-badge {
+  position: absolute;
+  top: -12px; left: 28px;
+  background: var(--signal);
+  color: var(--paper);
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.price-name {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.price-sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin-bottom: 20px;
+}
+.price-desc {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px dashed var(--rule);
+}
+.price-features { list-style: none; margin-bottom: 24px; flex: 1; }
+.price-features li {
+  padding: 8px 0;
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.price-features li.yes::before { content: '✓'; color: var(--moss); font-weight: 600; flex-shrink: 0; }
+.price-features li.no::before { content: '✕'; color: var(--ink-faint); flex-shrink: 0; }
+.price-features li.no { color: var(--ink-faint); text-decoration: line-through; text-decoration-color: var(--ink-faint); }
+.price-cta { width: 100%; justify-content: center; }
+.pricing-foot {
+  margin: 24px auto 0;
+  font-size: 14px;
+  color: var(--ink-faint);
+  text-align: center;
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+/* ──── ENTITY ──── */
+.entity {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 24px;
+  margin: 0 48px;
+  padding: 64px;
+}
+.entity-title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: var(--paper);
+}
+.entity-title .accent { font-style: italic; color: var(--signal-warm); font-variation-settings: 'SOFT' 100, 'WONK' 1; }
+.entity-lead {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: var(--paper);
+  max-width: 800px;
+  letter-spacing: -0.01em;
+}
+.entity-body { font-size: 16px; line-height: 1.65; color: #C9BFAE; max-width: 800px; }
+.entity-body strong { color: var(--signal-warm); font-weight: 500; }
+
+/* ──── FAQ (bestaande .faq__* markup, paper-restyle) ──── */
+.faq-wrap {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.faq-side {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+  padding-top: 12px;
+  border-top: 2px solid var(--signal);
+  position: sticky;
+  top: 100px;
+}
+.faq__list { max-width: 100%; list-style: none; margin: 0; padding: 0; }
+.faq__item { border-bottom: 1px solid var(--rule); }
+.faq__item:first-child { border-top: 1px solid var(--rule); }
+.faq__question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 28px 0;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  transition: color 0.2s;
+}
+.faq__question:hover { color: var(--signal); }
+.faq__icon {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  color: var(--ink-faint);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s, color 0.3s, border-color 0.3s;
+}
+.faq__question[aria-expanded="true"] .faq__icon {
+  transform: rotate(180deg);
+  background: var(--signal);
+  border-color: var(--signal);
+  color: var(--paper);
+}
+.faq__answer { padding-bottom: 28px; }
+.faq__answer[hidden] { display: none; }
+.faq__answer p {
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 720px;
+}
+.faq-wrap .section-title { margin-bottom: 16px; }
+.faq-wrap .section-sub { margin-top: 0; margin-bottom: 40px; }
+
+/* ──── CTA ──── */
+.cta-section { padding: 96px 48px; text-align: center; }
+.cta-block {
+  max-width: 920px;
+  margin: 0 auto;
+  background: var(--cream);
+  border-radius: 24px;
+  border: 1px solid var(--rule);
+  padding: 72px 48px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, var(--signal-tint), transparent 60%);
+  pointer-events: none;
+}
+.cta-block > * { position: relative; }
+.cta-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--signal-deep);
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 350;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  margin-bottom: 24px;
+}
+.cta-title .accent {
+  font-style: italic;
+  color: var(--signal);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+}
+.cta-sub { font-size: 18px; line-height: 1.55; color: var(--ink-soft); max-width: 640px; margin: 0 auto 36px; }
+.cta-trust {
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ──── FOOTER (gedeelde component, paper-restyle) ──── */
+.footer { border-top: 1px solid var(--rule); background: var(--paper-soft); }
+.footer .container { padding: 64px 48px 40px; }
+.footer__accent { width: 48px; height: 2px; background: var(--signal); margin-bottom: 40px; }
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 0.8fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer__logo { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink); }
+.footer__logo svg { width: 26px; height: 26px; }
+.footer__logo-text {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+}
+.footer__logo-accent { font-style: italic; color: var(--signal); font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1; }
+.footer__tagline { margin-top: 12px; font-family: var(--font-display); font-style: italic; color: var(--ink-soft); font-size: 17px; }
+.footer__nav { display: contents; }
+.footer__nav-group + .footer__nav-group { margin-top: 0; }
+.footer__nav-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin-bottom: 14px;
+}
+.footer__nav ul, .footer__social-links { list-style: none; }
+.footer__nav li { padding: 5px 0; }
+.footer__nav-link { color: var(--ink); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.footer__nav-link:hover { color: var(--signal); }
+.footer__nav-link--cta { color: var(--signal-deep); font-weight: 500; }
+.footer__social-links { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+.footer__social-link { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); text-decoration: none; font-size: 14px; }
+.footer__social-link:hover { color: var(--signal); }
+.footer__social-link svg { width: 18px; height: 18px; }
+.footer__bottom {
+  border-top: 1px solid var(--rule);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer__copyright { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); }
+.footer__legal { display: inline-flex; gap: 16px; }
+.footer__legal-link { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); text-decoration: none; }
+.footer__legal-link:hover { color: var(--ink); }
+
+/* ──── MODAL + FORM ──── */
+.modal { position: fixed; inset: 0; z-index: 100; display: none; }
+.modal.is-open { display: block; }
+.modal__overlay { position: absolute; inset: 0; background: rgba(31, 24, 20, 0.55); }
+.modal__card {
+  position: relative;
+  max-width: 560px;
+  margin: 5vh auto;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-lg);
+  padding: 40px;
+}
+.modal__close {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 36px; height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  color: var(--ink);
+  cursor: pointer;
+}
+.modal__close:hover { border-color: var(--ink); }
+.modal__title { font-family: var(--font-display); font-size: 28px; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 8px; }
+.modal__subtitle { color: var(--ink-soft); font-size: 15px; margin-bottom: 24px; }
+.modal__form { display: flex; flex-direction: column; gap: 16px; }
+.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form__group { display: flex; flex-direction: column; gap: 6px; }
+.form__label { font-size: 13px; font-weight: 500; color: var(--ink); }
+.form__label-optional { color: var(--ink-faint); font-weight: 400; }
+.form__input, .form__select, .form__textarea {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+  padding: 12px 14px;
+  width: 100%;
+}
+.form__input:focus, .form__select:focus, .form__textarea:focus { outline: none; border-color: var(--signal); }
+.form__textarea { resize: vertical; min-height: 80px; }
+.form__submit { margin-top: 8px; }
+.form__disclaimer { font-size: 12px; color: var(--ink-faint); text-align: center; line-height: 1.5; }
+.form__link { color: var(--signal-deep); }
+.modal__success { text-align: center; padding: 20px 0; }
+.success__icon {
+  width: 56px; height: 56px;
+  margin: 0 auto 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+}
+.modal__success h3 { font-family: var(--font-display); font-size: 24px; font-weight: 400; margin-bottom: 8px; }
+.modal__success p { color: var(--ink-soft); font-size: 15px; line-height: 1.6; }
+.section__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--signal-deep);
+  display: inline-block;
+}
+
+/* ──── COOKIE BANNER ──── */
+.cookie-banner {
+  position: fixed;
+  left: 24px; right: 24px; bottom: 24px;
+  z-index: 90;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  box-shadow: 0 16px 40px rgba(31, 24, 20, 0.14);
+  padding: 16px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+}
+.cookie-banner.is-visible, .cookie-banner--visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.cookie-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.cookie-banner__text { font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+.cookie-banner__text a { color: var(--signal-deep); }
+.cookie-banner__actions { display: flex; gap: 8px; flex-shrink: 0; }
+
+/* ──── WHATSAPP BUTTON ──── */
+.wa-button {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  z-index: 80;
+  width: 56px; height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  transition: transform 0.25s;
+}
+.wa-button:hover { transform: scale(1.06); }
+.wa-button__tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  white-space: nowrap;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 6px 10px;
+  border-radius: var(--r-sm);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.wa-button:hover .wa-button__tooltip { opacity: 1; }
+
+/* ──── REDUCED MOTION ──── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .ticker { animation: none; }
+}
+
+/* ──── RESPONSIVE ──── */
+@media (max-width: 1080px) {
+  .hero { grid-template-columns: 1fr; gap: 48px; }
+  .footer__inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 980px) {
+  .navbar__container { padding: 14px 24px; }
+  .navbar__nav, .navbar__actions .btn { display: none; }
+  .navbar__hamburger { display: flex; }
+  .hero { padding: 48px 24px 64px; }
+  .hero-title-wrap { padding: 16px; margin: 0 -16px; }
+  .tldr-wrap { padding: 24px 24px 40px; }
+  .tldr { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
+  .section { padding: 72px 24px; }
+  .cta-section { padding: 72px 24px; }
+  .section-head { grid-template-columns: 1fr; gap: 12px; }
+  .section-label, .faq-side { border-top: none; padding-top: 0; }
+  .voor-wie-grid { grid-template-columns: 1fr; }
+  .diensten-row { grid-template-columns: 1fr; gap: 16px; }
+  .diensten-row::before, .diensten-row::after { display: none; }
+  .diensten-output { max-width: 100%; margin-top: 16px; }
+  .resultaten-grid, .pricing-grid { grid-template-columns: 1fr; }
+  .process-step { grid-template-columns: 1fr; gap: 8px; }
+  .faq-wrap { grid-template-columns: 1fr; gap: 8px; }
+  .faq-side { position: static; }
+  .entity { margin: 0 24px; padding: 40px 28px; }
+  .footer .container { padding: 48px 24px 32px; }
+  .footer__inner { grid-template-columns: 1fr; gap: 28px; }
+  .cta-block { padding: 48px 24px; }
+}
+@media (max-width: 560px) {
+  .form__row { grid-template-columns: 1fr; }
+  .modal__card { padding: 28px 20px; margin: 2vh auto; }
+  .cookie-banner__inner { flex-direction: column; align-items: flex-start; }
+  .cookie-banner__actions { width: 100%; }
+  .cookie-banner__actions .btn { flex: 1; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; }
+}
+  </style>
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -218,12 +1549,11 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Direct naar inhoud</a>
 
-  <a class="skip-link" href="#main">Direct naar inhoud</a>
+<div class="page">
 
-  <!-- ═══════════════════════════════════════
-       NAVBAR
-  ═══════════════════════════════════════ -->
+  <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="navbar" id="navbar">
     <div class="navbar__container">
 
@@ -336,721 +1666,448 @@
 
   <main id="main">
 
-    <!-- ═══════════════════════════════════════
-         HERO
-    ═══════════════════════════════════════ -->
-    <section class="hero" id="hero" aria-labelledby="hero-heading">
-      <div class="hero__bg-grid" aria-hidden="true"></div>
-      <div class="hero__glow" aria-hidden="true"></div>
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-main">
+        <div class="hero-badge">
+          <span class="dot" aria-hidden="true"></span>
+          Website · GEO/AEO · Workflow Automatisering
+        </div>
+        <div class="hero-title-wrap">
+          <span class="measure-corner tl" aria-hidden="true"></span>
+          <span class="measure-corner tr" aria-hidden="true"></span>
+          <span class="measure-corner bl" aria-hidden="true"></span>
+          <span class="measure-corner br" aria-hidden="true"></span>
+          <h1 class="hero-title" id="hero-heading">Meer resultaat.<br><span class="accent">Minder handwerk.</span></h1>
+        </div>
+        <p class="hero-sub hero__subtitle">We bouwen websites die klanten opleveren, en we automatiseren het werk dat jij niet meer wilt doen. Voor bedrijven die willen groeien zonder dat het hoofd erbij in moet.</p>
+        <div class="cta-row">
+          <button type="button" class="cta-primary" data-modal="open">Gratis strategiegesprek</button>
+          <a href="#aanpak" class="cta-secondary">Bekijk aanpak</a>
+        </div>
+        <p class="hero-proof">Vanuit Maastricht voor heel Nederland en België. Voor bedrijven van een eenpitter tot honderd man.</p>
+      </div>
 
-      <div class="container">
-        <div class="hero__layout">
-
-          <!-- Left: Text -->
-          <div class="hero__text">
-            <div class="hero__badge reveal">
-              <span class="hero__badge-dot" aria-hidden="true"></span>
-              <span>Website · GEO/AEO · Workflow Automatisering</span>
+      <aside class="dashboard" aria-label="Voorbeeld van een klantdashboard">
+        <div class="dash-tabs">
+          <div class="dash-window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+          <span class="dash-tab">Website</span>
+          <span class="dash-live">Live</span>
+        </div>
+        <div class="dash-body" id="tab-website">
+          <div class="dash-title">Klant: voorbeeld B2B</div>
+          <div class="metrics">
+            <div class="metric">
+              <div class="metric-label">Bezoekers</div>
+              <div class="metric-value">2.847</div>
+              <div class="metric-change">↑ 34%</div>
             </div>
+            <div class="metric">
+              <div class="metric-label">Conversie</div>
+              <div class="metric-value">4,2%</div>
+              <div class="metric-change">↑ 1,1%</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Leads</div>
+              <div class="metric-value">119</div>
+              <div class="metric-change">↑ 27%</div>
+            </div>
+          </div>
+          <div class="spark">
+            <svg viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="sparkGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#FF4D2E" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#FF4D2E" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path class="chart__area" d="M0,50 L40,45 L80,48 L120,32 L160,28 L200,18 L240,14 L280,8 L300,4 L300,60 L0,60 Z" fill="url(#sparkGrad)"/>
+              <path class="chart__line" d="M0,50 L40,45 L80,48 L120,32 L160,28 L200,18 L240,14 L280,8 L300,4" stroke="#FF4D2E" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="spark-labels" aria-hidden="true">
+            <span>Ma</span><span>Di</span><span>Wo</span><span>Do</span><span>Vr</span><span>Za</span><span>Zo</span>
+          </div>
+        </div>
+      </aside>
+    </section>
 
-            <h1 class="hero__title reveal" id="hero-heading">
-              Meer resultaat.<br>
-              <span class="hero__title-accent">Minder handwerk.</span>
-            </h1>
+    <!-- ═══════════ TL;DR ═══════════ -->
+    <div class="tldr-wrap">
+      <div class="tldr" role="note" aria-label="Samenvatting">
+        <div class="tldr-label">TL;DR</div>
+        <div class="tldr-text">Kelvantis is een AI-bureau uit Maastricht. We bouwen websites die klanten opleveren, zorgen dat je gevonden wordt in Google én ChatGPT, en automatiseren het saaie werk binnen je bedrijf. Voor ondernemers in Nederland en België, van eenpitter tot bedrijven met honderd man personeel.</div>
+      </div>
+    </div>
 
-            <p class="hero__subtitle reveal">
-              We bouwen websites die klanten opleveren, en we automatiseren het werk dat jij niet meer wilt doen. Voor bedrijven die willen groeien zonder dat het hoofd erbij in moet.
-            </p>
+    <!-- ═══════════ TICKER ═══════════ -->
+    <section class="ticker-wrap" aria-label="Technologie die we gebruiken">
+      <div class="ticker" aria-hidden="true">
+        <span class="tool"><span class="dot"></span>Webflow</span>
+        <span class="tool"><span class="dot"></span>n8n</span>
+        <span class="tool"><span class="dot"></span>Claude AI</span>
+        <span class="tool"><span class="dot"></span>Notion</span>
+        <span class="tool"><span class="dot"></span>Make.com</span>
+        <span class="tool"><span class="dot"></span>Zapier</span>
+        <span class="tool"><span class="dot"></span>OpenAI</span>
+        <span class="tool"><span class="dot"></span>Airtable</span>
+        <span class="tool"><span class="dot"></span>HubSpot</span>
+        <span class="tool"><span class="dot"></span>Stripe</span>
+        <span class="tool"><span class="dot"></span>Google Search Console</span>
+        <span class="tool"><span class="dot"></span>WordPress</span>
+        <span class="tool"><span class="dot"></span>Webflow</span>
+        <span class="tool"><span class="dot"></span>n8n</span>
+        <span class="tool"><span class="dot"></span>Claude AI</span>
+        <span class="tool"><span class="dot"></span>Notion</span>
+        <span class="tool"><span class="dot"></span>Make.com</span>
+        <span class="tool"><span class="dot"></span>Zapier</span>
+        <span class="tool"><span class="dot"></span>OpenAI</span>
+        <span class="tool"><span class="dot"></span>Airtable</span>
+        <span class="tool"><span class="dot"></span>HubSpot</span>
+        <span class="tool"><span class="dot"></span>Stripe</span>
+        <span class="tool"><span class="dot"></span>Google Search Console</span>
+        <span class="tool"><span class="dot"></span>WordPress</span>
+      </div>
+    </section>
 
-            <div class="hero__ctas reveal">
-              <button type="button" class="btn btn--primary btn--lg" data-modal="open">
-                <span>Gratis strategiegesprek</span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- ═══════════ VOOR WIE ═══════════ -->
+    <section class="section" id="voor-wie" aria-labelledby="voor-wie-heading">
+      <header class="section-head">
+        <div class="section-label">§ 01 / Voor wie</div>
+        <div>
+          <h2 class="section-title" id="voor-wie-heading">Voor jou, als je dit <span class="accent">herkent</span>.</h2>
+          <p class="section-sub">Je bent niet de enige ondernemer die vastloopt op deze uitdagingen. Kelvantis werkt met B2B bedrijven die concrete problemen hebben op het vlak van online zichtbaarheid, leadgeneratie of inefficiënte werkprocessen.</p>
+        </div>
+      </header>
+
+      <div class="voor-wie-grid">
+        <article class="vw-card">
+          <h3 class="vw-quote">Leads komen binnen, maar opvolging is een chaos</h3>
+          <p class="vw-desc">Aanvragen worden te laat of helemaal niet opgevolgd. Je verliest deals niet omdat het product niet goed is, maar omdat het proces faalt. Wij automatiseren de opvolging volledig.</p>
+        </article>
+        <article class="vw-card">
+          <h3 class="vw-quote">We verliezen uren aan handmatig herhaalwerk</h3>
+          <p class="vw-desc">Facturen verwerken, CRM bijhouden, rapportages opstellen, e-mails kopiëren. Werk dat een systeem kan doen terwijl jij bezig bent met wat echt telt.</p>
+        </article>
+        <article class="vw-card">
+          <h3 class="vw-quote">Onze website converteert niet</h3>
+          <p class="vw-desc">Bezoekers komen, bekijken en vertrekken zonder te converteren. Je hebt een website die er mooi uitziet, maar die niet verkoopt. Wij bouwen voor conversie, niet voor decoratie.</p>
+        </article>
+        <article class="vw-card">
+          <h3 class="vw-quote">We willen AI integreren maar weten niet hoe</h3>
+          <p class="vw-desc">Je ziet het potentieel van AI maar het ontbreekt aan overzicht, richting en iemand die het concreet kan bouwen. Geen hype, geen theorie, wij implementeren wat werkt.</p>
+        </article>
+        <article class="vw-card">
+          <h3 class="vw-quote">We zijn slecht vindbaar in Google</h3>
+          <p class="vw-desc">Je concurrenten staan bovenaan en pakken de leads die van jou hadden kunnen zijn. Wij zorgen dat klanten je vinden, of ze nu via Google zoeken of via ChatGPT vragen. We bouwen daar een systeem voor en laten zien wat het oplevert.</p>
+        </article>
+        <article class="vw-card">
+          <h3 class="vw-quote">We hebben een complete digitale infrastructuur nodig</h3>
+          <p class="vw-desc">Van een verouderde website tot een totale herbouw van je digitale stack. Website, GEO/AEO, automations en AI-integraties, wij ontwerpen en bouwen het als één samenhangend systeem.</p>
+        </article>
+      </div>
+
+      <div class="not-for">
+        <p class="not-for-title">Niet voor jou als je zoekt naar:</p>
+        <div class="not-for-list">
+          <span class="not-for-item">Social media beheer</span>
+          <span class="not-for-item">Maandelijks ads-beheer</span>
+          <span class="not-for-item">Dagelijkse content creatie</span>
+          <span class="not-for-item">Uurtje-factuurtje werk</span>
+        </div>
+      </div>
+
+      <div class="section-cta">
+        <button type="button" class="cta-primary" data-modal="open">Herken jij dit? Gratis gesprek plannen</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ DIENSTEN ═══════════ -->
+    <section class="section" id="diensten-overzicht">
+      <header class="section-head">
+        <div class="section-label">§ 02 / Wat we doen</div>
+        <div>
+          <h2 class="section-title">Wat we voor je <span class="accent">bouwen</span></h2>
+        </div>
+      </header>
+
+      <div class="diensten-flow">
+        <div class="diensten-row">
+          <a href="/website-laten-maken/" class="node">
+            <div class="node-id">node_01 — Web</div>
+            <h3 class="node-title">Een website die klanten <span class="accent">oplevert</span></h3>
+            <p class="node-desc">Geen digitale visitekaart, maar een site die bezoekers omzet in aanvragen. Snel, helder, en gemaakt voor wie via Google of een aanbeveling bij je terechtkomt.</p>
+            <span class="node-link">Bekijk websitediensten →</span>
+          </a>
+          <a href="/workflow-automatisering/" class="node">
+            <div class="node-id">node_02 — Automation</div>
+            <h3 class="node-title">Het saaie werk laten <span class="accent">verdwijnen</span></h3>
+            <p class="node-desc">Offertes versturen, leads opvolgen, facturen verwerken, klantgegevens overzetten. Werk dat een systeem prima zelf kan, terwijl jij doet waar je goed in bent. Wij regelen de workflow automatisering.</p>
+            <span class="node-link">Bekijk automatisering →</span>
+          </a>
+          <a href="/ai-implementatie/" class="node">
+            <div class="node-id">node_03 — AI</div>
+            <h3 class="node-title">AI die je bedrijf <span class="accent">snapt</span></h3>
+            <p class="node-desc">Een chatbot die jouw klanten helpt, ook 's avonds. Een assistent die jouw documenten kent. Geen losse hype, maar AI die past bij hoe jij werkt.</p>
+            <span class="node-link">Bekijk AI diensten →</span>
+          </a>
+        </div>
+
+        <a href="/geo-aeo/" class="diensten-output">
+          <div class="node-id">output — GEO &amp; AEO</div>
+          <h3 class="node-title">Gevonden worden in Google én <span class="accent">ChatGPT</span></h3>
+          <p class="node-desc">Steeds meer mensen zoeken niet alleen op Google, maar ook in ChatGPT en Perplexity. Wij zorgen dat jouw bedrijf in beide soorten zoekresultaten naar boven komt. <small>Dit heet GEO en AEO.</small></p>
+          <span class="node-link">Bekijk GEO &amp; AEO →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════ RESULTATEN ═══════════ -->
+    <section class="section" id="resultaten" aria-labelledby="resultaten-heading">
+      <header class="section-head">
+        <div class="section-label">§ 03 / Branche-onderzoek</div>
+        <div>
+          <h2 class="section-title" id="resultaten-heading">Wat onderzoek <span class="accent">laat zien</span></h2>
+          <p class="section-sub">Gedocumenteerde cijfers uit B2B-marketing- en automatiseringsonderzoek, geen eigen claims.</p>
+        </div>
+      </header>
+
+      <div class="resultaten-grid">
+        <div class="res-card">
+          <div class="res-metric">+40%</div>
+          <p class="res-desc">meer gekwalificeerde leads met AI-assisted marketing</p>
+          <cite class="res-source">Bron: HubSpot State of Marketing 2024</cite>
+        </div>
+        <div class="res-card">
+          <div class="res-metric">8–12 uur</div>
+          <p class="res-desc">per week bespaard op repetitief werk via automatisering</p>
+          <cite class="res-source">Bron: McKinsey State of AI 2024</cite>
+        </div>
+        <div class="res-card">
+          <div class="res-metric">2.5×</div>
+          <p class="res-desc">hogere ROI op marketingbudget met marketing automation</p>
+          <cite class="res-source">Bron: Forrester Total Economic Impact</cite>
+        </div>
+      </div>
+
+      <p class="res-disclaimer">Cijfers zijn brancheanalyses uit gepubliceerd onderzoek. Individuele resultaten hangen af van uitgangssituatie, sector en implementatie-diepte.</p>
+      <div class="section-cta">
+        <a href="/werkwijze/" class="cta-secondary">Bekijk hoe we dit bereiken</a>
+      </div>
+    </section>
+
+    <!-- ═══════════ AANPAK ═══════════ -->
+    <section class="section" id="aanpak" aria-labelledby="aanpak-heading">
+      <header class="section-head">
+        <div class="section-label">§ 04 / Aanpak</div>
+        <div>
+          <h2 class="section-title" id="aanpak-heading">Van gesprek tot <span class="accent">groei</span>. In vier stappen.</h2>
+          <p class="section-sub">Geen maandenlange trajecten. Geen vaag advies. Wij bouwen en lanceren snel, zodat jij zo snel mogelijk resultaat ziet.</p>
+        </div>
+      </header>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="process-num" aria-hidden="true">01</div>
+          <div>
+            <h3 class="process-title">Strategiegesprek</h3>
+            <p class="process-desc">We starten met een gratis gesprek om jouw situatie te begrijpen, knelpunten te identificeren en de grootste groeikansen bloot te leggen. Geen verplichtingen, wel concrete inzichten.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-num" aria-hidden="true">02</div>
+          <div>
+            <h3 class="process-title">Systeem ontwerp</h3>
+            <p class="process-desc">Op basis van jouw doelen ontwerpen we een op maat gemaakt digitaal systeem. Je krijgt een helder plan met exacte tools, koppelingen en verwachte resultaten, voordat we ook maar één regel code schrijven.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-num" aria-hidden="true">03</div>
+          <div>
+            <h3 class="process-title">Bouwen &amp; koppelen</h3>
+            <p class="process-desc">We bouwen alles van A tot Z en koppelen alle tools naadloos aan elkaar. Website, AI chatbot, automations, CRM, jij hoeft nergens naar om te kijken. Wij houden je op de hoogte via wekelijkse updates.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-num" aria-hidden="true">04</div>
+          <div>
+            <h3 class="process-title">Live &amp; schaalbaar</h3>
+            <p class="process-desc">Jouw systeem gaat live en begint direct voor je te werken. We monitoren de prestaties, optimaliseren waar nodig, en schalen het systeem mee zodra jij klaar bent voor de volgende groeistap.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-cta">
+        <button type="button" class="cta-primary" data-modal="open">Zo ziet jouw eerste stap eruit</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRICING ═══════════ -->
+    <section class="section" id="prijzen" aria-labelledby="prijzen-heading">
+      <header class="section-head">
+        <div class="section-label">§ 05 / Pakketten</div>
+        <div>
+          <h2 class="section-title" id="prijzen-heading">Drie pakketten. Één duidelijk <span class="accent">systeem</span>.</h2>
+          <p class="section-sub">Geen uurtje-factuurtje, geen verborgen kosten. Vraag een offerte aan en we bespreken samen wat past bij jouw situatie en doelen.</p>
+        </div>
+      </header>
+
+      <div class="pricing-grid">
+        <article class="price-card" aria-label="Foundation pakket">
+          <h3 class="price-name">Foundation</h3>
+          <p class="price-sub">Eenmalige investering · Prijs op aanvraag</p>
+          <p class="price-desc">De basis. Een nette website die snel laadt, op de telefoon werkt zoals het hoort, en zorgt dat klanten je vinden via Google.</p>
+          <ul class="price-features">
+            <li class="yes">Een website die aanvragen oplevert (t/m 8 pagina's)</li>
+            <li class="yes">Klaar voor Google én ChatGPT</li>
+            <li class="yes">Contactformulier met e-mailnotificaties</li>
+            <li class="yes">Google Search Console</li>
+            <li class="yes">Werkt op de telefoon zoals het hoort</li>
+            <li class="yes">Razendsnelle laadtijd</li>
+            <li class="no">AI chatbot</li>
+            <li class="no">Automatische opvolging van leads</li>
+            <li class="no">Aansluiting op je klantsysteem</li>
+          </ul>
+          <button type="button" class="btn btn--outline btn--full price-cta" data-modal="open" data-pakket="Foundation">Bespreek dit pakket</button>
+        </article>
+
+        <article class="price-card featured" aria-label="Growth System pakket, onze aanbeveling">
+          <div class="price-badge">Onze aanbeveling</div>
+          <h3 class="price-name">Growth System</h3>
+          <p class="price-sub">Eenmalige investering · Prijs op aanvraag</p>
+          <p class="price-desc">Het complete pakket. Website, chatbot en automatisering die samenwerken zodat er ook leads binnenkomen als jij niet achter je laptop zit.</p>
+          <ul class="price-features">
+            <li class="yes">Alles van Foundation</li>
+            <li class="yes">AI chatbot getraind op jouw bedrijf</li>
+            <li class="yes">Automatische opvolging van leads</li>
+            <li class="yes">Aansluiting op je klantsysteem, zodat niets verdwaalt</li>
+            <li class="yes">E-mailflows die zelf doorlopen</li>
+            <li class="yes">Live overzicht van wat er gebeurt</li>
+            <li class="yes">Agenda-koppeling voor de chatbot</li>
+            <li class="yes">30 dagen ondersteuning na livegang</li>
+            <li class="yes">Snelle reactie op vragen</li>
+          </ul>
+          <button type="button" class="btn btn--primary btn--full price-cta" data-modal="open" data-pakket="Growth System">Bespreek dit pakket</button>
+        </article>
+
+        <article class="price-card" aria-label="Advisory pakket">
+          <h3 class="price-name">Advisory</h3>
+          <p class="price-sub">Maandelijks opzegbaar · Prijs op aanvraag</p>
+          <p class="price-desc">Voor wie blijvend wil groeien. Elke maand kijken we samen naar wat werkt, wat beter kan, en bouwen we mee aan de volgende stap.</p>
+          <ul class="price-features">
+            <li class="yes">Maandelijks strategiegesprek (60 min)</li>
+            <li class="yes">Doorlopend bijschaven van wat al draait</li>
+            <li class="yes">Maandelijkse prestatierapportage</li>
+            <li class="yes">Directe WhatsApp/e-mail toegang</li>
+            <li class="yes">Nieuwe automatiseringen en testen</li>
+            <li class="yes">Voorrang bij uitbreidingen</li>
+            <li class="no">Inclusief nieuw systeem bouwen</li>
+            <li class="no">Inclusief Foundation website</li>
+            <li class="no">Inclusief AI chatbot setup</li>
+          </ul>
+          <button type="button" class="btn btn--outline btn--full price-cta" data-modal="open" data-pakket="Advisory">Bespreek dit pakket</button>
+        </article>
+      </div>
+
+      <p class="pricing-foot">Alle pakketten zijn eenmalige investeringen. Advisory is maandelijks opzegbaar. Plan een gratis gesprek, dan bespreken we wat past bij jouw situatie en budget.</p>
+    </section>
+
+    <!-- ═══════════ WAT IS KELVANTIS (entity, AEO) ═══════════ -->
+    <section class="entity" aria-labelledby="entity-heading">
+      <h2 class="entity-title" id="entity-heading">Wat is <span class="accent">Kelvantis</span>?</h2>
+      <p class="entity-lead">Kelvantis is een B2B-bureau uit Maastricht, Nederland, dat websites, GEO/AEO-strategieën en workflow automatisering combineert in één samenhangend systeem. Het bureau is opgericht door Kjell Kuijpers en bedient opdrachtgevers in Nederland en België.</p>
+      <p class="entity-body">De dienstverlening bestaat uit vier kerndomeinen: <strong>website-ontwikkeling</strong> (conversiegericht, technisch geoptimaliseerd, snel), <strong>GEO en AEO</strong> (zichtbaarheid in ChatGPT, Perplexity en Google AI Overviews), <strong>workflow automatisering</strong> (repetitieve processen via n8n en Make.com) en <strong>AI Implementatie</strong> (chatbots, AI-agents en knowledge-integraties). In plaats van losse deeldiensten levert Kelvantis een geïntegreerd systeem waarin elk onderdeel het ander versterkt.</p>
+    </section>
+
+    <!-- ═══════════ FAQ ═══════════ -->
+    <section class="section" id="faq" aria-labelledby="faq-heading">
+      <div class="faq-wrap">
+        <div class="faq-side">§ 06 / FAQ</div>
+        <div>
+          <h2 class="section-title" id="faq-heading">Veelgestelde <span class="accent">vragen</span>.</h2>
+          <p class="section-sub">Staat jouw vraag er niet tussen? Plan een gratis gesprek en we beantwoorden alles direct.</p>
+
+          <ul class="faq__list">
+
+            <li class="faq__item">
+              <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-1">
+                <span>Voor wie is Kelvantis geschikt?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <a href="#aanpak" class="btn btn--ghost btn--lg">
-                Bekijk aanpak
-              </a>
-            </div>
-
-            <p class="hero__proof">
-              Vanuit Maastricht voor heel Nederland en België. Voor bedrijven van een eenpitter tot honderd man.
-            </p>
-          </div>
-
-            <div class="dashboard" role="tablist" aria-label="Dashboard preview">
-
-              <div class="dashboard__header">
-                <div class="dashboard__window-controls" aria-hidden="true">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="dashboard__tabs">
-                  <button type="button" class="dashboard__tab dashboard__tab--active" role="tab" aria-selected="true" aria-controls="tab-website" id="btn-website" data-tab="website">Website</button>
-                  <button type="button" class="dashboard__tab" role="tab" aria-selected="false" aria-controls="tab-ai" id="btn-ai" data-tab="ai">AI</button>
-                  <button type="button" class="dashboard__tab" role="tab" aria-selected="false" aria-controls="tab-automations" id="btn-automations" data-tab="automations">Automations</button>
-                </div>
-                <div class="dashboard__live" aria-label="Systeem is live">
-                  <span class="dashboard__live-dot" aria-hidden="true"></span>
-                  <span>Live</span>
-                </div>
+              <div class="faq__answer" id="faq-1" hidden>
+                <p>Kelvantis werkt met B2B bedrijven, van startup tot enterprise, die concrete problemen hebben op het vlak van online zichtbaarheid, leadgeneratie of inefficiënte werkprocessen. Elke bedrijfsgrootte, elke sector, zolang er een helder probleem is dat we kunnen oplossen met een website, GEO/AEO of workflow automatisering.</p>
               </div>
+            </li>
 
-              <div class="dashboard__body">
-
-                <!-- Website tab -->
-                <div class="dashboard__panel dashboard__panel--active" id="tab-website" role="tabpanel" aria-labelledby="btn-website">
-                  <div class="dashboard__metrics">
-                    <div class="dashboard__metric">
-                      <span class="dashboard__metric-label">Bezoekers</span>
-                      <span class="dashboard__metric-value" aria-label="2.847 bezoekers deze maand">2,847</span>
-                      <span class="dashboard__metric-change" aria-label="stijging 34 procent">↑ 34%</span>
-                    </div>
-                    <div class="dashboard__metric">
-                      <span class="dashboard__metric-label">Conversie</span>
-                      <span class="dashboard__metric-value" aria-label="4.2 procent conversieratio">4.2%</span>
-                      <span class="dashboard__metric-change" aria-label="stijging 1.1 procentpunt">↑ 1.1%</span>
-                    </div>
-                    <div class="dashboard__metric">
-                      <span class="dashboard__metric-label">Leads</span>
-                      <span class="dashboard__metric-value" aria-label="119 leads deze maand">119</span>
-                      <span class="dashboard__metric-change" aria-label="stijging 27 procent">↑ 27%</span>
-                    </div>
-                  </div>
-                  <div class="dashboard__chart">
-                    <svg viewBox="0 0 280 90" class="chart-svg" aria-label="Verkeersgrafiek met stijgende trend">
-                      <defs>
-                        <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stop-color="#05FE82" stop-opacity="0.25"/>
-                          <stop offset="100%" stop-color="#05FE82" stop-opacity="0"/>
-                        </linearGradient>
-                      </defs>
-                      <path class="chart__area" d="M0,75 L40,60 L80,65 L120,42 L160,28 L200,14 L240,7 L280,3 L280,90 L0,90Z" fill="url(#chartGrad)"/>
-                      <path class="chart__line" d="M0,75 L40,60 L80,65 L120,42 L160,28 L200,14 L240,7 L280,3" fill="none" stroke="#05FE82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <!-- Data points -->
-                      <circle cx="0" cy="75" r="3" fill="#05FE82" opacity="0.7"/>
-                      <circle cx="80" cy="65" r="3" fill="#05FE82" opacity="0.7"/>
-                      <circle cx="160" cy="28" r="3" fill="#05FE82" opacity="0.7"/>
-                      <circle cx="280" cy="3" r="4" fill="#05FE82"/>
-                    </svg>
-                    <div class="dashboard__chart-labels" aria-hidden="true">
-                      <span>Ma</span><span>Di</span><span>Wo</span><span>Do</span><span>Vr</span><span>Za</span><span>Zo</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- AI tab -->
-                <div class="dashboard__panel" id="tab-ai" role="tabpanel" aria-labelledby="btn-ai" aria-hidden="true">
-                  <div class="ai-chat">
-                    <div class="ai-chat__message ai-chat__message--user">
-                      Wat zijn jullie openingstijden?
-                    </div>
-                    <div class="ai-chat__message ai-chat__message--bot">
-                      <div class="ai-chat__bot-label" aria-hidden="true">AI</div>
-                      <div class="ai-chat__bubble">We zijn bereikbaar van ma–vr 8:00–18:00. Wil je direct een afspraak plannen?</div>
-                    </div>
-                    <div class="ai-chat__message ai-chat__message--user">
-                      Ja graag, morgen 10:00?
-                    </div>
-                    <div class="ai-chat__message ai-chat__message--bot">
-                      <div class="ai-chat__bot-label" aria-hidden="true">AI</div>
-                      <div class="ai-chat__bubble">
-                        <span class="typing-indicator" aria-label="AI is aan het typen">
-                          <span></span><span></span><span></span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ai-stats">
-                    <div class="ai-stat">
-                      <span class="ai-stat__value">94%</span>
-                      <span class="ai-stat__label">Vragen beantwoord</span>
-                    </div>
-                    <div class="ai-stat">
-                      <span class="ai-stat__value">1.8s</span>
-                      <span class="ai-stat__label">Gem. responstijd</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Automations tab -->
-                <div class="dashboard__panel" id="tab-automations" role="tabpanel" aria-labelledby="btn-automations" aria-hidden="true">
-                  <div class="flow">
-                    <div class="flow__step flow__step--active">
-                      <div class="flow__icon" aria-hidden="true">
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round"/></svg>
-                      </div>
-                      <span>Lead binnenkomt</span>
-                      <span class="flow__check" aria-hidden="true">✓</span>
-                    </div>
-                    <div class="flow__connector" aria-hidden="true"></div>
-                    <div class="flow__step">
-                      <div class="flow__icon" aria-hidden="true">
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#05FE82" stroke-width="1.5"/><path d="M6 8h4M8 6v4" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round"/></svg>
-                      </div>
-                      <span>AI kwalificeert</span>
-                    </div>
-                    <div class="flow__connector" aria-hidden="true"></div>
-                    <div class="flow__step">
-                      <div class="flow__icon" aria-hidden="true">
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="9" rx="1" stroke="#05FE82" stroke-width="1.5"/><path d="M2 7l6 4 6-4" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round"/></svg>
-                      </div>
-                      <span>Email verstuurd</span>
-                    </div>
-                    <div class="flow__connector" aria-hidden="true"></div>
-                    <div class="flow__step">
-                      <div class="flow__icon" aria-hidden="true">
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="1" stroke="#05FE82" stroke-width="1.5"/><path d="M5 8h6M8 5v6" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round"/></svg>
-                      </div>
-                      <span>Afspraak gepland</span>
-                    </div>
-                  </div>
-                  <div class="flow__footer">
-                    <span class="flow__badge">47 automations actief</span>
-                  </div>
-                </div>
-
-              </div><!-- /.dashboard__body -->
-            </div><!-- /.dashboard -->
-
-        </div><!-- /.hero__layout -->
-      </div><!-- /.container -->
-    </section>
-
-    <!-- TL;DR -->
-    <div class="container">
-      <div class="tldr" role="note" aria-label="Samenvatting">
-        <p class="tldr__label">TL;DR</p>
-        <p>Kelvantis is een AI-bureau uit Maastricht. We bouwen websites die klanten opleveren, zorgen dat je gevonden wordt in Google én ChatGPT, en automatiseren het saaie werk binnen je bedrijf. Voor ondernemers in Nederland en België, van eenpitter tot bedrijven met honderd man personeel.</p>
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════
-         TICKER
-    ═══════════════════════════════════════ -->
-    <div class="ticker" aria-label="Technologiepartners die we gebruiken">
-      <div class="ticker__fade ticker__fade--left" aria-hidden="true"></div>
-      <div class="ticker__fade ticker__fade--right" aria-hidden="true"></div>
-      <div class="ticker__track" aria-hidden="true">
-        <div class="ticker__list">
-          <span class="ticker__item">Webflow</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">n8n</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Claude AI</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Notion</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Make.com</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Zapier</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">OpenAI</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Airtable</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">HubSpot</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Stripe</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Google Search Console</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">WordPress</span>
-          <span class="ticker__dot">·</span>
-        </div>
-        <!-- Duplicate for seamless loop -->
-        <div class="ticker__list" aria-hidden="true">
-          <span class="ticker__item">Webflow</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">n8n</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Claude AI</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Notion</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Make.com</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Zapier</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">OpenAI</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Airtable</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">HubSpot</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Stripe</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">Google Search Console</span>
-          <span class="ticker__dot">·</span>
-          <span class="ticker__item">WordPress</span>
-          <span class="ticker__dot">·</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════
-         VOOR WIE
-    ═══════════════════════════════════════ -->
-    <section class="section voor-wie" id="voor-wie" aria-labelledby="voor-wie-heading">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">Voor wie</span>
-          <h2 class="section__title" id="voor-wie-heading">Voor jou, als je<br>dit herkent.</h2>
-          <p class="section__subtitle">Je bent niet de enige ondernemer die vastloopt op deze uitdagingen. Kelvantis werkt met B2B bedrijven die concrete problemen hebben op het vlak van online zichtbaarheid, leadgeneratie of inefficiënte werkprocessen.</p>
-        </div>
-
-        <div class="voor-wie__grid">
-
-          <article class="voor-wie__card reveal">
-            <div class="voor-wie__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-            </div>
-            <div>
-              <h3 class="voor-wie__title">"Leads komen binnen, maar opvolging is een chaos"</h3>
-              <p class="voor-wie__desc">Aanvragen worden te laat of helemaal niet opgevolgd. Je verliest deals niet omdat het product niet goed is, maar omdat het proces faalt. Wij automatiseren de opvolging volledig.</p>
-            </div>
-          </article>
-
-          <article class="voor-wie__card reveal">
-            <div class="voor-wie__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <h3 class="voor-wie__title">"We verliezen uren aan handmatig herhaalwerk"</h3>
-              <p class="voor-wie__desc">Facturen verwerken, CRM bijhouden, rapportages opstellen, e-mails kopiëren. Werk dat een systeem kan doen terwijl jij bezig bent met wat echt telt.</p>
-            </div>
-          </article>
-
-          <article class="voor-wie__card reveal">
-            <div class="voor-wie__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            </div>
-            <div>
-              <h3 class="voor-wie__title">"Onze website converteert niet"</h3>
-              <p class="voor-wie__desc">Bezoekers komen, bekijken en vertrekken zonder te converteren. Je hebt een website die er mooi uitziet, maar die niet verkoopt. Wij bouwen voor conversie, niet voor decoratie.</p>
-            </div>
-          </article>
-
-          <article class="voor-wie__card reveal">
-            <div class="voor-wie__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </div>
-            <div>
-              <h3 class="voor-wie__title">"We willen AI integreren maar weten niet hoe"</h3>
-              <p class="voor-wie__desc">Je ziet het potentieel van AI maar het ontbreekt aan overzicht, richting en iemand die het concreet kan bouwen. Geen hype, geen theorie, wij implementeren wat werkt.</p>
-            </div>
-          </article>
-
-          <article class="voor-wie__card reveal">
-            <div class="voor-wie__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            </div>
-            <div>
-              <h3 class="voor-wie__title">"We zijn slecht vindbaar in Google"</h3>
-              <p class="voor-wie__desc">Je concurrenten staan bovenaan en pakken de leads die van jou hadden kunnen zijn. Wij zorgen dat klanten je vinden, of ze nu via Google zoeken of via ChatGPT vragen. We bouwen daar een systeem voor en laten zien wat het oplevert.</p>
-            </div>
-          </article>
-
-          <article class="voor-wie__card reveal">
-            <div class="voor-wie__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            </div>
-            <div>
-              <h3 class="voor-wie__title">"We hebben een complete digitale infrastructuur nodig"</h3>
-              <p class="voor-wie__desc">Van een verouderde website tot een totale herbouw van je digitale stack. Website, GEO/AEO, automations en AI-integraties, wij ontwerpen en bouwen het als één samenhangend systeem.</p>
-            </div>
-          </article>
-
-        </div>
-
-        <div class="voor-wie__not-for reveal" aria-label="Niet geschikt voor">
-          <p class="voor-wie__not-for-title">Niet voor jou als je zoekt naar:</p>
-          <div class="voor-wie__not-for-list">
-            <span class="voor-wie__not-for-item">Social media beheer</span>
-            <span class="voor-wie__not-for-item">Maandelijks ads-beheer</span>
-            <span class="voor-wie__not-for-item">Dagelijkse content creatie</span>
-            <span class="voor-wie__not-for-item">Uurtje-factuurtje werk</span>
-          </div>
-        </div>
-
-        <div class="reveal" style="text-align:center; margin-top:2.5rem;">
-          <button type="button" class="btn btn--primary" data-modal="open">Herken jij dit? Gratis gesprek plannen →</button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         DIENSTEN OVERZICHT
-    ═══════════════════════════════════════ -->
-    <section class="section diensten-overzicht" id="diensten-overzicht">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">Wat we doen</span>
-          <h2 class="section__title">Wat we voor je bouwen</h2>
-        </div>
-        <div class="diensten-overzicht__grid">
-          <div class="diensten__card reveal">
-            <div class="diensten-overzicht__card-emoji" aria-hidden="true">🌐</div>
-            <h3 class="diensten__card-title">Een website die klanten oplevert</h3>
-            <p class="diensten__card-desc">Geen digitale visitekaart, maar een site die bezoekers omzet in aanvragen. Snel, helder, en gemaakt voor wie via Google of een aanbeveling bij je terechtkomt.</p>
-            <a href="/website-laten-maken/" class="diensten-overzicht__card-link">
-              <span>Bekijk websitediensten</span> →
-            </a>
-          </div>
-          <div class="diensten__card reveal">
-            <div class="diensten-overzicht__card-emoji" aria-hidden="true">⚡</div>
-            <h3 class="diensten__card-title">Het saaie werk laten verdwijnen</h3>
-            <p class="diensten__card-desc">Offertes versturen, leads opvolgen, facturen verwerken, klantgegevens overzetten. Werk dat een systeem prima zelf kan, terwijl jij doet waar je goed in bent. Wij regelen de workflow automatisering.</p>
-            <a href="/workflow-automatisering/" class="diensten-overzicht__card-link">
-              <span>Bekijk automatisering</span> →
-            </a>
-          </div>
-          <div class="diensten__card reveal">
-            <div class="diensten-overzicht__card-emoji" aria-hidden="true">🤖</div>
-            <h3 class="diensten__card-title">AI die je bedrijf snapt</h3>
-            <p class="diensten__card-desc">Een chatbot die jouw klanten helpt, ook 's avonds. Een assistent die jouw documenten kent. Geen losse hype, maar AI die past bij hoe jij werkt.</p>
-            <a href="/ai-implementatie/" class="diensten-overzicht__card-link">
-              <span>Bekijk AI diensten</span> →
-            </a>
-          </div>
-          <div class="diensten__card reveal">
-            <div class="diensten-overzicht__card-emoji" aria-hidden="true">🔍</div>
-            <h3 class="diensten__card-title">Gevonden worden in Google én ChatGPT</h3>
-            <p class="diensten__card-desc">Steeds meer mensen zoeken niet alleen op Google, maar ook in ChatGPT en Perplexity. Wij zorgen dat jouw bedrijf in beide soorten zoekresultaten naar boven komt. <small style="opacity:0.7;">Dit heet GEO en AEO.</small></p>
-            <a href="/geo-aeo/" class="diensten-overzicht__card-link">
-              <span>Bekijk GEO &amp; AEO</span> →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         RESULTATEN / SOCIAL PROOF
-    ═══════════════════════════════════════ -->
-    <section class="section resultaten" id="resultaten" aria-labelledby="resultaten-heading">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">Branche-onderzoek</span>
-          <h2 class="section__title" id="resultaten-heading">Wat onderzoek laat zien</h2>
-          <p class="section__subtitle">Gedocumenteerde cijfers uit B2B-marketing- en automatiseringsonderzoek, geen eigen claims.</p>
-        </div>
-        <div class="resultaten__grid">
-
-          <div class="resultaten__card reveal">
-            <div class="resultaten__icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l4-4 3 3 5-6 4 3"/><path d="M20 4v4h-4"/></svg>
-            </div>
-            <div class="resultaten__metric">+40%</div>
-            <p class="resultaten__desc">meer gekwalificeerde leads met AI-assisted marketing</p>
-            <cite class="resultaten__source">Bron: HubSpot State of Marketing 2024</cite>
-          </div>
-
-          <div class="resultaten__card reveal">
-            <div class="resultaten__icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="resultaten__metric">8–12 uur</div>
-            <p class="resultaten__desc">per week bespaard op repetitief werk via automatisering</p>
-            <cite class="resultaten__source">Bron: McKinsey State of AI 2024</cite>
-          </div>
-
-          <div class="resultaten__card reveal">
-            <div class="resultaten__icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-            </div>
-            <div class="resultaten__metric">2.5×</div>
-            <p class="resultaten__desc">hogere ROI op marketingbudget met marketing automation</p>
-            <cite class="resultaten__source">Bron: Forrester Total Economic Impact</cite>
-          </div>
-
-        </div>
-        <p class="resultaten__disclaimer">Cijfers zijn brancheanalyses uit gepubliceerd onderzoek. Individuele resultaten hangen af van uitgangssituatie, sector en implementatie-diepte.</p>
-        <div class="reveal" style="text-align:center; margin-top:2rem;">
-          <a href="/werkwijze/" class="btn btn--ghost">Bekijk hoe we dit bereiken →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         PROCESS / AANPAK
-    ═══════════════════════════════════════ -->
-    <section class="section process" id="aanpak" aria-labelledby="aanpak-heading">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">Aanpak</span>
-          <h2 class="section__title" id="aanpak-heading">Van gesprek tot groei.<br>In vier stappen.</h2>
-          <p class="section__subtitle">Geen maandenlange trajecten. Geen vaag advies. Wij bouwen en lanceren snel, zodat jij zo snel mogelijk resultaat ziet.</p>
-        </div>
-
-        <div class="process__steps">
-
-          <div class="process__step reveal">
-            <div class="process__step-number" aria-hidden="true">01</div>
-            <div class="process__step-content">
-              <div class="process__step-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M12 3C7.03 3 3 7.03 3 12c0 1.68.44 3.26 1.2 4.63L3 21l4.37-1.2A8.96 8.96 0 0012 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <li class="faq__item">
+              <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-2">
+                <span>Hoe lang duurt het om live te gaan?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="faq__answer" id="faq-2" hidden>
+                <p>De doorlooptijd hangt af van de scope. Een Foundation project is doorgaans snel klaar; een volledig Growth System met AI chatbot, automations en CRM-koppeling vraagt meer tijd. We werken gefaseerd en houden je via vaste updates op de hoogte van de voortgang. Geen verrassingen.</p>
               </div>
-              <h3 class="process__step-title">Strategiegesprek</h3>
-              <p class="process__step-desc">We starten met een gratis gesprek om jouw situatie te begrijpen, knelpunten te identificeren en de grootste groeikansen bloot te leggen. Geen verplichtingen, wel concrete inzichten.</p>
-            </div>
-          </div>
+            </li>
 
-          <div class="process__step reveal">
-            <div class="process__step-number" aria-hidden="true">02</div>
-            <div class="process__step-content">
-              <div class="process__step-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M9 9h6M9 12h4M9 15h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <li class="faq__item">
+              <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-3">
+                <span>Heb ik technische kennis nodig?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="faq__answer" id="faq-3" hidden>
+                <p>Nee, absoluut niet. Wij regelen alles van A tot Z, van het ontwerp en de technische bouw tot aan de koppelingen en training van de AI. Jij hoeft alleen jouw bedrijf goed te kennen en ons te vertellen wat je wilt bereiken. De rest is aan ons.</p>
               </div>
-              <h3 class="process__step-title">Systeem ontwerp</h3>
-              <p class="process__step-desc">Op basis van jouw doelen ontwerpen we een op maat gemaakt digitaal systeem. Je krijgt een helder plan met exacte tools, koppelingen en verwachte resultaten, voordat we ook maar één regel code schrijven.</p>
-            </div>
-          </div>
+            </li>
 
-          <div class="process__step reveal">
-            <div class="process__step-number" aria-hidden="true">03</div>
-            <div class="process__step-content">
-              <div class="process__step-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14 3v4a1 1 0 001 1h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 13h6M9 17h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <li class="faq__item">
+              <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-4">
+                <span>Wat is het verschil tussen Foundation en Growth System?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="faq__answer" id="faq-4" hidden>
+                <p>Foundation geeft je een professionele, snelle website met GEO/AEO-optimalisatie en een contactformulier, een solide basis. Growth System gaat verder: je krijgt daar bovenop een AI chatbot, automatische lead nurturing, CRM-koppeling en marketing automations die 24/7 voor je werken. Foundation is perfect als start; Growth System is voor wie maximaal wil groeien op autopilot.</p>
               </div>
-              <h3 class="process__step-title">Bouwen &amp; koppelen</h3>
-              <p class="process__step-desc">We bouwen alles van A tot Z en koppelen alle tools naadloos aan elkaar. Website, AI chatbot, automations, CRM, jij hoeft nergens naar om te kijken. Wij houden je op de hoogte via wekelijkse updates.</p>
-            </div>
-          </div>
+            </li>
 
-          <div class="process__step reveal">
-            <div class="process__step-number" aria-hidden="true">04</div>
-            <div class="process__step-content">
-              <div class="process__step-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 17l4-8 4 4 4-6 4 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="17" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+            <li class="faq__item">
+              <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-5">
+                <span>Kan ik later upgraden van Foundation naar Growth System?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="faq__answer" id="faq-5" hidden>
+                <p>Absoluut. Veel klanten starten met Foundation om snel resultaat te zien, en upgraden zodra ze de groei in leads ervaren. De investering in Foundation wordt volledig verrekend bij een upgrade naar Growth System. Zo groei je in jouw eigen tempo.</p>
               </div>
-              <h3 class="process__step-title">Live &amp; schaalbaar</h3>
-              <p class="process__step-desc">Jouw systeem gaat live en begint direct voor je te werken. We monitoren de prestaties, optimaliseren waar nodig, en schalen het systeem mee zodra jij klaar bent voor de volgende groeistap.</p>
-            </div>
-          </div>
+            </li>
 
-        </div>
-
-        <div class="reveal" style="text-align:center; margin-top:2.5rem;">
-          <button type="button" class="btn btn--primary" data-modal="open">Zo ziet jouw eerste stap eruit →</button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         PRICING / PRIJZEN
-    ═══════════════════════════════════════ -->
-    <section class="section pricing" id="prijzen" aria-labelledby="prijzen-heading">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">Pakketten</span>
-          <h2 class="section__title" id="prijzen-heading">Drie pakketten.<br>Één duidelijk systeem.</h2>
-          <p class="section__subtitle">Geen uurtje-factuurtje, geen verborgen kosten. Vraag een offerte aan en we bespreken samen wat past bij jouw situatie en doelen.</p>
-        </div>
-
-        <div class="pricing__grid">
-
-          <!-- Foundation -->
-          <article class="pricing__card reveal" aria-label="Foundation pakket">
-            <div class="pricing__card-header">
-              <h3 class="pricing__plan-name">Foundation</h3>
-              <p class="pricing__plan-sub">Eenmalige investering · Prijs op aanvraag</p>
-            </div>
-            <p class="pricing__desc">De basis. Een nette website die snel laadt, op de telefoon werkt zoals het hoort, en zorgt dat klanten je vinden via Google.</p>
-            <ul class="pricing__features" aria-label="Inbegrepen in Foundation">
-              <li class="pricing__feature pricing__feature--yes">Een website die aanvragen oplevert (t/m 8 pagina's)</li>
-              <li class="pricing__feature pricing__feature--yes">Klaar voor Google én ChatGPT</li>
-              <li class="pricing__feature pricing__feature--yes">Contactformulier met e-mailnotificaties</li>
-              <li class="pricing__feature pricing__feature--yes">Google Search Console</li>
-              <li class="pricing__feature pricing__feature--yes">Werkt op de telefoon zoals het hoort</li>
-              <li class="pricing__feature pricing__feature--yes">Razendsnelle laadtijd</li>
-              <li class="pricing__feature pricing__feature--no">AI chatbot</li>
-              <li class="pricing__feature pricing__feature--no">Automatische opvolging van leads</li>
-              <li class="pricing__feature pricing__feature--no">Aansluiting op je klantsysteem</li>
-            </ul>
-            <button type="button" class="btn btn--outline btn--full" data-modal="open" data-pakket="Foundation">Bespreek dit pakket</button>
-          </article>
-
-          <!-- Growth System (featured) -->
-          <article class="pricing__card pricing__card--featured reveal" aria-label="Growth System pakket, onze aanbeveling">
-            <div class="pricing__popular-badge">Onze aanbeveling</div>
-            <div class="pricing__card-header">
-              <h3 class="pricing__plan-name">Growth System</h3>
-              <p class="pricing__plan-sub">Eenmalige investering · Prijs op aanvraag</p>
-            </div>
-            <p class="pricing__desc">Het complete pakket. Website, chatbot en automatisering die samenwerken zodat er ook leads binnenkomen als jij niet achter je laptop zit.</p>
-            <ul class="pricing__features" aria-label="Inbegrepen in Growth System">
-              <li class="pricing__feature pricing__feature--yes">Alles van Foundation</li>
-              <li class="pricing__feature pricing__feature--yes">AI chatbot getraind op jouw bedrijf</li>
-              <li class="pricing__feature pricing__feature--yes">Automatische opvolging van leads</li>
-              <li class="pricing__feature pricing__feature--yes">Aansluiting op je klantsysteem, zodat niets verdwaalt</li>
-              <li class="pricing__feature pricing__feature--yes">E-mailflows die zelf doorlopen</li>
-              <li class="pricing__feature pricing__feature--yes">Live overzicht van wat er gebeurt</li>
-              <li class="pricing__feature pricing__feature--yes">Agenda-koppeling voor de chatbot</li>
-              <li class="pricing__feature pricing__feature--yes">30 dagen ondersteuning na livegang</li>
-              <li class="pricing__feature pricing__feature--yes">Snelle reactie op vragen</li>
-            </ul>
-            <button type="button" class="btn btn--primary btn--full" data-modal="open" data-pakket="Growth System">Bespreek dit pakket</button>
-          </article>
-
-          <!-- Advisory -->
-          <article class="pricing__card reveal" aria-label="Advisory pakket">
-            <div class="pricing__card-header">
-              <h3 class="pricing__plan-name">Advisory</h3>
-              <p class="pricing__plan-sub">Maandelijks opzegbaar · Prijs op aanvraag</p>
-            </div>
-            <p class="pricing__desc">Voor wie blijvend wil groeien. Elke maand kijken we samen naar wat werkt, wat beter kan, en bouwen we mee aan de volgende stap.</p>
-            <ul class="pricing__features" aria-label="Inbegrepen in Advisory">
-              <li class="pricing__feature pricing__feature--yes">Maandelijks strategiegesprek (60 min)</li>
-              <li class="pricing__feature pricing__feature--yes">Doorlopend bijschaven van wat al draait</li>
-              <li class="pricing__feature pricing__feature--yes">Maandelijkse prestatierapportage</li>
-              <li class="pricing__feature pricing__feature--yes">Directe WhatsApp/e-mail toegang</li>
-              <li class="pricing__feature pricing__feature--yes">Nieuwe automatiseringen en testen</li>
-              <li class="pricing__feature pricing__feature--yes">Voorrang bij uitbreidingen</li>
-              <li class="pricing__feature pricing__feature--no">Inclusief nieuw systeem bouwen</li>
-              <li class="pricing__feature pricing__feature--no">Inclusief Foundation website</li>
-              <li class="pricing__feature pricing__feature--no">Inclusief AI chatbot setup</li>
-            </ul>
-            <button type="button" class="btn btn--outline btn--full" data-modal="open" data-pakket="Advisory">Bespreek dit pakket</button>
-          </article>
-
-        </div>
-
-        <p class="pricing__footnote reveal">
-          Alle pakketten zijn eenmalige investeringen. Advisory is maandelijks opzegbaar. Plan een gratis gesprek, dan bespreken we wat past bij jouw situatie en budget.
-        </p>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════
-         WAT IS KELVANTIS (entity-alinea voor AEO)
-    ═══════════════════════════════════════ -->
-    <section class="section entity" aria-labelledby="entity-heading">
-      <div class="container">
-        <div class="entity__block reveal">
-          <h2 class="entity__title" id="entity-heading">Wat is Kelvantis?</h2>
-          <p class="entity__lead">Kelvantis is een B2B-bureau uit Maastricht, Nederland, dat websites, GEO/AEO-strategieën en workflow automatisering combineert in één samenhangend systeem. Het bureau is opgericht door Kjell Kuijpers en bedient opdrachtgevers in Nederland en België.</p>
-          <p class="entity__body">De dienstverlening bestaat uit vier kerndomeinen: <strong>website-ontwikkeling</strong> (conversiegericht, technisch geoptimaliseerd, snel), <strong>GEO en AEO</strong> (zichtbaarheid in ChatGPT, Perplexity en Google AI Overviews), <strong>workflow automatisering</strong> (repetitieve processen via n8n en Make.com) en <strong>AI Implementatie</strong> (chatbots, AI-agents en knowledge-integraties). In plaats van losse deeldiensten levert Kelvantis een geïntegreerd systeem waarin elk onderdeel het ander versterkt.</p>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         FAQ
-    ═══════════════════════════════════════ -->
-    <section class="section faq" id="faq" aria-labelledby="faq-heading">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">FAQ</span>
-          <h2 class="section__title" id="faq-heading">Veelgestelde vragen.</h2>
-          <p class="section__subtitle">Staat jouw vraag er niet tussen? Plan een gratis gesprek en we beantwoorden alles direct.</p>
-        </div>
-
-        <div class="faq__list reveal" role="list">
-
-          <div class="faq__item" role="listitem">
-            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-1">
-              <span>Voor wie is Kelvantis geschikt?</span>
-              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-            <div class="faq__answer" id="faq-1" hidden>
-              <p>Kelvantis werkt met B2B bedrijven, van startup tot enterprise, die concrete problemen hebben op het vlak van online zichtbaarheid, leadgeneratie of inefficiënte werkprocessen. Elke bedrijfsgrootte, elke sector, zolang er een helder probleem is dat we kunnen oplossen met een website, GEO/AEO of workflow automatisering.</p>
-            </div>
-          </div>
-
-          <div class="faq__item" role="listitem">
-            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-2">
-              <span>Hoe lang duurt het om live te gaan?</span>
-              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-            <div class="faq__answer" id="faq-2" hidden>
-              <p>De doorlooptijd hangt af van de scope. Een Foundation project is doorgaans snel klaar; een volledig Growth System met AI chatbot, automations en CRM-koppeling vraagt meer tijd. We werken gefaseerd en houden je via vaste updates op de hoogte van de voortgang. Geen verrassingen.</p>
-            </div>
-          </div>
-
-          <div class="faq__item" role="listitem">
-            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-3">
-              <span>Heb ik technische kennis nodig?</span>
-              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-            <div class="faq__answer" id="faq-3" hidden>
-              <p>Nee, absoluut niet. Wij regelen alles van A tot Z, van het ontwerp en de technische bouw tot aan de koppelingen en training van de AI. Jij hoeft alleen jouw bedrijf goed te kennen en ons te vertellen wat je wilt bereiken. De rest is aan ons.</p>
-            </div>
-          </div>
-
-          <div class="faq__item" role="listitem">
-            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-4">
-              <span>Wat is het verschil tussen Foundation en Growth System?</span>
-              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-            <div class="faq__answer" id="faq-4" hidden>
-              <p>Foundation geeft je een professionele, snelle website met GEO/AEO-optimalisatie en een contactformulier, een solide basis. Growth System gaat verder: je krijgt daar bovenop een AI chatbot, automatische lead nurturing, CRM-koppeling en marketing automations die 24/7 voor je werken. Foundation is perfect als start; Growth System is voor wie maximaal wil groeien op autopilot.</p>
-            </div>
-          </div>
-
-          <div class="faq__item" role="listitem">
-            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-5">
-              <span>Kan ik later upgraden van Foundation naar Growth System?</span>
-              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-            <div class="faq__answer" id="faq-5" hidden>
-              <p>Absoluut. Veel klanten starten met Foundation om snel resultaat te zien, en upgraden zodra ze de groei in leads ervaren. De investering in Foundation wordt volledig verrekend bij een upgrade naar Growth System. Zo groei je in jouw eigen tempo.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         CTA SECTION
-    ═══════════════════════════════════════ -->
-    <section class="section cta-section" id="contact" aria-labelledby="cta-heading">
-      <div class="container">
-        <div class="cta-section__inner reveal">
-          <div class="cta-section__glow" aria-hidden="true"></div>
-          <span class="section__label">Klaar om te groeien?</span>
-          <h2 class="cta-section__title" id="cta-heading">
-            Meer resultaat.<br>
-            <span class="cta-section__title-accent">Minder handwerk.</span>
-          </h2>
-          <p class="cta-section__subtitle">
-            Plan een gratis strategiegesprek en ontdek wat een conversiegerichte website, GEO/AEO of slimme workflow automatisering voor jouw bedrijf kan betekenen. We kijken samen naar jouw situatie en de grootste kansen. Geen verplichtingen, wel concrete inzichten.
-          </p>
-          <div class="cta-section__actions">
-            <button type="button" class="btn btn--primary btn--xl" data-modal="open">
-              <span>Gratis strategiegesprek plannen</span>
-              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-          <p class="cta-section__trust">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2L5 8.3 2 5.4l4.2-.8L8 1z" stroke="#05FE82" stroke-width="1.2" stroke-linejoin="round"/></svg>
-            <span>Gratis · Geen verplichtingen · Binnen 24 uur reactie</span>
-          </p>
-        </div>
+    <!-- ═══════════ CTA ═══════════ -->
+    <section class="cta-section" id="contact">
+      <div class="cta-block">
+        <span class="cta-label">Klaar om te groeien?</span>
+        <h2 class="cta-title" id="cta-heading">Meer resultaat.<br><span class="accent">Minder handwerk.</span></h2>
+        <p class="cta-sub">Plan een gratis strategiegesprek en ontdek wat een conversiegerichte website, GEO/AEO of slimme workflow automatisering voor jouw bedrijf kan betekenen. We kijken samen naar jouw situatie en de grootste kansen. Geen verplichtingen, wel concrete inzichten.</p>
+        <button type="button" class="cta-primary" data-modal="open">Gratis strategiegesprek plannen</button>
+        <p class="cta-trust">Gratis · Geen verplichtingen · Binnen 24 uur reactie</p>
       </div>
     </section>
 
   </main>
 
-  <!-- ═══════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════ -->
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__inner">
@@ -1112,10 +2169,10 @@
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════
-       INTAKE FORM MODAL
-  ═══════════════════════════════════════ -->
-  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+</div>
+
+  <!-- ═══════════ INTAKE FORM MODAL ═══════════ -->
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal__overlay" id="modalOverlay"></div>
     <div class="modal__card">
       <button type="button" class="modal__close" id="modalClose" aria-label="Formulier sluiten">
@@ -1206,9 +2263,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════
-       WHATSAPP BUTTON
-  ═══════════════════════════════════════ -->
+  <!-- ═══════════ WHATSAPP BUTTON ═══════════ -->
   <a class="wa-button"
      href="https://wa.me/31627900367?text=Hallo%20Kelvantis%2C%20ik%20heb%20interesse%20in%20een%20gratis%20strategiegesprek."
      target="_blank"
@@ -1220,9 +2275,7 @@
     </svg>
   </a>
 
-  <!-- ═══════════════════════════════════════
-       COOKIE BANNER (AVG/GDPR)
-  ═══════════════════════════════════════ -->
+  <!-- ═══════════ COOKIE BANNER (AVG/GDPR) ═══════════ -->
   <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie-instellingen" aria-live="polite">
     <div class="cookie-banner__inner">
       <p class="cookie-banner__text">
@@ -1235,6 +2288,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
