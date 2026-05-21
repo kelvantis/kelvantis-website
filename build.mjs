@@ -7,6 +7,9 @@ const footer = readFileSync('_components/footer.html', 'utf8');
 // Match standaard navbar (.navbar) én legacy regio-navbars (.limburg-nav, .belgie-nav)
 // die ooit als losse design-systemen gebouwd zijn maar nu via build moeten syncen.
 const headerRe = /<header class="(?:navbar|limburg-nav|belgie-nav)"[\s\S]*?<\/header>/;
+// LET OP: footerRe matcht ELKE <footer>...</footer>. Een pagina-footer die
+// afwijkt van _components/footer.html wordt bij de volgende build overschreven.
+// Houd pagina-footers dus identiek aan de component.
 const footerRe = /<footer[\s\S]*?<\/footer>/;
 
 function collectHtmlFiles(dir, skip = []) {
