@@ -423,46 +423,6 @@ function animateFlow() {
 })();
 
 /* ═══════════════════════════════════════
-   9. COOKIE BANNER (AVG/GDPR)
-═══════════════════════════════════════ */
-(function initCookieBanner() {
-  const banner  = document.getElementById('cookieBanner');
-  if (!banner) return;
-
-  const acceptBtn  = document.getElementById('cookieAccept');
-  const declineBtn = document.getElementById('cookieDecline');
-
-  function dismiss(choice) {
-    localStorage.setItem('kelvantis_cookie_consent', choice);
-    banner.classList.remove('is-visible');
-    banner.removeEventListener('keydown', trapFocus);
-  }
-
-  /* Focus trap: Tab cycles only between the two buttons */
-  function trapFocus(e) {
-    if (e.key !== 'Tab') return;
-    e.preventDefault();
-    if (document.activeElement === acceptBtn) {
-      declineBtn.focus();
-    } else {
-      acceptBtn.focus();
-    }
-  }
-
-  const stored = localStorage.getItem('kelvantis_cookie_consent');
-  if (!stored) {
-    setTimeout(() => {
-      banner.classList.add('is-visible');
-      acceptBtn?.focus();          /* autofocus on the primary action */
-      banner.addEventListener('keydown', trapFocus);
-    }, 1200);
-  }
-
-  acceptBtn?.addEventListener('click',  () => dismiss('all'));
-  declineBtn?.addEventListener('click', () => dismiss('minimal'));
-})();
-
-/* ═══════════════════════════════════════
    10. MODAL, Intake Form
 ═══════════════════════════════════════ */
 

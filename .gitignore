@@ -1,0 +1,14 @@
+# Lokale backups (bv. index.html.backup-YYYYMMDD bij pagina-migraties)
+index.html.backup-*
+*.backup-*
+
+# Lokale dev-server logs
+serve.log
+*.log
+
+# Vercel CLI
+.vercel
+
+# OS / editor
+.DS_Store
+Thumbs.db

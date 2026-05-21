@@ -117,3 +117,22 @@ Snapshot van de staat vóór de sprint: pagina-overzicht met meta-tags en schema
 - [x] Alle sitemap lastmod = `2026-04-19`
 - [ ] Rich Results Test doorvoeren op kelvantis.com (uitvoeren na deploy)
 - [ ] Localhost dev-server check (geen broken links, menu consistent) — uit te voeren indien gewenst
+
+---
+
+## Homepage redesign + site-cleanup (2026-05-21)
+
+### Homepage redesign — paper/Fraunces (`3897244`, merge `2691558`)
+
+Homepage volledig vernieuwd naar een paper/cream-esthetiek: Fraunces display-font, JetBrains Mono labels, Inter Tight body, coral accent `#FF4D2E`. Alle SEO, content, JSON-LD-schema's (Organization+LocalBusiness, WebSite met speakable, FAQPage), GTM en URL's byte-voor-byte behouden. CSS volledig inline in `index.html` — de gedeelde `style.css` is onaangeroerd, dus de overige pagina's blijven ongewijzigd. `script.js` ongewijzigd. Homepage is light-only (geen dark-mode-variant).
+
+### Site-brede opschoning (branch `site-cleanup`)
+
+- **Componenten** (`a13a582`): `_components/navbar.html` + `footer.html` html-validate- en a11y-fixes — redundante `role`-attributen verwijderd, telefoonnummer met non-breaking spaces, `aria-label` op de mobiele sub-nav, redundante `aria-hidden` van het mobiele menu weg. `build.mjs` gedraaid → gesynct naar alle 22 pagina's. `tongeren` + `lanaken` hadden stale navbar-markup (zonder mobiel menu / theme-toggle); nu in sync.
+- **Cookie-banner** (`9b4bec1`): `script.js` bevatte twee conflicterende `initCookieBanner`-implementaties (dubbele banner, inconsistente localStorage-waarden). Samengevoegd tot één — de GA Consent Mode v2-variant die `gtag('consent','update')` aanroept. Inert `#cookieBanner`-element uit `index.html` verwijderd; de overige pagina's volgen bij hun migratie.
+- **Performance** (`5593fb1`): `og-image.jpg` 697 KB → 90 KB (JPEG-kwaliteit 82, zelfde 1200×630). Fraunces-fontlink `wght`-as `300..900` → `300..700`.
+- **SEO**: `sitemap.xml` `lastmod` van de homepage → `2026-05-21`.
+
+### build.mjs — aandachtspunt
+
+`build.mjs` synct navbar én footer naar elke pagina via regex. De footer-regex `<footer>…</footer>` matcht **elke** footer; de navbar-regex matcht `<header class="navbar|limburg-nav|belgie-nav">`. Een pagina met afwijkende navbar/footer-markup wordt bij de volgende build overschreven met de component. Houd pagina-footers dus identiek aan `_components/footer.html`.
