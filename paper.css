@@ -1511,3 +1511,155 @@ a { color: inherit; }
   .check-list { grid-template-columns: 1fr; }
   .expert-quote { padding-left: 20px; }
 }
+
+/* ─── Prose block (uitleg-secties) ─── */
+.prose { max-width: 720px; margin: 0 auto; }
+.prose p { font-size: 16px; line-height: 1.75; color: var(--ink-soft); }
+.prose p + p { margin-top: 16px; }
+.prose strong { color: var(--ink); }
+
+/* ─── Vergelijkingstabel (SEO/GEO/AEO) ─── */
+.table-wrap { overflow-x: auto; }
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 13px 16px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft);
+}
+.comparison-table thead th {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  background: var(--paper-soft);
+}
+.comparison-table tbody td:first-child {
+  background: var(--paper-soft);
+  color: var(--ink);
+}
+.comparison-table td strong { color: var(--ink); font-weight: 600; }
+.comparison-table th:nth-child(3),
+.comparison-table td:nth-child(3) { background: var(--signal-tint); }
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td { border-bottom: none; }
+
+/* ─── AI-overview demo-kaart ─── */
+.ai-demo {
+  max-width: 640px;
+  margin: 32px auto 0;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: 0 14px 36px rgba(31, 24, 20, 0.07);
+}
+.ai-demo__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  background: var(--paper-soft);
+  border-bottom: 1px solid var(--rule);
+}
+.ai-demo__dots { display: flex; gap: 6px; }
+.ai-demo__dots span {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--rule-strong);
+}
+.ai-demo__url { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-faint); }
+.ai-demo__body { padding: 20px; }
+.ai-demo__query-label,
+.ai-demo__answer-label,
+.ai-demo__sources-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+.ai-demo__query p {
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--ink);
+}
+.ai-demo__answer {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+.ai-demo__answer-header { display: flex; align-items: center; gap: 8px; }
+.ai-demo__sparkle { color: var(--signal); font-size: 14px; }
+.ai-demo__answer p {
+  margin-top: 10px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.ai-demo__answer p strong { color: var(--ink); }
+.ai-demo__cite {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 14px; height: 14px;
+  margin-left: 2px;
+  padding: 0 3px;
+  border-radius: 4px;
+  background: var(--signal-tint);
+  color: var(--signal-deep);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  vertical-align: super;
+}
+.ai-demo__sources {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+}
+.ai-demo__source {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+.ai-demo__source-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px; height: 18px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: var(--signal-tint);
+  color: var(--signal-deep);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+.ai-demo__source-title { font-size: 13px; color: var(--ink); font-weight: 500; }
+.ai-demo__source-url {
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+.ai-demo__caveat {
+  max-width: 640px;
+  margin: 16px auto 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--ink-faint);
+  text-align: center;
+}
