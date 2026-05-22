@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="nl" data-theme="dark" class="no-js">
+<html lang="nl">
 <head>
-  <script>document.documentElement.classList.remove("no-js")</script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ0XQN7GR4"></script>
@@ -14,11 +13,11 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GEO/AEO, Websites & AI Automatisering Kennisbank | Kelvantis Blog</title>
+  <title>GEO/AEO, Websites &amp; AI Automatisering Kennisbank | Kelvantis Blog</title>
   <meta name="description" content="Praktische gidsen over websites, GEO/AEO en AI automatisering voor B2B bedrijven in Nederland en België. Leer van Kelvantis experts en groei sneller.">
   <meta name="robots" content="index, follow">
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="apple-touch-icon" href="../favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
   <link rel="canonical" href="https://kelvantis.com/blog/">
   <link rel="alternate" hreflang="nl" href="https://kelvantis.com/blog/" />
   <link rel="alternate" hreflang="x-default" href="https://kelvantis.com/blog/" />
@@ -36,10 +35,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../style.css">
+  <!-- Styles (gedeelde paper.css) -->
+  <link rel="stylesheet" href="/paper.css">
 
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
@@ -99,123 +98,14 @@
     ]
   }
   </script>
-
-  <style>
-    .blog-hero {
-      padding: 7rem 0 4rem;
-      text-align: center;
-    }
-    .blog-hero__label {
-      display: inline-block;
-      font-size: .75rem;
-      font-weight: 600;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-      margin-bottom: 1rem;
-    }
-    .blog-hero__title {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: var(--color-text);
-      margin-bottom: 1rem;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .blog-hero__subtitle {
-      font-size: 1.0625rem;
-      color: var(--color-text-muted);
-      line-height: 1.7;
-      max-width: 560px;
-      margin: 0 auto;
-    }
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    @media (max-width: 900px) {
-      .blog-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 600px) {
-      .blog-grid { grid-template-columns: 1fr; }
-    }
-    .blog-card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-xl);
-      padding: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .blog-card:hover {
-      border-color: rgba(5, 254, 130, 0.35);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(5, 254, 130, 0.06);
-    }
-    .blog-card:focus-visible {
-      outline: 2px solid var(--color-accent);
-      outline-offset: 3px;
-    }
-    .blog-card__category {
-      display: inline-block;
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-      background: rgba(5, 254, 130, 0.08);
-      padding: .25rem .625rem;
-      border-radius: 100px;
-      border: 1px solid rgba(5, 254, 130, 0.18);
-      width: fit-content;
-    }
-    .blog-card__title {
-      font-family: 'Sora', sans-serif;
-      font-size: 1.0625rem;
-      font-weight: 700;
-      color: var(--color-text);
-      line-height: 1.4;
-      letter-spacing: -0.02em;
-    }
-    .blog-card__excerpt {
-      font-size: .9rem;
-      color: var(--color-text-muted);
-      line-height: 1.65;
-      flex: 1;
-    }
-    .blog-card__meta {
-      font-size: .8125rem;
-      color: var(--color-text-muted);
-      padding-top: .75rem;
-      border-top: 1px solid var(--color-border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .blog-card__arrow {
-      color: var(--color-accent);
-      opacity: 0;
-      transform: translateX(-4px);
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-    .blog-card:hover .blog-card__arrow {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
+<a class="skip-link" href="#main">Direct naar inhoud</a>
+
+<div class="page">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="navbar" id="navbar">
     <div class="navbar__container">
 
@@ -326,118 +216,106 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
+
     <!-- HERO -->
-    <section class="blog-hero">
-      <div class="container">
-        <span class="blog-hero__label">Kennisbank</span>
-        <h1 class="blog-hero__title">Inzichten over websites, GEO/AEO en automatisering</h1>
-        <p class="blog-hero__subtitle">Praktische kennis voor bedrijven die willen groeien met slimme digitale systemen.</p>
-      </div>
+    <section class="svc-hero">
+      <p class="svc-hero__label">Kennisbank</p>
+      <h1 class="svc-hero__title">Inzichten over websites, GEO/AEO en <span class="accent">automatisering</span></h1>
+      <p class="svc-hero__sub">Praktische kennis voor bedrijven die willen groeien met slimme digitale systemen.</p>
     </section>
 
     <!-- TL;DR -->
-    <div class="container">
-      <aside class="tldr reveal" aria-label="Kort samengevat">
-        <strong>Kort samengevat:</strong> De Kelvantis-kennisbank behandelt GEO/AEO, AI-implementatie, workflow automation en webdesign voor B2B-bedrijven. Elk artikel combineert praktische uitleg met concrete voorbeelden, gericht op MKB en ZZP in Nederland en België. Onze meest gelezen stukken: <a href="/blog/wat-is-geo-aeo/" style="color: var(--color-accent);">Wat is GEO/AEO</a>, <a href="/blog/n8n-vs-make/" style="color: var(--color-accent);">n8n vs Make</a> en <a href="/blog/webflow-vs-wordpress/" style="color: var(--color-accent);">Webflow vs WordPress</a>.
-      </aside>
+    <div class="tldr-wrap">
+      <div class="tldr" role="note" aria-label="Kort samengevat">
+        <div class="tldr-label">Kort samengevat</div>
+        <div class="tldr-text">De Kelvantis-kennisbank behandelt GEO/AEO, AI-implementatie, workflow automation en webdesign voor B2B-bedrijven. Elk artikel combineert praktische uitleg met concrete voorbeelden, gericht op MKB en ZZP in Nederland en België. Onze meest gelezen stukken: <a href="/blog/wat-is-geo-aeo/">Wat is GEO/AEO</a>, <a href="/blog/n8n-vs-make/">n8n vs Make</a> en <a href="/blog/webflow-vs-wordpress/">Webflow vs WordPress</a>.</div>
+      </div>
     </div>
 
     <!-- BLOG GRID -->
-    <section class="section" style="padding-top: 0;">
-      <div class="container">
+    <section class="section">
 
-        <!-- Categorie filter tabs -->
-        <div class="blog-filters" role="group" aria-label="Filter op categorie">
-          <button type="button" class="filter-btn active" data-filter="all" onclick="filterBlogs('all',this)">Alle</button>
-          <button type="button" class="filter-btn" data-filter="automatisering" onclick="filterBlogs('automatisering',this)">Automatisering</button>
-          <button type="button" class="filter-btn" data-filter="ai" onclick="filterBlogs('ai',this)">AI</button>
-          <button type="button" class="filter-btn" data-filter="websites" onclick="filterBlogs('websites',this)">Websites</button>
-          <button type="button" class="filter-btn" data-filter="geo-aeo" onclick="filterBlogs('geo-aeo',this)">GEO &amp; AEO</button>
-        </div>
+      <!-- Categorie filter tabs -->
+      <div class="blog-filters" role="group" aria-label="Filter op categorie">
+        <button type="button" class="filter-btn active" data-filter="all">Alle</button>
+        <button type="button" class="filter-btn" data-filter="automatisering">Automatisering</button>
+        <button type="button" class="filter-btn" data-filter="ai">AI</button>
+        <button type="button" class="filter-btn" data-filter="websites">Websites</button>
+        <button type="button" class="filter-btn" data-filter="geo-aeo">GEO &amp; AEO</button>
+      </div>
 
-        <div class="blog-grid">
+      <div class="blog-grid">
 
-          <!-- Card 1: n8n vs Make -->
-          <a href="/blog/n8n-vs-make/" class="blog-card reveal" data-cat="automatisering">
-            <span class="blog-card__category">Automatisering</span>
-            <h2 class="blog-card__title">n8n vs Make: welke automation tool past bij jouw bedrijf? [2026]</h2>
-            <p class="blog-card__excerpt">Twijfel je tussen n8n en Make voor jouw workflow automatisering? We vergelijken prijs, functies en schaalbaarheid eerlijk naast elkaar.</p>
-            <div class="blog-card__meta">
-              <time datetime="2026-04-01">1 april 2026</time>
-              <span class="blog-card__sep">·</span>
-              <span class="blog-card__readtime">10 min lezen</span>
-              <svg class="blog-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-          </a>
+        <!-- Card 1: n8n vs Make -->
+        <a href="/blog/n8n-vs-make/" class="blog-card" data-cat="automatisering">
+          <span class="blog-card__category">Automatisering</span>
+          <h2 class="blog-card__title">n8n vs Make: welke automation tool past bij jouw bedrijf? [2026]</h2>
+          <p class="blog-card__excerpt">Twijfel je tussen n8n en Make voor jouw workflow automatisering? We vergelijken prijs, functies en schaalbaarheid eerlijk naast elkaar.</p>
+          <div class="blog-card__meta">
+            <time datetime="2026-04-01">1 april 2026</time>
+            <span class="blog-card__sep">·</span>
+            <span class="blog-card__readtime">10 min lezen</span>
+            <svg class="blog-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
 
-          <!-- Card 2: AI Chatbot -->
-          <a href="/blog/ai-chatbot-website/" class="blog-card reveal" data-cat="ai">
-            <span class="blog-card__category">AI</span>
-            <h2 class="blog-card__title">AI chatbot voor je website: wat kost het en wat levert het op? [2026]</h2>
-            <p class="blog-card__excerpt">Wat kost een AI chatbot en wat is de ROI? Alles wat B2B bedrijven moeten weten over implementatie, kosten en conversie.</p>
-            <div class="blog-card__meta">
-              <time datetime="2026-04-08">8 april 2026</time>
-              <span class="blog-card__sep">·</span>
-              <span class="blog-card__readtime">8 min lezen</span>
-              <svg class="blog-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-          </a>
+        <!-- Card 2: AI Chatbot -->
+        <a href="/blog/ai-chatbot-website/" class="blog-card" data-cat="ai">
+          <span class="blog-card__category">AI</span>
+          <h2 class="blog-card__title">AI chatbot voor je website: wat kost het en wat levert het op? [2026]</h2>
+          <p class="blog-card__excerpt">Wat kost een AI chatbot en wat is de ROI? Alles wat B2B bedrijven moeten weten over implementatie, kosten en conversie.</p>
+          <div class="blog-card__meta">
+            <time datetime="2026-04-08">8 april 2026</time>
+            <span class="blog-card__sep">·</span>
+            <span class="blog-card__readtime">8 min lezen</span>
+            <svg class="blog-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
 
-          <!-- Card 4: Wat is GEO en AEO -->
-          <a href="/blog/wat-is-geo-aeo/" class="blog-card reveal" data-cat="geo-aeo">
-            <span class="blog-card__category">GEO &amp; AEO</span>
-            <h2 class="blog-card__title">Wat is GEO en AEO? Gevonden worden in ChatGPT en Perplexity [2026]</h2>
-            <p class="blog-card__excerpt">GEO en AEO optimaliseren je website voor AI-zoekmachines. Leer wat het is, hoe het werkt en waarom het nu al belangrijk is voor B2B bedrijven.</p>
-            <div class="blog-card__meta">
-              <time datetime="2026-04-22">22 april 2026</time>
-              <span class="blog-card__sep">·</span>
-              <span class="blog-card__readtime">9 min lezen</span>
-              <svg class="blog-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-          </a>
+        <!-- Card 3: Wat is GEO en AEO -->
+        <a href="/blog/wat-is-geo-aeo/" class="blog-card" data-cat="geo-aeo">
+          <span class="blog-card__category">GEO &amp; AEO</span>
+          <h2 class="blog-card__title">Wat is GEO en AEO? Gevonden worden in ChatGPT en Perplexity [2026]</h2>
+          <p class="blog-card__excerpt">GEO en AEO optimaliseren je website voor AI-zoekmachines. Leer wat het is, hoe het werkt en waarom het nu al belangrijk is voor B2B bedrijven.</p>
+          <div class="blog-card__meta">
+            <time datetime="2026-04-22">22 april 2026</time>
+            <span class="blog-card__sep">·</span>
+            <span class="blog-card__readtime">9 min lezen</span>
+            <svg class="blog-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
 
-          <!-- Card 3: Webflow vs WordPress -->
-          <a href="/blog/webflow-vs-wordpress/" class="blog-card reveal" data-cat="websites">
-            <span class="blog-card__category">Websites</span>
-            <h2 class="blog-card__title">Webflow vs WordPress in 2026: welk platform past bij jouw bedrijf?</h2>
-            <p class="blog-card__excerpt">Webflow of WordPress? We vergelijken design, snelheid, SEO, kosten en schaalbaarheid in een eerlijke vergelijking.</p>
-            <div class="blog-card__meta">
-              <time datetime="2026-04-15">15 april 2026</time>
-              <span class="blog-card__sep">·</span>
-              <span class="blog-card__readtime">11 min lezen</span>
-              <svg class="blog-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-          </a>
+        <!-- Card 4: Webflow vs WordPress -->
+        <a href="/blog/webflow-vs-wordpress/" class="blog-card" data-cat="websites">
+          <span class="blog-card__category">Websites</span>
+          <h2 class="blog-card__title">Webflow vs WordPress in 2026: welk platform past bij jouw bedrijf?</h2>
+          <p class="blog-card__excerpt">Webflow of WordPress? We vergelijken design, snelheid, SEO, kosten en schaalbaarheid in een eerlijke vergelijking.</p>
+          <div class="blog-card__meta">
+            <time datetime="2026-04-15">15 april 2026</time>
+            <span class="blog-card__sep">·</span>
+            <span class="blog-card__readtime">11 min lezen</span>
+            <svg class="blog-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
 
-        </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="section cta-section" id="contact">
-      <div class="container">
-        <div class="cta-section__inner reveal">
-          <div class="cta-section__glow" aria-hidden="true"></div>
-          <span class="section__label">Klaar om te groeien?</span>
-          <h2 class="cta-section__title">Meer resultaat.<br><span class="cta-section__title-accent">Minder handwerk.</span></h2>
-          <p class="cta-section__subtitle">Plan een gratis gesprek en ontdek wat Kelvantis voor jouw bedrijf kan betekenen.</p>
-          <div class="cta-section__actions">
-            <button type="button" class="btn btn--primary btn--xl" data-modal="open">
-              <span>Gratis gesprek plannen</span>
-              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
-          <p class="cta-section__trust">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2L5 8.3 2 5.4l4.2-.8L8 1z" stroke="#05FE82" stroke-width="1.2" stroke-linejoin="round"/></svg>
-            <span>Gratis · Geen verplichtingen · Binnen 24 uur reactie</span>
-          </p>
-        </div>
+    <section class="cta-section" id="contact">
+      <div class="cta-block">
+        <span class="cta-label">Klaar om te groeien?</span>
+        <h2 class="cta-title">Meer resultaat.<br><span class="accent">Minder handwerk.</span></h2>
+        <p class="cta-sub">Plan een gratis gesprek en ontdek wat Kelvantis voor jouw bedrijf kan betekenen.</p>
+        <button type="button" class="cta-primary" data-modal="open">Gratis gesprek plannen</button>
+        <p class="cta-trust">Gratis · Geen verplichtingen · Binnen 24 uur reactie</p>
       </div>
     </section>
+
   </main>
 
-  <!-- FOOTER -->
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -499,15 +377,17 @@
     </div>
   </footer>
 
-  <!-- MODAL -->
-  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+</div>
+
+  <!-- ═══════════ INTAKE FORM MODAL ═══════════ -->
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal__overlay" id="modalOverlay"></div>
     <div class="modal__card">
       <button type="button" class="modal__close" id="modalClose" aria-label="Formulier sluiten">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </button>
       <div class="modal__header">
-        <span class="section__label" style="margin-bottom:.75rem;">Gratis · Geen verplichtingen</span>
+        <span class="section__label">Gratis · Geen verplichtingen</span>
         <h2 class="modal__title" id="modal-title">Plan je gratis strategiegesprek</h2>
         <p class="modal__subtitle">Vertel kort over je situatie. We nemen binnen 24 uur contact op.</p>
       </div>
@@ -555,40 +435,44 @@
         <p class="form__disclaimer">Door te versturen ga je akkoord met ons <a href="/privacy" class="form__link">privacybeleid</a>.</p>
       </form>
       <div class="modal__success" id="formSuccess" hidden>
-        <div class="success__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#05FE82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="success__icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#05FE82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
         <h3>Aanvraag ontvangen!</h3>
         <p>We nemen binnen <strong>24 uur</strong> contact met je op.</p>
-        <button type="button" class="btn btn--ghost" id="modalSuccessClose" style="margin-top:1.5rem;">Sluiten</button>
+        <button type="button" class="btn btn--ghost" id="modalSuccessClose">Sluiten</button>
       </div>
     </div>
   </div>
 
-  <!-- WHATSAPP -->
-  <a class="wa-button" href="https://wa.me/31627900367?text=Hallo%20Kelvantis" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <!-- ═══════════ WHATSAPP ═══════════ -->
+  <a class="wa-button" href="https://wa.me/31627900367?text=Hallo%20Kelvantis%2C%20ik%20heb%20interesse%20in%20een%20gratis%20strategiegesprek." target="_blank" rel="noopener noreferrer" aria-label="App ons direct op WhatsApp">
     <span class="wa-button__tooltip">App ons direct</span>
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
   </a>
 
-  <!-- COOKIE -->
-  <div class="cookie-banner" id="cookieBanner" role="region" aria-live="polite">
-    <div class="cookie-banner__inner">
-      <p class="cookie-banner__text"><span>Wij gebruiken cookies voor analytics.</span></p>
-      <div class="cookie-banner__actions">
-        <button type="button" class="btn btn--ghost btn--sm" id="cookieDecline">Alleen noodzakelijk</button>
-        <button type="button" class="btn btn--primary btn--sm" id="cookieAccept">Accepteren</button>
-      </div>
-    </div>
-  </div>
+  <script src="/script.js"></script>
 
-  <script src="../script.js"></script>
+  <!-- Pagina-specifiek: blog-categoriefilter -->
   <script>
-    function filterBlogs(cat, btn) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.blog-card[data-cat]').forEach(card => {
-        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    (function () {
+      var buttons = document.querySelectorAll('.filter-btn');
+      var cards = document.querySelectorAll('.blog-card[data-cat]');
+      if (!buttons.length) return;
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var cat = btn.getAttribute('data-filter');
+          buttons.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          cards.forEach(function (card) {
+            card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+          });
+        });
       });
-    }
+    }());
   </script>
+
 </body>
 </html>
