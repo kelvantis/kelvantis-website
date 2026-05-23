@@ -2039,6 +2039,11 @@ a { color: inherit; }
   color: var(--ink);
 }
 .article-body .comparison-table { margin: 22px 0 26px; }
+.article-body .comparison-table th:nth-child(3),
+.article-body .comparison-table td:nth-child(3) { background: transparent; }
+.article-body .comparison-table td.win-webflow { background: var(--signal-tint); color: var(--ink); font-weight: 600; }
+.article-body .comparison-table td.win-wp { background: var(--paper-soft); color: var(--ink); font-weight: 600; }
+.article-body .comparison-table td.win-tie { color: var(--ink-faint); font-style: italic; }
 
 .article-callout {
   background: var(--paper-soft);
