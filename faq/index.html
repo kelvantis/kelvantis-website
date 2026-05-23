@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="nl" data-theme="dark" class="no-js">
+<html lang="nl">
 <head>
-  <script>document.documentElement.classList.remove("no-js")</script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ0XQN7GR4"></script>
@@ -17,8 +16,8 @@
   <title>FAQ | Veelgestelde Vragen over Webdesign, GEO/AEO &amp; AI | Kelvantis</title>
   <meta name="description" content="Veelgestelde vragen over website laten maken, GEO en AEO optimalisatie, AI automatisering, workflow automatisering en samenwerken met Kelvantis. Wat kost een website? Wat is GEO? Alle antwoorden.">
   <meta name="robots" content="index, follow">
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="apple-touch-icon" href="../favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
   <link rel="canonical" href="https://kelvantis.com/faq/">
   <link rel="alternate" hreflang="nl" href="https://kelvantis.com/faq/" />
   <link rel="alternate" hreflang="x-default" href="https://kelvantis.com/faq/" />
@@ -132,29 +131,18 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    .faq-page { max-width: 780px; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
-    .faq-page__hero { text-align: center; margin-bottom: 3.5rem; }
-    .faq-page__label { display: inline-block; background: rgba(5,254,130,.1); color: var(--color-accent); font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 2rem; margin-bottom: 1rem; }
-    .faq-page__title { font-family: 'Sora', sans-serif; font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; color: var(--color-text); letter-spacing: -.03em; margin-bottom: .75rem; }
-    .faq-page__subtitle { font-size: 1.0625rem; color: var(--color-text-muted); line-height: 1.7; max-width: 580px; margin: 0 auto; }
-    .faq-cat { margin-bottom: 3rem; }
-    .faq-cat__title { font-family: 'Sora', sans-serif; font-size: 1rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 1px solid rgba(5,254,130,.2); }
-    .faq-item { border-bottom: 1px solid var(--color-border); }
-    .faq-item summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.25rem 0; min-height: 52px; font-weight: 600; font-size: .9375rem; color: var(--color-text); user-select: none; }
-    .faq-item summary::-webkit-details-marker { display: none; }
-    .faq-item summary svg { flex-shrink: 0; transition: transform .2s; }
-    .faq-item[open] summary svg { transform: rotate(180deg); }
-    .faq-item__answer { padding: 0 0 1.25rem; font-size: .9375rem; color: var(--color-text-muted); line-height: 1.75; }
-    .faq-item__answer p { margin: 0; }
-  </style>
+  <!-- Styles (gedeelde paper.css) -->
+  <link rel="stylesheet" href="/paper.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
+<a class="skip-link" href="#main">Direct naar inhoud</a>
+
+<div class="page">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="navbar" id="navbar">
     <div class="navbar__container">
 
@@ -265,221 +253,369 @@
     </div>
   </header>
 
-  <main>
-    <div class="faq-page">
+  <main id="main">
+    <div class="faq-page-wrap">
 
-      <div class="faq-page__hero">
-        <span class="faq-page__label">Veelgestelde vragen</span>
-        <h1 class="faq-page__title">Alles wat je wil weten over Kelvantis</h1>
-        <p class="faq-page__subtitle">Van webdesign en GEO/AEO tot AI automatisering en samenwerken. Staat jouw vraag er niet bij? Stuur ons een bericht.</p>
+      <div class="faq-page-hero">
+        <span class="article-hero__cat">Veelgestelde vragen</span>
+        <h1 class="article-hero__title">Alles wat je wil weten over Kelvantis</h1>
+        <p>Van webdesign en GEO/AEO tot AI automatisering en samenwerken. Staat jouw vraag er niet bij? Stuur ons een bericht.</p>
       </div>
 
       <!-- Categorie 1: Over Kelvantis -->
-      <div class="faq-cat">
+      <section class="faq-cat">
         <h2 class="faq-cat__title">Over Kelvantis</h2>
-
-        <details class="faq-item">
-          <summary>Wat doet Kelvantis precies?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Kelvantis is een digitaal bureau in Maastricht dat B2B bedrijven helpt groeien met websites die klanten opleveren, vindbaarheid in Google en ChatGPT, en workflow automatisering. We bouwen systemen die werken terwijl jij je focust op je bedrijf.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Voor wat voor bedrijven werkt Kelvantis?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Kelvantis werkt voor bedrijven van elke schaal: van startups en zelfstandigen tot grotere enterprises en lokale bedrijven die online willen groeien. B2B dienstverleners, consultants, agencies, installatiebedrijven en retailers in Nederland en België.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Hoe verloopt het proces bij Kelvantis?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ons proces bestaat uit 4 fases: (1) <strong>Strategiegesprek</strong>: we brengen jouw situatie, doelen en doelgroep in kaart. (2) <strong>Voorstel &amp; planning</strong>: we presenteren een concrete aanpak met tijdlijn en budget. (3) <strong>Bouw &amp; implementatie</strong>: we bouwen, testen en optimaliseren. (4) <strong>Livegang &amp; optimalisatie</strong>: na livegang analyseren we data en blijven bijsturen.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Biedt Kelvantis een gratis gesprek aan?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ja, we bieden altijd een gratis strategiegesprek van 30-45 minuten aan. In dat gesprek brengen we jouw situatie in kaart en geven we direct bruikbaar advies, ook als je daarna besluit niet samen te werken. Geen verplichtingen.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Hoe neem ik contact op met Kelvantis?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Via het contactformulier op <a href="/contact/">kelvantis.com/contact</a>, per e-mail via <a href="mailto:kelvantis.com@gmail.com">kelvantis.com@gmail.com</a> of telefonisch op <a href="tel:+31627900367">+31 6 27 90 03 67</a>. We reageren altijd binnen 24 uur op werkdagen.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Waar is Kelvantis gevestigd?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Kelvantis is gevestigd in Maastricht. We werken met klanten door heel Nederland en België, volledig online via Teams of Google Meet. Geen rijkosten, geen verloren tijd, gewoon effectief werken.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Werkt Kelvantis ook met bedrijven buiten Maastricht?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ja. De meeste klantgesprekken voeren we online via Teams of Google Meet. We werken met bedrijven door heel Nederland en België. Alle samenwerking verloopt volledig op afstand.</p></div>
-        </details>
-      </div>
+        <ul class="faq__list">
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-1">
+              <span>Wat doet Kelvantis precies?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-1" hidden>
+              <p>Kelvantis is een digitaal bureau in Maastricht dat B2B bedrijven helpt groeien met websites die klanten opleveren, vindbaarheid in Google en ChatGPT, en workflow automatisering. We bouwen systemen die werken terwijl jij je focust op je bedrijf.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-2">
+              <span>Voor wat voor bedrijven werkt Kelvantis?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-2" hidden>
+              <p>Kelvantis werkt voor bedrijven van elke schaal: van startups en zelfstandigen tot grotere enterprises en lokale bedrijven die online willen groeien. B2B dienstverleners, consultants, agencies, installatiebedrijven en retailers in Nederland en België.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-3">
+              <span>Hoe verloopt het proces bij Kelvantis?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-3" hidden>
+              <p>Ons proces bestaat uit 4 fases: (1) <strong>Strategiegesprek</strong>: we brengen jouw situatie, doelen en doelgroep in kaart. (2) <strong>Voorstel &amp; planning</strong>: we presenteren een concrete aanpak met tijdlijn en budget. (3) <strong>Bouw &amp; implementatie</strong>: we bouwen, testen en optimaliseren. (4) <strong>Livegang &amp; optimalisatie</strong>: na livegang analyseren we data en blijven bijsturen.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-4">
+              <span>Biedt Kelvantis een gratis gesprek aan?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-4" hidden>
+              <p>Ja, we bieden altijd een gratis strategiegesprek van 30-45 minuten aan. In dat gesprek brengen we jouw situatie in kaart en geven we direct bruikbaar advies, ook als je daarna besluit niet samen te werken. Geen verplichtingen.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-5">
+              <span>Hoe neem ik contact op met Kelvantis?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-5" hidden>
+              <p>Via het contactformulier op <a href="/contact/">kelvantis.com/contact</a>, per e-mail via <a href="mailto:kelvantis.com@gmail.com">kelvantis.com@gmail.com</a> of telefonisch op <a href="tel:+31627900367">+31&nbsp;6&nbsp;27&nbsp;90&nbsp;03&nbsp;67</a>. We reageren altijd binnen 24 uur op werkdagen.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-6">
+              <span>Waar is Kelvantis gevestigd?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-6" hidden>
+              <p>Kelvantis is gevestigd in Maastricht. We werken met klanten door heel Nederland en België, volledig online via Teams of Google Meet. Geen rijkosten, geen verloren tijd, gewoon effectief werken.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-7">
+              <span>Werkt Kelvantis ook met bedrijven buiten Maastricht?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-7" hidden>
+              <p>Ja. De meeste klantgesprekken voeren we online via Teams of Google Meet. We werken met bedrijven door heel Nederland en België. Alle samenwerking verloopt volledig op afstand.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
       <!-- Categorie 2: Websites -->
-      <div class="faq-cat">
+      <section class="faq-cat">
         <h2 class="faq-cat__title">Websites laten maken</h2>
-
-        <details class="faq-item">
-          <summary>Wat kost een website laten maken bij Kelvantis?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>De prijs is afhankelijk van de scope en het platform. We werken op projectbasis en stellen een offerte op maat op na ons gratis strategiegesprek. Vraag een gesprek aan voor een concreet voorstel.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Hoe lang duurt het om een website te bouwen?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Een standaard B2B-website bouwen we in 3 tot 5 weken, afhankelijk van de complexiteit en hoe snel aangeleverde content beschikbaar is. Complexere projecten met AI-integraties nemen doorgaans 6 tot 10 weken in beslag.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Bouw je websites in Webflow of WordPress?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>We werken het liefst in Webflow, WordPress of custom code (HTML/CSS/JS), afhankelijk van wat het beste past bij jouw situatie. We kunnen in vrijwel elk platform bouwen en kiezen altijd wat het meest waardevol is voor jou.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Kan ik mijn website zelf beheren na oplevering?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Dat hangt af van het platform. In Webflow en WordPress kun je zelf content beheren na een korte uitleg. Wil je dat liever uitbesteden? Dan bieden we ook een onderhoudsabonnement aan.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Verzorgen jullie ook de hosting?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ja. De kosten hangen af van het platform: Webflow en Vercel hebben gratis en betaalde tiers; WordPress hosting varieert per provider. We adviseren altijd de beste optie voor jouw situatie en budget.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Schrijven jullie ook de content voor de website?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ja, copywriting is onderdeel van ons aanbod. We schrijven teksten die bezoekers omzetten in aanvragen, op basis van een intake-sessie. Je mag altijd extra informatie aanleveren die we verwerken in de teksten.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Bouwen jullie ook webshops?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ja, we kunnen webshops bouwen, maar dit is niet waar we ons primair op richten. Onze focus ligt op B2B-websites, automatisering en AI. Heb je toch een webshop nodig? Bespreek het in een gratis gesprek.</p></div>
-        </details>
-      </div>
+        <ul class="faq__list">
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-8">
+              <span>Wat kost een website laten maken bij Kelvantis?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-8" hidden>
+              <p>De prijs is afhankelijk van de scope en het platform. We werken op projectbasis en stellen een offerte op maat op na ons gratis strategiegesprek. Vraag een gesprek aan voor een concreet voorstel.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-9">
+              <span>Hoe lang duurt het om een website te bouwen?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-9" hidden>
+              <p>Een standaard B2B-website bouwen we in 3 tot 5 weken, afhankelijk van de complexiteit en hoe snel aangeleverde content beschikbaar is. Complexere projecten met AI-integraties nemen doorgaans 6 tot 10 weken in beslag.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-10">
+              <span>Bouw je websites in Webflow of WordPress?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-10" hidden>
+              <p>We werken het liefst in Webflow, WordPress of custom code (HTML/CSS/JS), afhankelijk van wat het beste past bij jouw situatie. We kunnen in vrijwel elk platform bouwen en kiezen altijd wat het meest waardevol is voor jou.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-11">
+              <span>Kan ik mijn website zelf beheren na oplevering?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-11" hidden>
+              <p>Dat hangt af van het platform. In Webflow en WordPress kun je zelf content beheren na een korte uitleg. Wil je dat liever uitbesteden? Dan bieden we ook een onderhoudsabonnement aan.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-12">
+              <span>Verzorgen jullie ook de hosting?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-12" hidden>
+              <p>Ja. De kosten hangen af van het platform: Webflow en Vercel hebben gratis en betaalde tiers; WordPress hosting varieert per provider. We adviseren altijd de beste optie voor jouw situatie en budget.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-13">
+              <span>Schrijven jullie ook de content voor de website?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-13" hidden>
+              <p>Ja, copywriting is onderdeel van ons aanbod. We schrijven teksten die bezoekers omzetten in aanvragen, op basis van een intake-sessie. Je mag altijd extra informatie aanleveren die we verwerken in de teksten.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-14">
+              <span>Bouwen jullie ook webshops?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-14" hidden>
+              <p>Ja, we kunnen webshops bouwen, maar dit is niet waar we ons primair op richten. Onze focus ligt op B2B-websites, automatisering en AI. Heb je toch een webshop nodig? Bespreek het in een gratis gesprek.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
       <!-- Categorie 3: GEO & AEO -->
-      <div class="faq-cat">
+      <section class="faq-cat">
         <h2 class="faq-cat__title">GEO &amp; AEO</h2>
+        <ul class="faq__list">
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-15">
+              <span>Wat is GEO (Generative Engine Optimization)?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-15" hidden>
+              <p>GEO staat voor Generative Engine Optimization: het optimaliseren van jouw website zodat AI-modellen zoals ChatGPT, Perplexity en Google AI Overviews jouw content citeren als antwoord op vragen van gebruikers. Waar klassieke SEO draait om rankings in blauwe links, gaat GEO over zichtbaarheid in AI-gegenereerde antwoorden.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-16">
+              <span>Wat is AEO (Answer Engine Optimization)?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-16" hidden>
+              <p>AEO richt zich op het beantwoorden van specifieke vragen die jouw doelgroep stelt aan zoekmachines en AI-assistenten. Door FAQ-schema, structured data en gezaghebbende content te gebruiken vergroot je de kans dat jouw antwoord direct wordt getoond.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-17">
+              <span>Verschilt GEO/AEO van klassieke SEO?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-17" hidden>
+              <p>Klassieke SEO richt zich op rankings in Google's blauwe links. GEO en AEO richten zich op zichtbaarheid in AI-gegenereerde antwoorden. De technieken overlappen gedeeltelijk maar GEO vereist ook citeerbare content, FAQ-schema en sterke E-E-A-T signalen. De beste strategie combineert alle drie.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-18">
+              <span>Hoe snel zie ik resultaat van GEO/AEO?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-18" hidden>
+              <p>GEO/AEO werkt op de middellange termijn. Wanneer je zichtbaarheid verbetert hangt af van de autoriteit van je domein, de concurrentie en hoe consistent je content is geoptimaliseerd. Er is geen vaste tijdlijn te geven.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-19">
+              <span>Voor welke AI-zoekmachines optimaliseert Kelvantis?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-19" hidden>
+              <p>Wij optimaliseren voor ChatGPT (inclusief SearchGPT), Perplexity AI, Google AI Overviews en Bing Copilot. De kern van GEO werkt universeel: gezaghebbende, citeerbare content die duidelijk vragen beantwoordt.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-20">
+              <span>Is GEO/AEO ook geschikt voor kleine B2B bedrijven?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-20" hidden>
+              <p>Ja, juist. Voor kleine B2B bedrijven biedt GEO een unieke kans om zichtbaar te zijn in een niche waar grote concurrenten nog niet actief op optimaliseren. Wie nu begint, bouwt een voorsprong op die moeilijk in te halen is.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-21">
+              <span>Heb ik GEO nodig als ik al goede SEO-rankings heb?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-21" hidden>
+              <p>Goede SEO-rankings helpen, maar zijn geen garantie voor GEO-zichtbaarheid. AI-modellen beoordelen content anders dan Google's ranking-algoritme. Je kunt op positie 3 staan in Google maar nooit geciteerd worden door ChatGPT. De beste strategie investeert in beide.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-        <details class="faq-item">
-          <summary>Wat is GEO (Generative Engine Optimization)?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>GEO staat voor Generative Engine Optimization: het optimaliseren van jouw website zodat AI-modellen zoals ChatGPT, Perplexity en Google AI Overviews jouw content citeren als antwoord op vragen van gebruikers. Waar klassieke SEO draait om rankings in blauwe links, gaat GEO over zichtbaarheid in AI-gegenereerde antwoorden.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Wat is AEO (Answer Engine Optimization)?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>AEO richt zich op het beantwoorden van specifieke vragen die jouw doelgroep stelt aan zoekmachines en AI-assistenten. Door FAQ-schema, structured data en gezaghebbende content te gebruiken vergroot je de kans dat jouw antwoord direct wordt getoond.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Verschilt GEO/AEO van klassieke SEO?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Klassieke SEO richt zich op rankings in Google's blauwe links. GEO en AEO richten zich op zichtbaarheid in AI-gegenereerde antwoorden. De technieken overlappen gedeeltelijk maar GEO vereist ook citeerbare content, FAQ-schema en sterke E-E-A-T signalen. De beste strategie combineert alle drie.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Hoe snel zie ik resultaat van GEO/AEO?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>GEO/AEO werkt op de middellange termijn. Wanneer je zichtbaarheid verbetert hangt af van de autoriteit van je domein, de concurrentie en hoe consistent je content is geoptimaliseerd. Er is geen vaste tijdlijn te geven.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Voor welke AI-zoekmachines optimaliseert Kelvantis?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Wij optimaliseren voor ChatGPT (inclusief SearchGPT), Perplexity AI, Google AI Overviews en Bing Copilot. De kern van GEO werkt universeel: gezaghebbende, citeerbare content die duidelijk vragen beantwoordt.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Is GEO/AEO ook geschikt voor kleine B2B bedrijven?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ja, juist. Voor kleine B2B bedrijven biedt GEO een unieke kans om zichtbaar te zijn in een niche waar grote concurrenten nog niet actief op optimaliseren. Wie nu begint, bouwt een voorsprong op die moeilijk in te halen is.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Heb ik GEO nodig als ik al goede SEO-rankings heb?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Goede SEO-rankings helpen, maar zijn geen garantie voor GEO-zichtbaarheid. AI-modellen beoordelen content anders dan Google's ranking-algoritme. Je kunt op positie 3 staan in Google maar nooit geciteerd worden door ChatGPT. De beste strategie investeert in beide.</p></div>
-        </details>
-      </div>
-
-      <!-- Categorie 4: Workflow Automatisering -->
-      <div class="faq-cat">
+      <!-- Categorie 4: Workflow Automatisering & AI -->
+      <section class="faq-cat">
         <h2 class="faq-cat__title">Workflow Automatisering &amp; AI</h2>
+        <ul class="faq__list">
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-22">
+              <span>Wat is workflow automatisering?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-22" hidden>
+              <p>Workflow automatisering is het automatisch laten uitvoeren van terugkerende bedrijfsprocessen, zoals lead-opvolging, e-mailcampagnes, CRM-updates en rapportages. Je bespaart tijd, vermindert fouten en kunt je focussen op werk dat echt waarde toevoegt.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-23">
+              <span>Wat kan ik automatiseren in mijn bedrijf?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-23" hidden>
+              <p>Populaire automatiseringen zijn: lead-opvolging (automatische e-mail na formulierverzending), CRM-koppelingen, offerte-aanvragen, facturatie-reminders, social media planning en interne rapportages. In een gratis gesprek analyseren we welke processen de meeste tijdwinst opleveren.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-24">
+              <span>Werkt Kelvantis met n8n of Make?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-24" hidden>
+              <p>Kelvantis werkt met beide platforms, afhankelijk van de situatie. Make is ideaal voor eenvoudigere automatiseringen waarbij de klant zelf wil beheren. n8n is beter voor complexe workflows, hoge volumes en privacy-gevoelige data. We hosten n8n op een dedicated server.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-25">
+              <span>Kan ik mijn automatisering zelf beheren na oplevering?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-25" hidden>
+              <p>Ja. Bij Make-automatiseringen kun je na een korte uitleg zelf kleine aanpassingen doen. n8n-workflows zijn iets technischer maar we leveren altijd documentatie op. Voor onderhoud en uitbreidingen kun je een onderhoudsabonnement afnemen.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-26">
+              <span>Wat is het verschil tussen workflow automatisering en AI Implementatie?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-26" hidden>
+              <p>Workflow automatisering verbindt bestaande tools en laat processen automatisch verlopen. AI Implementatie gaat een stap verder: we bouwen intelligente systemen die analyseren, beslissingen nemen en leren, zoals AI chatbots, lead scoring of content generatie. Beide overlappen en versterken elkaar.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-27">
+              <span>Met welke tools en platformen werkt Kelvantis?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-27" hidden>
+              <p>We werken onder andere met: n8n, Make (Integromat), Zapier, HubSpot, ActiveCampaign, Google Workspace, Notion, Airtable, Slack, WhatsApp Business API en custom API-koppelingen. We kiezen altijd de stack die het beste aansluit bij jouw bestaande systemen.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-28">
+              <span>Bouwen jullie ook AI chatbots?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-28" hidden>
+              <p>Ja, AI chatbots zijn onderdeel van ons AI Implementatie aanbod. We bouwen chatbots die op basis van jouw bedrijfsinformatie vragen beantwoorden, leads kwalificeren en afspraken inplannen. Gebaseerd op Claude of GPT-4, gehost op jouw eigen infrastructure.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-        <details class="faq-item">
-          <summary>Wat is workflow automatisering?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Workflow automatisering is het automatisch laten uitvoeren van terugkerende bedrijfsprocessen, zoals lead-opvolging, e-mailcampagnes, CRM-updates en rapportages. Je bespaart tijd, vermindert fouten en kunt je focussen op werk dat echt waarde toevoegt.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Wat kan ik automatiseren in mijn bedrijf?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Populaire automatiseringen zijn: lead-opvolging (automatische e-mail na formulierverzending), CRM-koppelingen, offerte-aanvragen, facturatie-reminders, social media planning en interne rapportages. In een gratis gesprek analyseren we welke processen de meeste tijdwinst opleveren.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Werkt Kelvantis met n8n of Make?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Kelvantis werkt met beide platforms, afhankelijk van de situatie. Make is ideaal voor eenvoudigere automatiseringen waarbij de klant zelf wil beheren. n8n is beter voor complexe workflows, hoge volumes en privacy-gevoelige data. We hosten n8n op een dedicated server.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Kan ik mijn automatisering zelf beheren na oplevering?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ja. Bij Make-automatiseringen kun je na een korte uitleg zelf kleine aanpassingen doen. n8n-workflows zijn iets technischer maar we leveren altijd documentatie op. Voor onderhoud en uitbreidingen kun je een onderhoudsabonnement afnemen.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Wat is het verschil tussen workflow automatisering en AI Implementatie?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Workflow automatisering verbindt bestaande tools en laat processen automatisch verlopen. AI Implementatie gaat een stap verder: we bouwen intelligente systemen die analyseren, beslissingen nemen en leren, zoals AI chatbots, lead scoring of content generatie. Beide overlappen en versterken elkaar.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Met welke tools en platformen werkt Kelvantis?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>We werken onder andere met: n8n, Make (Integromat), Zapier, HubSpot, ActiveCampaign, Google Workspace, Notion, Airtable, Slack, WhatsApp Business API en custom API-koppelingen. We kiezen altijd de stack die het beste aansluit bij jouw bestaande systemen.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Bouwen jullie ook AI chatbots?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ja, AI chatbots zijn onderdeel van ons AI Implementatie aanbod. We bouwen chatbots die op basis van jouw bedrijfsinformatie vragen beantwoorden, leads kwalificeren en afspraken inplannen. Gebaseerd op Claude of GPT-4, gehost op jouw eigen infrastructure.</p></div>
-        </details>
-      </div>
-
-      <!-- Categorie 5: Samenwerking & prijzen -->
-      <div class="faq-cat">
+      <!-- Categorie 5: Samenwerking & Prijzen -->
+      <section class="faq-cat">
         <h2 class="faq-cat__title">Samenwerking &amp; Prijzen</h2>
-
-        <details class="faq-item">
-          <summary>Werkt Kelvantis op projectbasis of met een abonnement?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Beide. Eenmalige projecten (website, automatisering) worden op vaste prijs of uurtarief afgerekend. Voor doorlopende begeleiding, GEO/AEO optimalisatie of onderhoud werken we met maandelijkse abonnementen zonder langetermijnverplichting.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Vraagt Kelvantis een aanbetaling?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ja, voor projecten vragen we een aanbetaling van 40% bij de start van het project. De resterende 60% is verschuldigd bij oplevering. Dit geeft beide partijen zekerheid en commitment aan de samenwerking.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Wat gebeurt er als ik niet tevreden ben met het resultaat?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>We werken altijd iteratief: je ziet het werk tussentijds en geeft feedback voor oplevering. In het contract zijn revisierondes inbegrepen. Mochten er na oplevering toch issues zijn, lossen we die altijd op. Klanttevredenheid staat centraal in elke samenwerking.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Kan ik ook losse diensten afnemen?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ja. Je kunt ook een losse website, een GEO/AEO audit of een specifieke automatisering afnemen. Vraag een vrijblijvend gesprek aan, dan bespreken we samen wat het beste past.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Bieden jullie een onderhoudsabonnement aan?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>Ja, voor klanten die doorlopend technisch onderhoud, kleine updates en monitoring willen bieden we een maandelijks onderhoudsabonnement. Dit omvat beveiligingsupdates, snelheidsoptimalisatie, content-aanpassingen en prioriteitsondersteuning.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Hoe weet ik of de investering iets oplevert?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-          <div class="faq-item__answer"><p>We koppelen bij elke website Google Search Console. Voor GEO/AEO rapporteren we maandelijks over vermeldingen in AI Overviews, featured snippet posities en domeinautoriteit. Je weet altijd precies wat het oplevert.</p></div>
-        </details>
-      </div>
+        <ul class="faq__list">
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-29">
+              <span>Werkt Kelvantis op projectbasis of met een abonnement?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-29" hidden>
+              <p>Beide. Eenmalige projecten (website, automatisering) worden op vaste prijs of uurtarief afgerekend. Voor doorlopende begeleiding, GEO/AEO optimalisatie of onderhoud werken we met maandelijkse abonnementen zonder langetermijnverplichting.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-30">
+              <span>Vraagt Kelvantis een aanbetaling?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-30" hidden>
+              <p>Ja, voor projecten vragen we een aanbetaling van 40% bij de start van het project. De resterende 60% is verschuldigd bij oplevering. Dit geeft beide partijen zekerheid en commitment aan de samenwerking.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-31">
+              <span>Wat gebeurt er als ik niet tevreden ben met het resultaat?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-31" hidden>
+              <p>We werken altijd iteratief: je ziet het werk tussentijds en geeft feedback voor oplevering. In het contract zijn revisierondes inbegrepen. Mochten er na oplevering toch issues zijn, lossen we die altijd op. Klanttevredenheid staat centraal in elke samenwerking.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-32">
+              <span>Kan ik ook losse diensten afnemen?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-32" hidden>
+              <p>Ja. Je kunt ook een losse website, een GEO/AEO audit of een specifieke automatisering afnemen. Vraag een vrijblijvend gesprek aan, dan bespreken we samen wat het beste past.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-33">
+              <span>Bieden jullie een onderhoudsabonnement aan?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-33" hidden>
+              <p>Ja, voor klanten die doorlopend technisch onderhoud, kleine updates en monitoring willen bieden we een maandelijks onderhoudsabonnement. Dit omvat beveiligingsupdates, snelheidsoptimalisatie, content-aanpassingen en prioriteitsondersteuning.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-34">
+              <span>Hoe weet ik of de investering iets oplevert?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-34" hidden>
+              <p>We koppelen bij elke website Google Search Console. Voor GEO/AEO rapporteren we maandelijks over vermeldingen in AI Overviews, featured snippet posities en domeinautoriteit. Je weet altijd precies wat het oplevert.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
       <!-- CTA -->
-      <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2.5rem; text-align: center; margin-top: 1rem;">
-        <h2 style="font-family:'Sora',sans-serif; font-size:1.375rem; font-weight:700; color:var(--color-text); margin-bottom:.75rem;">Staat jouw vraag er niet bij?</h2>
-        <p style="color:var(--color-text-muted); margin-bottom:1.5rem;">Stel hem in ons gratis strategiegesprek. 30-45 minuten, geen verplichtingen.</p>
-        <a href="/contact/" class="btn btn--primary btn--lg">Gratis strategiegesprek</a>
+      <div class="article-cta">
+        <h3>Staat jouw vraag er niet bij?</h3>
+        <p>Stel hem in ons gratis strategiegesprek. 30-45 minuten, geen verplichtingen.</p>
+        <div class="article-cta__actions">
+          <a href="/contact/" class="cta-primary">Gratis strategiegesprek</a>
+        </div>
       </div>
 
     </div>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -541,10 +677,17 @@
     </div>
   </footer>
 
-  <a class="wa-button" href="https://wa.me/31627900367?text=Hallo%20Kelvantis" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="wa-button__tooltip">App ons direct</span><svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</div>
 
-  <div class="cookie-banner" id="cookieBanner" role="region" aria-live="polite"><div class="cookie-banner__inner"><p class="cookie-banner__text"><span>Wij gebruiken cookies voor analytics.</span></p><div class="cookie-banner__actions"><button type="button" class="btn btn--ghost btn--sm" id="cookieDecline">Alleen noodzakelijk</button><button type="button" class="btn btn--primary btn--sm" id="cookieAccept">Accepteren</button></div></div></div>
+  <!-- ═══════════ WHATSAPP ═══════════ -->
+  <a class="wa-button" href="https://wa.me/31627900367?text=Hallo%20Kelvantis%2C%20ik%20heb%20interesse%20in%20een%20gratis%20strategiegesprek." target="_blank" rel="noopener noreferrer" aria-label="App ons direct op WhatsApp">
+    <span class="wa-button__tooltip">App ons direct</span>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
 
-  <script src="../script.js"></script>
+  <script src="/script.js"></script>
+
 </body>
 </html>
