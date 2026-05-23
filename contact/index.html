@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="nl" data-theme="dark" class="no-js">
+<html lang="nl">
 <head>
-  <script>document.documentElement.classList.remove("no-js")</script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ0XQN7GR4"></script>
@@ -17,8 +16,8 @@
   <title>Contact | Plan een gratis strategiegesprek | Kelvantis</title>
   <meta name="description" content="Plan een gratis strategiegesprek met Kelvantis. Geen verkooppraatje, direct bruikbaar advies over websites, GEO/AEO of AI automatisering. Binnen 24 uur reactie.">
   <meta name="robots" content="index, follow">
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="apple-touch-icon" href="../favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
   <link rel="canonical" href="https://kelvantis.com/contact/">
   <link rel="alternate" hreflang="nl" href="https://kelvantis.com/contact/" />
   <link rel="alternate" hreflang="x-default" href="https://kelvantis.com/contact/" />
@@ -36,10 +35,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../style.css">
+  <!-- Styles (gedeelde paper.css) -->
+  <link rel="stylesheet" href="/paper.css">
 
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
@@ -95,32 +94,15 @@
     }
   }
   </script>
-
-  <style>
-    .contact-page { padding: calc(var(--navbar-h) + 4rem) 0 6rem; }
-    .contact-page__grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-top: 3rem; }
-    @media (min-width: 768px) { .contact-page__grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
-    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
-    .contact-info__item { display: flex; align-items: flex-start; gap: 1rem; }
-    .contact-info__icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(5,254,130,0.1); border: 1px solid rgba(5,254,130,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
-    .contact-info__text strong { display: block; font-size: 0.875rem; font-weight: 600; color: var(--color-text); margin-bottom: 0.25rem; }
-    .contact-info__text span, .contact-info__text a { font-size: 0.9375rem; color: var(--color-text-muted); text-decoration: none; transition: color var(--transition-fast); }
-    .contact-info__text a:hover { color: var(--color-accent); }
-    .contact-trust { margin-top: 2.5rem; padding: 1.5rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
-    .contact-trust__title { font-size: 0.875rem; font-weight: 600; color: var(--color-text); margin-bottom: 1rem; }
-    .contact-trust__items { display: flex; flex-direction: column; gap: 0.625rem; }
-    .contact-trust__item { display: flex; align-items: center; gap: 0.625rem; font-size: 0.875rem; color: var(--color-text-muted); }
-    .contact-trust__item::before { content: '✓'; color: var(--color-accent); font-weight: 700; flex-shrink: 0; }
-    .contact-form-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2rem; }
-    @media (min-width: 640px) { .contact-form-card { padding: 2.5rem; } }
-    .contact-form-card h2 { font-family: var(--font-heading); font-size: 1.375rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text); }
-    .contact-form-card p { font-size: 0.9375rem; color: var(--color-text-muted); margin-bottom: 1.75rem; line-height: 1.6; }
-  </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar" id="navbar">
+<a class="skip-link" href="#main">Direct naar inhoud</a>
+
+<div class="page">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header class="navbar" id="navbar">
     <div class="navbar__container">
 
       <a href="/" class="navbar__logo" aria-label="Kelvantis: terug naar home">
@@ -230,57 +212,59 @@
     </div>
   </header>
 
-<main>
-  <section class="contact-page">
-    <div class="container">
-      <div class="section__header reveal" style="text-align:left; margin-bottom: 0;">
-        <span class="section__label">Gratis · Geen verplichtingen</span>
-        <h1 class="section__title" style="font-size: clamp(2rem, 5vw, 3rem);">Plan een gratis strategiegesprek</h1>
-        <p style="font-size: 1.0625rem; color: var(--color-text-muted); line-height: 1.7; max-width: 560px; margin-top: 1rem;">Geen verkooppraatje. We analyseren jouw situatie en geven direct bruikbaar advies over websites, GEO/AEO of AI automatisering. Binnen 24 uur reactie.</p>
-      </div>
+  <main id="main">
+    <section class="section">
 
-      <div class="contact-page__grid">
+      <header class="section-head">
+        <div class="section-label">Gratis · Geen verplichtingen</div>
+        <div>
+          <h1 class="section-title">Plan een gratis <span class="accent">strategiegesprek</span>.</h1>
+          <p class="section-sub">Geen verkooppraatje. We analyseren jouw situatie en geven direct bruikbaar advies over websites, GEO/AEO of AI automatisering. Binnen 24 uur reactie.</p>
+        </div>
+      </header>
+
+      <div class="contact-grid">
 
         <!-- Contactformulier -->
-        <div class="contact-form-card reveal">
+        <div class="contact-form-card">
           <h2>Stuur ons een bericht</h2>
           <p>Vul het formulier in en we nemen binnen 24 uur contact op.</p>
 
           <form id="contactPageForm" action="https://formspree.io/f/xwvweodo" method="POST" novalidate>
             <div class="form__row">
               <div class="form__group">
-                <label class="form__label" for="cp-naam">Naam <span aria-hidden="true">*</span></label>
+                <label class="form__label" for="cp-naam"><span>Naam</span> <span aria-hidden="true">*</span></label>
                 <input class="form__input" type="text" id="cp-naam" name="naam" required aria-required="true" placeholder="Jan de Vries" autocomplete="name">
               </div>
               <div class="form__group">
-                <label class="form__label" for="cp-bedrijf">Bedrijfsnaam <span aria-hidden="true">*</span></label>
+                <label class="form__label" for="cp-bedrijf"><span>Bedrijfsnaam</span> <span aria-hidden="true">*</span></label>
                 <input class="form__input" type="text" id="cp-bedrijf" name="bedrijf" required aria-required="true" placeholder="Jouw Bedrijf BV" autocomplete="organization">
               </div>
             </div>
             <div class="form__row">
               <div class="form__group">
-                <label class="form__label" for="cp-email">E-mailadres <span aria-hidden="true">*</span></label>
+                <label class="form__label" for="cp-email"><span>E-mailadres</span> <span aria-hidden="true">*</span></label>
                 <input class="form__input" type="email" id="cp-email" name="email" required aria-required="true" placeholder="jan@jouwbedrijf.nl" autocomplete="email">
               </div>
               <div class="form__group">
-                <label class="form__label" for="cp-website">Website URL <span class="form__label-optional">(optioneel)</span></label>
+                <label class="form__label" for="cp-website"><span>Website URL</span> <span class="form__label-optional">(optioneel)</span></label>
                 <input class="form__input" type="url" id="cp-website" name="website" placeholder="https://jouwbedrijf.nl" autocomplete="url">
               </div>
             </div>
             <div class="form__group">
-              <label class="form__label" for="cp-dienst">Interesse in <span aria-hidden="true">*</span></label>
+              <label class="form__label" for="cp-dienst"><span>Interesse in</span> <span aria-hidden="true">*</span></label>
               <select class="form__select" id="cp-dienst" name="dienst" required aria-required="true">
                 <option value="" disabled selected>Kies een dienst...</option>
                 <option value="Nog niet zeker">Nog niet zeker, adviseer mij</option>
                 <option value="Website">Website laten maken</option>
-                <option value="GEO & AEO">GEO &amp; AEO</option>
+                <option value="GEO &amp; AEO">GEO &amp; AEO</option>
                 <option value="Automatisering">Workflow Automatisering</option>
                 <option value="AI Implementatie">AI Implementatie</option>
                 <option value="Combinatie">Combinatie van diensten</option>
               </select>
             </div>
             <div class="form__group">
-              <label class="form__label" for="cp-bericht">Wat wil je aanpakken? <span aria-hidden="true">*</span></label>
+              <label class="form__label" for="cp-bericht"><span>Wat wil je aanpakken?</span> <span aria-hidden="true">*</span></label>
               <textarea class="form__textarea" id="cp-bericht" name="bericht" rows="4" required aria-required="true" placeholder="Vertel kort over je situatie, je doelen en wat je wilt bereiken..."></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--full btn--lg form__submit" id="cp-submit">
@@ -290,44 +274,44 @@
             <p class="form__disclaimer">Door te versturen ga je akkoord met ons <a href="/privacy" class="form__link">privacybeleid</a>. We reageren binnen 24 uur.</p>
           </form>
 
-          <div id="cp-success" hidden style="text-align:center; padding: 2rem 0;">
-            <div style="width:56px;height:56px;border-radius:50%;background:rgba(5,254,130,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#05FE82" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div id="cp-success" class="cp-success" hidden>
+            <div class="cp-success__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <h3 style="font-family:var(--font-heading);font-size:1.375rem;margin-bottom:0.5rem;">Aanvraag ontvangen!</h3>
-            <p style="color:var(--color-text-muted);">We nemen binnen <strong>24 uur</strong> contact met je op.</p>
+            <h3>Aanvraag ontvangen!</h3>
+            <p>We nemen binnen <strong>24 uur</strong> contact met je op.</p>
           </div>
 
-          <div id="cp-error" hidden role="alert" aria-live="polite" style="margin-top:1rem;padding:0.875rem 1rem;border-radius:8px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);color:#FCA5A5;font-size:0.9375rem;line-height:1.5;">
-            <strong style="color:#F87171;">Er ging iets mis bij het versturen.</strong> Probeer het opnieuw, of mail direct naar <a href="mailto:kelvantis.com@gmail.com" style="color:#F87171;text-decoration:underline;">kelvantis.com@gmail.com</a>.
+          <div id="cp-error" class="cp-error" role="alert" aria-live="polite" hidden>
+            <strong>Er ging iets mis bij het versturen.</strong> Probeer het opnieuw, of mail direct naar <a href="mailto:kelvantis.com@gmail.com">kelvantis.com@gmail.com</a>.
           </div>
         </div>
 
         <!-- Contact info -->
-        <div class="contact-info reveal">
+        <div class="contact-info">
           <div class="contact-info__item">
-            <div class="contact-info__icon">📧</div>
+            <div class="contact-info__icon" aria-hidden="true">📧</div>
             <div class="contact-info__text">
               <strong>E-mail</strong>
               <a href="mailto:kelvantis.com@gmail.com">kelvantis.com@gmail.com</a>
             </div>
           </div>
           <div class="contact-info__item">
-            <div class="contact-info__icon">💬</div>
+            <div class="contact-info__icon" aria-hidden="true">💬</div>
             <div class="contact-info__text">
               <strong>WhatsApp</strong>
               <a href="https://wa.me/31627900367" target="_blank" rel="noopener">Direct een gesprek starten</a>
             </div>
           </div>
           <div class="contact-info__item">
-            <div class="contact-info__icon">📍</div>
+            <div class="contact-info__icon" aria-hidden="true">📍</div>
             <div class="contact-info__text">
               <strong>Locatie</strong>
               <span>Maastricht, Nederland</span>
             </div>
           </div>
           <div class="contact-info__item">
-            <div class="contact-info__icon">🕐</div>
+            <div class="contact-info__icon" aria-hidden="true">🕐</div>
             <div class="contact-info__text">
               <strong>Reactietijd</strong>
               <span>Binnen 24 uur op werkdagen</span>
@@ -347,12 +331,11 @@
         </div>
 
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-<!-- FOOTER -->
-<footer class="footer">
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
     <div class="container">
       <div class="footer__inner">
 
@@ -413,46 +396,48 @@
     </div>
   </footer>
 
-<!-- WHATSAPP -->
-<a class="wa-button" href="https://wa.me/31627900367?text=Hallo%20Kelvantis%2C%20ik%20heb%20interesse%20in%20een%20gratis%20strategiegesprek." target="_blank" rel="noopener noreferrer" aria-label="App ons direct op WhatsApp">
-  <span class="wa-button__tooltip">App ons direct</span>
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-
-<!-- COOKIE BANNER -->
-<div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie-instellingen" aria-live="polite">
-  <div class="cookie-banner__inner">
-    <p class="cookie-banner__text"><span>Wij gebruiken cookies voor analytics en een betere gebruikerservaring.</span></p>
-    <div class="cookie-banner__actions">
-      <button type="button" class="btn btn--ghost btn--sm" id="cookieDecline">Alleen noodzakelijk</button>
-      <button type="button" class="btn btn--primary btn--sm" id="cookieAccept">Accepteren</button>
-    </div>
-  </div>
 </div>
 
-<script src="../script.js"></script>
-<script>
-  // Contact page form submission
-  const cpForm = document.getElementById('contactPageForm');
-  const cpSuccess = document.getElementById('cp-success');
-  const cpError = document.getElementById('cp-error');
-  if (cpForm) {
-    cpForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = document.getElementById('cp-submit');
-      btn.disabled = true;
-      btn.querySelector('span').textContent = 'Versturen...';
-      if (cpError) cpError.hidden = true;
-      try {
-        const res = await fetch(cpForm.action, {
-          method: 'POST',
-          body: new FormData(cpForm),
-          headers: { Accept: 'application/json' }
-        });
-        if (res.ok) {
-          cpForm.hidden = true;
-          cpSuccess.hidden = false;
-        } else {
+  <!-- ═══════════ WHATSAPP ═══════════ -->
+  <a class="wa-button" href="https://wa.me/31627900367?text=Hallo%20Kelvantis%2C%20ik%20heb%20interesse%20in%20een%20gratis%20strategiegesprek." target="_blank" rel="noopener noreferrer" aria-label="App ons direct op WhatsApp">
+    <span class="wa-button__tooltip">App ons direct</span>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="/script.js"></script>
+  <script>
+    // Contact page form submission (Formspree, inline success/error)
+    (function () {
+      var cpForm = document.getElementById('contactPageForm');
+      if (!cpForm) return;
+      var cpSuccess = document.getElementById('cp-success');
+      var cpError = document.getElementById('cp-error');
+      cpForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var btn = document.getElementById('cp-submit');
+        btn.disabled = true;
+        btn.querySelector('span').textContent = 'Versturen...';
+        if (cpError) cpError.hidden = true;
+        try {
+          var res = await fetch(cpForm.action, {
+            method: 'POST',
+            body: new FormData(cpForm),
+            headers: { Accept: 'application/json' }
+          });
+          if (res.ok) {
+            cpForm.hidden = true;
+            cpSuccess.hidden = false;
+          } else {
+            btn.disabled = false;
+            btn.querySelector('span').textContent = 'Verstuur aanvraag';
+            if (cpError) {
+              cpError.hidden = false;
+              cpError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }
+        } catch (err) {
           btn.disabled = false;
           btn.querySelector('span').textContent = 'Verstuur aanvraag';
           if (cpError) {
@@ -460,16 +445,9 @@
             cpError.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
         }
-      } catch {
-        btn.disabled = false;
-        btn.querySelector('span').textContent = 'Verstuur aanvraag';
-        if (cpError) {
-          cpError.hidden = false;
-          cpError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }
-    });
-  }
-</script>
+      });
+    }());
+  </script>
+
 </body>
 </html>
