@@ -2044,6 +2044,7 @@ a { color: inherit; }
 .article-body .comparison-table td.win-webflow { background: var(--signal-tint); color: var(--ink); font-weight: 600; }
 .article-body .comparison-table td.win-wp { background: var(--paper-soft); color: var(--ink); font-weight: 600; }
 .article-body .comparison-table td.win-tie { color: var(--ink-faint); font-style: italic; }
+.article-body .comparison-table td.winner { background: var(--signal-tint); color: var(--ink); font-weight: 600; }
 
 .article-callout {
   background: var(--paper-soft);
