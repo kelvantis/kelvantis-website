@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="nl" data-theme="dark" class="no-js">
+<html lang="nl">
 <head>
-  <script>document.documentElement.classList.remove("no-js")</script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ0XQN7GR4"></script>
@@ -17,8 +16,8 @@
   <title>Onze Werkwijze | Hoe Kelvantis werkt | Kelvantis</title>
   <meta name="description" content="Ontdek de werkwijze van Kelvantis. Van strategie tot livegang en optimalisatie: zo bouwen we websites, GEO/AEO en automatisering die écht werken voor B2B bedrijven.">
   <meta name="robots" content="index, follow">
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="apple-touch-icon" href="../favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
   <link rel="canonical" href="https://kelvantis.com/werkwijze/">
   <link rel="alternate" hreflang="nl" href="https://kelvantis.com/werkwijze/" />
   <link rel="alternate" hreflang="x-default" href="https://kelvantis.com/werkwijze/" />
@@ -36,10 +35,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../style.css">
+  <!-- Styles (gedeelde paper.css) -->
+  <link rel="stylesheet" href="/paper.css">
 
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
@@ -92,7 +91,11 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
+<a class="skip-link" href="#main">Direct naar inhoud</a>
+
+<div class="page">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="navbar" id="navbar">
     <div class="navbar__container">
 
@@ -203,124 +206,73 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- HERO -->
-    <section class="section hero" id="hero" style="padding-top: 8rem; padding-bottom: 5rem; background: var(--color-bg);">
-      <div class="container">
-        <div class="hero__content" style="max-width: 700px;">
-          <span class="section__label reveal">Werkwijze</span>
-          <h1 class="hero__title reveal" style="margin-top: 1rem;">Zo werken wij.<br><span style="color: var(--color-accent);">Stap voor stap.</span></h1>
-          <p class="hero__subtitle reveal" style="margin-top: 1.25rem; font-size: clamp(1rem, 2.5vw, 1.125rem); color: var(--color-text-muted); line-height: 1.75; max-width: 560px;">
-            Geen zwarte dozen, geen vage processen. Bij Kelvantis weet je precies wat er wanneer gebeurt, waarom we het zo doen, en wat jij eraan hebt.
-          </p>
-          <div class="hero__ctas reveal" style="margin-top: 2rem;">
-            <button type="button" class="btn btn--primary btn--lg" data-modal="open">Gratis strategiegesprek</button>
-            <a href="/over-ons/" class="btn btn--ghost btn--lg">Over Kelvantis</a>
-          </div>
-        </div>
+    <section class="svc-hero" id="hero">
+      <p class="svc-hero__label">Werkwijze</p>
+      <h1 class="svc-hero__title">Zo werken wij.<br><span class="accent">Stap voor stap.</span></h1>
+      <p class="svc-hero__sub">Geen zwarte dozen, geen vage processen. Bij Kelvantis weet je precies wat er wanneer gebeurt, waarom we het zo doen, en wat jij eraan hebt.</p>
+      <div class="svc-hero__ctas">
+        <button type="button" class="cta-primary" data-modal="open">Gratis strategiegesprek</button>
+        <a href="/over-ons/" class="cta-secondary">Over Kelvantis</a>
       </div>
     </section>
 
     <!-- TL;DR -->
-    <div class="container">
-      <aside class="tldr reveal" aria-label="Kort samengevat">
-        <strong>Kort samengevat:</strong> Onze werkwijze telt vier stappen, begrijpen, ontwerpen, bouwen, optimaliseren. We starten met een gratis strategiegesprek, leveren in 4-6 weken op, en blijven na livegang betrokken om data te analyseren en door te ontwikkelen. Vaste prijzen, duidelijke deliverables, geen verrassingen achteraf.
-      </aside>
+    <div class="tldr-wrap">
+      <div class="tldr" role="note" aria-label="Kort samengevat">
+        <div class="tldr-label">Kort samengevat</div>
+        <div class="tldr-text">Onze werkwijze telt vier stappen, begrijpen, ontwerpen, bouwen, optimaliseren. We starten met een gratis strategiegesprek, leveren in 4-6 weken op, en blijven na livegang betrokken om data te analyseren en door te ontwikkelen. Vaste prijzen, duidelijke deliverables, geen verrassingen achteraf.</div>
+      </div>
     </div>
 
     <!-- INTRO -->
-    <section class="section" style="background: var(--color-surface); padding: 3rem 0;">
-      <div class="container">
-        <div style="max-width: 680px; margin: 0 auto; text-align: center;">
-          <p style="font-size: 1.125rem; color: var(--color-text-muted); line-height: 1.8;">
-            De meeste bureaus beginnen direct met bouwen. Wij beginnen met begrijpen. Want een website of automatisering die niet aansluit op jouw doelen is geld dat je twee keer uitgeeft.
-          </p>
-        </div>
-      </div>
-    </section>
+    <div class="intro-block">
+      <p>De meeste bureaus beginnen direct met bouwen. Wij beginnen met begrijpen. Want een website of automatisering die niet aansluit op jouw doelen is geld dat je twee keer uitgeeft.</p>
+    </div>
 
     <!-- STAP 1 -->
     <section class="section" id="stap-1">
-      <div class="container">
-        <div class="stack-2col">
-          <div class="reveal">
-            <div style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: rgba(5,254,130,0.1); border: 1px solid rgba(5,254,130,0.25); margin-bottom: 1.5rem;">
-              <span style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--color-accent);">01</span>
-            </div>
-            <h2 style="font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-text); margin-bottom: 1rem;">Strategie eerst</h2>
-            <p style="font-size: 1rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.25rem;">
-              We beginnen altijd met jouw situatie, doelen en concurrentie. Pas daarna schrijven we een regel code of content. Geen aannames, geen sjablonen.
-            </p>
-            <p style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.75;">
-              In een gratis strategiegesprek brengen we in kaart: wat wil je bereiken, wie is je doelgroep, wat doet de concurrentie en waar liggen de kansen? Dat gesprek duurt 30–45 minuten en levert altijd bruikbare inzichten op, ook als we niet samenwerken.
-            </p>
-            <div style="margin-top: 1.5rem; padding: 1rem 1.25rem; background: rgba(5,254,130,0.05); border-left: 2px solid var(--color-accent); border-radius: 0 8px 8px 0;">
-              <p style="font-size: 0.875rem; color: var(--color-text-muted); margin: 0;"><strong style="color: var(--color-text);">Wat je krijgt:</strong> Heldere strategie, prioriteitenlijst, eerlijk advies, ook als dat betekent dat je iets zelf kunt doen.</p>
-            </div>
+      <div class="two-col">
+        <div class="step-text">
+          <div class="step-num" aria-hidden="true">01</div>
+          <h2>Strategie eerst</h2>
+          <p>We beginnen altijd met jouw situatie, doelen en concurrentie. Pas daarna schrijven we een regel code of content. Geen aannames, geen sjablonen.</p>
+          <p>In een gratis strategiegesprek brengen we in kaart: wat wil je bereiken, wie is je doelgroep, wat doet de concurrentie en waar liggen de kansen? Dat gesprek duurt 30–45 minuten en levert altijd bruikbare inzichten op, ook als we niet samenwerken.</p>
+          <div class="article-callout">
+            <p><strong>Wat je krijgt:</strong> Heldere strategie, prioriteitenlijst, eerlijk advies, ook als dat betekent dat je iets zelf kunt doen.</p>
           </div>
-          <div class="reveal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2rem;">
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">Gratis strategiegesprek (30–45 min)</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">Analyse van jouw doelgroep en concurrentie</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">Heldere offerte binnen 48 uur</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">Geen verplichtingen na het gesprek</span>
-              </li>
-            </ul>
-          </div>
+        </div>
+        <div class="step-side">
+          <ul class="step-checks">
+            <li>Gratis strategiegesprek (30–45 min)</li>
+            <li>Analyse van jouw doelgroep en concurrentie</li>
+            <li>Heldere offerte binnen 48 uur</li>
+            <li>Geen verplichtingen na het gesprek</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- STAP 2 -->
-    <section class="section" id="stap-2" style="background: var(--color-surface);">
-      <div class="container">
-        <div class="stack-2col">
-          <div class="reveal" style="background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2rem; order: 2;">
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">Wireframes en design review vooraf</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">CTA's, formulieren en flows geoptimaliseerd</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">Core Web Vitals 90+ als standaard</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">SEO en techniek ingebakken, niet er bovenop geplakt</span>
-              </li>
-            </ul>
-          </div>
-          <div class="reveal" style="order: 1;">
-            <div style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: rgba(5,254,130,0.1); border: 1px solid rgba(5,254,130,0.25); margin-bottom: 1.5rem;">
-              <span style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--color-accent);">02</span>
-            </div>
-            <h2 style="font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-text); margin-bottom: 1rem;">Bouw voor conversie</h2>
-            <p style="font-size: 1rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.25rem;">
-              Elke pagina, elk formulier, elke knop is ontworpen om bezoekers om te zetten in klanten. Mooie websites zijn leuk, websites die converteren zijn beter.
-            </p>
-            <p style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.75;">
-              We bouwen met bewezen conversie-principes: duidelijke waardepropositie bovenaan, sociale bewijskracht op de juiste plekken, en frictionloze formulieren. Alles staat of valt bij de eerste 3 seconden die een bezoeker op je pagina doorbrengt.
-            </p>
-            <div style="margin-top: 1.5rem; padding: 1rem 1.25rem; background: rgba(5,254,130,0.05); border-left: 2px solid var(--color-accent); border-radius: 0 8px 8px 0;">
-              <p style="font-size: 0.875rem; color: var(--color-text-muted); margin: 0;"><strong style="color: var(--color-text);">Wat je krijgt:</strong> Een website of systeem dat niet alleen mooi is, maar meetbaar meer oplevert dan wat je had.</p>
-            </div>
+    <section class="section" id="stap-2">
+      <div class="two-col">
+        <div class="step-side">
+          <ul class="step-checks">
+            <li>Wireframes en design review vooraf</li>
+            <li>CTA's, formulieren en flows geoptimaliseerd</li>
+            <li>Core Web Vitals 90+ als standaard</li>
+            <li>SEO en techniek ingebakken, niet er bovenop geplakt</li>
+          </ul>
+        </div>
+        <div class="step-text">
+          <div class="step-num" aria-hidden="true">02</div>
+          <h2>Bouw voor conversie</h2>
+          <p>Elke pagina, elk formulier, elke knop is ontworpen om bezoekers om te zetten in klanten. Mooie websites zijn leuk, websites die converteren zijn beter.</p>
+          <p>We bouwen met bewezen conversie-principes: duidelijke waardepropositie bovenaan, sociale bewijskracht op de juiste plekken, en frictionloze formulieren. Alles staat of valt bij de eerste 3 seconden die een bezoeker op je pagina doorbrengt.</p>
+          <div class="article-callout">
+            <p><strong>Wat je krijgt:</strong> Een website of systeem dat niet alleen mooi is, maar meetbaar meer oplevert dan wat je had.</p>
           </div>
         </div>
       </div>
@@ -328,85 +280,45 @@
 
     <!-- STAP 3 -->
     <section class="section" id="stap-3">
-      <div class="container">
-        <div class="stack-2col">
-          <div class="reveal">
-            <div style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: rgba(5,254,130,0.1); border: 1px solid rgba(5,254,130,0.25); margin-bottom: 1.5rem;">
-              <span style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--color-accent);">03</span>
-            </div>
-            <h2 style="font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-text); margin-bottom: 1rem;">Meet wat werkt</h2>
-            <p style="font-size: 1rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.25rem;">
-              We koppelen analytics, Search Console en CRM zodat je precies ziet wat werkt en wat niet. Geen data = geen richting. Geen richting = geld weggooien.
-            </p>
-            <p style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.75;">
-              Bij livegang stel je niet alleen een mooie website online: je activeert ook het meetapparaat. Google Search Console, eventueel Hotjar voor heatmaps. Alles gekoppeld, alles getest. Zo weten we snel wat bijgestuurd moet worden.
-            </p>
-            <div style="margin-top: 1.5rem; padding: 1rem 1.25rem; background: rgba(5,254,130,0.05); border-left: 2px solid var(--color-accent); border-radius: 0 8px 8px 0;">
-              <p style="font-size: 0.875rem; color: var(--color-text-muted); margin: 0;"><strong style="color: var(--color-text);">Wat je krijgt:</strong> Volledig geconfigureerd meetapparaat, duidelijk dashboard, maandelijkse inzichten.</p>
-            </div>
+      <div class="two-col">
+        <div class="step-text">
+          <div class="step-num" aria-hidden="true">03</div>
+          <h2>Meet wat werkt</h2>
+          <p>We koppelen analytics, Search Console en CRM zodat je precies ziet wat werkt en wat niet. Geen data = geen richting. Geen richting = geld weggooien.</p>
+          <p>Bij livegang stel je niet alleen een mooie website online: je activeert ook het meetapparaat. Google Search Console, eventueel Hotjar voor heatmaps. Alles gekoppeld, alles getest. Zo weten we snel wat bijgestuurd moet worden.</p>
+          <div class="article-callout">
+            <p><strong>Wat je krijgt:</strong> Volledig geconfigureerd meetapparaat, duidelijk dashboard, maandelijkse inzichten.</p>
           </div>
-          <div class="reveal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2rem;">
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">Google Search Console</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">Conversie-tracking op alle CTA's</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">CRM-koppeling voor lead tracking</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">Maandelijks overzicht van resultaten</span>
-              </li>
-            </ul>
-          </div>
+        </div>
+        <div class="step-side">
+          <ul class="step-checks">
+            <li>Google Search Console</li>
+            <li>Conversie-tracking op alle CTA's</li>
+            <li>CRM-koppeling voor lead tracking</li>
+            <li>Maandelijks overzicht van resultaten</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- STAP 4 -->
-    <section class="section" id="stap-4" style="background: var(--color-surface);">
-      <div class="container">
-        <div class="stack-2col">
-          <div class="reveal" style="background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2rem; order: 2;">
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">Maandelijkse data-analyse en bijsturing</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">A/B testen van CTA's en copy</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">GEO/AEO-groei door continue contentoptimalisatie</span>
-              </li>
-              <li class="checklist-item">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" class="checklist-item__icon" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="checklist-item__text">Proactieve aanbevelingen, geen wachten</span>
-              </li>
-            </ul>
-          </div>
-          <div class="reveal" style="order: 1;">
-            <div style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: rgba(5,254,130,0.1); border: 1px solid rgba(5,254,130,0.25); margin-bottom: 1.5rem;">
-              <span style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--color-accent);">04</span>
-            </div>
-            <h2 style="font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-text); margin-bottom: 1rem;">Optimaliseer continu</h2>
-            <p style="font-size: 1rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.25rem;">
-              Na livegang stoppen we niet. We analyseren data, testen verbeteringen en blijven optimaliseren. Een website is geen product, het is een proces.
-            </p>
-            <p style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.75;">
-              Maand 1 na livegang is anders dan maand 6. Google heeft je site geïndexeerd, bezoekers gedragen zich op een bepaalde manier, sommige pagina's presteren beter dan andere. Op basis van die data sturen we bij: proactief, niet reactief.
-            </p>
-            <div style="margin-top: 1.5rem; padding: 1rem 1.25rem; background: rgba(5,254,130,0.05); border-left: 2px solid var(--color-accent); border-radius: 0 8px 8px 0;">
-              <p style="font-size: 0.875rem; color: var(--color-text-muted); margin: 0;"><strong style="color: var(--color-text);">Wat je krijgt:</strong> Een systeem dat maand na maand beter presteert, niet één dat stilstaat na oplevering.</p>
-            </div>
+    <section class="section" id="stap-4">
+      <div class="two-col">
+        <div class="step-side">
+          <ul class="step-checks">
+            <li>Maandelijkse data-analyse en bijsturing</li>
+            <li>A/B testen van CTA's en copy</li>
+            <li>GEO/AEO-groei door continue contentoptimalisatie</li>
+            <li>Proactieve aanbevelingen, geen wachten</li>
+          </ul>
+        </div>
+        <div class="step-text">
+          <div class="step-num" aria-hidden="true">04</div>
+          <h2>Optimaliseer continu</h2>
+          <p>Na livegang stoppen we niet. We analyseren data, testen verbeteringen en blijven optimaliseren. Een website is geen product, het is een proces.</p>
+          <p>Maand 1 na livegang is anders dan maand 6. Google heeft je site geïndexeerd, bezoekers gedragen zich op een bepaalde manier, sommige pagina's presteren beter dan andere. Op basis van die data sturen we bij: proactief, niet reactief.</p>
+          <div class="article-callout">
+            <p><strong>Wat je krijgt:</strong> Een systeem dat maand na maand beter presteert, niet één dat stilstaat na oplevering.</p>
           </div>
         </div>
       </div>
@@ -414,70 +326,49 @@
 
     <!-- WAAROM DIT WERKT -->
     <section class="section">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">Waarom dit werkt</span>
-          <h2 class="section__title">Systeem vs. losse diensten.</h2>
-          <p class="section__subtitle">De meeste bureaus leveren onderdelen. Wij leveren een systeem dat samenwerkt.</p>
+      <header class="section-head">
+        <div class="section-label">Waarom dit werkt</div>
+        <div>
+          <h2 class="section-title">Systeem vs. losse diensten.</h2>
+          <p class="section-sub">De meeste bureaus leveren onderdelen. Wij leveren een systeem dat samenwerkt.</p>
         </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem;">
-          <div class="reveal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 1.75rem;">
-            <p style="font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-grey); margin-bottom: 1rem;">Traditioneel bureau</p>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
-              <li style="display: flex; align-items: center; gap: 0.625rem; font-size: 0.9375rem; color: var(--color-text-muted);">
-                <span style="color: #ef4444; font-size: 1rem;">✕</span> Website, GEO/AEO en automation apart
-              </li>
-              <li style="display: flex; align-items: center; gap: 0.625rem; font-size: 0.9375rem; color: var(--color-text-muted);">
-                <span style="color: #ef4444; font-size: 1rem;">✕</span> Geen afstemming tussen diensten
-              </li>
-              <li style="display: flex; align-items: center; gap: 0.625rem; font-size: 0.9375rem; color: var(--color-text-muted);">
-                <span style="color: #ef4444; font-size: 1rem;">✕</span> Oplevering = einde samenwerking
-              </li>
-              <li style="display: flex; align-items: center; gap: 0.625rem; font-size: 0.9375rem; color: var(--color-text-muted);">
-                <span style="color: #ef4444; font-size: 1rem;">✕</span> Resultaten vaag en niet meetbaar
-              </li>
-            </ul>
-          </div>
-          <div class="reveal" style="background: rgba(5,254,130,0.04); border: 1px solid rgba(5,254,130,0.2); border-radius: var(--radius-xl); padding: 1.75rem;">
-            <p style="font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 1rem;">Kelvantis aanpak</p>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
-              <li style="display: flex; align-items: center; gap: 0.625rem; font-size: 0.9375rem; color: var(--color-text-muted);">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Alles ontworpen als één systeem
-              </li>
-              <li style="display: flex; align-items: center; gap: 0.625rem; font-size: 0.9375rem; color: var(--color-text-muted);">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Website, GEO/AEO en AI werken samen
-              </li>
-              <li style="display: flex; align-items: center; gap: 0.625rem; font-size: 0.9375rem; color: var(--color-text-muted);">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Continue optimalisatie na livegang
-              </li>
-              <li style="display: flex; align-items: center; gap: 0.625rem; font-size: 0.9375rem; color: var(--color-text-muted);">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l4 4 6-7" stroke="#05FE82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> KPIs vastgesteld, resultaten meetbaar
-              </li>
-            </ul>
-          </div>
+      </header>
+      <div class="cmp-grid">
+        <div class="cmp-list-card cmp-list-card--bad">
+          <p class="cmp-list-card__label">Traditioneel bureau</p>
+          <ul>
+            <li>Website, GEO/AEO en automation apart</li>
+            <li>Geen afstemming tussen diensten</li>
+            <li>Oplevering = einde samenwerking</li>
+            <li>Resultaten vaag en niet meetbaar</li>
+          </ul>
+        </div>
+        <div class="cmp-list-card cmp-list-card--good">
+          <p class="cmp-list-card__label">Kelvantis aanpak</p>
+          <ul>
+            <li>Alles ontworpen als één systeem</li>
+            <li>Website, GEO/AEO en AI werken samen</li>
+            <li>Continue optimalisatie na livegang</li>
+            <li>KPIs vastgesteld, resultaten meetbaar</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="section cta-section">
-      <div class="container">
-        <div class="cta-section__inner reveal">
-          <div class="cta-section__glow" aria-hidden="true"></div>
-          <span class="section__label">Klaar om te starten?</span>
-          <h2 class="cta-section__title">Begin met een gratis<br><span class="cta-section__title-accent">strategiegesprek.</span></h2>
-          <p class="cta-section__subtitle">30–45 minuten. Geen verplichtingen. Altijd bruikbare inzichten, ook als we niet samenwerken.</p>
-          <div class="cta-section__actions">
-            <button type="button" class="btn btn--primary btn--xl" data-modal="open">Gratis strategiegesprek</button>
-            <a href="/contact/" class="btn btn--ghost btn--xl">Plan direct een gesprek</a>
-          </div>
-        </div>
+    <section class="cta-section">
+      <div class="cta-block">
+        <span class="cta-label">Klaar om te starten?</span>
+        <h2 class="cta-title">Begin met een gratis<br><span class="accent">strategiegesprek.</span></h2>
+        <p class="cta-sub">30–45 minuten. Geen verplichtingen. Altijd bruikbare inzichten, ook als we niet samenwerken.</p>
+        <button type="button" class="cta-primary" data-modal="open">Plan een strategiegesprek</button>
+        <p class="cta-trust">Gratis · Geen verplichtingen · Binnen 24 uur reactie</p>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -539,35 +430,35 @@
     </div>
   </footer>
 
-  <!-- MODAL -->
-  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
-    <div class="modal__overlay" data-modal="close"></div>
-    <div class="modal__panel">
-      <button type="button" class="modal__close" data-modal="close" aria-label="Sluiten">&times;</button>
-      <div id="formSuccess" hidden tabindex="-1">
-        <div style="text-align:center;padding:2rem 0;">
-          <div style="font-size:3rem;margin-bottom:1rem;" aria-hidden="true">✅</div>
-          <h3 style="font-family:var(--font-heading);font-size:1.5rem;margin-bottom:.75rem;">Aanvraag ontvangen!</h3>
-          <p style="color:var(--color-text-muted);">We nemen binnen 24 uur contact op.</p>
-        </div>
+</div>
+
+  <!-- ═══════════ INTAKE FORM MODAL ═══════════ -->
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__card">
+      <button type="button" class="modal__close" id="modalClose" aria-label="Formulier sluiten">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <div class="modal__header">
+        <span class="section__label">Gratis · Geen verplichtingen</span>
+        <h2 class="modal__title" id="modal-title">Plan je gratis strategiegesprek</h2>
+        <p class="modal__subtitle">Vertel kort over je situatie. We nemen binnen 24 uur contact op.</p>
       </div>
-      <form id="contactForm" action="https://formspree.io/f/xwvweodo" method="POST" novalidate>
-        <h2 class="modal__title" id="modalTitle">Gratis gesprek plannen</h2>
-        <p class="modal__subtitle">Binnen 24 uur reactie. Geen verplichtingen.</p>
+      <form class="modal__form" id="contactForm" action="https://formspree.io/f/xwvweodo" method="POST" novalidate>
         <div class="form__row">
           <div class="form__group">
-            <label class="form__label" for="f-naam">Naam <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="text" id="f-naam" name="naam" required aria-required="true" autocomplete="name">
+            <label class="form__label" for="f-naam"><span>Naam</span> <span aria-hidden="true">*</span></label>
+            <input class="form__input" type="text" id="f-naam" name="naam" required aria-required="true" placeholder="Jan de Vries" autocomplete="name">
           </div>
           <div class="form__group">
-            <label class="form__label" for="f-bedrijf">Bedrijfsnaam</label>
-            <input class="form__input" type="text" id="f-bedrijf" name="bedrijf" autocomplete="organization">
+            <label class="form__label" for="f-bedrijf"><span>Bedrijfsnaam</span> <span aria-hidden="true">*</span></label>
+            <input class="form__input" type="text" id="f-bedrijf" name="bedrijf" required aria-required="true" placeholder="Jouw Bedrijf BV" autocomplete="organization">
           </div>
         </div>
         <div class="form__row">
           <div class="form__group">
-            <label class="form__label" for="f-email">E-mailadres <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="email" id="f-email" name="email" required aria-required="true" autocomplete="email">
+            <label class="form__label" for="f-email"><span>E-mailadres</span> <span aria-hidden="true">*</span></label>
+            <input class="form__input" type="email" id="f-email" name="email" required aria-required="true" placeholder="jan@jouwbedrijf.nl" autocomplete="email">
           </div>
           <div class="form__group">
             <label class="form__label" for="f-tel">Telefoonnummer</label>
@@ -575,38 +466,47 @@
           </div>
         </div>
         <div class="form__group">
-          <label class="form__label" for="f-pakket">Interesse</label>
-          <select class="form__select" id="f-pakket" name="pakket">
-            <option value="">Nog niet zeker</option>
-            <optgroup label="── Pakketten (aanbevolen) ──">
-              <option value="Foundation">Foundation: Website</option>
-              <option value="Growth System">Growth System: Website + AI</option>
-              <option value="Maatwerk">Maatwerk: Volledig systeem</option>
-              <option value="GEO & AEO Start">GEO &amp; AEO Start</option>
-              <option value="GEO & AEO Groei">GEO &amp; AEO Groei</option>
-              <option value="GEO & AEO Enterprise">GEO &amp; AEO Enterprise</option>
-              <option value="Starter Automation">Starter Automation</option>
-              <option value="Business Automation">Business Automation</option>
-              <option value="Enterprise">Enterprise</option>
-            </optgroup>
-            <optgroup label="── Los afnemen ──">
-              <option value="Los: Website">Alleen een website</option>
-              <option value="Los: GEO & AEO">Alleen GEO/AEO</option>
-              <option value="Los: Workflow">Alleen workflow / automatisering</option>
-              <option value="Los: AI">Alleen AI integratie</option>
-            </optgroup>
+          <label class="form__label" for="f-uitdaging"><span>Wat is jouw grootste uitdaging?</span> <span aria-hidden="true">*</span></label>
+          <select class="form__select" id="f-uitdaging" name="uitdaging" required aria-required="true">
+            <option value="" disabled selected>Kies je situatie...</option>
+            <option value="Te weinig leads">Te weinig leads en aanvragen</option>
+            <option value="Website presteert slecht">Website presteert slecht</option>
+            <option value="Opvolging kost te veel tijd">Opvolging kost te veel tijd</option>
+            <option value="Geen inzicht">Geen inzicht in marketingresultaten</option>
+            <option value="Concurrentie">Concurrentie trekt klanten weg</option>
+            <option value="Anders">Anders</option>
           </select>
         </div>
         <div class="form__group">
-          <label class="form__label" for="f-bericht">Wat wil je bereiken?</label>
-          <textarea class="form__input form__textarea" id="f-bericht" name="bericht" rows="3" placeholder="Vertel kort over je situatie en doelen..."></textarea>
+          <label class="form__label" for="f-bericht"><span>Vertel kort over je bedrijf</span> <span class="form__label-optional">(optioneel)</span></label>
+          <textarea class="form__textarea" id="f-bericht" name="bericht" rows="3" placeholder="Bijv: Ik run een installatiebedrijf..."></textarea>
         </div>
-        <button type="submit" class="btn btn--primary btn--full form__submit">Verstuur aanvraag</button>
-        <p style="font-size:.75rem;color:var(--color-text-muted);text-align:center;margin-top:.75rem;">Door te versturen ga je akkoord met ons <a href="/privacy" style="color:var(--color-accent);">privacybeleid</a>.</p>
+        <button type="submit" class="btn btn--primary btn--full btn--lg form__submit">
+          <span>Verstuur aanvraag</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form__disclaimer">Door te versturen ga je akkoord met ons <a href="/privacy" class="form__link">privacybeleid</a>.</p>
       </form>
+      <div class="modal__success" id="formSuccess" hidden>
+        <div class="success__icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#05FE82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Aanvraag ontvangen!</h3>
+        <p>We nemen binnen <strong>24 uur</strong> contact met je op.</p>
+        <button type="button" class="btn btn--ghost" id="modalSuccessClose">Sluiten</button>
+      </div>
     </div>
   </div>
 
-  <script src="../script.js"></script>
+  <!-- ═══════════ WHATSAPP ═══════════ -->
+  <a class="wa-button" href="https://wa.me/31627900367?text=Hallo%20Kelvantis%2C%20ik%20heb%20interesse%20in%20een%20gratis%20strategiegesprek." target="_blank" rel="noopener noreferrer" aria-label="App ons direct op WhatsApp">
+    <span class="wa-button__tooltip">App ons direct</span>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="/script.js"></script>
+
 </body>
 </html>
