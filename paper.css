@@ -1968,6 +1968,25 @@ a { color: inherit; }
   padding: 0 24px 48px;
 }
 .article-body > .tldr { margin-bottom: 32px; }
+.article-body .toc {
+  margin: 24px 0 32px;
+  padding: 20px 24px;
+  background: var(--paper-soft);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+}
+.article-body .toc-title {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin: 0 0 12px;
+}
+.article-body .toc ol { margin: 0 0 0 20px; padding: 0; }
+.article-body .toc li { font-size: 14.5px; line-height: 1.7; margin-bottom: 4px; color: var(--ink-soft); }
+.article-body .toc a { color: var(--signal-deep); text-decoration: none; }
+.article-body .toc a:hover { text-decoration: underline; }
 .article-body h2 {
   margin: 40px 0 14px;
   font-family: var(--font-display);
