@@ -2143,3 +2143,32 @@ a { color: inherit; }
   color: var(--signal-deep);
 }
 .related-card__time { font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint); }
+
+/* ─── FAQ-pagina ─── */
+.faq-page-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+.faq-page-hero {
+  text-align: center;
+  padding: 48px 0 32px;
+}
+.faq-page-hero p {
+  max-width: 580px;
+  margin: 18px auto 0;
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.faq-cat + .faq-cat { margin-top: 36px; }
+.faq-cat__title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--signal-deep);
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
