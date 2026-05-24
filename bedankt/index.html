@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="nl" data-theme="dark" class="no-js">
+<html lang="nl">
 <head>
-  <script>document.documentElement.classList.remove("no-js")</script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ0XQN7GR4"></script>
@@ -17,88 +16,23 @@
   <title>Aanvraag ontvangen | Kelvantis</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
-  <style>
-    .bedankt-page {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 5rem 1.5rem;
-    }
-    .bedankt-page__inner { max-width: 520px; }
-    .bedankt-page__icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: rgba(5, 254, 130, 0.1);
-      border: 1px solid rgba(5, 254, 130, 0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 2rem;
-    }
-    .bedankt-page__title {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(1.75rem, 5vw, 2.5rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: var(--color-text);
-      margin-bottom: 1rem;
-    }
-    .bedankt-page__desc {
-      font-size: 1.0625rem;
-      color: var(--color-text-muted);
-      line-height: 1.75;
-      margin-bottom: 2rem;
-    }
-    .bedankt-page__steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      text-align: left;
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .bedankt-page__step {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.9375rem;
-      color: var(--color-text-muted);
-    }
-    .bedankt-page__step-num {
-      flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: rgba(5, 254, 130, 0.12);
-      color: var(--color-accent);
-      font-family: 'Sora', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .bedankt-page__actions {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles (gedeelde paper.css) -->
+  <link rel="stylesheet" href="/paper.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
+<a class="skip-link" href="#main">Direct naar inhoud</a>
+
+<div class="page">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="navbar" id="navbar">
     <div class="navbar__container">
 
@@ -209,12 +143,12 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <div class="bedankt-page">
       <div class="bedankt-page__inner">
         <div class="bedankt-page__icon" aria-hidden="true">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-            <path d="M4 12l6 6L20 6" stroke="#05FE82" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <h1 class="bedankt-page__title">Aanvraag ontvangen!</h1>
@@ -236,13 +170,14 @@
         </div>
 
         <div class="bedankt-page__actions">
-          <a href="/" class="btn btn--primary">Terug naar home</a>
-          <a href="/blog/" class="btn btn--ghost">Lees onze blog</a>
+          <a href="/" class="cta-primary">Terug naar home</a>
+          <a href="/blog/" class="cta-secondary">Lees onze blog</a>
         </div>
       </div>
     </div>
   </main>
 
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -304,6 +239,9 @@
     </div>
   </footer>
 
+</div>
+
   <script src="/script.js"></script>
+
 </body>
 </html>
