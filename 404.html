@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="nl" data-theme="dark" class="no-js">
+<html lang="nl">
 <head>
-  <script>document.documentElement.classList.remove("no-js")</script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ0XQN7GR4"></script>
@@ -17,55 +16,23 @@
   <title>Pagina niet gevonden | Kelvantis</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
-  <style>
-    .error-page {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 5rem 1.5rem;
-    }
-    .error-page__inner { max-width: 480px; }
-    .error-page__code {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(5rem, 15vw, 8rem);
-      font-weight: 800;
-      letter-spacing: -0.05em;
-      color: var(--color-accent);
-      line-height: 1;
-      margin-bottom: 1rem;
-      opacity: 0.15;
-    }
-    .error-page__title {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(1.5rem, 4vw, 2rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: var(--color-text);
-      margin-bottom: 0.75rem;
-    }
-    .error-page__desc {
-      font-size: 1rem;
-      color: var(--color-text-muted);
-      line-height: 1.7;
-      margin-bottom: 2rem;
-    }
-    .error-page__actions {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles (gedeelde paper.css) -->
+  <link rel="stylesheet" href="/paper.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
+<a class="skip-link" href="#main">Direct naar inhoud</a>
+
+<div class="page">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="navbar" id="navbar">
     <div class="navbar__container">
 
@@ -176,20 +143,21 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <div class="error-page">
       <div class="error-page__inner">
         <div class="error-page__code" aria-hidden="true">404</div>
         <h1 class="error-page__title">Deze pagina bestaat niet</h1>
         <p class="error-page__desc">De pagina die je zoekt is verplaatst, verwijderd of heeft nooit bestaan. Ga terug naar de homepage of neem contact op.</p>
         <div class="error-page__actions">
-          <a href="/" class="btn btn--primary">Terug naar home</a>
-          <a href="/contact/" class="btn btn--ghost">Neem contact op</a>
+          <a href="/" class="cta-primary">Terug naar home</a>
+          <a href="/contact/" class="cta-secondary">Neem contact op</a>
         </div>
       </div>
     </div>
   </main>
 
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -251,6 +219,9 @@
     </div>
   </footer>
 
+</div>
+
   <script src="/script.js"></script>
+
 </body>
 </html>
