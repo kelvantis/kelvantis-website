@@ -1,0 +1,13 @@
+{
+  "name": "kelvantis-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Statische site Kelvantis (custom HTML/CSS/JS, Vercel).",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}

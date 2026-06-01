@@ -6,8 +6,21 @@ index.html.backup-*
 serve.log
 *.log
 
+# Node
+node_modules/
+
 # Vercel CLI
 .vercel
+
+# Interne docs / build-bronnen (mogen niet mee-deployen)
+AUDIT.md
+CHANGELOG.md
+CLAUDE.md
+Kelvantis-Audit-FIXES.md
+.claude/
+
+# Gegenereerde CSS (build.mjs maakt deze van paper.css; Vercel regenereert bij build)
+paper.min.css
 
 # OS / editor
 .DS_Store

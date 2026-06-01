@@ -2,7 +2,7 @@
   "buildCommand": "node build.mjs",
   "outputDirectory": ".",
   "cleanUrls": true,
-  "trailingSlash": false,
+  "trailingSlash": true,
   "redirects": [
     { "source": "/pakketten/:path*", "destination": "/contact", "permanent": true },
     { "source": "/diensten/seo", "destination": "/geo-aeo", "permanent": true },
@@ -15,7 +15,9 @@
     { "source": "/diensten/workflow-automatisering.html", "destination": "/workflow-automatisering", "permanent": true },
     { "source": "/diensten/website-laten-maken", "destination": "/website-laten-maken", "permanent": true },
     { "source": "/diensten/website-laten-maken.html", "destination": "/website-laten-maken", "permanent": true },
-    { "source": "/diensten/:path*", "destination": "/", "permanent": true }
+    { "source": "/diensten/:path*", "destination": "/", "permanent": true },
+    { "source": "/build.mjs", "destination": "/", "permanent": false },
+    { "source": "/_components/:path*", "destination": "/", "permanent": false }
   ],
   "headers": [
     {

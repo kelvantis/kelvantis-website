@@ -437,8 +437,11 @@ function animateFlow() {
   const successClose = document.getElementById('modalSuccessClose');
   const pakketSelect = document.getElementById('f-pakket');
 
+  let lastTrigger = null;
+
   /* ── Open / Close ── */
   function openModal(pakket) {
+    lastTrigger = document.activeElement;       // onthoud trigger
     modal.classList.add('is-open');
     modal.removeAttribute('aria-hidden');
     document.body.style.overflow = 'hidden';
@@ -453,7 +456,18 @@ function animateFlow() {
     modal.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (lastTrigger) lastTrigger.focus();       // herstel focus
   }
+
+  /* ── Focus-trap (Tab/Shift+Tab binnen de modal) ── */
+  modal.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    const f = modal.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])');
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
 
   /* ── Triggers ── */
   document.querySelectorAll('[data-modal="open"]').forEach(trigger => {

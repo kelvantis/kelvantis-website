@@ -1,5 +1,17 @@
-import { readFileSync, writeFileSync, readdirSync, statSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, copyFileSync } from 'fs';
 import { join, extname } from 'path';
+
+/*
+ * SECURITY — bewust geaccepteerd restrisico (audit #11):
+ * De CSP in vercel.json bevat `script-src ... 'unsafe-inline'`. Dit is een
+ * bewuste keuze: dit is een statische site zonder server-side rendering of
+ * user-generated content (laag XSS-aanvalsoppervlak), en de inline scripts
+ * (gtag-init, consent-banner, LP/scan-handlers) zijn talrijk en wijzigen
+ * regelmatig. Per-script SHA-256-hashes/nonces zijn hier te fragiel: één
+ * gemiste of gewijzigde inline-script blokkeert dan álle JS op de site.
+ * Bij een toekomstige buildstap die alle inline scripts kan enumereren kan
+ * dit alsnog naar hashes/nonces worden gemigreerd.
+ */
 
 const navbar = readFileSync('_components/navbar.html', 'utf8');
 const footer = readFileSync('_components/footer.html', 'utf8');
@@ -70,3 +82,29 @@ for (const file of files) {
 }
 
 console.log(`\nBuild complete. Updated ${updated} files.`);
+
+// ── CSS minify (audit #9) ──────────────────────────────────────────────
+// paper.css → paper.min.css. Gebruikt esbuild als die beschikbaar is; valt
+// anders veilig terug op een ongeminificeerde kopie zodat de build nooit breekt.
+const SRC_CSS = 'paper.css';
+const OUT_CSS = 'paper.min.css';
+try {
+  const css = readFileSync(SRC_CSS, 'utf8');
+  let minified;
+  try {
+    const esbuild = await import('esbuild');
+    const result = await esbuild.transform(css, { loader: 'css', minify: true });
+    minified = result.code;
+    console.log(`CSS minified via esbuild: ${SRC_CSS} → ${OUT_CSS} (${css.length} → ${minified.length} bytes)`);
+  } catch (e) {
+    minified = null;
+    console.warn(`esbuild niet beschikbaar (${e.message}); ${OUT_CSS} wordt een ongeminificeerde kopie.`);
+  }
+  if (minified !== null) {
+    writeFileSync(OUT_CSS, minified, 'utf8');
+  } else {
+    copyFileSync(SRC_CSS, OUT_CSS);
+  }
+} catch (e) {
+  console.error(`CSS-minify-stap overgeslagen: ${e.message}`);
+}
