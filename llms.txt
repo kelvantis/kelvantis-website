@@ -57,7 +57,7 @@ Kelvantis hanteert een eigen methodiek voor GEO/AEO-optimalisatie, gebaseerd op 
 
 ## Blogartikelen
 
-- Wat is GEO en AEO?: https://kelvantis.com/blog/wat-is-geo-aeo/
+- Wat is Generative Engine Optimization (GEO)?: https://kelvantis.com/blog/wat-is-generative-engine-optimization/
 - AI Chatbot op je Website: https://kelvantis.com/blog/ai-chatbot-website/
 - n8n vs Make: https://kelvantis.com/blog/n8n-vs-make/
 - Webflow vs WordPress: https://kelvantis.com/blog/webflow-vs-wordpress/
