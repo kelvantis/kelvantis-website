@@ -5,7 +5,8 @@
   "trailingSlash": true,
   "redirects": [
     { "source": "/pakketten/:path*", "destination": "/contact", "permanent": true },
-    { "source": "/blog/wat-is-geo-aeo", "destination": "/blog/wat-is-generative-engine-optimization", "permanent": true },
+    { "source": "/blog/wat-is-geo-aeo", "destination": "/blog/wat-is-generative-engine-optimization/", "permanent": true },
+    { "source": "/blog/wat-is-geo-aeo/", "destination": "/blog/wat-is-generative-engine-optimization/", "permanent": true },
     { "source": "/diensten/seo", "destination": "/geo-aeo", "permanent": true },
     { "source": "/diensten/seo.html", "destination": "/geo-aeo", "permanent": true },
     { "source": "/diensten/geo-aeo", "destination": "/geo-aeo", "permanent": true },
